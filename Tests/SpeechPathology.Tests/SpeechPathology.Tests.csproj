@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\SpeechPathology\SpeechPathology\SpeechPathology.csproj" />
+    <ProjectReference Include="..\..\src\SpeechPathology\SpeechPathology.csproj" />
   </ItemGroup>
 
 </Project>
