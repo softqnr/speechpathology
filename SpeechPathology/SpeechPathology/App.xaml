@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SpeechPathology.ViewModels"
+             xmlns:converters="clr-namespace:SpeechPathology.Converters"
+             x:Class="SpeechPathology.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!--  colors  -->
+            <Color x:Key="HeaderTextColor">#585858</Color>
+            <Color x:Key="BodyTextColor">#C3C3C3</Color>
+            <Color x:Key="ButtonBackgroundColor">#5992FF</Color>
+            <Color x:Key="BackgroundColor">White</Color>
+            <!--  converters  -->
+            <converters:BoolToColorConverter x:Key="BoolToColorConverter" />
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
