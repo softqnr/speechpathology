@@ -123,10 +123,34 @@
   <data name="ArticulationTest" xml:space="preserve">
     <value>Articulation Test</value>
   </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
   <data name="Flashcards" xml:space="preserve">
     <value>Flashcards</value>
   </data>
+  <data name="of" xml:space="preserve">
+    <value>of</value>
+  </data>
   <data name="Worksheets" xml:space="preserve">
     <value>Worksheets</value>
+  </data>
+  <data name="Final" xml:space="preserve">
+    <value>Final</value>
+  </data>
+  <data name="Initial" xml:space="preserve">
+    <value>Initial</value>
+  </data>
+  <data name="Medial" xml:space="preserve">
+    <value>Medial</value>
+  </data>
+  <data name="Mixed" xml:space="preserve">
+    <value>Mixed</value>
+  </data>
+  <data name="Correct" xml:space="preserve">
+    <value>Correct</value>
+  </data>
+  <data name="Incorrect" xml:space="preserve">
+    <value>Incorrect</value>
   </data>
 </root>

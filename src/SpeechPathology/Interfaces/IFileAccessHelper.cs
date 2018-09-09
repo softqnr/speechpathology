@@ -6,6 +6,6 @@ namespace SpeechPathology.Interfaces
 {
     public interface IFileAccessHelper
     {
-        Task<String> GetDBPathAndCreateIfNotExists(string databaseFilename);
+        string GetDBPathAndCreateIfNotExists(string databaseFilename);
     }
 }

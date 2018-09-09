@@ -29,7 +29,9 @@ namespace SpeechPathology.ViewModels
             {
                 return new Command(async () =>
                 {
-                    await DialogService.ShowAlertAsync("Excel export", "Export", "Ok");
+                    DialogService.ShowLoading("Generating File Wait …");
+                    await Task.Delay(1000);
+                    DialogService.HideLoading();
                 });
             }
         }

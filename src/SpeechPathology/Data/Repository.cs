@@ -12,9 +12,9 @@ namespace SpeechPathology.Data
     {
         private SQLiteAsyncConnection db;
 
-        public Repository(SQLiteAsyncConnection db)
+        public Repository(string databaseFile)
         {
-            this.db = db;
+            this.db = new SQLiteAsyncConnection(databaseFile);
         }
 
         public AsyncTableQuery<T> AsQueryable() =>
@@ -25,6 +25,9 @@ namespace SpeechPathology.Data
 
         public async Task DeleteAllAsync(IEnumerable<T> objects, bool recursive = false) =>
             await db.DeleteAllAsync(objects, recursive);
+
+        public async Task InsertAllAsync(IEnumerable<T> objects) => 
+            await db.InsertAllAsync(objects);
 
         public async Task<List<T>> GetAll() =>
             await db.Table<T>().ToListAsync();

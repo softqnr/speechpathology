@@ -1,4 +1,7 @@
-﻿using SpeechPathology.Services.Navigation;
+﻿using Acr.UserDialogs;
+using SpeechPathology.Models.Enums;
+using SpeechPathology.Services.Navigation;
+using System;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -16,8 +19,19 @@ namespace SpeechPathology.ViewModels
             {
                 return new Command(async () =>
                 {
-                    // Open popup
-                    await NavigationService.NavigateToPopupAsync<SelectSoundLocationViewModel>(true);                   
+                    // Open dialog box
+                    string location = await DialogService.SelectActionAsync("Select sound location", 
+                        "Select sound location", "Cancel", Enum.GetNames(typeof(SoundPosition)));
+                    
+                    if (location != "Cancel") {
+                        DialogService.ShowLoading("Loading…");
+                        // Convert string value to enum
+                        SoundPosition soundPosition = (SoundPosition)Enum.Parse(typeof(SoundPosition), location);
+                        // Navigate to articulation test
+                        await NavigationService.NavigateToAsync<ArticulationTestViewModel>(soundPosition);
+
+                        DialogService.HideLoading();
+                    }
                 });
             }
         }

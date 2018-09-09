@@ -71,6 +71,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
+    <Compile Update="Views\BellCurveChartView.xaml.cs">
+      <DependentUpon>BellCurveChartView.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\FlashcardsView.xaml.cs">
       <DependentUpon>FlashcardsViewxaml</DependentUpon>
     </Compile>

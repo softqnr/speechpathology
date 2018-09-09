@@ -69,5 +69,14 @@ namespace SpeechPathology.Services.Dialog
                 return string.Empty;
             }
         }
+        public void ShowLoading(string title)
+        {
+            UserDialogs.Instance.ShowLoading(title);
+        }
+
+        public void HideLoading()
+        {
+            UserDialogs.Instance.HideLoading();
+        }
     }
 }

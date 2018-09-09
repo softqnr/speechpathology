@@ -1,7 +1,10 @@
 ﻿using SpeechPathology.Data;
 using SpeechPathology.Models;
+using SpeechPathology.Models.Enums;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System;
+using System.Linq;
 
 namespace SpeechPathology.DataServices.Articulation
 {
@@ -16,20 +19,24 @@ namespace SpeechPathology.DataServices.Articulation
             _repositoryAnswer = repositoryAnswer;
         }
 
-        public async Task<IList<ArticulationTestAnswer>> GenerateTest(string location)
+        public async Task<IList<ArticulationTestAnswer>> GenerateTest(SoundPosition soundPosition)
         {
             IList<ArticulationTestAnswer> answers = await _repositoryAnswer.GetAll();
             // Delete previous answers if any
             if (answers.Count > 0)
-            {
+            {               
                 await _repositoryAnswer.DeleteAllAsync(answers);
             }
+            // Get position name from enum
+            string soundPositionName = Enum.GetName(typeof(SoundPosition), soundPosition).ToUpper();
             // Select tests based on sound position
-            var tests = await _repositoryTest.Get(predicate: x => x.Position == location, orderBy: x => x.Sound);
-            foreach (ArticulationTest test in tests)
-            {
-                await _repositoryAnswer.Insert(new ArticulationTestAnswer(tests.IndexOf(test) + 1, test.Id));
-            }
+            var tests = await _repositoryTest.Get(predicate: x => x.Position == soundPositionName, 
+                orderBy: x => x.Sound);
+            // Create answers
+            var testAnswers = tests.Select(t => new ArticulationTestAnswer(tests.IndexOf(t) + 1, t.Id)).ToArray();
+            // Bulk insert
+            await _repositoryAnswer.InsertAllAsync(testAnswers);
+            
             return await _repositoryAnswer.GetAllWithChildren();
         }
 

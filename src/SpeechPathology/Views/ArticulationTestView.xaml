@@ -9,27 +9,28 @@
 
     <ContentPage.Content>
         <StackLayout Padding="10, 10">
-            <Label Text="{Binding TestIndex, Mode=OneWay}"
-               HorizontalOptions="Center" FontSize="Large" />
-
-            <ffimageloading:CachedImage Source="{Binding Image}" Aspect="AspectFill"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label Text="{Binding TestIndex, Mode=OneWay}" FontSize="Large" />
+                <Label Text=" {i18n:Translate of} " FontSize="Large" />
+                <Label Text="{Binding TestCount, Mode=OneWay}" FontSize="Large" />
+            </StackLayout>
+            
+            <ffimageloading:CachedImage Source="{Binding Image}" Aspect="AspectFit"/>
             
             <Label Text="{Binding Text, Mode=OneWay}"
                HorizontalOptions="Center" FontSize="Large" />
-            
-            <Button Text="Correct" BackgroundColor="Green" TextColor="White" Command="{Binding AnswerCommand}">
+
+            <Button Text="{i18n:Translate Correct}" BackgroundColor="Green" TextColor="White" Command="{Binding AnswerTestCommand}">
                 <Button.CommandParameter>
                     <s:Boolean>True</s:Boolean>
                 </Button.CommandParameter>
             </Button>
-            
-            <Button Text="Incorrect" BackgroundColor="Red" TextColor="White" Command="{Binding AnswerCommand}">
+
+            <Button Text="{i18n:Translate Incorrect}" BackgroundColor="Red" TextColor="White" Command="{Binding AnswerTestCommand}">
                 <Button.CommandParameter>
                     <s:Boolean>False</s:Boolean>
                 </Button.CommandParameter>
             </Button>
-
-
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

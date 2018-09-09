@@ -10,5 +10,7 @@ namespace SpeechPathology.Services.Dialog
         Task<bool> ShowConfirmAsync(string message, string title, string okLabel, string cancelLabel);
         Task<string> SelectActionAsync(string message, string title, IEnumerable<string> options);
         Task<string> SelectActionAsync(string message, string title, string cancelLabel, IEnumerable<string> options);
+        void ShowLoading(string title);
+        void HideLoading();
     }
 }

@@ -79,11 +79,83 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        internal static string Cancel {
+            get {
+                return ResourceManager.GetString("Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Correct.
+        /// </summary>
+        internal static string Correct {
+            get {
+                return ResourceManager.GetString("Correct", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Final.
+        /// </summary>
+        internal static string Final {
+            get {
+                return ResourceManager.GetString("Final", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Flashcards.
         /// </summary>
         internal static string Flashcards {
             get {
                 return ResourceManager.GetString("Flashcards", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Incorrect.
+        /// </summary>
+        internal static string Incorrect {
+            get {
+                return ResourceManager.GetString("Incorrect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Initial.
+        /// </summary>
+        internal static string Initial {
+            get {
+                return ResourceManager.GetString("Initial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Medial.
+        /// </summary>
+        internal static string Medial {
+            get {
+                return ResourceManager.GetString("Medial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mixed.
+        /// </summary>
+        internal static string Mixed {
+            get {
+                return ResourceManager.GetString("Mixed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to of.
+        /// </summary>
+        internal static string of {
+            get {
+                return ResourceManager.GetString("of", resourceCulture);
             }
         }
         

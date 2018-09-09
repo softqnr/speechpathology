@@ -1,5 +1,4 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using System.Threading.Tasks;
 using SpeechPathology.Droid;
 using SpeechPathology.Interfaces;
@@ -10,7 +9,7 @@ namespace SpeechPathology.Droid
 {
     public class FileAccessHelper : IFileAccessHelper
     {
-        public async Task<String> GetDBPathAndCreateIfNotExists(String databaseName)
+        public string GetDBPathAndCreateIfNotExists(string databaseName)
         {
             var docFolder = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
             var dbFile = Path.Combine(docFolder, databaseName); // FILE NAME TO USE WHEN COPIED
@@ -19,8 +18,9 @@ namespace SpeechPathology.Droid
             {
                 // Copy from assets
                 FileStream writeStream = new FileStream(dbFile, FileMode.OpenOrCreate, FileAccess.Write);
-                await Android.App.Application.Context.Assets.Open(databaseName).CopyToAsync(writeStream);
+                Android.App.Application.Context.Assets.Open(databaseName).CopyTo(writeStream);
             }
+         
             return dbFile;
         }
     }

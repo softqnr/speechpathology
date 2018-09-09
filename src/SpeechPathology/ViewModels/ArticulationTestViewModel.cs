@@ -6,6 +6,7 @@ using System.Windows.Input;
 using Xamarin.Forms;
 using System;
 using SpeechPathology.DataServices.Articulation;
+using SpeechPathology.Models.Enums;
 
 namespace SpeechPathology.ViewModels
 {
@@ -17,114 +18,115 @@ namespace SpeechPathology.ViewModels
         private ArticulationTestAnswer _articulationTestAnswer;
 
         private string _testIndex;
+        private int _testCount;
         private string _text;
         private ImageSource _imageSource;
         private string _image;
 
-        public ICommand AnswerCommand { get; private set; } //=> new AsyncCommand(AnswerAsync);
+        public ICommand AnswerTestCommand { get; private set; } //=> new AsyncCommand(AnswerAsync);
 
         public string TestIndex
         {
-            get
-            {
-                return _testIndex;
-            }
-            set
-            {
-                _testIndex = value;
-                OnPropertyChanged("TestIndex");
-            }
+            get => _testIndex;
+            set => SetProperty(ref _testIndex, value);
+        }
+
+        public int TestCount
+        {
+            get => _testCount;
+            set => SetProperty(ref _testCount, value);
         }
 
         public string Text
         {
-            get {
-                return _text;
-            }
-            set {
-                _text = value;
-                OnPropertyChanged("Text");
-            }
+            get => _text;
+            set => SetProperty(ref _text, value);
         }
 
         public ImageSource ImageSource
         {
-            get
-            {
-                return _imageSource;
-            }
-            set
-            {
-                _imageSource = value;
-                OnPropertyChanged("ImageSource");
-            }
+            get => _imageSource;
+            set => SetProperty(ref _imageSource, value);
         }
 
         public string Image
         {
-            get
-            {
-                return _image;
-            }
-            set
-            {
-                _image = value;
-                OnPropertyChanged("Image");
-            }
+            get => _image;
+            set => SetProperty(ref _image, value);
         }
-
 
         public ArticulationTestViewModel(IArticulationService articulationService) 
         {
-            // 
             _articulationService = articulationService;
-            AnswerCommand = new Command<bool>(async (b) => await AnswerAsync(b)); 
+            AnswerTestCommand = new Command<bool>(async (b) => await AnswerTestAsync(b)); 
         }
 
-        private async Task AnswerAsync(bool answer)
+        private async Task AnswerTestAsync(bool answer)
         {
             // Save answer
             await _articulationService.Answer(_articulationTestAnswer, answer);
 
-            if (!NextTest(true))
+            if (!ShowNextTest())
             {
-                // Test ended navigate to results
-                await NavigationService.NavigateToAsync<PhonologicalTestResultsViewModel>(_articulationTestAnswers);
-                await NavigationService.RemoveLastFromBackStackAsync();
+                // Test ended open dialog box
+                await OpenResultsDialog();
             }
-
-            //return Task.FromResult(true);
         }
 
+        private async Task OpenResultsDialog()
+        {
+            string result = await DialogService.SelectActionAsync("Select view",
+                    "Select view", "Cancel", new string[] { "Phonological test results", "Bell curve chart" });
+            DialogService.ShowLoading("Loading…");
+            switch (result)
+            {
+                case "Phonological test results":
+                    // Navigate to phonological test results
+                    await NavigationService.NavigateToAsync<PhonologicalTestResultsViewModel>(_articulationTestAnswers);
+                    await NavigationService.RemoveLastFromBackStackAsync();
+                    break;
+                case "Bell curve chart":
+                    // Navigate to bell curve chart
+                    await NavigationService.NavigateToAsync<BellCurveChartViewModel>(_articulationTestAnswers);
+                    await NavigationService.RemoveLastFromBackStackAsync();
+                    break;
+                case "Cancel":
+                    await NavigationService.NavigateBackAsync();
+                    break;
+            }
+            DialogService.HideLoading();
+        }
 
         public override async Task InitializeAsync(object navigationData)
         {
-            if (navigationData == null)
+            if (navigationData != null && 
+                Enum.TryParse<SoundPosition>(navigationData.ToString(), out var soundPosition))
             {
-                // Resume
-                _articulationTestAnswers = await _articulationService.GenerateTest((string)navigationData);
-                //_articulationTestAnswersEnumerator = _articulationTestAnswers.GetEnumerator();
-            } else { 
-                // Create new
-                _articulationTestAnswers = await _articulationService.GenerateTest((string)navigationData);
-                _articulationTestAnswersEnumerator = _articulationTestAnswers.GetEnumerator();
+                await LoadData(soundPosition);
             }
-            NextTest(true);
+        }
+        private async Task LoadData(SoundPosition soundPosition)
+        { 
+            // Create new test
+            _articulationTestAnswers = await _articulationService.GenerateTest(soundPosition);
+            _articulationTestAnswersEnumerator = _articulationTestAnswers.GetEnumerator();
+
+            TestCount = _articulationTestAnswers.Count();
+
+            ShowNextTest();
         }
 
-        private bool NextTest(bool forward)
+        private bool ShowNextTest()
         {
             var moved = _articulationTestAnswersEnumerator.MoveNext();
             if (moved)
             {
                 _articulationTestAnswer = _articulationTestAnswersEnumerator.Current;
-                TestIndex = Convert.ToString(_articulationTestAnswers.IndexOf(_articulationTestAnswersEnumerator.Current) + 1) + " of "
-                    + _articulationTestAnswers.Count().ToString();
+
+                TestIndex = Convert.ToString(_articulationTestAnswers.IndexOf(_articulationTestAnswersEnumerator.Current) + 1);
                 Text = _articulationTestAnswer.ArticulationTest.Text;
                 //ImageSource = ImageSource.FromResource("SpeechPathology.Assets.Images." + _articulationTestAnswer.ArticulationTest.Image);
                 Image = "resource://SpeechPathology.Assets.Images." + _articulationTestAnswer.ArticulationTest.Image;
-
-                OnPropertyChanged("TestIndex");
             }
             return moved;
         }

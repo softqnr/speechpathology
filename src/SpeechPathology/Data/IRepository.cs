@@ -20,5 +20,6 @@ namespace SpeechPathology.Data
 
         Task<List<T>> GetAllWithChildren();
         Task DeleteAllAsync(IEnumerable<T> objects, bool recursive = false);
+        Task InsertAllAsync(IEnumerable<T> objects);
     }
 }

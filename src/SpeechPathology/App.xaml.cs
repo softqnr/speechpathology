@@ -10,7 +10,9 @@ using SpeechPathology.Services.Navigation;
 using SpeechPathology.ViewModels;
 using SpeechPathology.Views;
 using SQLite;
+using System.Threading.Tasks;
 using Unity;
+using Unity.Injection;
 using Unity.Lifetime;
 using Unity.ServiceLocation;
 using Xamarin.Forms;
@@ -22,10 +24,8 @@ namespace SpeechPathology
     public partial class App : Application
     {
         public static UnityContainer Container { get; private set; }
-        public static SQLiteAsyncConnection SQLiteConnection { get; private set; }
+        public string DatabaseFilePath { get; private set; }
         public readonly static INavigationService NavigationService = new NavigationService();
-        public static DatabaseContext DatabaseContext { get; protected set; }
-        public static string DatabasePath { get; private set; }
         public App()
         {
             InitializeComponent();
@@ -33,38 +33,34 @@ namespace SpeechPathology
             AppResources.Culture = CrossMultilingual.Current.DeviceCultureInfo;
             // Init DB
             InitializeDatabase();
-            // Init IOC
-            InitializeIOC();
-            // Nav service configuration
-            InitializeNavigation();
+            // Init DI
+            InitializeDI();
         }
 
-        private void InitializeNavigation()
+        private async Task InitializeNavigation()
         {
             NavigationService.Configure(typeof(MainViewModel), typeof(MainView));
             NavigationService.Configure(typeof(ArticulationTestViewModel), typeof(ArticulationTestView));
             NavigationService.Configure(typeof(PhonologicalTestResultsViewModel), typeof(PhonologicalTestResultsView));
-            NavigationService.Configure(typeof(SelectSoundLocationViewModel), typeof(SelectSoundLocationView));
+            NavigationService.Configure(typeof(BellCurveChartViewModel), typeof(BellCurveChartView));
             NavigationService.Configure(typeof(AgeCalculatorViewModel), typeof(AgeCalculatorView));
             NavigationService.Configure(typeof(FlashcardsViewModel), typeof(FlashcardsView));
             NavigationService.Configure(typeof(WorksheetsViewModel), typeof(WorksheetsView));
             NavigationService.Configure(typeof(AboutViewModel), typeof(AboutView));
-            NavigationService.InitializeAsync();
+            await NavigationService.InitializeAsync();
         }
 
-        private async void InitializeDatabase()
+        private void InitializeDatabase()
         {
-            string databasePath = await DependencyService.Get<IFileAccessHelper>().GetDBPathAndCreateIfNotExists("db_en.db");
-            SQLiteConnection = new SQLiteAsyncConnection(databasePath);
+            DatabaseFilePath = DependencyService.Get<IFileAccessHelper>().GetDBPathAndCreateIfNotExists("db_en.db");
         }
 
-        private void InitializeIOC()
+        private void InitializeDI()
         {
-            App.Container = new UnityContainer();
+            Container = new UnityContainer();
             // Data
-            Container.RegisterInstance(SQLiteConnection, new ContainerControlledLifetimeManager());
-            Container.RegisterType<IRepository<ArticulationTest>, Repository<ArticulationTest>>();
-            Container.RegisterType<IRepository<ArticulationTestAnswer>, Repository<ArticulationTestAnswer>>();
+            Container.RegisterType<IRepository<ArticulationTest>, Repository<ArticulationTest>>(new InjectionConstructor(DatabaseFilePath));
+            Container.RegisterType<IRepository<ArticulationTestAnswer>, Repository<ArticulationTestAnswer>>(new InjectionConstructor(DatabaseFilePath));
             // Services
             Container.RegisterInstance(NavigationService, new ContainerControlledLifetimeManager());
             Container.RegisterType<IDialogService, DialogService>();
@@ -76,7 +72,7 @@ namespace SpeechPathology
             Container.RegisterType<MainViewModel>();
             Container.RegisterType<ArticulationTestViewModel>();
             Container.RegisterType<PhonologicalTestResultsViewModel>();
-            Container.RegisterType<SelectSoundLocationViewModel>();
+            Container.RegisterType<BellCurveChartViewModel>();
             Container.RegisterType<AgeCalculatorViewModel>();
             Container.RegisterType<FlashcardsViewModel>();
             Container.RegisterType<WorksheetsViewModel>();
@@ -87,9 +83,11 @@ namespace SpeechPathology
             ServiceLocator.SetLocatorProvider(() => unityServiceLocator);
         }
 
-        protected override void OnStart()
+        protected override async void OnStart()
         {
             // Handle when your app starts
+            // Nav service configuration
+            await InitializeNavigation();
         }
 
         protected override void OnSleep()
