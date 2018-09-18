@@ -8,8 +8,8 @@ namespace SpeechPathology.Models
         public string Sound { get; set; }
   
         public string Text { get; set; }
-
-        public string Position { get; set; }
+        [Indexed]
+        public string SoundPosition { get; set; }
 
         public string Image { get; set; }
     }

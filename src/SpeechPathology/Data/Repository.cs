@@ -20,8 +20,26 @@ namespace SpeechPathology.Data
         public AsyncTableQuery<T> AsQueryable() =>
             db.Table<T>();
         
-        public async Task<List<T>> GetAllWithChildren() =>
+        public async Task<List<T>> GetAllWithChildrenAsync() =>
            await db.GetAllWithChildrenAsync<T>();
+
+        public async Task<T> GetWithChildrenAsync(Int64 id, bool recursive = false) =>
+            await db.FindWithChildrenAsync<T>(id, recursive);
+
+        public async Task InsertWithChildrenAsync(T entity, bool recursive = false) =>
+            await db.InsertWithChildrenAsync(entity);
+
+        public async Task UpdateWithChildrenAsync(T entity) =>
+            await db.UpdateWithChildrenAsync(entity);
+
+        public async Task InsertAllWithChildrenAsync(IEnumerable<T> objects, bool recursive = false) =>
+            await db.InsertAllWithChildrenAsync(objects);
+
+        public async Task UpdateWithChildrenAsync(IEnumerable<T> objects) =>
+            await db.UpdateWithChildrenAsync(objects);
+
+        public async Task InsertOrReplaceWithChildrenAsync(T entity, bool recursive = false) =>
+            await db.InsertOrReplaceWithChildrenAsync(entity, recursive);
 
         public async Task DeleteAllAsync(IEnumerable<T> objects, bool recursive = false) =>
             await db.DeleteAllAsync(objects, recursive);
@@ -29,10 +47,13 @@ namespace SpeechPathology.Data
         public async Task InsertAllAsync(IEnumerable<T> objects) => 
             await db.InsertAllAsync(objects);
 
-        public async Task<List<T>> GetAll() =>
+        public async Task UpdateAllAsync(IEnumerable<T> objects) =>
+            await db.UpdateAllAsync(objects);
+
+        public async Task<List<T>> GetAllAsync() =>
             await db.Table<T>().ToListAsync();
 
-        public async Task<List<T>> Get<TValue>(Expression<Func<T, bool>> predicate = null, Expression<Func<T, TValue>> orderBy = null)
+        public async Task<List<T>> GetAsync<TValue>(Expression<Func<T, bool>> predicate = null, Expression<Func<T, TValue>> orderBy = null)
         {
             var query = db.Table<T>();
 
@@ -45,19 +66,19 @@ namespace SpeechPathology.Data
             return await query.ToListAsync();
         }
 
-        public async Task<T> Get(Int64 id) =>
+        public async Task<T> GetAsync(Int64 id) =>
              await db.FindAsync<T>(id);
 
-        public async Task<T> Get(Expression<Func<T, bool>> predicate) =>
+        public async Task<T> GetAsync(Expression<Func<T, bool>> predicate) =>
             await db.FindAsync<T>(predicate);
 
-        public async Task<int> Insert(T entity) =>
+        public async Task<int> InsertAsync(T entity) =>
              await db.InsertAsync(entity);
 
-        public async Task<int> Update(T entity) =>
+        public async Task<int> UpdateAsync(T entity) =>
              await db.UpdateAsync(entity);
 
-        public async Task<int> Delete(T entity) =>
+        public async Task<int> DeleteAsync(T entity) =>
              await db.DeleteAsync(entity);
     }
 }

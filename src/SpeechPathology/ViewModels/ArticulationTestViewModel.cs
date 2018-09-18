@@ -12,15 +12,14 @@ namespace SpeechPathology.ViewModels
 {
     public class ArticulationTestViewModel : ViewModelBase
     {
-        private IArticulationService _articulationService;
-        private IList<ArticulationTestAnswer> _articulationTestAnswers;
-        private IEnumerator<ArticulationTestAnswer> _articulationTestAnswersEnumerator;
-        private ArticulationTestAnswer _articulationTestAnswer;
+        private IArticulationTestService _articulationTestService;
+        private ArticulationTestExam _articulationTestExam;
+        private IEnumerator<ArticulationTestExamAnswer> _articulationTestAnswersEnumerator;
+        private ArticulationTestExamAnswer _articulationTestAnswer;
 
         private string _testIndex;
         private int _testCount;
         private string _text;
-        private ImageSource _imageSource;
         private string _image;
 
         public ICommand AnswerTestCommand { get; private set; } //=> new AsyncCommand(AnswerAsync);
@@ -43,32 +42,29 @@ namespace SpeechPathology.ViewModels
             set => SetProperty(ref _text, value);
         }
 
-        public ImageSource ImageSource
-        {
-            get => _imageSource;
-            set => SetProperty(ref _imageSource, value);
-        }
-
         public string Image
         {
             get => _image;
             set => SetProperty(ref _image, value);
         }
 
-        public ArticulationTestViewModel(IArticulationService articulationService) 
+        public ArticulationTestViewModel(IArticulationTestService articulationTestService) 
         {
-            _articulationService = articulationService;
+            _articulationTestService = articulationTestService;
             AnswerTestCommand = new Command<bool>(async (b) => await AnswerTestAsync(b)); 
         }
 
         private async Task AnswerTestAsync(bool answer)
         {
             // Save answer
-            await _articulationService.Answer(_articulationTestAnswer, answer);
-
+            await _articulationTestService.Answer(_articulationTestAnswer, answer);
+            
+            // Test ended
             if (!ShowNextTest())
             {
-                // Test ended open dialog box
+                // Close exam
+                _articulationTestExam = await _articulationTestService.CloseExam(_articulationTestExam);
+                // Open dialog box
                 await OpenResultsDialog();
             }
         }
@@ -82,12 +78,12 @@ namespace SpeechPathology.ViewModels
             {
                 case "Phonological test results":
                     // Navigate to phonological test results
-                    await NavigationService.NavigateToAsync<PhonologicalTestResultsViewModel>(_articulationTestAnswers);
+                    await NavigationService.NavigateToAsync<PhonologicalTestResultsViewModel>(_articulationTestExam);
                     await NavigationService.RemoveLastFromBackStackAsync();
                     break;
                 case "Bell curve chart":
                     // Navigate to bell curve chart
-                    await NavigationService.NavigateToAsync<BellCurveChartViewModel>(_articulationTestAnswers);
+                    await NavigationService.NavigateToAsync<BellCurveChartViewModel>(_articulationTestExam);
                     await NavigationService.RemoveLastFromBackStackAsync();
                     break;
                 case "Cancel":
@@ -108,10 +104,10 @@ namespace SpeechPathology.ViewModels
         private async Task LoadData(SoundPosition soundPosition)
         { 
             // Create new test
-            _articulationTestAnswers = await _articulationService.GenerateTest(soundPosition);
-            _articulationTestAnswersEnumerator = _articulationTestAnswers.GetEnumerator();
+            _articulationTestExam = await _articulationTestService.GenerateExam(soundPosition);
+            _articulationTestAnswersEnumerator = _articulationTestExam.Answers.GetEnumerator();
 
-            TestCount = _articulationTestAnswers.Count();
+            TestCount = _articulationTestExam.Answers.Count();
 
             ShowNextTest();
         }
@@ -123,7 +119,7 @@ namespace SpeechPathology.ViewModels
             {
                 _articulationTestAnswer = _articulationTestAnswersEnumerator.Current;
 
-                TestIndex = Convert.ToString(_articulationTestAnswers.IndexOf(_articulationTestAnswersEnumerator.Current) + 1);
+                TestIndex = _articulationTestAnswer.Number.ToString();
                 Text = _articulationTestAnswer.ArticulationTest.Text;
                 //ImageSource = ImageSource.FromResource("SpeechPathology.Assets.Images." + _articulationTestAnswer.ArticulationTest.Image);
                 Image = "resource://SpeechPathology.Assets.Images." + _articulationTestAnswer.ArticulationTest.Image;

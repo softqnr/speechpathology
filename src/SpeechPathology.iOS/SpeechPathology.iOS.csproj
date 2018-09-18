@@ -94,10 +94,11 @@
     <AppExtensionDebugBundleId />
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="FileAccessHelper.cs" />
+    <Compile Include="Services\FileAccessHelper.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Services\Sound\SoundProvider.cs" />
+    <Compile Include="Services\Share\Share.cs" />
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />

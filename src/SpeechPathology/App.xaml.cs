@@ -7,6 +7,7 @@ using SpeechPathology.Models;
 using SpeechPathology.Resources;
 using SpeechPathology.Services.Dialog;
 using SpeechPathology.Services.Navigation;
+using SpeechPathology.Services.PDF;
 using SpeechPathology.ViewModels;
 using SpeechPathology.Views;
 using SQLite;
@@ -60,13 +61,16 @@ namespace SpeechPathology
             Container = new UnityContainer();
             // Data
             Container.RegisterType<IRepository<ArticulationTest>, Repository<ArticulationTest>>(new InjectionConstructor(DatabaseFilePath));
-            Container.RegisterType<IRepository<ArticulationTestAnswer>, Repository<ArticulationTestAnswer>>(new InjectionConstructor(DatabaseFilePath));
+            Container.RegisterType<IRepository<ArticulationTestExam>, Repository<ArticulationTestExam>>(new InjectionConstructor(DatabaseFilePath));
+            Container.RegisterType<IRepository<ArticulationTestExamAnswer>, Repository<ArticulationTestExamAnswer>>(new InjectionConstructor(DatabaseFilePath));
+            
             // Services
             Container.RegisterInstance(NavigationService, new ContainerControlledLifetimeManager());
             Container.RegisterType<IDialogService, DialogService>();
+            Container.RegisterType<IPDFGeneratorService, PDFGeneratorService>();
             
             // Data services
-            Container.RegisterType<IArticulationService, ArticulationService>();
+            Container.RegisterType<IArticulationTestService, ArticulationTestService>();
 
             // View models
             Container.RegisterType<MainViewModel>();

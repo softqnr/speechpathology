@@ -7,44 +7,61 @@ using System;
 using Xamarin.Forms;
 using System.Windows.Input;
 using SpeechPathology.Interfaces;
+using SpeechPathology.Services.PDF;
 
 namespace SpeechPathology.ViewModels
 {
     public class PhonologicalTestResultsViewModel : ViewModelBase
     {
-        private IList<ArticulationTestAnswer> _articulationTestAnswers;
-        private double _successPercentage;
-        public IList<ArticulationTestAnswer> ArticulationTestAnswers {
+        private ArticulationTestExam _articulationTestExam;
+        private List<ArticulationTestExamAnswer> _articulationTestAnswers;
+        private IPDFGeneratorService _pdfGeneratorService;
+        private double _score;
+
+        public ArticulationTestExam ArticulationTestExam
+        {
+            get => _articulationTestExam;
+            set => SetProperty(ref _articulationTestExam, value);
+        }
+
+        public List<ArticulationTestExamAnswer> ArticulationTestAnswers {
             get => _articulationTestAnswers;
             set => SetProperty(ref _articulationTestAnswers, value);
         }
-        public double SuccessPercentage
+        public double Score
         {
-            get => _successPercentage;
-            set => SetProperty(ref _successPercentage, value);
+            get => _score;
+            set => SetProperty(ref _score, value);
         }
-        public ICommand ExcelExport
+        public ICommand PDFExport
         {
             get
             {
                 return new Command(async () =>
                 {
-                    DialogService.ShowLoading("Generating File Wait …");
-                    await Task.Delay(1000);
-                    DialogService.HideLoading();
+                    await GenerateAndSharePdfAsync();
                 });
             }
         }
-        public PhonologicalTestResultsViewModel()
+        public PhonologicalTestResultsViewModel(IPDFGeneratorService pdfGeneratorService)
         {
-            
+            _pdfGeneratorService = pdfGeneratorService;
         }
         public override Task InitializeAsync(object navigationData)
         {
-            ArticulationTestAnswers = (IList<ArticulationTestAnswer>)navigationData;
-            SuccessPercentage = _articulationTestAnswers.DefaultIfEmpty().Average(x => Convert.ToInt32(x.IsCorrect));
+            ArticulationTestExam = (ArticulationTestExam)navigationData;
+            ArticulationTestAnswers = ArticulationTestExam.Answers;
+            Score = ArticulationTestExam.Score.Value;
 
             return Task.FromResult(true);
+        }
+
+        private async Task GenerateAndSharePdfAsync()
+        {
+            DialogService.ShowLoading("Generating PDF …");
+            string fileName =  await _pdfGeneratorService.GeneratePDFAsync(_articulationTestExam);
+            DialogService.HideLoading();
+            DependencyService.Get<IShare>().ShareFile("Share results", "Share results", fileName);
         }
     }
 }

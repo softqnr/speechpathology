@@ -1,4 +1,5 @@
 ﻿using Acr.UserDialogs;
+using SpeechPathology.Interfaces;
 using SpeechPathology.Models.Enums;
 using SpeechPathology.Services.Navigation;
 using System;
@@ -53,7 +54,6 @@ namespace SpeechPathology.ViewModels
             {
                 return new Command(async () =>
                 {
-                    // Open popup
                     await NavigationService.NavigateToAsync<FlashcardsViewModel>();
                 });
             }
@@ -65,7 +65,6 @@ namespace SpeechPathology.ViewModels
             {
                 return new Command(async () =>
                 {
-                    // Open popup
                     await NavigationService.NavigateToAsync<WorksheetsViewModel>();
                 });
             }

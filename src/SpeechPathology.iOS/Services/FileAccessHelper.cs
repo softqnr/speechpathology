@@ -1,12 +1,10 @@
-﻿using System;
-using System.IO;
-using System.Threading.Tasks;
+﻿using System.IO;
 using Foundation;
 using SpeechPathology.Interfaces;
-using SpeechPathology.iOS;
+using SpeechPathology.iOS.Services;
 
 [assembly: Xamarin.Forms.Dependency(typeof(FileAccessHelper))]
-namespace SpeechPathology.iOS
+namespace SpeechPathology.iOS.Services
 {
     public class FileAccessHelper : IFileAccessHelper
     {

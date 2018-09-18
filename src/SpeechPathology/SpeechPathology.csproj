@@ -5,6 +5,7 @@
     <Company>SoftQNR</Company>
     <Product>Speech Pathology Tools</Product>
     <Authors>SoftQNR</Authors>
+    <AssemblyName>SpeechPathology</AssemblyName>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -13,14 +14,26 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\Fonts\OpenSans-Bold.ttf" />
+    <None Remove="Assets\Fonts\OpenSans-BoldItalic.ttf" />
+    <None Remove="Assets\Fonts\OpenSans-Italic.ttf" />
+    <None Remove="Assets\Fonts\OpenSans-Regular.ttf" />
     <None Remove="Assets\Images\book.jpg" />
     <None Remove="Assets\Images\lemon.jpg" />
     <None Remove="Assets\Images\logo.svg" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Assets\Images\book.jpg" />
-    <EmbeddedResource Include="Assets\Images\lemon.jpg" />
+    <EmbeddedResource Include="Assets\Fonts\OpenSans-Bold.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\OpenSans-BoldItalic.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\OpenSans-Italic.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\OpenSans-Regular.ttf" />
+    <EmbeddedResource Include="Assets\Images\book.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\Images\lemon.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Assets\Images\logo.svg" />
   </ItemGroup>
 
@@ -63,6 +76,21 @@
 
   <ItemGroup>
     <Folder Include="Assets\Sounds\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="MigraDocCore.DocumentObjectModel">
+      <HintPath>..\..\lib\MigraDocCore.DocumentObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="MigraDocCore.Rendering">
+      <HintPath>..\..\lib\MigraDocCore.Rendering.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharpCore">
+      <HintPath>..\..\lib\PdfSharpCore.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharpCore.Charting">
+      <HintPath>..\..\lib\PdfSharpCore.Charting.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <ItemGroup>

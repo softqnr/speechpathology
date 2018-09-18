@@ -11,7 +11,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpeechPathology", "src\Spee
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{AF15307C-2938-41EF-9227-47F24ACAF17D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpeechPathology.Tests", "tests\SpeechPathology.Tests\SpeechPathology.Tests.csproj", "{49F243BA-C621-4E99-83B9-47A62814C413}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpeechPathology.Tests", "tests\SpeechPathology.Tests\SpeechPathology.Tests.csproj", "{49F243BA-C621-4E99-83B9-47A62814C413}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{CEC20035-238F-4FFC-AAE9-7E37667B87CC}"
+	ProjectSection(SolutionItems) = preProject
+		lib\MigraDocCore.DocumentObjectModel.dll = lib\MigraDocCore.DocumentObjectModel.dll
+		lib\MigraDocCore.DocumentObjectModel.pdb = lib\MigraDocCore.DocumentObjectModel.pdb
+		lib\MigraDocCore.Rendering.dll = lib\MigraDocCore.Rendering.dll
+		lib\MigraDocCore.Rendering.pdb = lib\MigraDocCore.Rendering.pdb
+		lib\PdfSharpCore.Charting.dll = lib\PdfSharpCore.Charting.dll
+		lib\PdfSharpCore.Charting.pdb = lib\PdfSharpCore.Charting.pdb
+		lib\PdfSharpCore.dll = lib\PdfSharpCore.dll
+		lib\PdfSharpCore.pdb = lib\PdfSharpCore.pdb
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

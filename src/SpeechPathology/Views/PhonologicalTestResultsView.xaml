@@ -8,8 +8,8 @@
     <ContentPage.Content>
         <StackLayout>
             <StackLayout Orientation="Horizontal" HorizontalOptions="End">
-                <Label Text="{Binding SuccessPercentage, StringFormat=Score: '{0:0.0%}'}" FontSize="Medium" Margin="10" HorizontalOptions="End"/>
-                <Button Text="Download XLSX" BackgroundColor="Green" TextColor="White" HorizontalOptions="End" Command="{Binding ExcelExport}"/>
+                <Label Text="{Binding Score, StringFormat=Score: '{0:0.0%}'}" FontSize="Medium" Margin="10" HorizontalOptions="End"/>
+                <Button Text="Export to PDF" BackgroundColor="Green" TextColor="White" HorizontalOptions="End" Command="{Binding PDFExport}"/>
             </StackLayout>
             <ListView x:Name="listView" 
                       VerticalOptions="FillAndExpand"
