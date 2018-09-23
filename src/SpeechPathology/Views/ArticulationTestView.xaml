@@ -20,13 +20,13 @@
             <Label Text="{Binding Text, Mode=OneWay}"
                HorizontalOptions="Center" FontSize="Large" />
 
-            <Button Text="{i18n:Translate Correct}" BackgroundColor="Green" TextColor="White" Command="{Binding AnswerTestCommand}">
+            <Button Text="{i18n:Translate Correct}" BackgroundColor="#358841" TextColor="White" Command="{Binding AnswerTestCommand}">
                 <Button.CommandParameter>
                     <s:Boolean>True</s:Boolean>
                 </Button.CommandParameter>
             </Button>
 
-            <Button Text="{i18n:Translate Incorrect}" BackgroundColor="Red" TextColor="White" Command="{Binding AnswerTestCommand}">
+            <Button Text="{i18n:Translate Incorrect}" BackgroundColor="#f54646" TextColor="White" Command="{Binding AnswerTestCommand}">
                 <Button.CommandParameter>
                     <s:Boolean>False</s:Boolean>
                 </Button.CommandParameter>

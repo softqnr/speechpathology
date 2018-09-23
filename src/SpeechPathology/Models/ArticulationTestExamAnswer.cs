@@ -20,15 +20,16 @@ namespace SpeechPathology.Models
         [ForeignKey(typeof(ArticulationTest))]
         public long ArticulationTestId { get; set; }
 
-        [OneToOne(CascadeOperations = CascadeOperation.CascadeRead)]
+        [OneToOne(CascadeOperations = CascadeOperation.CascadeRead, ReadOnly = true)]
         public ArticulationTest ArticulationTest { get; set; }
 
         public ArticulationTestExamAnswer() { }
-        public ArticulationTestExamAnswer(ArticulationTestExam articulationTestExam, int number, ArticulationTest articulationTest)
+
+        public ArticulationTestExamAnswer(int number, ArticulationTest articulationTest)
         {
-            ArticulationTestExam = articulationTestExam;
             Number = number;
             ArticulationTest = articulationTest;
+            ArticulationTestId = articulationTest.Id;
         }
     }
 }

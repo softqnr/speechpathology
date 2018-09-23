@@ -17,6 +17,7 @@ namespace SpeechPathology.ViewModels
         private List<ArticulationTestExamAnswer> _articulationTestAnswers;
         private IPDFGeneratorService _pdfGeneratorService;
         private double _score;
+        private string _soundPosition;
 
         public ArticulationTestExam ArticulationTestExam
         {
@@ -28,6 +29,12 @@ namespace SpeechPathology.ViewModels
             get => _articulationTestAnswers;
             set => SetProperty(ref _articulationTestAnswers, value);
         }
+        public string SoundPosition
+        {
+            get => _soundPosition;
+            set => SetProperty(ref _soundPosition, value);
+        }
+
         public double Score
         {
             get => _score;
@@ -51,8 +58,8 @@ namespace SpeechPathology.ViewModels
         {
             ArticulationTestExam = (ArticulationTestExam)navigationData;
             ArticulationTestAnswers = ArticulationTestExam.Answers;
-            Score = ArticulationTestExam.Score.Value;
-
+            Score = ArticulationTestExam.Score ?? ArticulationTestExam.Score.Value;
+            SoundPosition = ArticulationTestExam.SoundPosition;
             return Task.FromResult(true);
         }
 

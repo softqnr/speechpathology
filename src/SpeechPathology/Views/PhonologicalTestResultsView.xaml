@@ -5,13 +5,20 @@
              xmlns:i18n="clr-namespace:SpeechPathology.Extensions"
              x:Class="SpeechPathology.Views.PhonologicalTestResultsView"
              Title="Phonological Test Results">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text ="PDF" Command="{Binding PDFExport}"
+                Priority="0" Order="Primary" />
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
+
         <StackLayout>
-            <StackLayout Orientation="Horizontal" HorizontalOptions="End">
-                <Label Text="{Binding Score, StringFormat=Score: '{0:0.0%}'}" FontSize="Medium" Margin="10" HorizontalOptions="End"/>
-                <Button Text="Export to PDF" BackgroundColor="Green" TextColor="White" HorizontalOptions="End" Command="{Binding PDFExport}"/>
+            <StackLayout Orientation="Vertical" BackgroundColor="{StaticResource primary}" Padding="10">
+                <Label Text="{Binding SoundPosition}" FontSize="Medium" TextColor="White"/>
+                <Label Text="{Binding Score, StringFormat=Score: '{0:0.0%}'}" FontSize="Large" TextColor="White"/>
             </StackLayout>
-            <ListView x:Name="listView" 
+            <StackLayout Padding="10,0,10,0">
+            <Label Text="Results" FontSize="Large" />
+            <ListView x:Name="listView"
                       VerticalOptions="FillAndExpand"
                       HasUnevenRows="true"
                       SeparatorVisibility="None"
@@ -56,7 +63,7 @@
                 </ListView.ItemTemplate>
             </ListView>
         </StackLayout>
-  
+        </StackLayout>
 
     </ContentPage.Content>
 </ContentPage>

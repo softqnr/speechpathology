@@ -11,7 +11,6 @@ namespace SpeechPathology.DataServices.Articulation
     public class ArticulationTestService : IArticulationTestService
     {
         private IRepository<ArticulationTest> _repositoryTest;
-
         private IRepository<ArticulationTestExam> _repositoryTestExam;
         private IRepository<ArticulationTestExamAnswer> _repositoryTestExamAnswer;
 
@@ -23,36 +22,30 @@ namespace SpeechPathology.DataServices.Articulation
             _repositoryTestExam = repositoryExam;
             _repositoryTestExamAnswer = repositoryExamAnswer;
         }
-        // TODO: Investigate InsertOrReplaceWithChildrenAsync malfunction
+
         public async Task<ArticulationTestExam> GenerateExam(SoundPosition soundPosition)
         {
+            // Delete previous exams
+            await DeleteAllExams();
+
             // Get position name from enum
             string soundPositionName = Enum.GetName(typeof(SoundPosition), soundPosition);
             // Get tests by sound position
             var tests = await _repositoryTest.GetAsync(predicate: x => x.SoundPosition == soundPositionName,
                 orderBy: x => x.Sound);
-
-            // Delete previous exams
-            List<ArticulationTestExam> exams = await _repositoryTestExam.GetAllWithChildrenAsync();
-            if (exams.Count > 0)
-            {               
-                await _repositoryTestExam.DeleteAllAsync(exams, true);
-            }
-
             // Create new exam
             var exam = new ArticulationTestExam(soundPositionName);
-            int examId = await _repositoryTestExam.InsertAsync(exam);
-            // Create exam answers
+            // Create exam answers for each test
             int indexNumber = 0;
-            var answers = tests.Select(test =>
-            {
-                indexNumber += 1;
-                return new ArticulationTestExamAnswer(exam, indexNumber, test);
-            }).ToList();
-            await _repositoryTestExamAnswer.InsertAllWithChildrenAsync(answers, true);
-            
-            // Get exam with children
-            return await _repositoryTestExam.GetWithChildrenAsync(exam.Id, true); ;
+            exam.Answers = tests.Select(test =>
+                {
+                    indexNumber += 1;
+                    return new ArticulationTestExamAnswer(indexNumber, test);
+                }).ToList();
+            // Save exam
+            await _repositoryTestExam.InsertWithChildrenAsync(exam, true);
+
+            return exam;
         }
 
         public async Task<int> Answer(ArticulationTestExamAnswer articulationTestAnwser, bool isCorrect)
@@ -69,6 +62,15 @@ namespace SpeechPathology.DataServices.Articulation
             await _repositoryTestExam.UpdateAsync(exam);
 
             return await _repositoryTestExam.GetWithChildrenAsync(exam.Id, true);
+        }
+
+        public async Task DeleteAllExams()
+        {
+            List<ArticulationTestExam> exams = await _repositoryTestExam.GetAllWithChildrenAsync();
+            if (exams.Count > 0)
+            {
+                await _repositoryTestExam.DeleteAllAsync(exams, true);
+            }
         }
     }
 }

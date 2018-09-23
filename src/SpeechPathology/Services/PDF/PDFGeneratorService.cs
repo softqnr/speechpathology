@@ -120,7 +120,7 @@ namespace SpeechPathology.Services.PDF
                 iCount++;
             }
             // Score column
-            row.Cells[iCount].AddParagraph($"Score: {articulationTestExam.Score:0.0%}");
+            row.Cells[iCount].AddParagraph($"{articulationTestExam.Score:0.0%}");
 
             // Footer
             par = _section.Footers.Primary.AddParagraph();
