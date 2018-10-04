@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:i18n="clr-namespace:SpeechPathology.Extensions"
              xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
-             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              x:Class="SpeechPathology.Views.MainView"
              NavigationPage.HasNavigationBar="false">
     <StackLayout Spacing="0">
@@ -59,10 +58,10 @@
                      Grid.Column = "2" Grid.Row = "0" Grid.RowSpan="2"
                      />
         </Grid>
-        
-        <StackLayout Padding="10" Orientation="Horizontal" VerticalOptions="End">
-            <ffimageloading:CachedImage BackgroundColor="Transparent" 
-                                          Source="erasmusplus_logo.png" />
+
+        <StackLayout Padding="10">
+            <ffimageloadingsvg:SvgCachedImage WidthRequest="180" BackgroundColor="Transparent" HorizontalOptions="Start"
+                                          Source="resource://SpeechPathology.Assets.Images.erasmusplus_logo.svg" />
         </StackLayout>
     </StackLayout>
     

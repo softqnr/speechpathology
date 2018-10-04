@@ -9,12 +9,16 @@
 
     <ContentPage.Content>
         <StackLayout Padding="10, 10">
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                <Label Text="{Binding TestIndex, Mode=OneWay}" FontSize="Large" />
-                <Label Text=" {i18n:Translate of} " FontSize="Large" />
-                <Label Text="{Binding TestCount, Mode=OneWay}" FontSize="Large" />
-            </StackLayout>
-            
+            <Label HorizontalOptions="Center" HorizontalTextAlignment="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="{Binding TestIndex, Mode=OneWay}" FontSize="Large" />
+                        <Span Text="{i18n:Translate of}" FontSize="Large" />
+                        <Span Text="{Binding TestCount, Mode=OneWay}" FontSize="Large" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
             <ffimageloading:CachedImage Source="{Binding Image}" Aspect="AspectFit"/>
             
             <Label Text="{Binding Text, Mode=OneWay}"

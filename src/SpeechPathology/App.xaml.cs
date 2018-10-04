@@ -2,6 +2,7 @@
 using Plugin.Multilingual;
 using SpeechPathology.Data;
 using SpeechPathology.DataServices.Articulation;
+using SpeechPathology.DataServices.Flashcard;
 using SpeechPathology.Interfaces;
 using SpeechPathology.Models;
 using SpeechPathology.Resources;
@@ -63,7 +64,8 @@ namespace SpeechPathology
             Container.RegisterType<IRepository<ArticulationTest>, Repository<ArticulationTest>>(new InjectionConstructor(DatabaseFilePath));
             Container.RegisterType<IRepository<ArticulationTestExam>, Repository<ArticulationTestExam>>(new InjectionConstructor(DatabaseFilePath));
             Container.RegisterType<IRepository<ArticulationTestExamAnswer>, Repository<ArticulationTestExamAnswer>>(new InjectionConstructor(DatabaseFilePath));
-            
+            Container.RegisterType<IRepository<Flashcard>, Repository<Flashcard>>(new InjectionConstructor(DatabaseFilePath));
+
             // Services
             Container.RegisterInstance(NavigationService, new ContainerControlledLifetimeManager());
             Container.RegisterType<IDialogService, DialogService>();
@@ -71,6 +73,7 @@ namespace SpeechPathology
             
             // Data services
             Container.RegisterType<IArticulationTestService, ArticulationTestService>();
+            Container.RegisterType<IFlashcardService, FlashcardService>();
 
             // View models
             Container.RegisterType<MainViewModel>();

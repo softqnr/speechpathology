@@ -121,8 +121,7 @@ namespace SpeechPathology.ViewModels
 
                 TestIndex = _articulationTestAnswer.Number.ToString();
                 Text = _articulationTestAnswer.ArticulationTest.Text;
-                //ImageSource = ImageSource.FromResource("SpeechPathology.Assets.Images." + _articulationTestAnswer.ArticulationTest.Image);
-                Image = "resource://SpeechPathology.Assets.Images." + _articulationTestAnswer.ArticulationTest.Image;
+                Image = $"resource://SpeechPathology.Assets.Images.{_articulationTestAnswer.ArticulationTest.LanguageCode}.{_articulationTestAnswer.ArticulationTest.Image}";
             }
             return moved;
         }

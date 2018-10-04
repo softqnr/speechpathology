@@ -151,7 +151,7 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to of.
+        ///   Looks up a localized string similar to  of .
         /// </summary>
         internal static string of {
             get {
