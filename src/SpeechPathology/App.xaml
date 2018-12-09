@@ -16,6 +16,7 @@
             <Color x:Key="divider">#BDBDBD</Color>
             <!--  converters  -->
             <converters:BoolToColorConverter x:Key="BoolToColorConverter" />
+            <converters:RandomColorConverter x:Key="RandomColorConverter" />
         </ResourceDictionary>
     </Application.Resources>
 </Application>

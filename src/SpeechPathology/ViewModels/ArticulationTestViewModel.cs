@@ -18,7 +18,7 @@ namespace SpeechPathology.ViewModels
         private ArticulationTestExamAnswer _articulationTestAnswer;
 
         private string _testIndex;
-        private int _testCount;
+        private int? _testCount;
         private string _text;
         private string _image;
 
@@ -30,7 +30,7 @@ namespace SpeechPathology.ViewModels
             set => SetProperty(ref _testIndex, value);
         }
 
-        public int TestCount
+        public int? TestCount
         {
             get => _testCount;
             set => SetProperty(ref _testCount, value);

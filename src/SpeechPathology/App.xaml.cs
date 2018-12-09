@@ -1,4 +1,5 @@
 ﻿using CommonServiceLocator;
+using DLToolkit.Forms.Controls;
 using Plugin.Multilingual;
 using SpeechPathology.Data;
 using SpeechPathology.DataServices.Articulation;
@@ -31,6 +32,7 @@ namespace SpeechPathology
         public App()
         {
             InitializeComponent();
+            FlowListView.Init();
             // Localization
             AppResources.Culture = CrossMultilingual.Current.DeviceCultureInfo;
             // Init DB
