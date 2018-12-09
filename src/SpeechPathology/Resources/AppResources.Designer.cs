@@ -160,6 +160,33 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Select excluded sound.
+        /// </summary>
+        internal static string Selectexcludedsound {
+            get {
+                return ResourceManager.GetString("Selectexcludedsound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select sound.
+        /// </summary>
+        internal static string Selectsound {
+            get {
+                return ResourceManager.GetString("Selectsound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Skip.
+        /// </summary>
+        internal static string Skip {
+            get {
+                return ResourceManager.GetString("Skip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Worksheets.
         /// </summary>
         internal static string Worksheets {

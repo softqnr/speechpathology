@@ -5,10 +5,10 @@
              xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
              x:Class="SpeechPathology.Views.MainView"
              NavigationPage.HasNavigationBar="false">
-    <StackLayout Spacing="0">
-        <StackLayout Padding="10" VerticalOptions="Start" BackgroundColor="White">
+    <StackLayout Spacing="0" VerticalOptions="FillAndExpand">
+        <StackLayout Padding="8" VerticalOptions="Start" BackgroundColor="White">
             <ffimageloadingsvg:SvgCachedImage WidthRequest="120" HeightRequest="120" BackgroundColor="Transparent"
-                                          Source="resource://SpeechPathology.Assets.Images.logo.svg" HorizontalOptions="CenterAndExpand"/>
+                                          Source="logo.svg" HorizontalOptions="CenterAndExpand"/>
             <Label Text="Speech Pathology Tools" TextColor="{StaticResource accent}" FontSize="Medium" HorizontalOptions="CenterAndExpand" />
         </StackLayout>
         
@@ -16,7 +16,7 @@
             WidthRequest="300"
             HeightRequest="300"
             VerticalOptions="Center"
-          HorizontalOptions="Fill">
+          HorizontalOptions="FillAndExpand">
             
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
@@ -61,7 +61,7 @@
 
         <StackLayout Padding="10">
             <ffimageloadingsvg:SvgCachedImage WidthRequest="180" BackgroundColor="Transparent" HorizontalOptions="Start"
-                                          Source="resource://SpeechPathology.Assets.Images.erasmusplus_logo.svg" />
+                                          Source="erasmusplus_logo.svg" />
         </StackLayout>
     </StackLayout>
     

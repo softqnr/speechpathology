@@ -153,4 +153,13 @@
   <data name="Incorrect" xml:space="preserve">
     <value>Incorrect</value>
   </data>
+  <data name="Selectexcludedsound" xml:space="preserve">
+    <value>Select excluded sound</value>
+  </data>
+  <data name="Selectsound" xml:space="preserve">
+    <value>Select sound</value>
+  </data>
+  <data name="Skip" xml:space="preserve">
+    <value>Skip</value>
+  </data>
 </root>

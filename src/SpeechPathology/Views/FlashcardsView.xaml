@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:i18n="clr-namespace:SpeechPathology.Extensions"
              xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+             xmlns:controls="clr-namespace:SpeechPathology.Controls"
              x:Class="SpeechPathology.Views.FlashcardsView"
              Title="Flashcards">
     <ContentPage.Resources>
@@ -16,10 +17,15 @@
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
+    <ContentPage.ToolbarItems>
+        <controls:HideableToolbarItem Name="Skip" Priority="0" Order="Primary" 
+                                      Command="" IsVisible="{Binding SkipIsVisible}" />
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
-
-
-        <flv:FlowListView FlowColumnCount="5" SeparatorVisibility="None" HasUnevenRows="false" RowHeight="120" FlowColumnMinWidth="120"
+        <StackLayout>
+            <Label Text="{Binding LabelText}" TextColor="{StaticResource accent}" FontSize="Large" HorizontalOptions="Center" />
+            
+        <flv:FlowListView FlowColumnCount="5" SeparatorVisibility="None" HasUnevenRows="false" RowHeight="110" FlowColumnMinWidth="110"
 	        FlowItemTappedCommand="{Binding ItemTappedCommand}" FlowLastTappedItem="{Binding LastTappedItem}"
 	        FlowItemsSource="{Binding Sounds}" >
 
@@ -33,5 +39,6 @@
             </flv:FlowListView.FlowColumnTemplate>
 
         </flv:FlowListView>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

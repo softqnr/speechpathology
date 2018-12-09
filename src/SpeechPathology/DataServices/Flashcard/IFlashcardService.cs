@@ -1,4 +1,5 @@
 ﻿using SpeechPathology.Models;
+using SpeechPathology.Models.Enums;
 using System.Collections.Generic;
 
 namespace SpeechPathology.DataServices.Flashcard
@@ -7,6 +8,6 @@ namespace SpeechPathology.DataServices.Flashcard
     {
         List<string> GetSounds();
 
-        List<Models.Flashcard> GetFlashcards(string sound, string excludedSound);
+        List<Models.Flashcard> GetFlashcards(SoundPosition position, string sound, string excludedSound);
     }
 }

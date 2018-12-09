@@ -13,6 +13,9 @@ namespace SpeechPathology.ViewModels
     {
         private IFlashcardService _flashcardService;
         private IList<string> _sounds;
+        private string _selectedSound;
+        private string _labelText;
+        private bool _skipIsVisible;
         private object _lastTappedItem;
         public IList<string> Sounds
         {
@@ -29,16 +32,22 @@ namespace SpeechPathology.ViewModels
                 });
             }
         }
-
-        public Color RandomColor
-        {
-            get => GenerateRandomColor();
-        }
-
         public object LastTappedItem
         {
             get => _lastTappedItem;
             set => SetProperty(ref _lastTappedItem, value);
+        }
+
+        public string LabelText
+        {
+            get => _labelText;
+            set => SetProperty(ref _labelText, value);
+        }
+
+        public bool SkipIsVisible
+        {
+            get => _skipIsVisible;
+            set => SetProperty(ref _skipIsVisible, value);
         }
 
         public FlashcardsViewModel(IFlashcardService flashcardService)
@@ -48,36 +57,43 @@ namespace SpeechPathology.ViewModels
 
         public override async Task InitializeAsync(object navigationData)
         {
-            await LoadData();
+            await LoadData(navigationData);
         }
 
-        private async Task LoadData(/*SoundPosition soundPosition*/)
+        private async Task LoadData(object navigationData)
         {
             // Get sounds
             Sounds = _flashcardService.GetSounds();
+
+            _selectedSound = navigationData as string;
+            if (_selectedSound == null)
+            {
+                LabelText = "Select sound";
+            }
+            else
+            {
+                LabelText = "Select excluded sound";
+                SkipIsVisible = true;
+                Sounds.Remove(_selectedSound);
+            }
+    
             await Task.FromResult(true);
         }
-        public async Task OnLetterSelected(string letter)
+        public async Task OnLetterSelected(string s)
         {
             var item = LastTappedItem as string;
             if (item != null)
-                System.Diagnostics.Debug.WriteLine("Tapped {0}", item);
-
-            await Task.FromResult(true);
-        }
-
-        private Color GenerateRandomColor()
-        {
-            Random random = new Random();
-
-            // to create lighter colors:
-            // take a random integer between 0 & 128 (rather than between 0 and 255)
-            // and then add 127 to make the color lighter
-            int red = random.Next(128) + 127;
-            int green = random.Next(128) + 127;
-            int blue = random.Next(128) + 127;
-
-            return Color.FromRgba(red, green, blue, 255);
+            {
+                if (_selectedSound != null)
+                {
+                    //await NavigationService.NavigateToAsync<FlashcardsViewModel>(item);
+                    DialogService.ShowToast(s, 1000);
+                }
+                else
+                {
+                    await NavigationService.NavigateToAsync<FlashcardsViewModel>(item);
+                }
+            }
         }
     }
 }
