@@ -245,8 +245,11 @@
     <Compile Update="Views\BellCurveChartView.xaml.cs">
       <DependentUpon>BellCurveChartView.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\FlashcardsView.xaml.cs">
-      <DependentUpon>FlashcardsViewxaml</DependentUpon>
+    <Compile Update="Views\FlashcardsSelectSoundView.xaml.cs">
+      <DependentUpon>FlashcardsSelectSoundView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\FlashcardsTestView.xaml.cs">
+      <DependentUpon>FlashcardsTestView.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\WorksheetsView.xaml.cs">
       <DependentUpon>WorksheetsView.xaml</DependentUpon>

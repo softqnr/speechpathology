@@ -162,4 +162,7 @@
   <data name="Skip" xml:space="preserve">
     <value>Skip</value>
   </data>
+  <data name="Play" xml:space="preserve">
+    <value>Play</value>
+  </data>
 </root>

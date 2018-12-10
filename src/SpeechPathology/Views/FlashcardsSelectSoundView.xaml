@@ -4,7 +4,7 @@
              xmlns:i18n="clr-namespace:SpeechPathology.Extensions"
              xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
              xmlns:controls="clr-namespace:SpeechPathology.Controls"
-             x:Class="SpeechPathology.Views.FlashcardsView"
+             x:Class="SpeechPathology.Views.FlashcardsSelectSoundView"
              Title="Flashcards">
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -25,7 +25,7 @@
         <StackLayout>
             <Label Text="{Binding LabelText}" TextColor="{StaticResource accent}" FontSize="Large" HorizontalOptions="Center" />
             
-        <flv:FlowListView FlowColumnCount="5" SeparatorVisibility="None" HasUnevenRows="false" RowHeight="110" FlowColumnMinWidth="110"
+        <flv:FlowListView FlowColumnCount="5" SeparatorVisibility="None" HasUnevenRows="false" RowHeight="100" FlowColumnMinWidth="100"
 	        FlowItemTappedCommand="{Binding ItemTappedCommand}" FlowLastTappedItem="{Binding LastTappedItem}"
 	        FlowItemsSource="{Binding Sounds}" >
 

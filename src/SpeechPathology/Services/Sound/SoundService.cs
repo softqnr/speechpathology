@@ -3,7 +3,7 @@ using Xamarin.Forms;
 
 namespace SpeechPathology.Services.Sound
 {
-    public class SoundService
+    public class SoundService : ISoundService
     {
         private ISoundService _soundProvider;
         public SoundService()

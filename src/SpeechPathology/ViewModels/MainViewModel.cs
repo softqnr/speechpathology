@@ -54,7 +54,7 @@ namespace SpeechPathology.ViewModels
             {
                 return new Command(async () =>
                 {
-                    await NavigationService.NavigateToAsync<FlashcardsViewModel>();
+                    await NavigationService.NavigateToAsync<FlashcardsSelectSoundViewModel>();
                 });
             }
         }

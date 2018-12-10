@@ -10,6 +10,7 @@ using SpeechPathology.Resources;
 using SpeechPathology.Services.Dialog;
 using SpeechPathology.Services.Navigation;
 using SpeechPathology.Services.PDF;
+using SpeechPathology.Services.Sound;
 using SpeechPathology.ViewModels;
 using SpeechPathology.Views;
 using SQLite;
@@ -48,7 +49,8 @@ namespace SpeechPathology
             NavigationService.Configure(typeof(PhonologicalTestResultsViewModel), typeof(PhonologicalTestResultsView));
             NavigationService.Configure(typeof(BellCurveChartViewModel), typeof(BellCurveChartView));
             NavigationService.Configure(typeof(AgeCalculatorViewModel), typeof(AgeCalculatorView));
-            NavigationService.Configure(typeof(FlashcardsViewModel), typeof(FlashcardsView));
+            NavigationService.Configure(typeof(FlashcardsSelectSoundViewModel), typeof(FlashcardsSelectSoundView));
+            NavigationService.Configure(typeof(FlashcardsTestViewModel), typeof(FlashcardsTestView));
             NavigationService.Configure(typeof(WorksheetsViewModel), typeof(WorksheetsView));
             NavigationService.Configure(typeof(AboutViewModel), typeof(AboutView));
             await NavigationService.InitializeAsync();
@@ -70,6 +72,7 @@ namespace SpeechPathology
 
             // Services
             Container.RegisterInstance(NavigationService, new ContainerControlledLifetimeManager());
+            Container.RegisterType<ISoundService, SoundService>();
             Container.RegisterType<IDialogService, DialogService>();
             Container.RegisterType<IPDFGeneratorService, PDFGeneratorService>();
             
@@ -83,7 +86,8 @@ namespace SpeechPathology
             Container.RegisterType<PhonologicalTestResultsViewModel>();
             Container.RegisterType<BellCurveChartViewModel>();
             Container.RegisterType<AgeCalculatorViewModel>();
-            Container.RegisterType<FlashcardsViewModel>();
+            Container.RegisterType<FlashcardsSelectSoundViewModel>();
+            Container.RegisterType<FlashcardsTestViewModel>();
             Container.RegisterType<WorksheetsViewModel>();
             Container.RegisterType<AboutViewModel>();
 

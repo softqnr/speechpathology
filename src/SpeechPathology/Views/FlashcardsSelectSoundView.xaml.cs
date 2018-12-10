@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace SpeechPathology.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class FlashcardsView : ContentPage
+	public partial class FlashcardsSelectSoundView : ContentPage
 	{
-		public FlashcardsView()
+		public FlashcardsSelectSoundView()
 		{
 			InitializeComponent ();
 		}

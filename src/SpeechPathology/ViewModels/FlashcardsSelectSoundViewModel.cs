@@ -9,7 +9,7 @@ using Xamarin.Forms;
 
 namespace SpeechPathology.ViewModels
 {
-    public class FlashcardsViewModel : ViewModelBase
+    public class FlashcardsSelectSoundViewModel : ViewModelBase
     {
         private IFlashcardService _flashcardService;
         private IList<string> _sounds;
@@ -50,7 +50,7 @@ namespace SpeechPathology.ViewModels
             set => SetProperty(ref _skipIsVisible, value);
         }
 
-        public FlashcardsViewModel(IFlashcardService flashcardService)
+        public FlashcardsSelectSoundViewModel(IFlashcardService flashcardService)
         {
             _flashcardService = flashcardService;
         }
@@ -86,12 +86,11 @@ namespace SpeechPathology.ViewModels
             {
                 if (_selectedSound != null)
                 {
-                    //await NavigationService.NavigateToAsync<FlashcardsViewModel>(item);
-                    DialogService.ShowToast(s, 1000);
+                    await NavigationService.NavigateToAsync<FlashcardsTestViewModel>(new[] { _selectedSound, item });
                 }
                 else
                 {
-                    await NavigationService.NavigateToAsync<FlashcardsViewModel>(item);
+                    await NavigationService.NavigateToAsync<FlashcardsSelectSoundViewModel>(item);
                 }
             }
         }
