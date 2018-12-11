@@ -32,6 +32,16 @@ namespace SpeechPathology.ViewModels
                 });
             }
         }
+        public ICommand SkipClickedCommand
+        {
+            get
+            {
+                return new Command(async () =>
+                {
+                    await OnSkipClicked();
+                });
+            }
+        }
         public object LastTappedItem
         {
             get => _lastTappedItem;
@@ -76,7 +86,7 @@ namespace SpeechPathology.ViewModels
                 SkipIsVisible = true;
                 Sounds.Remove(_selectedSound);
             }
-    
+
             await Task.FromResult(true);
         }
         public async Task OnLetterSelected(string s)
@@ -87,12 +97,18 @@ namespace SpeechPathology.ViewModels
                 if (_selectedSound != null)
                 {
                     await NavigationService.NavigateToAsync<FlashcardsTestViewModel>(new[] { _selectedSound, item });
+                    await NavigationService.RemoveLastFromBackStackAsync();
                 }
                 else
                 {
                     await NavigationService.NavigateToAsync<FlashcardsSelectSoundViewModel>(item);
                 }
             }
+        }
+        public async Task OnSkipClicked()
+        {
+            await NavigationService.NavigateToAsync<FlashcardsTestViewModel>(new[] { _selectedSound, "" });
+            await NavigationService.RemoveLastFromBackStackAsync();
         }
     }
 }

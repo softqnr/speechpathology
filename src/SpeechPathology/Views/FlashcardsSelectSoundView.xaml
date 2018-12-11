@@ -19,7 +19,7 @@
     </ContentPage.Resources>
     <ContentPage.ToolbarItems>
         <controls:HideableToolbarItem Name="Skip" Priority="0" Order="Primary" 
-                                      Command="" IsVisible="{Binding SkipIsVisible}" />
+                                      Command="{Binding SkipClickedCommand}" IsVisible="{Binding SkipIsVisible}" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>

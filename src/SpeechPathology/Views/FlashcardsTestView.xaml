@@ -3,17 +3,35 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:i18n="clr-namespace:SpeechPathology.Extensions"
              xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:cv="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
              x:Class="SpeechPathology.Views.FlashcardsTestView"
              Title="Flashcards">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="{Binding Text, Mode=OneWay}"
-               HorizontalOptions="Center" FontSize="Large" />
+            <cv:CarouselView ItemsSource="{Binding Flashcards}" x:Name="Flashcards">
+            <cv:CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
 
-            <ffimageloading:CachedImage x:Name="image" Source="{Binding ImageSource}" Aspect="AspectFit"/>
+                            <Label TextColor="{StaticResource primary_dark}" Grid.Row="0" Text="{Binding Text}" FontSize="22" HorizontalOptions="Center" Margin="10"/>
 
-            <Button Text="{i18n:Translate Play}" BackgroundColor="#358841" TextColor="White" WidthRequest="60" HeightRequest="60" HorizontalOptions="Center"
-                    BorderRadius="30" Command="{Binding PlaySoundCommand}" CommandParameter="{Binding Sound}"/>
+                            <ffimageloading:CachedImage x:Name="image" Source="{Binding Imagefile}" 
+                                                        Aspect="AspectFit" Grid.Row="1" VerticalOptions="Center"/>
+
+                        </Grid>
+                    </DataTemplate>
+            </cv:CarouselView.ItemTemplate>
+        </cv:CarouselView>
+            <StackLayout  BackgroundColor="{StaticResource primary_light}" Padding="12">
+                <Button Text="{i18n:Translate Play}" BackgroundColor="{StaticResource accent}" TextColor="White" 
+                                        WidthRequest="60" HeightRequest="60" HorizontalOptions="Center" BorderRadius="30" 
+                                        Command="{Binding PlaySoundCommand}"
+                                        CommandParameter="{Binding Source={x:Reference Flashcards}, Path=Item.Sound}"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

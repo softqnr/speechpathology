@@ -44,7 +44,14 @@ namespace SpeechPathology.DataServices.Flashcard
 
         public List<Models.Flashcard> GetFlashcards(SoundPosition position, string sound, string excludedSound)
         {
-            throw new System.NotImplementedException();
+            List<Models.Flashcard> flashcards = new List<Models.Flashcard>
+                       {
+                            new Models.Flashcard() { Text = "Cat", Sound = "books.mp3", Imagefile = "cat.jpg" },
+                            new Models.Flashcard() { Text = "Tree", Sound = "bike.mp3", Imagefile = "tree.jpg" },
+                            new Models.Flashcard() { Text = "Brushes", Sound = "brushes.mp3", Imagefile = "cherries.jpg" },
+                        };
+
+            return flashcards;
         }
     }
 }
