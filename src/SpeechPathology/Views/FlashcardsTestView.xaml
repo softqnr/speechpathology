@@ -17,7 +17,7 @@
                                 <RowDefinition Height="*"/>
                             </Grid.RowDefinitions>
 
-                            <Label TextColor="{StaticResource primary_dark}" Grid.Row="0" Text="{Binding Text}" FontSize="22" HorizontalOptions="Center" Margin="10"/>
+                            <Label TextColor="{StaticResource primary_dark}" Grid.Row="0" Text="{Binding Text}" FontSize="26" HorizontalOptions="Center" Margin="10"/>
 
                             <ffimageloading:CachedImage x:Name="image" Source="{Binding Imagefile}" 
                                                         Aspect="AspectFit" Grid.Row="1" VerticalOptions="Center"/>
