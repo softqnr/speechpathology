@@ -1,13 +1,16 @@
 ﻿using SpeechPathology.Models;
 using SpeechPathology.Models.Enums;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace SpeechPathology.DataServices.Flashcard
 {
     public interface IFlashcardService
     {
-        List<string> GetSounds();
+        Task<List<string>> GetSounds();
 
-        List<Models.Flashcard> GetFlashcards(SoundPosition position, string sound, string excludedSound);
+        Task<List<Models.Flashcard>> GetFlashcards(SoundPosition soundPosition, string sound, string excludedSound);
+
+        Task<List<string>> GetSoundPositions(string soundPosition, string excludedSound);
     }
 }

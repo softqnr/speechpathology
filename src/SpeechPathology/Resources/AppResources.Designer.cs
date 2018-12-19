@@ -133,6 +133,15 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Loading....
+        /// </summary>
+        internal static string Loading {
+            get {
+                return ResourceManager.GetString("Loading", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Medial.
         /// </summary>
         internal static string Medial {
@@ -165,6 +174,15 @@ namespace SpeechPathology.Resources {
         internal static string Play {
             get {
                 return ResourceManager.GetString("Play", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Repeat.
+        /// </summary>
+        internal static string Repeat {
+            get {
+                return ResourceManager.GetString("Repeat", resourceCulture);
             }
         }
         

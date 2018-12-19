@@ -1,12 +1,13 @@
 ﻿using SpeechPathology.Data;
 using SpeechPathology.Models;
 using SpeechPathology.Models.Enums;
+using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace SpeechPathology.DataServices.Flashcard
 {
-
     public class FlashcardService : IFlashcardService
     {
         private IRepository<Models.Flashcard> _repositoryFlashcard;
@@ -15,41 +16,35 @@ namespace SpeechPathology.DataServices.Flashcard
             _repositoryFlashcard = repositoryFlashcard;
         }
 
-        public List<string> GetSounds()
+        public async Task<List<string>> GetSounds()
         {
-            return new List<string> { "m",
-                "n",
-                "h",
-                "p",
-                "b",
-                "t",
-                "k",
-                "w",
-                "d",
-                "g",
-                "f",
-                "ng",
-                "l",
-                "s",
-                "v",
-                "y",
-                "ch",
-                "r",
-                "j",
-                "sh",
-                "th",
-                "zh",
-            };
+            var flashcards = await _repositoryFlashcard.AsQueryable().OrderBy(x => x.Sound).ToListAsync();
+
+            var sounds = flashcards.GroupBy(x => new { x.Sound }).Select(x => x.FirstOrDefault()).Select(x => x.Sound).ToList<string>();
+
+            return sounds;
         }
 
-        public List<Models.Flashcard> GetFlashcards(SoundPosition position, string sound, string excludedSound)
+        public async Task<List<string>> GetSoundPositions(string sound, string excludedSound)
         {
-            List<Models.Flashcard> flashcards = new List<Models.Flashcard>
-                       {
-                            new Models.Flashcard() { Text = "Cat", Sound = "books.mp3", Imagefile = "cat.jpg" },
-                            new Models.Flashcard() { Text = "Tree", Sound = "bike.mp3", Imagefile = "tree.jpg" },
-                            new Models.Flashcard() { Text = "Brushes", Sound = "brushes.mp3", Imagefile = "cherries.jpg" },
-                        };
+            var flashcards = await _repositoryFlashcard.GetAsync<String>(predicate: x => x.Sound == sound
+                && (excludedSound == "" || !x.Text.Contains(excludedSound)));
+
+            var soundPositions = flashcards.GroupBy(x => new { x.SoundPosition }).Select(x => x.FirstOrDefault()).Select(x => x.SoundPosition).ToList<string>();
+            
+            // Convert to Enum
+            //var soundPositionsEnum =  soundPositions.Select(s => (FlashcardSoundPosition)Enum.Parse(typeof(FlashcardSoundPosition), s, true)).ToList();
+
+            return soundPositions;
+        }
+
+        public async Task<List<Models.Flashcard>> GetFlashcards(SoundPosition soundPosition, string sound, string excludedSound)
+        {
+            string soundPositionName = Enum.GetName(typeof(SoundPosition), soundPosition);
+
+            var flashcards = await _repositoryFlashcard.GetAsync<Models.Flashcard>(predicate: x => x.Sound == sound 
+                && x.SoundPosition == soundPositionName 
+                && (excludedSound == "" || !x.Text.Contains(excludedSound)));
 
             return flashcards;
         }

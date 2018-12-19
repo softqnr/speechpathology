@@ -4,9 +4,7 @@ using SpeechPathology.Models.Enums;
 using SpeechPathology.Services.Navigation;
 using SpeechPathology.Services.Sound;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -35,32 +33,25 @@ namespace SpeechPathology.ViewModels
                 });
             }
         }
-
         public FlashcardsTestViewModel(IFlashcardService flashcardService, ISoundService soundService)
         {
             _flashcardService = flashcardService;
             _soundService = soundService;
         }
-
         public override async Task InitializeAsync(object navigationData)
         {
             if (navigationData != null)
             {
                 string[]  navigationDataArray =  (string[])navigationData;
-
-                await LoadData(navigationDataArray[0], navigationDataArray[1]);
+                Enum.TryParse<SoundPosition>(navigationDataArray[0], out var soundPosition);
+                await LoadData(soundPosition, navigationDataArray[1], navigationDataArray[2]);
             }
         }
-
-        private async Task LoadData(string sound, string excludedSound)
+        private async Task LoadData(SoundPosition soundPosition, string sound, string excludedSound)
         {
             // Get flashcards
-            Flashcards = new ObservableCollection<Flashcard>(_flashcardService.GetFlashcards(SoundPosition.Initial, sound, excludedSound));
-       
-            //ImageSource = ImageSource.FromFile("cherries.jpg");
-            //Text = "Cheries";
-            //Sound = "bike.mp3";
-            await Task.FromResult(true);
+            var flashcards = await _flashcardService.GetFlashcards(soundPosition, sound, excludedSound);
+            Flashcards = new ObservableCollection<Flashcard>(flashcards);
         }
         public async Task OnPlaySound(string fileName)
         {

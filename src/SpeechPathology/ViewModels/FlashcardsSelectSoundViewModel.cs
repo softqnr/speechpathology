@@ -12,12 +12,12 @@ namespace SpeechPathology.ViewModels
     public class FlashcardsSelectSoundViewModel : ViewModelBase
     {
         private IFlashcardService _flashcardService;
-        private IList<string> _sounds;
+        private List<string> _sounds;
         private string _selectedSound;
         private string _labelText;
         private bool _skipIsVisible;
         private object _lastTappedItem;
-        public IList<string> Sounds
+        public List<string> Sounds
         {
             get => _sounds;
             set => SetProperty(ref _sounds, value);
@@ -73,16 +73,16 @@ namespace SpeechPathology.ViewModels
         private async Task LoadData(object navigationData)
         {
             // Get sounds
-            Sounds = _flashcardService.GetSounds();
+            Sounds = await _flashcardService.GetSounds();
 
             _selectedSound = navigationData as string;
             if (_selectedSound == null)
             {
-                LabelText = "Select sound";
+                LabelText = Resources.AppResources.Selectsound;
             }
             else
             {
-                LabelText = "Select excluded sound";
+                LabelText = Resources.AppResources.Selectexcludedsound;
                 SkipIsVisible = true;
                 Sounds.Remove(_selectedSound);
             }
@@ -96,7 +96,7 @@ namespace SpeechPathology.ViewModels
             {
                 if (_selectedSound != null)
                 {
-                    await NavigationService.NavigateToAsync<FlashcardsTestViewModel>(new[] { _selectedSound, item });
+                    await NavigationService.NavigateToAsync<FlashcardsSelectSoundPositionViewModel>(new[] { _selectedSound, item });
                     await NavigationService.RemoveLastFromBackStackAsync();
                 }
                 else

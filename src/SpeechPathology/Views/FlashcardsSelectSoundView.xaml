@@ -8,6 +8,10 @@
              Title="Flashcards">
     <ContentPage.Resources>
         <ResourceDictionary>
+            <x:Array x:Key="rotationParams" Type="{x:Type x:Int32}">
+                <x:Int32>-6</x:Int32>
+                <x:Int32>6</x:Int32>
+            </x:Array>
             <Style x:Key="plainButton" TargetType="Label">
                 <Setter Property="TextColor" Value="White" />
                 <Setter Property="FontSize" Value="48" />
@@ -25,20 +29,20 @@
         <StackLayout>
             <Label Text="{Binding LabelText}" TextColor="{StaticResource accent}" FontSize="Large" HorizontalOptions="Center" />
             
-        <flv:FlowListView FlowColumnCount="5" SeparatorVisibility="None" HasUnevenRows="false" RowHeight="100" FlowColumnMinWidth="100"
-	        FlowItemTappedCommand="{Binding ItemTappedCommand}" FlowLastTappedItem="{Binding LastTappedItem}"
-	        FlowItemsSource="{Binding Sounds}" >
+            <flv:FlowListView FlowColumnCount="5" SeparatorVisibility="None" HasUnevenRows="false" RowHeight="100" FlowColumnMinWidth="100"
+	            FlowItemTappedCommand="{Binding ItemTappedCommand}" FlowLastTappedItem="{Binding LastTappedItem}"
+	            FlowItemsSource="{Binding Sounds}" >
 
-            <flv:FlowListView.FlowColumnTemplate>
-                <DataTemplate>
-                    <Frame CornerRadius="10" BackgroundColor="{Binding ., Converter={StaticResource RandomColorConverter}}" Padding="4" Margin="4">
-                        <Label Text="{Binding .}" XAlign="Center" YAlign="Center" 
-                                HorizontalOptions="Fill" VerticalOptions="Fill" Style="{StaticResource plainButton}" />
-                    </Frame>
-                </DataTemplate>
-            </flv:FlowListView.FlowColumnTemplate>
+                <flv:FlowListView.FlowColumnTemplate>
+                    <DataTemplate>
+                        <Frame CornerRadius="10" BackgroundColor="{Binding ., Converter={StaticResource RandomColorConverter}}" Padding="4" Margin="4">
+                            <Label Text="{Binding .}" Rotation="{Binding ., Converter={StaticResource RandomNumberConverter}, ConverterParameter={StaticResource rotationParams}}"
+                                   XAlign="Center" YAlign="Center" HorizontalOptions="Fill" VerticalOptions="Fill" Style="{StaticResource plainButton}" />
+                        </Frame>
+                    </DataTemplate>
+                </flv:FlowListView.FlowColumnTemplate>
 
-        </flv:FlowListView>
+            </flv:FlowListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

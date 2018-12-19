@@ -50,6 +50,7 @@ namespace SpeechPathology
             NavigationService.Configure(typeof(BellCurveChartViewModel), typeof(BellCurveChartView));
             NavigationService.Configure(typeof(AgeCalculatorViewModel), typeof(AgeCalculatorView));
             NavigationService.Configure(typeof(FlashcardsSelectSoundViewModel), typeof(FlashcardsSelectSoundView));
+            NavigationService.Configure(typeof(FlashcardsSelectSoundPositionViewModel), typeof(FlashcardsSelectSoundPositionView)); 
             NavigationService.Configure(typeof(FlashcardsTestViewModel), typeof(FlashcardsTestView));
             NavigationService.Configure(typeof(WorksheetsViewModel), typeof(WorksheetsView));
             NavigationService.Configure(typeof(AboutViewModel), typeof(AboutView));
@@ -87,6 +88,7 @@ namespace SpeechPathology
             Container.RegisterType<BellCurveChartViewModel>();
             Container.RegisterType<AgeCalculatorViewModel>();
             Container.RegisterType<FlashcardsSelectSoundViewModel>();
+            Container.RegisterType<FlashcardsSelectSoundPositionViewModel>();
             Container.RegisterType<FlashcardsTestViewModel>();
             Container.RegisterType<WorksheetsViewModel>();
             Container.RegisterType<AboutViewModel>();

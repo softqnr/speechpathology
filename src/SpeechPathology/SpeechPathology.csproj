@@ -246,6 +246,9 @@
     <Compile Update="Views\BellCurveChartView.xaml.cs">
       <DependentUpon>BellCurveChartView.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\FlashcardsSelectSoundPositionView.xaml.cs">
+      <DependentUpon>FlashcardsSelectSoundPositionView.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\FlashcardsSelectSoundView.xaml.cs">
       <DependentUpon>FlashcardsSelectSoundView.xaml</DependentUpon>
     </Compile>

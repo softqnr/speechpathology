@@ -165,4 +165,10 @@
   <data name="Play" xml:space="preserve">
     <value>Play</value>
   </data>
+  <data name="Repeat" xml:space="preserve">
+    <value>Repeat</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
 </root>
