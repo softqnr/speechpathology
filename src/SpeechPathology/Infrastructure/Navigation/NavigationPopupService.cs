@@ -4,7 +4,7 @@ using SpeechPathology.ViewModels;
 using System;
 using System.Threading.Tasks;
 
-namespace SpeechPathology.Services.Navigation
+namespace SpeechPathology.Infrastructure.Navigation
 {
     public partial class NavigationService : INavigationService
     {

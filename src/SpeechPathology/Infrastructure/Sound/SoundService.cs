@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace SpeechPathology.Services.Sound
+namespace SpeechPathology.Infrastructure.Sound
 {
     public class SoundService : ISoundService
     {

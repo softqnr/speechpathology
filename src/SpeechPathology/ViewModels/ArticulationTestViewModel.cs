@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 using System;
-using SpeechPathology.DataServices.Articulation;
+using SpeechPathology.Services.Articulation;
 using SpeechPathology.Models.Enums;
 
 namespace SpeechPathology.ViewModels

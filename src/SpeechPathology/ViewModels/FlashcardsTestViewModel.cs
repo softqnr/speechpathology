@@ -1,8 +1,8 @@
-﻿using SpeechPathology.DataServices.Flashcard;
+﻿using SpeechPathology.Services.Flashcard;
 using SpeechPathology.Models;
 using SpeechPathology.Models.Enums;
-using SpeechPathology.Services.Navigation;
-using SpeechPathology.Services.Sound;
+using SpeechPathology.Infrastructure.Navigation;
+using SpeechPathology.Infrastructure.Sound;
 using System;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;

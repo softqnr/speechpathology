@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace SpeechPathology.Services.Dialog
+namespace SpeechPathology.Infrastructure.Dialog
 {
     public interface IDialogService
     {

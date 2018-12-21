@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace SpeechPathology.Services.Navigation
+namespace SpeechPathology.Infrastructure.Navigation
 {
     public partial class NavigationService : INavigationService
     {

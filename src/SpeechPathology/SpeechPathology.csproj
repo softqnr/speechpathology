@@ -6,6 +6,7 @@
     <Product>Speech Pathology Tools</Product>
     <Authors>SoftQNR</Authors>
     <AssemblyName>SpeechPathology</AssemblyName>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

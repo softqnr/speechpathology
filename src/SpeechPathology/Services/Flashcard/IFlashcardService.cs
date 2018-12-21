@@ -3,7 +3,7 @@ using SpeechPathology.Models.Enums;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace SpeechPathology.DataServices.Flashcard
+namespace SpeechPathology.Services.Flashcard
 {
     public interface IFlashcardService
     {

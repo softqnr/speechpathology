@@ -1,5 +1,5 @@
-﻿using SpeechPathology.DataServices.Flashcard;
-using SpeechPathology.Services.Navigation;
+﻿using SpeechPathology.Services.Flashcard;
+using SpeechPathology.Infrastructure.Navigation;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -107,7 +107,7 @@ namespace SpeechPathology.ViewModels
         }
         public async Task OnSkipClicked()
         {
-            await NavigationService.NavigateToAsync<FlashcardsTestViewModel>(new[] { _selectedSound, "" });
+            await NavigationService.NavigateToAsync<FlashcardsSelectSoundPositionViewModel>(new[] { _selectedSound, "" });
             await NavigationService.RemoveLastFromBackStackAsync();
         }
     }

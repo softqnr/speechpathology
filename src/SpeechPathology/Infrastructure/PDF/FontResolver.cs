@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 
-namespace SpeechPathology.Services.PDF
+namespace SpeechPathology.Infrastructure.PDF
 {
     internal class FontResolver : IFontResolver
     {

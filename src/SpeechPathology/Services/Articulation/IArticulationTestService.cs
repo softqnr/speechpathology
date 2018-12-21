@@ -3,7 +3,7 @@ using SpeechPathology.Models.Enums;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace SpeechPathology.DataServices.Articulation
+namespace SpeechPathology.Services.Articulation
 {
     public interface IArticulationTestService
     {

@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 
-namespace SpeechPathology.Services.PDF
+namespace SpeechPathology.Infrastructure.PDF
 {
     public class PDFGeneratorService : IPDFGeneratorService
     {

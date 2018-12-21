@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace SpeechPathology.Services.PDF
+namespace SpeechPathology.Infrastructure.PDF
 {
     public interface IPDFGeneratorService
     {

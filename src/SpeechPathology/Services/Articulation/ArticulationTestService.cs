@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System;
 using System.Linq;
 
-namespace SpeechPathology.DataServices.Articulation
+namespace SpeechPathology.Services.Articulation
 {
     public class ArticulationTestService : IArticulationTestService
     {

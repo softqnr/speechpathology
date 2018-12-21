@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace SpeechPathology.Services.Dialog
+namespace SpeechPathology.Infrastructure.Dialog
 {
     public class DialogService : IDialogService
     {

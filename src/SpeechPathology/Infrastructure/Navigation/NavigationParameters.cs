@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
-namespace SpeechPathology.Services.Navigation
+namespace SpeechPathology.Infrastructure.Navigation
 {
     public class NavigationParameters : IEnumerable<KeyValuePair<string, object>>
     {

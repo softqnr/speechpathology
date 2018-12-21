@@ -2,7 +2,7 @@
 using System;
 using System.Threading.Tasks;
 
-namespace SpeechPathology.Services.Navigation
+namespace SpeechPathology.Infrastructure.Navigation
 {
     public interface INavigationService
     {

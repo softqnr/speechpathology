@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace SpeechPathology.Services.Sound
+namespace SpeechPathology.Infrastructure.Sound
 {
     public interface ISoundService
     {

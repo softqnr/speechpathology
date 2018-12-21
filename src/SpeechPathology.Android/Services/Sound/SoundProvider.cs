@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Android.Media;
 using SpeechPathology.Droid.Services.Sound;
-using SpeechPathology.Services.Sound;
+using SpeechPathology.Infrastructure.Sound;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(SoundProvider))]
