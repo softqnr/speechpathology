@@ -55,7 +55,9 @@ namespace SpeechPathology.ViewModels
         }
         public async Task OnPlaySound(string fileName)
         {
-            await _soundService.PlaySoundAsync(fileName);
+            if (fileName != "") { 
+                await _soundService.PlaySoundAsync(fileName);
+            }
         }
     }
 }

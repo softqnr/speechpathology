@@ -94,6 +94,7 @@
     <AppExtensionDebugBundleId />
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Renderers\HybridWebViewRenderer.cs" />
     <Compile Include="Services\FileAccessHelper.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />

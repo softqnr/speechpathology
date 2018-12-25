@@ -15,7 +15,7 @@
         <Grid RowSpacing="0" ColumnSpacing="0" Margin="0" Padding="0"
             WidthRequest="300"
             HeightRequest="300"
-            VerticalOptions="Center"
+            VerticalOptions="FillAndExpand"
           HorizontalOptions="FillAndExpand">
             
             <Grid.ColumnDefinitions>
@@ -25,6 +25,7 @@
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
@@ -55,14 +56,12 @@
                 VerticalOptions="FillAndExpand" />
             
             <BoxView BackgroundColor="{StaticResource accent}"
-                     Grid.Column = "2" Grid.Row = "0" Grid.RowSpan="2"
-                     />
+                     Grid.Column = "2" Grid.Row = "0" Grid.RowSpan="2" />
+
+            <ffimageloadingsvg:SvgCachedImage WidthRequest="180" Margin="10" BackgroundColor="Transparent" HorizontalOptions="Start" VerticalOptions="End"
+                                          Source="erasmusplus_logo.svg"  Grid.Row = "2" Grid.Column = "0" Grid.ColumnSpan="3"/>
         </Grid>
 
-        <StackLayout Padding="10">
-            <ffimageloadingsvg:SvgCachedImage WidthRequest="180" BackgroundColor="Transparent" HorizontalOptions="Start"
-                                          Source="erasmusplus_logo.svg" />
-        </StackLayout>
     </StackLayout>
     
 </ContentPage>

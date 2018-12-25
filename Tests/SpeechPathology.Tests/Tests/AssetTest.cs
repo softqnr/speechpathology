@@ -1,5 +1,5 @@
 using SpeechPathology;
-using SpeechPathology.DataServices.Flashcard;
+using SpeechPathology.Services.Flashcard;
 using System.Reflection;
 using Xamarin.Forms;
 using Xunit;

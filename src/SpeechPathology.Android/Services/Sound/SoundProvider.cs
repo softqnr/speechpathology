@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using Android.Media;
 using SpeechPathology.Droid.Services.Sound;
 using SpeechPathology.Infrastructure.Sound;
@@ -10,12 +11,16 @@ namespace SpeechPathology.Droid.Services.Sound
     public class SoundProvider : ISoundService
     {
         private MediaPlayer player;
+
         public async Task PlaySoundAsync(string filename)
         {
             // Create media player
             player = player ?? new MediaPlayer();
 
             player.Reset();
+
+            // Set sound volume
+            player.SetVolume(1.0f, 1.0f);
 
             // Open the resource
             var fd = Android.App.Application.Context.Assets.OpenFd(filename);

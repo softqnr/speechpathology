@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using AVFoundation;
 using Foundation;
 using SpeechPathology.iOS.Services.Sound;
-using SpeechPathology.Services.Sound;
+using SpeechPathology.Infrastructure.Sound;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(SoundProvider))]

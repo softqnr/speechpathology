@@ -220,10 +220,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Assets\Sounds\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Reference Include="MigraDocCore.DocumentObjectModel">
       <HintPath>..\..\lib\MigraDocCore.DocumentObjectModel.dll</HintPath>
     </Reference>
@@ -255,6 +251,9 @@
     </Compile>
     <Compile Update="Views\FlashcardsTestView.xaml.cs">
       <DependentUpon>FlashcardsTestView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\PdfViewerView.xaml.cs">
+      <DependentUpon>PdfViewerView.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\WorksheetsView.xaml.cs">
       <DependentUpon>WorksheetsView.xaml</DependentUpon>

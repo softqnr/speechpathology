@@ -21,6 +21,7 @@ using Unity.Lifetime;
 using Unity.ServiceLocation;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using SpeechPathology.Services.Worksheet;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace SpeechPathology
@@ -53,6 +54,7 @@ namespace SpeechPathology
             NavigationService.Configure(typeof(FlashcardsSelectSoundPositionViewModel), typeof(FlashcardsSelectSoundPositionView)); 
             NavigationService.Configure(typeof(FlashcardsTestViewModel), typeof(FlashcardsTestView));
             NavigationService.Configure(typeof(WorksheetsViewModel), typeof(WorksheetsView));
+            NavigationService.Configure(typeof(PdfViewerViewModel), typeof(PdfViewerView));
             NavigationService.Configure(typeof(AboutViewModel), typeof(AboutView));
             await NavigationService.InitializeAsync();
         }
@@ -65,22 +67,24 @@ namespace SpeechPathology
         private void InitializeDI()
         {
             Container = new UnityContainer();
-            // Data
+            // Data repositories
             Container.RegisterType<IRepository<ArticulationTest>, Repository<ArticulationTest>>(new InjectionConstructor(DatabaseFilePath));
             Container.RegisterType<IRepository<ArticulationTestExam>, Repository<ArticulationTestExam>>(new InjectionConstructor(DatabaseFilePath));
             Container.RegisterType<IRepository<ArticulationTestExamAnswer>, Repository<ArticulationTestExamAnswer>>(new InjectionConstructor(DatabaseFilePath));
             Container.RegisterType<IRepository<Flashcard>, Repository<Flashcard>>(new InjectionConstructor(DatabaseFilePath));
+            Container.RegisterType<IRepository<Worksheet>, Repository<Worksheet>>(new InjectionConstructor(DatabaseFilePath));
 
-            // Services
+            // Infrastructure Services
             Container.RegisterInstance(NavigationService, new ContainerControlledLifetimeManager());
             Container.RegisterType<ISoundService, SoundService>();
             Container.RegisterType<IDialogService, DialogService>();
             Container.RegisterType<IPDFGeneratorService, PDFGeneratorService>();
             
-            // Data services
+            // Services
             Container.RegisterType<IArticulationTestService, ArticulationTestService>();
             Container.RegisterType<IFlashcardService, FlashcardService>();
-
+            Container.RegisterType<IWorksheetService, WorksheetService>();
+            
             // View models
             Container.RegisterType<MainViewModel>();
             Container.RegisterType<ArticulationTestViewModel>();
@@ -91,6 +95,7 @@ namespace SpeechPathology
             Container.RegisterType<FlashcardsSelectSoundPositionViewModel>();
             Container.RegisterType<FlashcardsTestViewModel>();
             Container.RegisterType<WorksheetsViewModel>();
+            Container.RegisterType<PdfViewerViewModel>();
             Container.RegisterType<AboutViewModel>();
 
             // Set as service locator provider
