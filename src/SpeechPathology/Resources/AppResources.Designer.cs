@@ -70,6 +70,17 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to IMPORTANT:
+        ///If you suspect your child is in need of speech therapy, you should consult a speech therapist.
+        ///This application does not replace a speech therapist, but offers an additional supporting tool..
+        /// </summary>
+        internal static string ApplicationNotice {
+            get {
+                return ResourceManager.GetString("ApplicationNotice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Articulation Test.
         /// </summary>
         internal static string ArticulationTest {
