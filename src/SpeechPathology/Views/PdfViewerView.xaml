@@ -7,8 +7,13 @@
              Title="Worksheets view">
        <ContentPage.Content>
 
-            <controls:HybridWebView x:Name="hybridWebView" Uri="{Binding PdfFile}" MinimumHeightRequest="300"
-                 HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+        <Grid VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <controls:PdfView Grid.Row="0" x:Name="PdfDocView" VerticalOptions="FillAndExpand" Uri="{Binding PdfFile}"/>
 
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

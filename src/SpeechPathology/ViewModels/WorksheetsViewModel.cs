@@ -1,10 +1,6 @@
-﻿using SpeechPathology.Infrastructure.Navigation;
-using SpeechPathology.Models;
+﻿using SpeechPathology.Models;
 using SpeechPathology.Services.Worksheet;
-using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -55,7 +51,7 @@ namespace SpeechPathology.ViewModels
         {
             if (ws != null)
             {
-                DialogService.ShowLoading("Loading...");
+                DialogService.ShowLoading(Resources.AppResources.Loading);
                 await NavigationService.NavigateToAsync<PdfViewerViewModel>(ws.File);
                 DialogService.HideLoading();
             }

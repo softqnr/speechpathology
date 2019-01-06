@@ -6,6 +6,14 @@
              xmlns:cv="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
              x:Class="SpeechPathology.Views.FlashcardsTestView"
              Title="Flashcards" BackgroundColor="White">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Home" Priority="0" Order="Secondary" />
+        <ToolbarItem Text="Disclaimer Erasmus+" Priority="1" Order="Secondary" />
+        <ToolbarItem Text="Recomended Usage" Priority="2" Order="Secondary" />
+        <ToolbarItem Text="Copyright" Priority="3" Order="Secondary" />
+        <ToolbarItem Text="Who we are" Priority="4" Order="Secondary" />
+        <ToolbarItem Text="Exit" Priority="5" Order="Secondary" />
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center">

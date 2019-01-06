@@ -20,7 +20,7 @@
     <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <AndroidKeyStore>true</AndroidKeyStore>
+    <AndroidKeyStore>false</AndroidKeyStore>
     <AndroidSigningKeyStore>C:\Users\Fradelo\AppData\Local\Xamarin\Mono for Android\Keystore\softqnr-dev\softqnr-dev.keystore</AndroidSigningKeyStore>
     <AndroidSigningStorePass>jijikos</AndroidSigningStorePass>
     <AndroidSigningKeyAlias>softqnr-dev</AndroidSigningKeyAlias>
@@ -83,9 +83,8 @@
     <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="28.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Renderers\HybridWebViewRenderer.cs" />
-    <Compile Include="Renderers\JavascriptWebViewClient.cs" />
-    <Compile Include="Renderers\JSBridge.cs" />
+    <Compile Include="Renderers\FilePrintDocumentAdapter.cs" />
+    <Compile Include="Renderers\PdfViewRenderer.cs" />
     <Compile Include="Services\FileAccessHelper.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
@@ -97,9 +96,20 @@
     <AndroidAsset Include="Assets\db_en.db">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </AndroidAsset>
-    <AndroidAsset Include="Assets\pdfjs\build\pdf.js.map" />
-    <AndroidAsset Include="Assets\pdfjs\build\pdf.worker.js.map" />
-    <AndroidAsset Include="Assets\pdfjs\web\viewer.js.map" />
+    <AndroidAsset Include="Assets\Worksheets\S_English_NTU.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\G_English_NTU.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\K_English_NTU.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\J_English_NTU.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\CH_English_NTU.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\SH_English_NTU.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\F_English_NTU.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\Y_English_NTU.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\W_English_NTU.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\TH_English_NTU.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\L_English_NTU.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\ZH_English_NTU.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\R_English_NTU.pdf" />
+    <AndroidAsset Include="Assets\pdfjs\LICENSE" />
     <AndroidAsset Include="Assets\pdfjs\web\cmaps\78-EUC-H.bcmap" />
     <AndroidAsset Include="Assets\pdfjs\web\cmaps\78-EUC-V.bcmap" />
     <AndroidAsset Include="Assets\pdfjs\web\cmaps\78-H.bcmap" />
@@ -283,18 +293,14 @@
     <AndroidAsset Include="Assets\pdfjs\web\locale\bn-BD\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\bn-IN\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\br\viewer.properties" />
-    <AndroidAsset Include="Assets\pdfjs\web\locale\brx\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\bs\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\ca\viewer.properties" />
-    <AndroidAsset Include="Assets\pdfjs\web\locale\cak\viewer.properties" />
-    <AndroidAsset Include="Assets\pdfjs\web\locale\crh\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\cs\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\csb\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\cy\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\da\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\de\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\el\viewer.properties" />
-    <AndroidAsset Include="Assets\pdfjs\web\locale\en-CA\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\en-GB\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\en-US\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\en-ZA\viewer.properties" />
@@ -313,37 +319,27 @@
     <AndroidAsset Include="Assets\pdfjs\web\locale\ga-IE\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\gd\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\gl\viewer.properties" />
-    <AndroidAsset Include="Assets\pdfjs\web\locale\gn\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\gu-IN\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\he\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\hi-IN\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\hr\viewer.properties" />
-    <AndroidAsset Include="Assets\pdfjs\web\locale\hsb\viewer.properties" />
-    <AndroidAsset Include="Assets\pdfjs\web\locale\hto\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\hu\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\hy-AM\viewer.properties" />
-    <AndroidAsset Include="Assets\pdfjs\web\locale\ia\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\id\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\is\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\it\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\ja\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\ka\viewer.properties" />
-    <AndroidAsset Include="Assets\pdfjs\web\locale\kab\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\kk\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\km\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\kn\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\ko\viewer.properties" />
-    <AndroidAsset Include="Assets\pdfjs\web\locale\kok\viewer.properties" />
-    <AndroidAsset Include="Assets\pdfjs\web\locale\ks\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\ku\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\lg\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\lij\viewer.properties" />
-    <AndroidAsset Include="Assets\pdfjs\web\locale\lo\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\lt\viewer.properties" />
-    <AndroidAsset Include="Assets\pdfjs\web\locale\ltg\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\lv\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\mai\viewer.properties" />
-    <AndroidAsset Include="Assets\pdfjs\web\locale\meh\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\mk\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\ml\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\mn\viewer.properties" />
@@ -351,7 +347,6 @@
     <AndroidAsset Include="Assets\pdfjs\web\locale\ms\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\my\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\nb-NO\viewer.properties" />
-    <AndroidAsset Include="Assets\pdfjs\web\locale\ne-NP\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\nl\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\nn-NO\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\nso\viewer.properties" />
@@ -366,7 +361,6 @@
     <AndroidAsset Include="Assets\pdfjs\web\locale\ru\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\rw\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\sah\viewer.properties" />
-    <AndroidAsset Include="Assets\pdfjs\web\locale\sat\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\si\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\sk\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\sl\viewer.properties" />
@@ -382,19 +376,14 @@
     <AndroidAsset Include="Assets\pdfjs\web\locale\tl\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\tn\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\tr\viewer.properties" />
-    <AndroidAsset Include="Assets\pdfjs\web\locale\tsz\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\uk\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\ur\viewer.properties" />
-    <AndroidAsset Include="Assets\pdfjs\web\locale\uz\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\vi\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\wo\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\xh\viewer.properties" />
-    <AndroidAsset Include="Assets\pdfjs\web\locale\zam\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\zh-CN\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\zh-TW\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\zu\viewer.properties" />
-    <AndroidAsset Include="Assets\Content\a.pdf" />
-    <AndroidAsset Include="Assets\Content\Worksheet_TR_Z.pdf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml">
@@ -1175,323 +1164,6 @@
     <AndroidResource Include="Resources\drawable\_throw.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Content\index.html">
-      <SubType>Designer</SubType>
-    </AndroidAsset>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\build\pdf.js" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\build\pdf.worker.js" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\debugger.js" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\viewer.css" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\viewer.html" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\viewer.js" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\annotation-check.svg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\annotation-comment.svg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\annotation-help.svg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\annotation-insert.svg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\annotation-key.svg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\annotation-newparagraph.svg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\annotation-noicon.svg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\annotation-note.svg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\annotation-paragraph.svg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\findbarButton-next-rtl.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\findbarButton-next-rtl%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\findbarButton-next.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\findbarButton-next%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\findbarButton-previous-rtl.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\findbarButton-previous-rtl%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\findbarButton-previous.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\findbarButton-previous%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\grab.cur" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\grabbing.cur" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\loading-icon.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\loading-small.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\loading-small%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-documentProperties.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-documentProperties%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-firstPage.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-firstPage%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-handTool.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-handTool%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-lastPage.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-lastPage%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-rotateCcw.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-rotateCcw%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-rotateCw.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-rotateCw%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-scrollHorizontal.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-scrollHorizontal%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-scrollVertical.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-scrollVertical%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-scrollWrapped.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-scrollWrapped%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-selectTool.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-selectTool%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-spreadEven.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-spreadEven%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-spreadNone.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-spreadNone%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-spreadOdd.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-spreadOdd%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\shadow.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\texture.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-bookmark.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-bookmark%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-download.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-download%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-menuArrows.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-menuArrows%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-openFile.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-openFile%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-pageDown-rtl.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-pageDown-rtl%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-pageDown.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-pageDown%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-pageUp-rtl.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-pageUp-rtl%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-pageUp.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-pageUp%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-presentationMode.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-presentationMode%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-print.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-print%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-search.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-search%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-secondaryToolbarToggle-rtl.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-secondaryToolbarToggle-rtl%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-secondaryToolbarToggle.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-secondaryToolbarToggle%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-sidebarToggle-rtl.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-sidebarToggle-rtl%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-sidebarToggle.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-sidebarToggle%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-viewAttachments.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-viewAttachments%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-viewOutline-rtl.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-viewOutline-rtl%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-viewOutline.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-viewOutline%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-viewThumbnail.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-viewThumbnail%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-zoomIn.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-zoomIn%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-zoomOut.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-zoomOut%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\treeitem-collapsed-rtl.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\treeitem-collapsed-rtl%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\treeitem-collapsed.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\treeitem-collapsed%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\treeitem-expanded.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\pdfjs\web\images\treeitem-expanded%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidAsset Include="Assets\Sounds\angel.mp3" />
   </ItemGroup>
   <ItemGroup>
@@ -2093,6 +1765,441 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Sounds\zigzag.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\archer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\badger.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\bishop.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\boot.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\buses.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\cannon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\car.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\cow.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\crayon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\cub.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\dog.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\father.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\fifteen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\finger.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\fish.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\foghorn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\gate.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\george.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\hardhat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\head.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\hen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\hill.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\laugh.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\log.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\lolipop.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\map.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\midge.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\mole.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\moose.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\path.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\pig.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\pin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\puddle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\rat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\robber.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\rocket.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\shower.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\sieve.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\slipper.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\sock.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\swinging.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\thistle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\tiger.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\tower.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\toy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\train.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\tulip.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\van.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\wafer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\waving.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\wing.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\wolf.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\yak.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\build\pdf.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\build\pdf.worker.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\compatibility.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\debugger.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\l10n.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\viewer.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\viewer.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\viewer.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\annotation-check.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\annotation-comment.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\annotation-help.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\annotation-insert.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\annotation-key.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\annotation-newparagraph.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\annotation-noicon.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\annotation-note.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\annotation-paragraph.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\findbarButton-next-rtl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\findbarButton-next-rtl%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\findbarButton-next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\findbarButton-next%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\findbarButton-previous-rtl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\findbarButton-previous-rtl%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\findbarButton-previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\findbarButton-previous%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\grab.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\grabbing.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\loading-icon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\loading-small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\loading-small%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-documentProperties.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-documentProperties%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-firstPage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-firstPage%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-handTool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-handTool%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-lastPage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-lastPage%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-rotateCcw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-rotateCcw%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-rotateCw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-rotateCw%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\shadow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\texture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-bookmark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-bookmark%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-download%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-menuArrows.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-menuArrows%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-openFile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-openFile%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-pageDown-rtl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-pageDown-rtl%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-pageDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-pageDown%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-pageUp-rtl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-pageUp-rtl%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-pageUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-pageUp%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-presentationMode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-presentationMode%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-print%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-search%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-secondaryToolbarToggle-rtl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-secondaryToolbarToggle-rtl%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-secondaryToolbarToggle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-secondaryToolbarToggle%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-sidebarToggle-rtl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-sidebarToggle-rtl%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-sidebarToggle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-sidebarToggle%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-viewAttachments.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-viewAttachments%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-viewOutline-rtl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-viewOutline-rtl%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-viewOutline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-viewOutline%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-viewThumbnail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-viewThumbnail%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-zoomIn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-zoomIn%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-zoomOut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-zoomOut%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\treeitem-collapsed-rtl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\treeitem-collapsed-rtl%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\treeitem-collapsed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\treeitem-collapsed%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\treeitem-expanded.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\pdfjs\web\images\treeitem-expanded%402x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
