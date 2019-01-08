@@ -4513,7 +4513,7 @@ namespace SpeechPathology.Droid
 			public const int tablets = 2130838054;
 			
 			// aapt resource value: 0x7f020227
-			public const int tassles = 2130838055;
+			public const int tassels = 2130838055;
 			
 			// aapt resource value: 0x7f020228
 			public const int teacher = 2130838056;

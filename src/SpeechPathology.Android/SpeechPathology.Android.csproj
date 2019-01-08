@@ -678,7 +678,7 @@
     <AndroidResource Include="Resources\drawable\shrew.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\tassles.jpg" />
+    <AndroidResource Include="Resources\drawable\tassels.jpg" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\stars.jpg" />
@@ -1665,7 +1665,7 @@
     <AndroidAsset Include="Assets\Sounds\table.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\tassles.mp3" />
+    <AndroidAsset Include="Assets\Sounds\tassels.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Sounds\teacher.mp3" />
