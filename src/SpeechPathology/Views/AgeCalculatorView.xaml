@@ -35,8 +35,11 @@
                 <Label Text="Age at test date: " />
                 <Label Text="{Binding AgeAtTest}"
                        HorizontalOptions="StartAndExpand"/>
-                <Label Text="{Binding CurrentAge}" />
+                <Label Text="Days" />
             </StackLayout>
+            
+            <Label Text="{Binding CurrentAge}"
+                   HorizontalOptions="CenterAndExpand"/>
 
             <FlexLayout Direction="Row"
                         Margin="0, 30"

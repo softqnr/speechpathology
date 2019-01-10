@@ -22,6 +22,7 @@ namespace SpeechPathology.ViewModels
                 _startDate = value;
                 OnPropertyChanged();
                 OnPropertyChanged(nameof(AgeAtTest));
+                OnPropertyChanged(nameof(CurrentAge));
             }
         }
 
@@ -33,22 +34,26 @@ namespace SpeechPathology.ViewModels
                 _endDate =  value;
                 OnPropertyChanged();
                 OnPropertyChanged(nameof(AgeAtTest));
+                OnPropertyChanged(nameof(CurrentAge));
             }
         }
 
-        public string AgeAtTest
+        public int AgeAtTest
         {
-            get
-            {
-                TimeSpan timeSpan = EndDate - StartDate;
-                return timeSpan.Days.ToString();
-            }
+            get => (EndDate - StartDate.Date).Days;
         }
 
         public string CurrentAge
         {
-            get => _currentAge;
-            set => SetProperty(ref _currentAge, value);
+            get
+            {
+                int daysRemaining = AgeAtTest;
+                int years = (int) Math.Floor(daysRemaining / 365f);
+                daysRemaining = daysRemaining % 365;
+                var months = (int) Math.Floor(daysRemaining / 30f);
+                daysRemaining = daysRemaining % 30;
+                return years.ToString() + "y " + months.ToString() + "m " + daysRemaining + "d";
+            }
         }
 
         public string ResultOut
@@ -66,8 +71,6 @@ namespace SpeechPathology.ViewModels
 
         public AgeCalculatorViewModel ()
         {
-            _currentAge = "days";
-
             StartDate = DateTime.Now;
             EndDate = DateTime.Now;
 
