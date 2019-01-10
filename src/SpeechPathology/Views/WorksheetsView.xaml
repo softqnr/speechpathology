@@ -2,13 +2,42 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:i18n="clr-namespace:SpeechPathology.Extensions"
+             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+             xmlns:controls="clr-namespace:SpeechPathology.Controls"
              x:Class="SpeechPathology.Views.WorksheetsView"
              Title="Worksheets">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <x:Array x:Key="rotationParams" Type="{x:Type x:Int32}">
+                <x:Int32>-6</x:Int32>
+                <x:Int32>6</x:Int32>
+            </x:Array>
+            <Style x:Key="plainButton" TargetType="Label">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="48" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="HeightRequest" Value="60" />
+                <Setter Property="WidthRequest" Value="60" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Worksheets"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <flv:FlowListView FlowColumnCount="5" SeparatorVisibility="None" HasUnevenRows="false" RowHeight="100" FlowColumnMinWidth="100"
+	            FlowItemTappedCommand="{Binding ItemTappedCommand}" FlowItemsSource="{Binding Worksheets}" >
+
+                <flv:FlowListView.FlowColumnTemplate>
+                    <DataTemplate>
+                        <Frame CornerRadius="10" BackgroundColor="{Binding Sound, Converter={StaticResource RandomColorConverter}}" Padding="4" Margin="4">
+                            <Label Text="{Binding Sound}" Rotation="{Binding Sound, Converter={StaticResource RandomNumberConverter}, ConverterParameter={StaticResource rotationParams}}"
+                                   XAlign="Center" YAlign="Center" HorizontalOptions="Fill" VerticalOptions="Fill" Style="{StaticResource plainButton}" />
+                        </Frame>
+                    </DataTemplate>
+                </flv:FlowListView.FlowColumnTemplate>
+            </flv:FlowListView>
+            
+            
+           
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

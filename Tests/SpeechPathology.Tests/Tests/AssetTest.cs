@@ -1,4 +1,5 @@
 using SpeechPathology;
+using SpeechPathology.Services.Flashcard;
 using System.Reflection;
 using Xamarin.Forms;
 using Xunit;
@@ -7,6 +8,11 @@ namespace SpeechPathology.Tests
 {
     public class AssetTest
     {
+        private readonly FlashcardService _flashcardService;
+        public AssetTest()
+        {
+            //_flashcardService = new FlashcardService();
+        }
         [Fact]
         public void CheckImagesExistInResources()
         {

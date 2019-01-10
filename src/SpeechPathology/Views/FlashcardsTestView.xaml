@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:i18n="clr-namespace:SpeechPathology.Extensions"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:cv="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
+             x:Class="SpeechPathology.Views.FlashcardsTestView"
+             Title="Flashcards" BackgroundColor="White">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Home" Priority="0" Order="Secondary" />
+        <ToolbarItem Text="Disclaimer Erasmus+" Priority="1" Order="Secondary" />
+        <ToolbarItem Text="Recomended Usage" Priority="2" Order="Secondary" />
+        <ToolbarItem Text="Copyright" Priority="3" Order="Secondary" />
+        <ToolbarItem Text="Who we are" Priority="4" Order="Secondary" />
+        <ToolbarItem Text="Exit" Priority="5" Order="Secondary" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label Text="{Binding Source={x:Reference Flashcards}, Path=Position, Converter={StaticResource ZeroToOneBaseConverter}}" FontSize="Large" />
+                <Label Text="{i18n:Translate of}" FontSize="Large" />
+                <Label Text="{Binding Source={x:Reference Flashcards}, Path=ItemsSource.Count}" FontSize="Large" />
+            </StackLayout>
+            <cv:CarouselView ItemsSource="{Binding Flashcards}" x:Name="Flashcards">
+            <cv:CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <Label TextColor="{StaticResource primary_dark}" Grid.Row="0" Text="{Binding Text}" FontSize="26" HorizontalOptions="Center"/>
+
+                            <ffimageloading:CachedImage x:Name="image" Source="{Binding ImageFile}" 
+                                                        Aspect="AspectFit" Grid.Row="1" VerticalOptions="Center"/>
+
+                        </Grid>
+                    </DataTemplate>
+            </cv:CarouselView.ItemTemplate>
+        </cv:CarouselView>
+            <StackLayout  BackgroundColor="{StaticResource primary_light}" Padding="12">
+                <Button Text="{i18n:Translate Play}" BackgroundColor="{StaticResource accent}" TextColor="White" 
+                                        WidthRequest="60" HeightRequest="60" HorizontalOptions="Center" BorderRadius="30" 
+                                        Command="{Binding PlaySoundCommand}"
+                                        CommandParameter="{Binding Source={x:Reference Flashcards}, Path=Item.SoundFile}"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

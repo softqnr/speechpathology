@@ -9,6 +9,7 @@ namespace SpeechPathology.Data
 {
     public interface IRepository<T> where T : ModelBase, new()
     {
+        Task<List<object>> QueryAsync(string query, params object[] args);
         Task<List<T>> GetAllAsync();
         Task<T> GetAsync(Int64 id);
         Task<List<T>> GetAsync<TValue>(Expression<Func<T, bool>> predicate = null, Expression<Func<T, TValue>> orderBy = null);

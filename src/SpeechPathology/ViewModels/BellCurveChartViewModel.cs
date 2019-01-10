@@ -1,4 +1,4 @@
-﻿using SpeechPathology.Services.Navigation;
+﻿using SpeechPathology.Infrastructure.Navigation;
 using System;
 using System.Collections.Generic;
 using System.Text;

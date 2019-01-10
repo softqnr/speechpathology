@@ -1,6 +1,6 @@
 ﻿using CommonServiceLocator;
-using SpeechPathology.Services.Dialog;
-using SpeechPathology.Services.Navigation;
+using SpeechPathology.Infrastructure.Dialog;
+using SpeechPathology.Infrastructure.Navigation;
 using System.Threading.Tasks;
 
 namespace SpeechPathology.ViewModels

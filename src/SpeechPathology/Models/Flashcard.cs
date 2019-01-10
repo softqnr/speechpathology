@@ -2,7 +2,7 @@
 
 namespace SpeechPathology.Models
 {
-    [Table("ArticulationTests")]
+    [Table("Flashcards")]
     public class Flashcard : ModelBase
     {
         public string Sound { get; set; }
@@ -11,8 +11,10 @@ namespace SpeechPathology.Models
         [Indexed]
         public string SoundPosition { get; set; }
 
-        public string Imagefile { get; set; }
+        public string ImageFile { get; set; }
 
-        public string Soundfile { get; set; }
+        public string SoundFile { get; set; }
+        [Indexed]
+        public string LanguageCode { get; set; }
     }
 }

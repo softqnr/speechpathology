@@ -1,7 +1,7 @@
 ﻿using Acr.UserDialogs;
 using SpeechPathology.Interfaces;
 using SpeechPathology.Models.Enums;
-using SpeechPathology.Services.Navigation;
+using SpeechPathology.Infrastructure.Navigation;
 using System;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -54,7 +54,7 @@ namespace SpeechPathology.ViewModels
             {
                 return new Command(async () =>
                 {
-                    await NavigationService.NavigateToAsync<FlashcardsViewModel>();
+                    await NavigationService.NavigateToAsync<FlashcardsSelectSoundViewModel>();
                 });
             }
         }

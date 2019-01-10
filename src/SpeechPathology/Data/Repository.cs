@@ -16,8 +16,10 @@ namespace SpeechPathology.Data
         {
             this.db = new SQLiteAsyncConnection(databaseFile);
         }
+        public async Task<List<object>> QueryAsync(string query, params object[] args) =>
+            await db.QueryAsync<object>(query, args);
 
-        public AsyncTableQuery<T> AsQueryable() =>
+        public AsyncTableQuery<T> AsQueryable() => 
             db.Table<T>();
         
         public async Task<List<T>> GetAllWithChildrenAsync() =>

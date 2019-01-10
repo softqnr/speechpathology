@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 using System;
-using SpeechPathology.DataServices.Articulation;
+using SpeechPathology.Services.Articulation;
 using SpeechPathology.Models.Enums;
 
 namespace SpeechPathology.ViewModels
@@ -18,7 +18,7 @@ namespace SpeechPathology.ViewModels
         private ArticulationTestExamAnswer _articulationTestAnswer;
 
         private string _testIndex;
-        private int _testCount;
+        private int? _testCount;
         private string _text;
         private string _image;
 
@@ -30,7 +30,7 @@ namespace SpeechPathology.ViewModels
             set => SetProperty(ref _testIndex, value);
         }
 
-        public int TestCount
+        public int? TestCount
         {
             get => _testCount;
             set => SetProperty(ref _testCount, value);
@@ -121,7 +121,7 @@ namespace SpeechPathology.ViewModels
 
                 TestIndex = _articulationTestAnswer.Number.ToString();
                 Text = _articulationTestAnswer.ArticulationTest.Text;
-                Image = $"resource://SpeechPathology.Assets.Images.{_articulationTestAnswer.ArticulationTest.LanguageCode}.{_articulationTestAnswer.ArticulationTest.Image}";
+                Image = _articulationTestAnswer.ArticulationTest.Image;
             }
             return moved;
         }

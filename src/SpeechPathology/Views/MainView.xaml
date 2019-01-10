@@ -5,18 +5,18 @@
              xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
              x:Class="SpeechPathology.Views.MainView"
              NavigationPage.HasNavigationBar="false">
-    <StackLayout Spacing="0">
-        <StackLayout Padding="10" VerticalOptions="Start" BackgroundColor="White">
-            <ffimageloadingsvg:SvgCachedImage WidthRequest="120" HeightRequest="120" BackgroundColor="Transparent"
-                                          Source="resource://SpeechPathology.Assets.Images.logo.svg" HorizontalOptions="CenterAndExpand"/>
+    <StackLayout Spacing="0" VerticalOptions="FillAndExpand">
+        <StackLayout Padding="6" VerticalOptions="Start" BackgroundColor="White">
+            <ffimageloadingsvg:SvgCachedImage WidthRequest="110" HeightRequest="110" BackgroundColor="Transparent"
+                                          Source="logo.svg" HorizontalOptions="CenterAndExpand"/>
             <Label Text="Speech Pathology Tools" TextColor="{StaticResource accent}" FontSize="Medium" HorizontalOptions="CenterAndExpand" />
         </StackLayout>
         
         <Grid RowSpacing="0" ColumnSpacing="0" Margin="0" Padding="0"
             WidthRequest="300"
             HeightRequest="300"
-            VerticalOptions="Center"
-          HorizontalOptions="Fill">
+            VerticalOptions="FillAndExpand"
+          HorizontalOptions="FillAndExpand">
             
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
@@ -25,6 +25,7 @@
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
@@ -55,14 +56,14 @@
                 VerticalOptions="FillAndExpand" />
             
             <BoxView BackgroundColor="{StaticResource accent}"
-                     Grid.Column = "2" Grid.Row = "0" Grid.RowSpan="2"
-                     />
+                     Grid.Column = "2" Grid.Row = "0" Grid.RowSpan="2"  />
+
+            <Label Text="{i18n:Translate ApplicationNotice}" Grid.Row="2" Grid.Column="0" FontSize="Micro" Grid.ColumnSpan="3" Margin="4" />
+            
+            <ffimageloadingsvg:SvgCachedImage WidthRequest="180" Margin="10" BackgroundColor="Transparent" HorizontalOptions="Start" VerticalOptions="End"
+                                          Source="erasmusplus_logo.svg"  Grid.Row = "2" Grid.Column = "0" Grid.ColumnSpan="3"/>
         </Grid>
 
-        <StackLayout Padding="10">
-            <ffimageloadingsvg:SvgCachedImage WidthRequest="180" BackgroundColor="Transparent" HorizontalOptions="Start"
-                                          Source="resource://SpeechPathology.Assets.Images.erasmusplus_logo.svg" />
-        </StackLayout>
     </StackLayout>
     
 </ContentPage>

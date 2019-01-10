@@ -153,4 +153,27 @@
   <data name="Incorrect" xml:space="preserve">
     <value>Incorrect</value>
   </data>
+  <data name="Selectexcludedsound" xml:space="preserve">
+    <value>Select excluded sound</value>
+  </data>
+  <data name="Selectsound" xml:space="preserve">
+    <value>Select sound</value>
+  </data>
+  <data name="Skip" xml:space="preserve">
+    <value>Skip</value>
+  </data>
+  <data name="Play" xml:space="preserve">
+    <value>Play</value>
+  </data>
+  <data name="Repeat" xml:space="preserve">
+    <value>Repeat</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="ApplicationNotice" xml:space="preserve">
+    <value>IMPORTANT:
+If you suspect your child is in need of speech therapy, you should consult a speech therapist.
+This application does not replace a speech therapist, but offers an additional supporting tool.</value>
+  </data>
 </root>

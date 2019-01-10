@@ -70,6 +70,17 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to IMPORTANT:
+        ///If you suspect your child is in need of speech therapy, you should consult a speech therapist.
+        ///This application does not replace a speech therapist, but offers an additional supporting tool..
+        /// </summary>
+        internal static string ApplicationNotice {
+            get {
+                return ResourceManager.GetString("ApplicationNotice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Articulation Test.
         /// </summary>
         internal static string ArticulationTest {
@@ -133,6 +144,15 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Loading....
+        /// </summary>
+        internal static string Loading {
+            get {
+                return ResourceManager.GetString("Loading", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Medial.
         /// </summary>
         internal static string Medial {
@@ -156,6 +176,51 @@ namespace SpeechPathology.Resources {
         internal static string of {
             get {
                 return ResourceManager.GetString("of", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Play.
+        /// </summary>
+        internal static string Play {
+            get {
+                return ResourceManager.GetString("Play", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Repeat.
+        /// </summary>
+        internal static string Repeat {
+            get {
+                return ResourceManager.GetString("Repeat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select excluded sound.
+        /// </summary>
+        internal static string Selectexcludedsound {
+            get {
+                return ResourceManager.GetString("Selectexcludedsound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select sound.
+        /// </summary>
+        internal static string Selectsound {
+            get {
+                return ResourceManager.GetString("Selectsound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Skip.
+        /// </summary>
+        internal static string Skip {
+            get {
+                return ResourceManager.GetString("Skip", resourceCulture);
             }
         }
         
