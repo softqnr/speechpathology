@@ -1,7 +1,4 @@
-﻿using Acr.UserDialogs;
-using SpeechPathology.Interfaces;
-using SpeechPathology.Models.Enums;
-using SpeechPathology.Infrastructure.Navigation;
+﻿using SpeechPathology.Models.Enums;
 using System;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -13,6 +10,16 @@ namespace SpeechPathology.ViewModels
         public MainViewModel() 
         {
 
+        }
+        public ICommand ImageTappedCommand
+        {
+            get
+            {
+                return new Command(async () =>
+                {
+                    await NavigationService.NavigateToAsync<AboutViewModel>();
+                });
+            }
         }
         public ICommand ArticulationTest
         {

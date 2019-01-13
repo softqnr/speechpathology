@@ -61,6 +61,42 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The European Commission support for the production of this mobile app does not constitute an endorsement of the contents which reflects the views only of the authors, and the Commission cannot be held responsible for any use which may be made of the information contained therein..
+        /// </summary>
+        internal static string AboutFooter {
+            get {
+                return ResourceManager.GetString("AboutFooter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This application was designed by the Erasmus+ KA2 Strategic Partnership Project consortium of “Interactive Tools for Teachers and Children at Initial Education”.
+        /// </summary>
+        internal static string AboutIntro {
+            get {
+                return ResourceManager.GetString("AboutIntro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to For more information please visit our website and social media channels..
+        /// </summary>
+        internal static string AboutSocial {
+            get {
+                return ResourceManager.GetString("AboutSocial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to About the project.
+        /// </summary>
+        internal static string AboutTheProject {
+            get {
+                return ResourceManager.GetString("AboutTheProject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Age Calculator.
         /// </summary>
         internal static string AgeCalculator {
@@ -230,6 +266,15 @@ namespace SpeechPathology.Resources {
         internal static string Worksheets {
             get {
                 return ResourceManager.GetString("Worksheets", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Worksheet saved..
+        /// </summary>
+        internal static string WorksheetSaved {
+            get {
+                return ResourceManager.GetString("WorksheetSaved", resourceCulture);
             }
         }
     }

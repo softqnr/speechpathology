@@ -43,11 +43,11 @@ namespace SpeechPathology.ViewModels
             if (navigationData != null)
             {
                 string[]  navigationDataArray =  (string[])navigationData;
-                Enum.TryParse<SoundPosition>(navigationDataArray[0], out var soundPosition);
+                Enum.TryParse<FlashcardSoundPosition>(navigationDataArray[0], out var soundPosition);
                 await LoadData(soundPosition, navigationDataArray[1], navigationDataArray[2]);
             }
         }
-        private async Task LoadData(SoundPosition soundPosition, string sound, string excludedSound)
+        private async Task LoadData(FlashcardSoundPosition soundPosition, string sound, string excludedSound)
         {
             // Get flashcards
             var flashcards = await _flashcardService.GetFlashcards(soundPosition, sound, excludedSound);
@@ -55,7 +55,7 @@ namespace SpeechPathology.ViewModels
         }
         public async Task OnPlaySound(string fileName)
         {
-            if (fileName != "") { 
+            if (!string.IsNullOrWhiteSpace(fileName)) { 
                 await _soundService.PlaySoundAsync(fileName);
             }
         }

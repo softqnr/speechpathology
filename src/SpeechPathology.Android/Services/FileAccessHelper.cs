@@ -12,7 +12,7 @@ namespace SpeechPathology.Droid
         public string GetDBPathAndCreateIfNotExists(string databaseName)
         {
             var docFolder = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
-            var dbFile = Path.Combine(docFolder, databaseName); // FILE NAME TO USE WHEN COPIED
+            var dbFile = Path.Combine(docFolder, databaseName); 
             
             if (!File.Exists(dbFile))
             {
@@ -22,6 +22,16 @@ namespace SpeechPathology.Droid
             }
          
             return dbFile;
+        }
+        public async Task<string> CopyAssetFileToTemp(string assetFile, string destinationFileName)
+        {
+            destinationFileName = Path.Combine(Path.GetTempPath(), destinationFileName);
+
+            using (var fileStream = new FileStream(destinationFileName, FileMode.OpenOrCreate, FileAccess.Write)) {
+                await Android.App.Application.Context.Assets.Open(assetFile).CopyToAsync(fileStream);
+            }
+
+            return destinationFileName;
         }
     }
 }

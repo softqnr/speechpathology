@@ -5,7 +5,7 @@
         Initial,
         Medial,
         Final,
-        Blended,
+        Blend,
         Repeat
     }
 }

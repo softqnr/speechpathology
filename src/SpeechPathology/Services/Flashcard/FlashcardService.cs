@@ -38,9 +38,9 @@ namespace SpeechPathology.Services.Flashcard
             return soundPositions;
         }
 
-        public async Task<List<Models.Flashcard>> GetFlashcards(SoundPosition soundPosition, string sound, string excludedSound)
+        public async Task<List<Models.Flashcard>> GetFlashcards(FlashcardSoundPosition soundPosition, string sound, string excludedSound)
         {
-            string soundPositionName = Enum.GetName(typeof(SoundPosition), soundPosition);
+            string soundPositionName = Enum.GetName(typeof(FlashcardSoundPosition), soundPosition);
 
             var flashcards = await _repositoryFlashcard.GetAsync<Models.Flashcard>(predicate: x => x.Sound == sound 
                 && x.SoundPosition == soundPositionName 

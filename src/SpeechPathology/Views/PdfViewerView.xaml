@@ -5,7 +5,11 @@
              xmlns:controls="clr-namespace:SpeechPathology.Controls"
              x:Class="SpeechPathology.Views.PdfViewerView"
              Title="Worksheets view">
-       <ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <controls:HideableToolbarItem Name="Save" Priority="0" Order="Primary" 
+                                      Command="{Binding SavePdfCommand}"  />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
 
         <Grid VerticalOptions="FillAndExpand">
             <Grid.RowDefinitions>

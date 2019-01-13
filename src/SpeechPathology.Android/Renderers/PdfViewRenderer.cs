@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Net;
 using Android.Content;
 using Android.Print;
 using Android.Webkit;
@@ -35,7 +36,7 @@ namespace SpeechPathology.Droid
 
                 using (var printManager = _context.GetSystemService(Android.Content.Context.PrintService) as PrintManager)
                 {
-                    printManager?.Print(FileName, new FilePrintDocumentAdapter(FileName, Uri), null);
+                    printManager?.Print(FileName, new FilePrintDocumentAdapter(_context, FileName, Uri), null);
                 }
 
                 return true;
@@ -61,7 +62,7 @@ namespace SpeechPathology.Droid
             {
                 return;
             }
-
+           
             if (string.IsNullOrWhiteSpace(pdfView.Uri) == false)
             {
                 Control.SetWebChromeClient(new PdfWebChromeClient(_context)
@@ -70,9 +71,11 @@ namespace SpeechPathology.Droid
                     FileName = GetFileNameFromUri(pdfView.Uri)
                 });
             }
-
+            // WebChromeClient has JS enabled by default
+            Control.Settings.JavaScriptEnabled = true;
             Control.Settings.AllowFileAccess = true;
             Control.Settings.AllowUniversalAccessFromFileURLs = true;
+
             LoadFile(pdfView.Uri);
         }
 
@@ -116,7 +119,8 @@ namespace SpeechPathology.Droid
             {
                 return;
             }
-            Control.LoadUrl($"file:///android_asset/pdfjs/web/viewer.html?file=file://{uri}");
+            Control.LoadUrl(string.Format("file:///android_asset/pdfjs/web/viewer.html?file={0}",
+                WebUtility.UrlEncode("file:///android_asset/" + uri)));
         }
     }
 }
