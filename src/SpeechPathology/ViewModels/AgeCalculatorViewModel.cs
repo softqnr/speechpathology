@@ -11,8 +11,12 @@ namespace SpeechPathology.ViewModels
 
         private DateTime _endDate;
         private DateTime _startDate;
-        private string _currentAge;
         private string _resultOut;
+
+        private int m_years;
+        private int m_months;
+        private int m_days;
+
 
         public DateTime StartDate
         {
@@ -47,12 +51,8 @@ namespace SpeechPathology.ViewModels
         {
             get
             {
-                int daysRemaining = AgeAtTest;
-                int years = (int) Math.Floor(daysRemaining / 365f);
-                daysRemaining = daysRemaining % 365;
-                var months = (int) Math.Floor(daysRemaining / 30f);
-                daysRemaining = daysRemaining % 30;
-                return years.ToString() + "y " + months.ToString() + "m " + daysRemaining + "d";
+                Calculate(StartDate, EndDate);
+                return string.Format("{0} years {1} months {2} days.", m_years, m_months, m_days);
             }
         }
 
@@ -97,6 +97,44 @@ namespace SpeechPathology.ViewModels
             ResultOut = "Opening Speech Development Sheet";
             await Task.Delay(1500);
             ResultOut = string.Empty;
+        }
+
+
+        public void Calculate(DateTime start, DateTime end)
+        {
+            DateTime d;
+
+            m_years = 0;
+            d = start;
+            while (d <= end)
+            {
+                m_years++;
+                d = start.AddYears(m_years);
+            }
+
+            m_years--;
+            start = start.AddYears(m_years);
+
+            m_months = 0;
+            d = start;
+            while (d <= end)
+            {
+                m_months++;
+                d = start.AddMonths(m_months);
+            }
+
+            m_months--;
+            start = start.AddMonths(m_months);
+
+            m_days = 0;
+            d = start;
+            while (d <= end)
+            {
+                m_days++;
+                d = start.AddDays(m_days);
+            }
+
+            m_days--;
         }
     }
 }
