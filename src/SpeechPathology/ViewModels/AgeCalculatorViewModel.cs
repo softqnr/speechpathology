@@ -1,3 +1,4 @@
+using SpeechPathology.Services.AgeCalculator;
 using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
@@ -7,7 +8,7 @@ namespace SpeechPathology.ViewModels
 {
     public class AgeCalculatorViewModel : ViewModelBase
     {
-        //private IAgeCalculatorService _ageCalculatorService;
+        private IAgeCalculatorService _ageCalculatorService;
 
         private DateTime _endDate;
         private DateTime _startDate;
@@ -69,8 +70,12 @@ namespace SpeechPathology.ViewModels
         public Command OralSkillsCommand { get; }
         public Command SpeechDevelopmentCommand { get; }
 
-        public AgeCalculatorViewModel ()
+        public AgeCalculatorViewModel(IAgeCalculatorService ageCalculatorService)
         {
+            _ageCalculatorService = ageCalculatorService;
+
+            _ageCalculatorService.TestDate = DateTime.Today;
+
             StartDate = DateTime.Now;
             EndDate = DateTime.Now;
 
@@ -100,7 +105,7 @@ namespace SpeechPathology.ViewModels
         }
 
 
-        public void Calculate(DateTime start, DateTime end)
+        private void Calculate(DateTime start, DateTime end)
         {
             DateTime d;
 

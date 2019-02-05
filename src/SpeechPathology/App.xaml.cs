@@ -22,6 +22,7 @@ using Unity.ServiceLocation;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using SpeechPathology.Services.Worksheet;
+using SpeechPathology.Services.AgeCalculator;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace SpeechPathology
@@ -73,6 +74,7 @@ namespace SpeechPathology
             Container.RegisterType<IRepository<ArticulationTestExamAnswer>, Repository<ArticulationTestExamAnswer>>(new InjectionConstructor(DatabaseFilePath));
             Container.RegisterType<IRepository<Flashcard>, Repository<Flashcard>>(new InjectionConstructor(DatabaseFilePath));
             Container.RegisterType<IRepository<Worksheet>, Repository<Worksheet>>(new InjectionConstructor(DatabaseFilePath));
+            Container.RegisterType<IRepository<AgeCalculation>, Repository<AgeCalculation>>(new InjectionConstructor(DatabaseFilePath));
 
             // Infrastructure Services
             Container.RegisterInstance(NavigationService, new ContainerControlledLifetimeManager());
@@ -84,6 +86,7 @@ namespace SpeechPathology
             Container.RegisterType<IArticulationTestService, ArticulationTestService>();
             Container.RegisterType<IFlashcardService, FlashcardService>();
             Container.RegisterType<IWorksheetService, WorksheetService>();
+            Container.RegisterType<IAgeCalculatorService, AgeCalculatorService>();
             
             // View models
             Container.RegisterType<MainViewModel>();
