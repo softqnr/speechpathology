@@ -1,4 +1,5 @@
 using SpeechPathology.Services.AgeCalculator;
+using SpeechPathology.Views;
 using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
@@ -17,7 +18,6 @@ namespace SpeechPathology.ViewModels
         private int m_years;
         private int m_months;
         private int m_days;
-
 
         public DateTime StartDate
         {
@@ -42,6 +42,8 @@ namespace SpeechPathology.ViewModels
                 OnPropertyChanged(nameof(CurrentAge));
             }
         }
+
+        public DateTime TestDate { get; set; }
 
         public int AgeAtTest
         {
@@ -74,10 +76,11 @@ namespace SpeechPathology.ViewModels
         {
             _ageCalculatorService = ageCalculatorService;
 
-            _ageCalculatorService.TestDate = DateTime.Today;
+            //NewSesson = new Command(async () => await StartNewSession() );
 
             StartDate = DateTime.Now;
             EndDate = DateTime.Now;
+            TestDate = DateTime.Today;
 
             OralSkillsCommand = new Command(async () => await OpenOralSkillsSheet() );
             SpeechDevelopmentCommand = new Command(async () => await OpenSpeechDevelopmentSheet() );
@@ -94,6 +97,7 @@ namespace SpeechPathology.ViewModels
             ResultOut = "Opening Oral Skills Sheet";
             await Task.Delay(1500);
             ResultOut = string.Empty;
+            
         }
 
         async Task OpenSpeechDevelopmentSheet()
