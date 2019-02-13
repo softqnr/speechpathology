@@ -191,4 +191,40 @@ This application does not replace a speech therapist, but offers an additional s
   <data name="AboutTheProject" xml:space="preserve">
     <value>About the project</value>
   </data>
+  <data name="SelectSoundPosition" xml:space="preserve">
+    <value>Select sound position</value>
+  </data>
+  <data name="Disclaimer" xml:space="preserve">
+    <value>Disclaimer</value>
+  </data>
+  <data name="RecomendedUsage" xml:space="preserve">
+    <value>Recomended Usage</value>
+  </data>
+  <data name="GeneratingPDF" xml:space="preserve">
+    <value>Generating PDF …</value>
+  </data>
+  <data name="SelectView" xml:space="preserve">
+    <value>Select View</value>
+  </data>
+  <data name="ShareResults" xml:space="preserve">
+    <value>Share results</value>
+  </data>
+  <data name="ShareWorksheet" xml:space="preserve">
+    <value>Share worksheet</value>
+  </data>
+  <data name="OpenInBrowser" xml:space="preserve">
+    <value>Open in browser</value>
+  </data>
+  <data name="PositionTestResults" xml:space="preserve">
+    <value>Position test results</value>
+  </data>
+  <data name="SoundTestResults" xml:space="preserve">
+    <value>Sound test results</value>
+  </data>
+  <data name="PhonologicalTestResults" xml:space="preserve">
+    <value>Phonological Test Results</value>
+  </data>
+  <data name="WorksheetsView" xml:space="preserve">
+    <value>Worksheets view</value>
+  </data>
 </root>

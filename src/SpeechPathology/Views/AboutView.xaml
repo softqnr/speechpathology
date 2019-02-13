@@ -4,7 +4,7 @@
              xmlns:i18n="clr-namespace:SpeechPathology.Extensions"
              xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
              x:Class="SpeechPathology.Views.AboutView"
-             Title="{i18n:Translate AboutTheProject}">
+             Title="{i18n:Translate Disclaimer}">
     <ContentPage.Content>
         <StackLayout Padding="20">
             <Label Text="{i18n:Translate AboutIntro}"
@@ -21,10 +21,10 @@
                                           CommandParameter="https://www.facebook.com/Speech-Pathology-Tools-157827324801986/"/>
                     </Image.GestureRecognizers>
                 </Image>
-                <Image Source="youtube_icon.png" WidthRequest="40" >
+                <Image Source="home_icon.png" WidthRequest="40" >
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding LinkTappedCommand}" 
-                                          CommandParameter="https://youtube.com/"/>
+                                          CommandParameter="http://www.speechpathologytools.eu/"/>
                     </Image.GestureRecognizers>
                 </Image>
                 <Image Source="mail_icon.png" WidthRequest="40" >

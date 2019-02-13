@@ -71,24 +71,25 @@ namespace SpeechPathology.ViewModels
 
         private async Task OpenResultsDialog()
         {
-            string result = await DialogService.SelectActionAsync("Select view",
-                    "Select view", "Cancel", new string[] { "Phonological test results", "Bell curve chart" });
-            DialogService.ShowLoading("Loading…");
-            switch (result)
+            string result = await DialogService.SelectActionAsync(Resources.AppResources.SelectView,
+                    Resources.AppResources.SelectView, 
+                    Resources.AppResources.Cancel, 
+                    new string[] { Resources.AppResources.SoundTestResults,
+                        Resources.AppResources.PositionTestResults });
+
+            DialogService.ShowLoading(Resources.AppResources.Loading);
+            if (result == Resources.AppResources.SoundTestResults) {
+                // Navigate to position test results
+                await NavigationService.NavigateToAsync<SoundTestResultsViewModel>(_articulationTestExam);
+                await NavigationService.RemoveLastFromBackStackAsync();
+            }else if (result == Resources.AppResources.PositionTestResults)
             {
-                case "Phonological test results":
-                    // Navigate to phonological test results
-                    await NavigationService.NavigateToAsync<PhonologicalTestResultsViewModel>(_articulationTestExam);
-                    await NavigationService.RemoveLastFromBackStackAsync();
-                    break;
-                case "Bell curve chart":
-                    // Navigate to bell curve chart
-                    await NavigationService.NavigateToAsync<BellCurveChartViewModel>(_articulationTestExam);
-                    await NavigationService.RemoveLastFromBackStackAsync();
-                    break;
-                case "Cancel":
-                    await NavigationService.NavigateBackAsync();
-                    break;
+                // Navigate to sound test results
+                await NavigationService.NavigateToAsync<PositionTestResultsViewModel>(_articulationTestExam);
+                await NavigationService.RemoveLastFromBackStackAsync();
+            }else if(result == Resources.AppResources.Cancel){
+                // Back
+                await NavigationService.NavigateBackAsync();
             }
             DialogService.HideLoading();
         }

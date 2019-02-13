@@ -144,6 +144,15 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Disclaimer.
+        /// </summary>
+        internal static string Disclaimer {
+            get {
+                return ResourceManager.GetString("Disclaimer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Final.
         /// </summary>
         internal static string Final {
@@ -158,6 +167,15 @@ namespace SpeechPathology.Resources {
         internal static string Flashcards {
             get {
                 return ResourceManager.GetString("Flashcards", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Generating PDF ….
+        /// </summary>
+        internal static string GeneratingPDF {
+            get {
+                return ResourceManager.GetString("GeneratingPDF", resourceCulture);
             }
         }
         
@@ -216,11 +234,47 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Open in browser.
+        /// </summary>
+        internal static string OpenInBrowser {
+            get {
+                return ResourceManager.GetString("OpenInBrowser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Phonological Test Results.
+        /// </summary>
+        internal static string PhonologicalTestResults {
+            get {
+                return ResourceManager.GetString("PhonologicalTestResults", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Play.
         /// </summary>
         internal static string Play {
             get {
                 return ResourceManager.GetString("Play", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Position test results.
+        /// </summary>
+        internal static string PositionTestResults {
+            get {
+                return ResourceManager.GetString("PositionTestResults", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Recomended Usage.
+        /// </summary>
+        internal static string RecomendedUsage {
+            get {
+                return ResourceManager.GetString("RecomendedUsage", resourceCulture);
             }
         }
         
@@ -252,11 +306,56 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Select sound position.
+        /// </summary>
+        internal static string SelectSoundPosition {
+            get {
+                return ResourceManager.GetString("SelectSoundPosition", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select View.
+        /// </summary>
+        internal static string SelectView {
+            get {
+                return ResourceManager.GetString("SelectView", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Share results.
+        /// </summary>
+        internal static string ShareResults {
+            get {
+                return ResourceManager.GetString("ShareResults", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Share worksheet.
+        /// </summary>
+        internal static string ShareWorksheet {
+            get {
+                return ResourceManager.GetString("ShareWorksheet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Skip.
         /// </summary>
         internal static string Skip {
             get {
                 return ResourceManager.GetString("Skip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sound test results.
+        /// </summary>
+        internal static string SoundTestResults {
+            get {
+                return ResourceManager.GetString("SoundTestResults", resourceCulture);
             }
         }
         
@@ -275,6 +374,15 @@ namespace SpeechPathology.Resources {
         internal static string WorksheetSaved {
             get {
                 return ResourceManager.GetString("WorksheetSaved", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Worksheets view.
+        /// </summary>
+        internal static string WorksheetsView {
+            get {
+                return ResourceManager.GetString("WorksheetsView", resourceCulture);
             }
         }
     }

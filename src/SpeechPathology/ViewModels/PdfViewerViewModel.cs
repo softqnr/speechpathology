@@ -44,7 +44,7 @@ namespace SpeechPathology.ViewModels
         {
             IsBusy = true;
             string filepath = await DependencyService.Get<IFileAccessHelper>().CopyAssetFileToTemp(PdfFile, "worksheet.pdf");
-            DependencyService.Get<IShare>().ShareFile("Share worksheet", "Share worksheet", filepath);
+            DependencyService.Get<IShare>().ShareFile(Resources.AppResources.ShareWorksheet, Resources.AppResources.ShareWorksheet, filepath);
             IsBusy = false;
         }
     }

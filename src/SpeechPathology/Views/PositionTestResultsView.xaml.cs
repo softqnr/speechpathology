@@ -4,9 +4,9 @@ using Xamarin.Forms.Xaml;
 namespace SpeechPathology.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class PhonologicalTestResultsView : ContentPage
+	public partial class PositionTestResultsView : ContentPage
 	{
-		public PhonologicalTestResultsView()
+		public PositionTestResultsView()
 		{
 			InitializeComponent ();
 		}

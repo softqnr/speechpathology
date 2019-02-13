@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:b="clr-namespace:SpeechPathology.Behaviors"
+             x:Class="SpeechPathology.Views.MasterView"
+             Title="Speech Pathology Tools">
+  <StackLayout>
+    <ListView x:Name="MenuItemsListView"
+              SeparatorVisibility="None"
+              HasUnevenRows="true"
+              ItemsSource="{Binding MenuItems}">
+            <ListView.Behaviors>
+                <b:EventToCommandBehavior Command="{Binding NavigationItemSelectedCommand}" 
+                                                  EventName="ItemTapped"/>
+            </ListView.Behaviors>
+            <ListView.Header>
+        <Grid BackgroundColor="{StaticResource primary}">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="10"/>
+          </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="30"/>
+          </Grid.RowDefinitions>
+            <Label TextColor="White"
+              Grid.Column="1"
+              Grid.Row="2">
+                    <Label.FormattedText>
+                        <FormattedString>
+                                <Span Text="Speech Pathology Tools " FontSize="Large" Style="{DynamicResource SubtitleStyle}"/>
+                                <Span Text="v1.0" FontSize="Small" />
+                        </FormattedString>
+                    </Label.FormattedText>
+            </Label>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="5" Grid.Column="1" Grid.Row="3">
+              <Image Source="facebook_icon.png" WidthRequest="30" >
+                <Image.GestureRecognizers>
+                  <TapGestureRecognizer Command="{Binding LinkTappedCommand}"
+                                    CommandParameter="https://www.facebook.com/Speech-Pathology-Tools-157827324801986/"/>
+                </Image.GestureRecognizers>
+              </Image>
+              <Image Source="home_icon.png" WidthRequest="30" >
+                <Image.GestureRecognizers>
+                  <TapGestureRecognizer Command="{Binding LinkTappedCommand}"
+                                    CommandParameter="http://www.speechpathologytools.eu/"/>
+                </Image.GestureRecognizers>
+              </Image>
+              <Image Source="mail_icon.png" WidthRequest="30" >
+                <Image.GestureRecognizers>
+                  <TapGestureRecognizer Command="{Binding LinkTappedCommand}"
+                                    CommandParameter="mailto:info@speechpathologytools.eu"/>
+                </Image.GestureRecognizers>
+              </Image>
+            </StackLayout>
+                </Grid>
+      </ListView.Header>
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <Grid Padding="5,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="18"/>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="{Binding IconSource}" />
+                <Label Grid.Column="1" Text="{Binding Title}" FontSize="Large"/>
+            </Grid>
+        </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
+</ContentPage>

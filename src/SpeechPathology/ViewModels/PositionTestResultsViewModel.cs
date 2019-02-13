@@ -11,7 +11,7 @@ using SpeechPathology.Infrastructure.PDF;
 
 namespace SpeechPathology.ViewModels
 {
-    public class PhonologicalTestResultsViewModel : ViewModelBase
+    public class PositionTestResultsViewModel : ViewModelBase
     {
         private ArticulationTestExam _articulationTestExam;
         private List<ArticulationTestExamAnswer> _articulationTestAnswers;
@@ -50,7 +50,7 @@ namespace SpeechPathology.ViewModels
                 });
             }
         }
-        public PhonologicalTestResultsViewModel(IPDFGeneratorService pdfGeneratorService)
+        public PositionTestResultsViewModel(IPDFGeneratorService pdfGeneratorService)
         {
             _pdfGeneratorService = pdfGeneratorService;
         }
@@ -65,10 +65,10 @@ namespace SpeechPathology.ViewModels
 
         private async Task GenerateAndSharePdfAsync()
         {
-            DialogService.ShowLoading("Generating PDF …");
-            string fileName =  await _pdfGeneratorService.GeneratePDFAsync(_articulationTestExam);
+            DialogService.ShowLoading(Resources.AppResources.GeneratingPDF);
+            string fileName =  await _pdfGeneratorService.GeneratePDFForPositionTestResultsAsync(_articulationTestExam);
             DialogService.HideLoading();
-            DependencyService.Get<IShare>().ShareFile("Share results", "Share results", fileName);
+            DependencyService.Get<IShare>().ShareFile(Resources.AppResources.ShareResults, Resources.AppResources.ShareResults, fileName);
         }
     }
 }

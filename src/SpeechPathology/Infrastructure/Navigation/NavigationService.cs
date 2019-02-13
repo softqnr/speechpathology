@@ -90,7 +90,7 @@ namespace SpeechPathology.Infrastructure.Navigation
         {
             Page page = CreateAndBindPage(viewModelType, parameter);
 
-            if (page is MainView)
+            if (page is MasterDetailView && page is ContentPage)
             {
                 CurrentApplication.MainPage = new CustomNavigationPage(page);
             }
@@ -107,10 +107,10 @@ namespace SpeechPathology.Infrastructure.Navigation
                 {
                     var currentPage = navigationPage.CurrentPage;
 
-                    if (currentPage.GetType() != page.GetType())
-                    {
+                    //if (currentPage.GetType() != page.GetType())
+                    //{
                         await navigationPage.PushAsync(page);
-                    }
+                    //}
                 }
                 else
                 {

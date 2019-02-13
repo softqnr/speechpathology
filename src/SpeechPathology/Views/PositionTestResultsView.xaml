@@ -3,8 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:converters="clr-namespace:SpeechPathology.Converters"
              xmlns:i18n="clr-namespace:SpeechPathology.Extensions"
-             x:Class="SpeechPathology.Views.PhonologicalTestResultsView"
-             Title="Phonological Test Results">
+             x:Class="SpeechPathology.Views.PositionTestResultsView"
+             Title="{i18n:Translate PositionTestResults}">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text ="PDF" Command="{Binding PDFExport}"
                 Priority="0" Order="Primary" />
@@ -47,8 +47,8 @@
                                             </StackLayout>
                                             <Label Grid.Row="1" VerticalTextAlignment="Start" FontSize="Small" Text="{Binding ArticulationTest.Text}"  Margin="0" />
                                             <StackLayout Grid.Row="2" Orientation="Horizontal">
-                                                <!--<Image WidthRequest="10" HeightRequest="10" Source="ic_icon" VerticalOptions="Center" />-->
-                                                <Label HorizontalTextAlignment="Start" VerticalTextAlignment="Center" FontSize="Micro" Text="22/08/2018"/>
+                                                <!--<Image WidthRequest="10" HeightRequest="10" Source="ic_icon" VerticalOptions="Center" />
+                                                <Label HorizontalTextAlignment="Start" VerticalTextAlignment="Center" FontSize="Micro" Text="22/08/2018"/>-->
                                             </StackLayout>
                                         </Grid>
                                         <StackLayout Orientation="Horizontal" Grid.Row="1" Padding="5"  Margin="-6,0,0,0" HorizontalOptions="FillAndExpand" BackgroundColor="#F1F1F1">

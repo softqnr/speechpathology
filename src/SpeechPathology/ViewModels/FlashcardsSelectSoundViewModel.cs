@@ -16,7 +16,6 @@ namespace SpeechPathology.ViewModels
         private string _selectedSound;
         private string _labelText;
         private bool _skipIsVisible;
-        private object _lastTappedItem;
         public List<string> Sounds
         {
             get => _sounds;
@@ -42,12 +41,6 @@ namespace SpeechPathology.ViewModels
                 });
             }
         }
-        public object LastTappedItem
-        {
-            get => _lastTappedItem;
-            set => SetProperty(ref _lastTappedItem, value);
-        }
-
         public string LabelText
         {
             get => _labelText;
@@ -91,17 +84,16 @@ namespace SpeechPathology.ViewModels
         }
         public async Task OnLetterSelected(string s)
         {
-            var item = LastTappedItem as string;
-            if (item != null)
+            if (s != null)
             {
                 if (_selectedSound != null)
                 {
-                    await NavigationService.NavigateToAsync<FlashcardsSelectSoundPositionViewModel>(new[] { _selectedSound, item });
+                    await NavigationService.NavigateToAsync<FlashcardsSelectSoundPositionViewModel>(new[] { _selectedSound, s });
                     await NavigationService.RemoveLastFromBackStackAsync();
                 }
                 else
                 {
-                    await NavigationService.NavigateToAsync<FlashcardsSelectSoundViewModel>(item);
+                    await NavigationService.NavigateToAsync<FlashcardsSelectSoundViewModel>(s);
                 }
             }
         }

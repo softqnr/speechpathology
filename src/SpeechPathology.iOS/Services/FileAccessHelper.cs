@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Threading.Tasks;
 using Foundation;
 using SpeechPathology.Interfaces;
 using SpeechPathology.iOS.Services;
@@ -20,6 +21,10 @@ namespace SpeechPathology.iOS.Services
                 File.Copy(existingDb, path);
             }
             return path;
+        }
+        public Task<string> CopyAssetFileToTemp(string assetFile, string destinationFileName)
+        {
+            throw new System.NotImplementedException();
         }
     } 
 }

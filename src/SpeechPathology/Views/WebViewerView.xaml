@@ -2,22 +2,20 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:i18n="clr-namespace:SpeechPathology.Extensions"
-             xmlns:controls="clr-namespace:SpeechPathology.Controls"
-             x:Class="SpeechPathology.Views.PdfViewerView"
-             Title="{i18n:Translate WorksheetsView}">
+             x:Class="SpeechPathology.Views.WebViewerView"
+             Title="{Binding Title}">
+
     <ContentPage.ToolbarItems>
-        <controls:HideableToolbarItem Name="Save" Priority="0" Order="Primary" 
-                                      Command="{Binding SavePdfCommand}"  />
+        <ToolbarItem Name="{i18n:Translate OpenInBrowser}" Priority="0" Order="Secondary" 
+                                      Command="{Binding OpenInBrowserCommand}"  />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
 
         <Grid VerticalOptions="FillAndExpand">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
-                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <controls:PdfView Grid.Row="0" x:Name="PdfDocView" VerticalOptions="FillAndExpand" Uri="{Binding PdfFile}"/>
-
+            <WebView Grid.Row="0" VerticalOptions="FillAndExpand" Source="{Binding Url}" />
         </Grid>
     </ContentPage.Content>
 </ContentPage>
