@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:i18n="clr-namespace:SpeechPathology.Extensions"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
              x:Class="SpeechPathology.Views.MainView"
              NavigationPage.HasNavigationBar="false">
@@ -21,7 +22,6 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="10"/>
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
@@ -31,37 +31,39 @@
             </Grid.RowDefinitions>
 
             <Button Text="{i18n:Translate ArticulationTest}" x:Name="ArticulationButton" Image="baseline_speaker_notes_white_24.png"
-                    Grid.Column = "0" Grid.Row = "0" BorderWidth="1" Margin="0" ContentLayout="Top,10"  Padding="0,50"
+                    Grid.Column = "0" Grid.Row = "0" BorderWidth="1" Margin="0" ContentLayout="Top,10"  Padding="0,50" BorderRadius="0"
                     BackgroundColor="{StaticResource primary}" BorderColor="{StaticResource primary_dark}" TextColor="White"
                 Command="{Binding ArticulationTest}"
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="FillAndExpand" />
             <Button Text="{i18n:Translate AgeCalculator}" x:Name="AgeCalculatorButton" Image="baseline_speaker_notes_white_24.png"
-                    Grid.Column = "1" Grid.Row = "0" BorderWidth="1" Margin="0" ContentLayout="Top,10"  Padding="0,50"
+                    Grid.Column = "1" Grid.Row = "0" BorderWidth="1" Margin="0" ContentLayout="Top,10"  Padding="0,50" BorderRadius="0"
                     BackgroundColor="{StaticResource primary}" BorderColor="{StaticResource primary_dark}" TextColor="White"
                 Command="{Binding AgeCalculator}"
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="FillAndExpand" />
             <Button Text="{i18n:Translate Flashcards}" x:Name="FlashcardsButton" Image="baseline_speaker_notes_white_24.png"
-                    Grid.Column = "0" Grid.Row = "1" BorderWidth="1" Margin="0" ContentLayout="Top,10"  Padding="0,50"
+                    Grid.Column = "0" Grid.Row = "1" BorderWidth="1" Margin="0" ContentLayout="Top,10"  Padding="0,50" BorderRadius="0"
                     BackgroundColor="{StaticResource primary}" BorderColor="{StaticResource primary_dark}" TextColor="White"
                 Command="{Binding Flashcards}"
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="FillAndExpand" />
             <Button Text="{i18n:Translate Worksheets}" x:Name="WorksheetsButton" Image="baseline_speaker_notes_white_24.png"
-                    Grid.Column = "1" Grid.Row = "1" BorderWidth="1" Margin="0" ContentLayout="Top,10" Padding="0,50"
+                    Grid.Column = "1" Grid.Row = "1" BorderWidth="1" Margin="0" ContentLayout="Top,10" Padding="0,50" BorderRadius="0"
                     BackgroundColor="{StaticResource primary}" BorderColor="{StaticResource primary_dark}" TextColor="White"
                 Command="{Binding Worksheets}"
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="FillAndExpand" />
             
-            <BoxView BackgroundColor="{StaticResource accent}"
-                     Grid.Column = "2" Grid.Row = "0" Grid.RowSpan="2"  />
 
-            <Label Text="{i18n:Translate ApplicationNotice}" Grid.Row="2" Grid.Column="0" FontSize="Micro" Grid.ColumnSpan="3" Margin="4" />
-            
+            <Label Text="{i18n:Translate ApplicationNotice}" Grid.Row="2" Grid.Column="0" FontSize="Micro" Grid.ColumnSpan="2" Margin="4" />
+
             <ffimageloadingsvg:SvgCachedImage WidthRequest="180" Margin="10" BackgroundColor="Transparent" HorizontalOptions="Start" VerticalOptions="End"
-                                          Source="erasmusplus_logo.svg"  Grid.Row = "2" Grid.Column = "0" Grid.ColumnSpan="3"/>
+                                          Source="erasmusplus_logo.svg"  Grid.Row = "2" Grid.Column = "0" Grid.ColumnSpan="2">
+                <ffimageloading:CachedImage.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding ImageTappedCommand}" />
+                </ffimageloading:CachedImage.GestureRecognizers>
+            </ffimageloadingsvg:SvgCachedImage>
         </Grid>
 
     </StackLayout>

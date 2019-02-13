@@ -1,16 +1,20 @@
 ﻿using System;
+using Android.Content;
 using Android.Print;
+using Android.Support.V4.Content;
 using Java.IO;
 
 namespace SpeechPathology.Droid
 {
     public class FilePrintDocumentAdapter : PrintDocumentAdapter
     {
+        private readonly Context _context;
         private readonly string _fileName;
-        private readonly string _filePath;
+        private string _filePath;
 
-        public FilePrintDocumentAdapter(string fileName, string filePath)
+        public FilePrintDocumentAdapter(Context context, string fileName, string filePath)
         {
+            _context = context;
             _fileName = fileName;
             _filePath = filePath;
         }

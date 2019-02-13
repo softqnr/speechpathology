@@ -176,4 +176,19 @@
 If you suspect your child is in need of speech therapy, you should consult a speech therapist.
 This application does not replace a speech therapist, but offers an additional supporting tool.</value>
   </data>
+  <data name="WorksheetSaved" xml:space="preserve">
+    <value>Worksheet saved.</value>
+  </data>
+  <data name="AboutIntro" xml:space="preserve">
+    <value>This application was designed by the Erasmus+ KA2 Strategic Partnership Project consortium of “Interactive Tools for Teachers and Children at Initial Education”</value>
+  </data>
+  <data name="AboutSocial" xml:space="preserve">
+    <value>For more information please visit our website and social media channels.</value>
+  </data>
+  <data name="AboutFooter" xml:space="preserve">
+    <value>The European Commission support for the production of this mobile app does not constitute an endorsement of the contents which reflects the views only of the authors, and the Commission cannot be held responsible for any use which may be made of the information contained therein.</value>
+  </data>
+  <data name="AboutTheProject" xml:space="preserve">
+    <value>About the project</value>
+  </data>
 </root>

@@ -52,7 +52,7 @@ namespace SpeechPathology.ViewModels
             if (ws != null)
             {
                 DialogService.ShowLoading(Resources.AppResources.Loading);
-                await NavigationService.NavigateToAsync<PdfViewerViewModel>(ws.File);
+                await NavigationService.NavigateToAsync<PdfViewerViewModel>("Worksheets/" + ws.File);
                 DialogService.HideLoading();
             }
         }

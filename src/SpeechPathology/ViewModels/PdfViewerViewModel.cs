@@ -1,10 +1,25 @@
-﻿using System.Threading.Tasks;
+﻿using SpeechPathology.Interfaces;
+using System.IO;
+using System.Threading.Tasks;
+using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace SpeechPathology.ViewModels
 {
     public class PdfViewerViewModel : ViewModelBase
     {
         private string _pdfFile;
+
+        public ICommand SavePdfCommand
+        {
+            get
+            {
+                return new Command(async () =>
+                {
+                    await OnSavePdfClicked();
+                });
+            }
+        }
 
         public string PdfFile
         {
@@ -23,6 +38,14 @@ namespace SpeechPathology.ViewModels
                 PdfFile = (string)navigationData;
             }
             await Task.FromResult(true);
+        }
+
+        public async Task OnSavePdfClicked()
+        {
+            IsBusy = true;
+            string filepath = await DependencyService.Get<IFileAccessHelper>().CopyAssetFileToTemp(PdfFile, "worksheet.pdf");
+            DependencyService.Get<IShare>().ShareFile("Share worksheet", "Share worksheet", filepath);
+            IsBusy = false;
         }
     }
 }
