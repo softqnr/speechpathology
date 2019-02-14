@@ -29,6 +29,7 @@ namespace SpeechPathology
 {
     public partial class App : Application
     {
+        public static MasterDetailPage MasterPage { get; set; }
         public static UnityContainer Container { get; private set; }
         public string DatabaseFilePath { get; private set; }
         public readonly static INavigationService NavigationService = new NavigationService();
@@ -42,21 +43,27 @@ namespace SpeechPathology
             InitializeDatabase();
             // Init DI
             InitializeDI();
+
+            // Nav
+            MainPage = new MasterDetailView();
         }
 
         private async Task InitializeNavigation()
         {
+            NavigationService.Configure(typeof(MasterViewModel), typeof(MasterView));
             NavigationService.Configure(typeof(MainViewModel), typeof(MainView));
             NavigationService.Configure(typeof(ArticulationTestViewModel), typeof(ArticulationTestView));
-            NavigationService.Configure(typeof(PhonologicalTestResultsViewModel), typeof(PhonologicalTestResultsView));
-            NavigationService.Configure(typeof(BellCurveChartViewModel), typeof(BellCurveChartView));
+            NavigationService.Configure(typeof(PositionTestResultsViewModel), typeof(PositionTestResultsView));
+            NavigationService.Configure(typeof(SoundTestResultsViewModel), typeof(SoundTestResultsView));
             NavigationService.Configure(typeof(AgeCalculatorViewModel), typeof(AgeCalculatorView));
             NavigationService.Configure(typeof(FlashcardsSelectSoundViewModel), typeof(FlashcardsSelectSoundView));
             NavigationService.Configure(typeof(FlashcardsSelectSoundPositionViewModel), typeof(FlashcardsSelectSoundPositionView)); 
             NavigationService.Configure(typeof(FlashcardsTestViewModel), typeof(FlashcardsTestView));
             NavigationService.Configure(typeof(WorksheetsViewModel), typeof(WorksheetsView));
             NavigationService.Configure(typeof(PdfViewerViewModel), typeof(PdfViewerView));
+            NavigationService.Configure(typeof(WebViewerViewModel), typeof(WebViewerView));
             NavigationService.Configure(typeof(AboutViewModel), typeof(AboutView));
+            
             await NavigationService.InitializeAsync();
         }
 
@@ -91,8 +98,8 @@ namespace SpeechPathology
             // View models
             Container.RegisterType<MainViewModel>();
             Container.RegisterType<ArticulationTestViewModel>();
-            Container.RegisterType<PhonologicalTestResultsViewModel>();
-            Container.RegisterType<BellCurveChartViewModel>();
+            Container.RegisterType<PositionTestResultsViewModel>();
+            Container.RegisterType<SoundTestResultsViewModel>();
             Container.RegisterType<AgeCalculatorViewModel>();
             Container.RegisterType<FlashcardsSelectSoundViewModel>();
             Container.RegisterType<FlashcardsSelectSoundPositionViewModel>();

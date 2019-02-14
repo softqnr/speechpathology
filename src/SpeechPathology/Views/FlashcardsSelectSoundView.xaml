@@ -5,7 +5,7 @@
              xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
              xmlns:controls="clr-namespace:SpeechPathology.Controls"
              x:Class="SpeechPathology.Views.FlashcardsSelectSoundView"
-             Title="Flashcards">
+             Title="{i18n:Translate Flashcards}">
     <ContentPage.Resources>
         <ResourceDictionary>
             <x:Array x:Key="rotationParams" Type="{x:Type x:Int32}">
@@ -30,8 +30,7 @@
             <Label Text="{Binding LabelText}" TextColor="{StaticResource accent}" FontSize="Large" HorizontalOptions="Center" />
             
             <flv:FlowListView FlowColumnCount="5" SeparatorVisibility="None" HasUnevenRows="false" RowHeight="100" FlowColumnMinWidth="100"
-	            FlowItemTappedCommand="{Binding ItemTappedCommand}" FlowLastTappedItem="{Binding LastTappedItem}"
-	            FlowItemsSource="{Binding Sounds}" >
+	            FlowItemTappedCommand="{Binding ItemTappedCommand}" FlowItemsSource="{Binding Sounds}" >
 
                 <flv:FlowListView.FlowColumnTemplate>
                     <DataTemplate>

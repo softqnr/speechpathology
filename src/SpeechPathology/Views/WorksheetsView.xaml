@@ -5,7 +5,7 @@
              xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
              xmlns:controls="clr-namespace:SpeechPathology.Controls"
              x:Class="SpeechPathology.Views.WorksheetsView"
-             Title="Worksheets">
+             Title="{i18n:Translate Worksheets}">
     <ContentPage.Resources>
         <ResourceDictionary>
             <x:Array x:Key="rotationParams" Type="{x:Type x:Int32}">

@@ -28,11 +28,14 @@ namespace SpeechPathology.ViewModels
                 return new Command(async () =>
                 {
                     // Open dialog box
-                    string location = await DialogService.SelectActionAsync("Select sound location", 
-                        "Select sound location", "Cancel", Enum.GetNames(typeof(SoundPosition)));
+                    string location = await DialogService.SelectActionAsync(
+                        Resources.AppResources.SelectSoundPosition,
+                        Resources.AppResources.SelectSoundPosition, 
+                        Resources.AppResources.Cancel, 
+                        Enum.GetNames(typeof(SoundPosition)));
                     
-                    if (location != "Cancel") {
-                        DialogService.ShowLoading("Loading…");
+                    if (location != Resources.AppResources.Cancel) {
+                        DialogService.ShowLoading(Resources.AppResources.Loading);
                         // Convert string value to enum
                         SoundPosition soundPosition = (SoundPosition)Enum.Parse(typeof(SoundPosition), location);
                         // Navigate to articulation test

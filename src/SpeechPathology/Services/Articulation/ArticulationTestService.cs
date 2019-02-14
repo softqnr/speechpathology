@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using System;
 using System.Linq;
+using SpeechPathology.Types;
 
 namespace SpeechPathology.Services.Articulation
 {
@@ -57,7 +58,7 @@ namespace SpeechPathology.Services.Articulation
         public async Task<ArticulationTestExam> CloseExam(ArticulationTestExam exam){
             exam.DateEnded = DateTime.Now;
             // Calculate score
-            exam.Score = exam.Answers.DefaultIfEmpty().Average(x => Convert.ToInt32(x.IsCorrect));
+            exam.Score = CalculateScore(exam);
             // Save
             await _repositoryTestExam.UpdateAsync(exam);
 
@@ -71,6 +72,22 @@ namespace SpeechPathology.Services.Articulation
             {
                 await _repositoryTestExam.DeleteAllAsync(exams, true);
             }
+        }
+
+        private double CalculateScore(ArticulationTestExam exam)
+        {
+            return exam.Answers.DefaultIfEmpty()
+                .Average(x => Convert.ToInt32(x.IsCorrect));
+        }
+
+        public IEnumerable<Grouping<string, ArticulationTestExamAnswer>> GenerateGroupings(ArticulationTestExam exam)
+        {
+            var result = from answer in exam.Answers
+                         orderby answer.ArticulationTest.Sound
+                         group answer by answer.ArticulationTest.Sound into answerGroup
+                         select new Grouping<string, ArticulationTestExamAnswer>($"{answerGroup.Key}  ({answerGroup.Average(x => Convert.ToInt32(x.IsCorrect)):P})", answerGroup);
+
+            return result;
         }
     }
 }

@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace SpeechPathology.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class BellCurveChartView : ContentPage
+	public partial class SoundTestResultsView : ContentPage
 	{
-		public BellCurveChartView()
+		public SoundTestResultsView()
 		{
 			InitializeComponent ();
 		}

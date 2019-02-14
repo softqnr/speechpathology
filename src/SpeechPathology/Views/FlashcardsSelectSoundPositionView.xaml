@@ -4,7 +4,7 @@
              xmlns:i18n="clr-namespace:SpeechPathology.Extensions"
              xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
              x:Class="SpeechPathology.Views.FlashcardsSelectSoundPositionView"
-             Title="Flashcards"
+             Title="{i18n:Translate Flashcards}"
              x:Name="Page">
     <ContentPage.Resources>
         <ResourceDictionary>
