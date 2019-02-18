@@ -97,6 +97,15 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Age at test date.
+        /// </summary>
+        internal static string AgeAtTest {
+            get {
+                return ResourceManager.GetString("AgeAtTest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Age Calculator.
         /// </summary>
         internal static string AgeCalculator {
@@ -140,6 +149,24 @@ namespace SpeechPathology.Resources {
         internal static string Correct {
             get {
                 return ResourceManager.GetString("Correct", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Birth date.
+        /// </summary>
+        internal static string DateOfBirth {
+            get {
+                return ResourceManager.GetString("DateOfBirth", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Test date.
+        /// </summary>
+        internal static string DateOfTest {
+            get {
+                return ResourceManager.GetString("DateOfTest", resourceCulture);
             }
         }
         

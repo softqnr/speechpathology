@@ -12,7 +12,7 @@
                    Margin="0, 20"
                    HorizontalTextAlignment="Center" />
 
-            <Label Text="Birth date: "
+            <Label Text="{i18n:Translate DateOfBirth}"
                    Style="{DynamicResource SubtitleStyle}" />
 
             <DatePicker x:Name="startDatePicker"
@@ -20,31 +20,27 @@
                         Margin="30, 0, 30, 30"
                         Date="{Binding StartDate}" />
 
-            <Label Text="Test Date:"
+            <Label Text="{i18n:Translate DateOfTest}"
                    Style="{DynamicResource SubtitleStyle}" />
 
             <DatePicker x:Name="endDatePicker"
-                        MinimumDate="{Binding Source={x:Reference startDatePicker},
-                                                Path=Date}"
+                        MinimumDate="{Binding Source={x:Reference startDatePicker}, Path=Date}"
                         Format="D"
                         Margin="30, 0, 30, 30"
                         Date="{Binding EndDate}" />
 
-            <StackLayout Orientation="Horizontal"
-                         HorizontalOptions="CenterAndExpand">
-                <Label Text="Age at test date: " />
-                <Label Text="{Binding AgeAtTest}"
-                       HorizontalOptions="StartAndExpand"/>
-                <Label Text="Days" />
-            </StackLayout>
-            
+            <Label Text="{i18n:Translate AgeAtTest}"
+                   Style="{DynamicResource TitleStyle}"
+                   HorizontalOptions="CenterAndExpand" />
+
             <Label Text="{Binding CurrentAge}"
-                   HorizontalOptions="CenterAndExpand"/>
+                   Style="{DynamicResource TitleStyle}"
+                   HorizontalOptions="CenterAndExpand" />
 
             <FlexLayout Direction="Row"
-                        Margin="0, 30"
-                        AlignItems="Center"
-                        AlignContent="SpaceBetween">
+                    Margin="0, 30"
+                    AlignItems="Center"
+                    AlignContent="SpaceBetween">
 
                 <Button Text="Show oral language skills"
                         BackgroundColor="#ffff99"
