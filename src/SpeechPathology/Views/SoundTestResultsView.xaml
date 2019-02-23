@@ -23,6 +23,7 @@
                       SeparatorVisibility="None"
                       ItemsSource="{Binding ArticulationTestAnswers}"
                       IsGroupingEnabled="True"
+                      GroupShortNameBinding="{Binding ShortKey}"
                       GroupDisplayBinding ="{Binding Key}">
                     <ListView.GroupHeaderTemplate>
                         <DataTemplate>

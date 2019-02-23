@@ -7,9 +7,12 @@ namespace SpeechPathology.Types
     {
         public K Key { get; private set; }
 
-        public Grouping(K key, IEnumerable<T> items)
+        public string ShortKey { get; private set; }
+
+        public Grouping(K key, string shortKey, IEnumerable<T> items)
         {
             Key = key;
+            ShortKey = shortKey;
             foreach (var item in items)
                 this.Items.Add(item);
         }

@@ -3,6 +3,7 @@ using MigraDocCore.DocumentObjectModel.Shapes;
 using MigraDocCore.DocumentObjectModel.Tables;
 using MigraDocCore.Rendering;
 using PdfSharpCore.Fonts;
+using SpeechPathology.Infrastructure.PDF;
 using SpeechPathology.Models;
 using SpeechPathology.Types;
 using System;
@@ -10,7 +11,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 
-namespace SpeechPathology.Infrastructure.PDF
+namespace SpeechPathology.Services.Articulation
 {
     public class PDFGeneratorService : IPDFGeneratorService
     {
@@ -30,8 +31,11 @@ namespace SpeechPathology.Infrastructure.PDF
                 GlobalFontSettings.FontResolver = new FontResolver();
             }
 
+            // Set page format
             _document = new Document();
             _section = _document.Sections.AddSection();
+            _section.PageSetup.PageFormat = PageFormat.A4;
+            _section.PageSetup.Orientation = Orientation.Landscape;
 
             InitStyles();
 
@@ -151,8 +155,11 @@ namespace SpeechPathology.Infrastructure.PDF
                 GlobalFontSettings.FontResolver = new FontResolver();
             }
 
+            // Set page format
             _document = new Document();
             _section = _document.Sections.AddSection();
+            _section.PageSetup.PageFormat = PageFormat.A4;
+            _section.PageSetup.Orientation = Orientation.Portrait;
 
             InitStyles();
 
@@ -174,9 +181,17 @@ namespace SpeechPathology.Infrastructure.PDF
             //frame.FillFormat.Color = Colors.LightGray;
             //frame.Height = "2cm";
             //frame.Width = "9cm";
-
+            
+            // Title
             var par = _section.AddParagraph(Resources.AppResources.SoundTestResults);
             par.Format.Font.Size = 14;
+            par.Format.Font.Bold = true;
+            par.Format.Alignment = ParagraphAlignment.Center;
+            par.Format.SpaceAfter = "1cm";
+
+            // Sub title 
+            par = _section.AddParagraph(articulationTestExam.SoundPosition);
+            par.Format.Font.Size = 12;
             par.Format.Font.Bold = true;
             par.Format.Alignment = ParagraphAlignment.Center;
             par.Format.SpaceAfter = "1cm";
@@ -185,26 +200,30 @@ namespace SpeechPathology.Infrastructure.PDF
             Table table = _section.AddTable();
             table.Borders.Visible = true;
             // Create table columns
-            var col = table.AddColumn(70);
+            var col = table.AddColumn(140);
             foreach (Grouping<string, ArticulationTestExamAnswer> grouping in articulationTestAnswersGrouping)
             {
-                col = table.AddColumn(34);
-            }
-  
-            int iCount = 1;
-            // Groupings row
-            var row = table.AddRow();
-            row.Height = 20;
-            // Location column
-            row.Cells[0].AddParagraph(articulationTestExam.SoundPosition);
-  
-            foreach (Grouping<string, ArticulationTestExamAnswer> grouping in articulationTestAnswersGrouping)
-            {
-                par = row.Cells[iCount].AddParagraph(grouping.Key);
-                par.Format.Font.Size = 10;
+                var row = table.AddRow();
+                row.Height = 20;
+                row.Shading.Color = Color.FromCmyk(0, 0, 0, 5); // #f1f1f1
+                par = row.Cells[0].AddParagraph(grouping.Key);
+                par.Format.Font.Size = 12;
                 par.Format.Alignment = ParagraphAlignment.Center;
-                iCount++;
-             }
+              
+                foreach (ArticulationTestExamAnswer answer in grouping)
+                {
+                    row = table.AddRow();
+                    row.Height = 20;
+
+                    if (answer.IsCorrect.HasValue)
+                    {
+                        string answerText = answer.IsCorrect.Value ? "T" : "F";
+                        par = row.Cells[0].AddParagraph($"Test {answer.Number} - {answer.ArticulationTest.Text} - {answerText}");
+                        par.Format.Font.Size = 12;
+                        par.Format.Alignment = ParagraphAlignment.Center;
+                    }
+                }
+            }          
 
             // Footer
             par = _section.Footers.Primary.AddParagraph();
@@ -225,9 +244,6 @@ namespace SpeechPathology.Infrastructure.PDF
             Style style = _document.Styles["Normal"];
             style.Font.Name = "OpenSans";
             style.Font.Size = 12;
-
-            _section.PageSetup.PageFormat = PageFormat.A4;
-            _section.PageSetup.Orientation = Orientation.Landscape;
         }
 
         private void SavePDF(string fileName)

@@ -270,7 +270,7 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Recomended Usage.
+        ///   Looks up a localized string similar to Recommended Usage.
         /// </summary>
         internal static string RecomendedUsage {
             get {

@@ -1,13 +1,10 @@
-﻿using SpeechPathology.Models;
-using SpeechPathology.Infrastructure.Navigation;
+﻿using SpeechPathology.Interfaces;
+using SpeechPathology.Models;
+using SpeechPathology.Services.Articulation;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using System.Linq;
-using System;
-using Xamarin.Forms;
 using System.Windows.Input;
-using SpeechPathology.Interfaces;
-using SpeechPathology.Infrastructure.PDF;
+using Xamarin.Forms;
 
 namespace SpeechPathology.ViewModels
 {

@@ -198,7 +198,7 @@ This application does not replace a speech therapist, but offers an additional s
     <value>Disclaimer</value>
   </data>
   <data name="RecomendedUsage" xml:space="preserve">
-    <value>Recomended Usage</value>
+    <value>Recommended Usage</value>
   </data>
   <data name="GeneratingPDF" xml:space="preserve">
     <value>Generating PDF …</value>

@@ -16,6 +16,7 @@
             <Color x:Key="divider">#BDBDBD</Color>
             <!--  converters  -->
             <converters:BoolToColorConverter x:Key="BoolToColorConverter" />
+            <converters:InverseBoolConverter x:Key="InverseBoolConverter" />
             <converters:RandomColorConverter x:Key="RandomColorConverter" />
             <converters:ZeroToOneBaseConverter x:Key="ZeroToOneBaseConverter" />
             <converters:RandomNumberConverter x:Key="RandomNumberConverter" />

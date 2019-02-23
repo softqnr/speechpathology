@@ -85,7 +85,7 @@ namespace SpeechPathology.Services.Articulation
             var result = from answer in exam.Answers
                          orderby answer.ArticulationTest.Sound
                          group answer by answer.ArticulationTest.Sound into answerGroup
-                         select new Grouping<string, ArticulationTestExamAnswer>($"{answerGroup.Key}  ({answerGroup.Average(x => Convert.ToInt32(x.IsCorrect)):P})", answerGroup);
+                         select new Grouping<string, ArticulationTestExamAnswer>($"{answerGroup.Key}  ({answerGroup.Average(x => Convert.ToInt32(x.IsCorrect)):P})", answerGroup.Key, answerGroup);
 
             return result;
         }
