@@ -227,4 +227,7 @@ This application does not replace a speech therapist, but offers an additional s
   <data name="WorksheetsView" xml:space="preserve">
     <value>Worksheets view</value>
   </data>
+  <data name="ProjectTitle" xml:space="preserve">
+    <value>Speech Pathology Tools</value>
+  </data>
 </root>

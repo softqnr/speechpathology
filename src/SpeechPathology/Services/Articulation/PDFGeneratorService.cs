@@ -1,4 +1,5 @@
 ﻿using MigraDocCore.DocumentObjectModel;
+using MigraDocCore.DocumentObjectModel.MigraDoc.DocumentObjectModel.Shapes;
 using MigraDocCore.DocumentObjectModel.Shapes;
 using MigraDocCore.DocumentObjectModel.Tables;
 using MigraDocCore.Rendering;
@@ -42,7 +43,7 @@ namespace SpeechPathology.Services.Articulation
             // Header
 
             // Logo
-            //Image image = _section.Headers.Primary.AddImage("../../PowerBooks.png");
+            //Image image = _section.Headers.Primary.AddImage(ImageSource.FromFile("logo_notext.png"));
             //image.Height = "2.5cm";
             //image.LockAspectRatio = true;
             //image.RelativeVertical = RelativeVertical.Line;
@@ -53,12 +54,13 @@ namespace SpeechPathology.Services.Articulation
 
             // Render Results
             // Header title
-            //TextFrame frame = new TextFrame();
-            //frame.FillFormat.Color = Colors.LightGray;
-            //frame.Height = "2cm";
-            //frame.Width = "9cm";
+            var par = _section.Headers.Primary.AddParagraph(Resources.AppResources.ProjectTitle);
+            par.Format.Font.Size = 24;
+            par.Format.Font.Bold = true;
+            par.Format.Alignment = ParagraphAlignment.Center;
 
-            var par = _section.AddParagraph(Resources.AppResources.PositionTestResults);
+            // Title
+            par = _section.AddParagraph(Resources.AppResources.PositionTestResults);
             par.Format.Font.Size = 16;
             par.Format.Font.Bold = true;
             par.Format.Alignment = ParagraphAlignment.Center;
@@ -130,7 +132,7 @@ namespace SpeechPathology.Services.Articulation
 
             // Footer
             par = _section.Footers.Primary.AddParagraph();
-            par.AddText(DateTime.Now.ToShortDateString());
+            par.AddText(DateTime.Now.ToString("dd/MM/yyyy"));
             par.Format.Font.Size = 9;
             par.Format.Alignment = ParagraphAlignment.Right;
 
@@ -166,7 +168,7 @@ namespace SpeechPathology.Services.Articulation
             // Header
 
             // Logo
-            //Image image = _section.Headers.Primary.AddImage("../../PowerBooks.png");
+            //Image image = _section.Headers.Primary.AddImage(ImageSource.FromFile("logo_notext.png"));
             //image.Height = "2.5cm";
             //image.LockAspectRatio = true;
             //image.RelativeVertical = RelativeVertical.Line;
@@ -177,13 +179,13 @@ namespace SpeechPathology.Services.Articulation
 
             // Render Results
             // Header title
-            //TextFrame frame = new TextFrame();
-            //frame.FillFormat.Color = Colors.LightGray;
-            //frame.Height = "2cm";
-            //frame.Width = "9cm";
-            
+            var par = _section.Headers.Primary.AddParagraph(Resources.AppResources.ProjectTitle);
+            par.Format.Font.Size = 24;
+            par.Format.Font.Bold = true;
+            par.Format.Alignment = ParagraphAlignment.Center;
+
             // Title
-            var par = _section.AddParagraph(Resources.AppResources.SoundTestResults);
+            par = _section.AddParagraph(Resources.AppResources.SoundTestResults);
             par.Format.Font.Size = 14;
             par.Format.Font.Bold = true;
             par.Format.Alignment = ParagraphAlignment.Center;
@@ -227,7 +229,7 @@ namespace SpeechPathology.Services.Articulation
 
             // Footer
             par = _section.Footers.Primary.AddParagraph();
-            par.AddText(DateTime.Now.ToShortDateString());
+            par.AddText(DateTime.Now.ToString("dd/MM/yyyy"));
             par.Format.Font.Size = 9;
             par.Format.Alignment = ParagraphAlignment.Right;
 

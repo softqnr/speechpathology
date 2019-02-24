@@ -7,10 +7,11 @@
              x:Class="SpeechPathology.Views.MainView"
              Title="">
     <StackLayout Padding="0" Spacing="0" VerticalOptions="FillAndExpand">
-        <StackLayout VerticalOptions="Start" BackgroundColor="White">
-            <ffimageloadingsvg:SvgCachedImage WidthRequest="110" HeightRequest="110" BackgroundColor="Transparent"
+        <StackLayout VerticalOptions="Start" BackgroundColor="White" Padding="0,0,0,10">
+            <ffimageloadingsvg:SvgCachedImage WidthRequest="100" HeightRequest="100" BackgroundColor="Transparent"
                                           Source="logo.svg" HorizontalOptions="CenterAndExpand"/>
-            <Label Text="Speech Pathology Tools" TextColor="{StaticResource accent}" FontSize="Medium" HorizontalOptions="CenterAndExpand" />
+            <Label Text="{i18n:Translate ProjectTitle}" TextColor="{StaticResource accent}" 
+                   FontSize="Medium" HorizontalOptions="CenterAndExpand" />
         </StackLayout>
         
         <Grid RowSpacing="0" ColumnSpacing="0" Margin="0" Padding="0"
@@ -30,25 +31,25 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
-            <Button Text="{i18n:Translate ArticulationTest}" x:Name="ArticulationButton" Image="baseline_speaker_notes_white_24.png"
+            <Button Text="{i18n:Translate ArticulationTest}" x:Name="ArticulationButton" Image="baseline_record_voice_over_white_24.png"
                     Grid.Column = "0" Grid.Row = "0" BorderWidth="1" Margin="0" ContentLayout="Top,10"  Padding="0,48" BorderRadius="0"
                     BackgroundColor="{StaticResource primary}" BorderColor="{StaticResource primary_dark}" TextColor="White"
                 Command="{Binding ArticulationTest}"
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="FillAndExpand" />
-            <Button Text="{i18n:Translate AgeCalculator}" x:Name="AgeCalculatorButton" Image="baseline_speaker_notes_white_24.png"
+            <Button Text="{i18n:Translate AgeCalculator}" x:Name="AgeCalculatorButton" Image="baseline_calendar_today_white_24.png"
                     Grid.Column = "1" Grid.Row = "0" BorderWidth="1" Margin="0" ContentLayout="Top,10"  Padding="0,48" BorderRadius="0"
                     BackgroundColor="{StaticResource primary}" BorderColor="{StaticResource primary_dark}" TextColor="White"
                 Command="{Binding AgeCalculator}"
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="FillAndExpand" />
-            <Button Text="{i18n:Translate Flashcards}" x:Name="FlashcardsButton" Image="baseline_speaker_notes_white_24.png"
+            <Button Text="{i18n:Translate Flashcards}" x:Name="FlashcardsButton" Image="baseline_wallpaper_white_24.png"
                     Grid.Column = "0" Grid.Row = "1" BorderWidth="1" Margin="0" ContentLayout="Top,10"  Padding="0,48" BorderRadius="0"
                     BackgroundColor="{StaticResource primary}" BorderColor="{StaticResource primary_dark}" TextColor="White"
                 Command="{Binding Flashcards}"
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="FillAndExpand" />
-            <Button Text="{i18n:Translate Worksheets}" x:Name="WorksheetsButton" Image="baseline_speaker_notes_white_24.png"
+            <Button Text="{i18n:Translate Worksheets}" x:Name="WorksheetsButton" Image="baseline_font_download_white_24.png"
                     Grid.Column = "1" Grid.Row = "1" BorderWidth="1" Margin="0" ContentLayout="Top,10" Padding="0,48" BorderRadius="0"
                     BackgroundColor="{StaticResource primary}" BorderColor="{StaticResource primary_dark}" TextColor="White"
                 Command="{Binding Worksheets}"
