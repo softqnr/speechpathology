@@ -21,6 +21,7 @@ namespace SpeechPathology.ViewModels
         private int? _testCount;
         private string _text;
         private string _image;
+        private bool _testViewIsVisible = true;
 
         public ICommand AnswerTestCommand { get; private set; } //=> new AsyncCommand(AnswerAsync);
 
@@ -48,6 +49,48 @@ namespace SpeechPathology.ViewModels
             set => SetProperty(ref _image, value);
         }
 
+        public bool TestViewIsVisible
+        {
+            get => _testViewIsVisible;
+            set => SetProperty(ref _testViewIsVisible, value);
+        }
+
+        public ICommand OpenSoundTestResultsCommand
+        {
+            get
+            {
+                return new Command<string>(async (s) =>
+                {
+                    // Navigate to sound test results
+                    await NavigationService.NavigateToAsync<SoundTestResultsViewModel>(_articulationTestExam);
+                });
+            }
+        }
+
+        public ICommand OpenPositionTestResultsCommand
+        {
+            get
+            {
+                return new Command<string>(async (s) =>
+                {
+                    // Navigate to position test results
+                    await NavigationService.NavigateToAsync<PositionTestResultsViewModel>(_articulationTestExam);
+                });
+            }
+        }
+
+        public ICommand CancelTestResultsCommand
+        {
+            get
+            {
+                return new Command<string>(async (s) =>
+                {
+                    // Back
+                    await NavigationService.NavigateBackAsync();
+                });
+            }
+        }
+        
         public ArticulationTestViewModel(IArticulationTestService articulationTestService) 
         {
             _articulationTestService = articulationTestService;
@@ -64,33 +107,16 @@ namespace SpeechPathology.ViewModels
             {
                 // Close exam
                 _articulationTestExam = await _articulationTestService.CloseExam(_articulationTestExam);
-                // Open dialog box
-                await OpenResultsDialog();
+                // Open dialog view
+                await OpenResultsView();
             }
         }
 
-        private async Task OpenResultsDialog()
+        private async Task OpenResultsView()
         {
-            string result = await DialogService.SelectActionAsync(Resources.AppResources.SelectView,
-                    Resources.AppResources.SelectView, 
-                    Resources.AppResources.Cancel, 
-                    new string[] { Resources.AppResources.SoundTestResults,
-                        Resources.AppResources.PositionTestResults });
-
             DialogService.ShowLoading(Resources.AppResources.Loading);
-            if (result == Resources.AppResources.SoundTestResults) {
-                // Navigate to position test results
-                await NavigationService.NavigateToAsync<SoundTestResultsViewModel>(_articulationTestExam);
-                await NavigationService.RemoveLastFromBackStackAsync();
-            }else if (result == Resources.AppResources.PositionTestResults)
-            {
-                // Navigate to sound test results
-                await NavigationService.NavigateToAsync<PositionTestResultsViewModel>(_articulationTestExam);
-                await NavigationService.RemoveLastFromBackStackAsync();
-            }else if(result == Resources.AppResources.Cancel){
-                // Back
-                await NavigationService.NavigateBackAsync();
-            }
+            await Task.Delay(500);
+            TestViewIsVisible = false;
             DialogService.HideLoading();
         }
 

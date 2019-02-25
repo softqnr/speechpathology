@@ -1,8 +1,10 @@
 ﻿using MigraDocCore.DocumentObjectModel;
+using MigraDocCore.DocumentObjectModel.MigraDoc.DocumentObjectModel.Shapes;
 using MigraDocCore.DocumentObjectModel.Shapes;
 using MigraDocCore.DocumentObjectModel.Tables;
 using MigraDocCore.Rendering;
 using PdfSharpCore.Fonts;
+using SpeechPathology.Infrastructure.PDF;
 using SpeechPathology.Models;
 using SpeechPathology.Types;
 using System;
@@ -10,7 +12,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 
-namespace SpeechPathology.Infrastructure.PDF
+namespace SpeechPathology.Services.Articulation
 {
     public class PDFGeneratorService : IPDFGeneratorService
     {
@@ -30,15 +32,18 @@ namespace SpeechPathology.Infrastructure.PDF
                 GlobalFontSettings.FontResolver = new FontResolver();
             }
 
+            // Set page format
             _document = new Document();
             _section = _document.Sections.AddSection();
+            _section.PageSetup.PageFormat = PageFormat.A4;
+            _section.PageSetup.Orientation = Orientation.Landscape;
 
             InitStyles();
 
             // Header
 
             // Logo
-            //Image image = _section.Headers.Primary.AddImage("../../PowerBooks.png");
+            //Image image = _section.Headers.Primary.AddImage(ImageSource.FromFile("logo_notext.png"));
             //image.Height = "2.5cm";
             //image.LockAspectRatio = true;
             //image.RelativeVertical = RelativeVertical.Line;
@@ -49,12 +54,13 @@ namespace SpeechPathology.Infrastructure.PDF
 
             // Render Results
             // Header title
-            //TextFrame frame = new TextFrame();
-            //frame.FillFormat.Color = Colors.LightGray;
-            //frame.Height = "2cm";
-            //frame.Width = "9cm";
+            var par = _section.Headers.Primary.AddParagraph(Resources.AppResources.ProjectTitle);
+            par.Format.Font.Size = 24;
+            par.Format.Font.Bold = true;
+            par.Format.Alignment = ParagraphAlignment.Center;
 
-            var par = _section.AddParagraph(Resources.AppResources.PositionTestResults);
+            // Title
+            par = _section.AddParagraph(Resources.AppResources.PositionTestResults);
             par.Format.Font.Size = 16;
             par.Format.Font.Bold = true;
             par.Format.Alignment = ParagraphAlignment.Center;
@@ -126,7 +132,7 @@ namespace SpeechPathology.Infrastructure.PDF
 
             // Footer
             par = _section.Footers.Primary.AddParagraph();
-            par.AddText(DateTime.Now.ToShortDateString());
+            par.AddText(DateTime.Now.ToString("dd/MM/yyyy"));
             par.Format.Font.Size = 9;
             par.Format.Alignment = ParagraphAlignment.Right;
 
@@ -151,15 +157,18 @@ namespace SpeechPathology.Infrastructure.PDF
                 GlobalFontSettings.FontResolver = new FontResolver();
             }
 
+            // Set page format
             _document = new Document();
             _section = _document.Sections.AddSection();
+            _section.PageSetup.PageFormat = PageFormat.A4;
+            _section.PageSetup.Orientation = Orientation.Portrait;
 
             InitStyles();
 
             // Header
 
             // Logo
-            //Image image = _section.Headers.Primary.AddImage("../../PowerBooks.png");
+            //Image image = _section.Headers.Primary.AddImage(ImageSource.FromFile("logo_notext.png"));
             //image.Height = "2.5cm";
             //image.LockAspectRatio = true;
             //image.RelativeVertical = RelativeVertical.Line;
@@ -170,13 +179,21 @@ namespace SpeechPathology.Infrastructure.PDF
 
             // Render Results
             // Header title
-            //TextFrame frame = new TextFrame();
-            //frame.FillFormat.Color = Colors.LightGray;
-            //frame.Height = "2cm";
-            //frame.Width = "9cm";
+            var par = _section.Headers.Primary.AddParagraph(Resources.AppResources.ProjectTitle);
+            par.Format.Font.Size = 24;
+            par.Format.Font.Bold = true;
+            par.Format.Alignment = ParagraphAlignment.Center;
 
-            var par = _section.AddParagraph(Resources.AppResources.SoundTestResults);
+            // Title
+            par = _section.AddParagraph(Resources.AppResources.SoundTestResults);
             par.Format.Font.Size = 14;
+            par.Format.Font.Bold = true;
+            par.Format.Alignment = ParagraphAlignment.Center;
+            par.Format.SpaceAfter = "1cm";
+
+            // Sub title 
+            par = _section.AddParagraph(articulationTestExam.SoundPosition);
+            par.Format.Font.Size = 12;
             par.Format.Font.Bold = true;
             par.Format.Alignment = ParagraphAlignment.Center;
             par.Format.SpaceAfter = "1cm";
@@ -185,30 +202,34 @@ namespace SpeechPathology.Infrastructure.PDF
             Table table = _section.AddTable();
             table.Borders.Visible = true;
             // Create table columns
-            var col = table.AddColumn(70);
+            var col = table.AddColumn(140);
             foreach (Grouping<string, ArticulationTestExamAnswer> grouping in articulationTestAnswersGrouping)
             {
-                col = table.AddColumn(34);
-            }
-  
-            int iCount = 1;
-            // Groupings row
-            var row = table.AddRow();
-            row.Height = 20;
-            // Location column
-            row.Cells[0].AddParagraph(articulationTestExam.SoundPosition);
-  
-            foreach (Grouping<string, ArticulationTestExamAnswer> grouping in articulationTestAnswersGrouping)
-            {
-                par = row.Cells[iCount].AddParagraph(grouping.Key);
-                par.Format.Font.Size = 10;
+                var row = table.AddRow();
+                row.Height = 20;
+                row.Shading.Color = Color.FromCmyk(0, 0, 0, 5); // #f1f1f1
+                par = row.Cells[0].AddParagraph(grouping.Key);
+                par.Format.Font.Size = 12;
                 par.Format.Alignment = ParagraphAlignment.Center;
-                iCount++;
-             }
+              
+                foreach (ArticulationTestExamAnswer answer in grouping)
+                {
+                    row = table.AddRow();
+                    row.Height = 20;
+
+                    if (answer.IsCorrect.HasValue)
+                    {
+                        string answerText = answer.IsCorrect.Value ? "T" : "F";
+                        par = row.Cells[0].AddParagraph($"Test {answer.Number} - {answer.ArticulationTest.Text} - {answerText}");
+                        par.Format.Font.Size = 12;
+                        par.Format.Alignment = ParagraphAlignment.Center;
+                    }
+                }
+            }          
 
             // Footer
             par = _section.Footers.Primary.AddParagraph();
-            par.AddText(DateTime.Now.ToShortDateString());
+            par.AddText(DateTime.Now.ToString("dd/MM/yyyy"));
             par.Format.Font.Size = 9;
             par.Format.Alignment = ParagraphAlignment.Right;
 
@@ -225,9 +246,6 @@ namespace SpeechPathology.Infrastructure.PDF
             Style style = _document.Styles["Normal"];
             style.Font.Name = "OpenSans";
             style.Font.Size = 12;
-
-            _section.PageSetup.PageFormat = PageFormat.A4;
-            _section.PageSetup.Orientation = Orientation.Landscape;
         }
 
         private void SavePDF(string fileName)

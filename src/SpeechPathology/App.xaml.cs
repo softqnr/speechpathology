@@ -83,14 +83,14 @@ namespace SpeechPathology
             Container.RegisterType<IRepository<Worksheet>, Repository<Worksheet>>(new InjectionConstructor(DatabaseFilePath));
             Container.RegisterType<IRepository<AgeCalculation>, Repository<AgeCalculation>>(new InjectionConstructor(DatabaseFilePath));
 
-            // Infrastructure Services
+            // Infrastructure
             Container.RegisterInstance(NavigationService, new ContainerControlledLifetimeManager());
             Container.RegisterType<ISoundService, SoundService>();
             Container.RegisterType<IDialogService, DialogService>();
-            Container.RegisterType<IPDFGeneratorService, PDFGeneratorService>();
             
             // Services
             Container.RegisterType<IArticulationTestService, ArticulationTestService>();
+            Container.RegisterType<IPDFGeneratorService, PDFGeneratorService>();
             Container.RegisterType<IFlashcardService, FlashcardService>();
             Container.RegisterType<IWorksheetService, WorksheetService>();
             Container.RegisterType<IAgeCalculatorService, AgeCalculatorService>();

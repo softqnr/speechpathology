@@ -198,7 +198,7 @@ This application does not replace a speech therapist, but offers an additional s
     <value>Disclaimer</value>
   </data>
   <data name="RecomendedUsage" xml:space="preserve">
-    <value>Recomended Usage</value>
+    <value>Recommended Usage</value>
   </data>
   <data name="GeneratingPDF" xml:space="preserve">
     <value>Generating PDF …</value>
@@ -226,6 +226,9 @@ This application does not replace a speech therapist, but offers an additional s
   </data>
   <data name="WorksheetsView" xml:space="preserve">
     <value>Worksheets view</value>
+  </data>
+  <data name="ProjectTitle" xml:space="preserve">
+    <value>Speech Pathology Tools</value>
   </data>
   <data name="AgeAtTest" xml:space="preserve">
     <value>Age at test date</value>

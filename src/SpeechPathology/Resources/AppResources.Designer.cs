@@ -297,7 +297,16 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Recomended Usage.
+        ///   Looks up a localized string similar to Speech Pathology Tools.
+        /// </summary>
+        internal static string ProjectTitle {
+            get {
+                return ResourceManager.GetString("ProjectTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Recommended Usage.
         /// </summary>
         internal static string RecomendedUsage {
             get {

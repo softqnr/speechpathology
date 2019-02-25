@@ -7,6 +7,8 @@
              Title="{i18n:Translate Disclaimer}">
     <ContentPage.Content>
         <StackLayout Padding="20">
+            <Label Text="{i18n:Translate ApplicationNotice}" FontAttributes="Italic"/>
+            
             <Label Text="{i18n:Translate AboutIntro}"
                 HorizontalOptions="CenterAndExpand" />
             <ffimageloadingsvg:SvgCachedImage WidthRequest="180" Margin="10" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End"

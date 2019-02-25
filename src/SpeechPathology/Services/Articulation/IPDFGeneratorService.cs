@@ -3,7 +3,7 @@ using SpeechPathology.Types;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace SpeechPathology.Infrastructure.PDF
+namespace SpeechPathology.Services.Articulation
 {
     public interface IPDFGeneratorService
     {
