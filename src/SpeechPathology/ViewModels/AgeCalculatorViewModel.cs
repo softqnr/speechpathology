@@ -24,30 +24,19 @@ namespace SpeechPathology.ViewModels
             get => _startDate;
             set
             {
-                _startDate = value;
-                OnPropertyChanged();
-                OnPropertyChanged(nameof(AgeAtTest));
+                SetProperty(ref _startDate, value);
                 OnPropertyChanged(nameof(CurrentAge));
             }
         }
 
         public DateTime EndDate
         {
-            get { return _endDate; }
+            get => _endDate;
             set
             {
-                _endDate =  value;
-                OnPropertyChanged();
-                OnPropertyChanged(nameof(AgeAtTest));
+                SetProperty(ref _endDate, value);
                 OnPropertyChanged(nameof(CurrentAge));
             }
-        }
-
-        public DateTime TestDate { get; set; }
-
-        public int AgeAtTest
-        {
-            get => (EndDate - StartDate.Date).Days;
         }
 
         public string CurrentAge
@@ -80,10 +69,11 @@ namespace SpeechPathology.ViewModels
 
             StartDate = DateTime.Now;
             EndDate = DateTime.Now;
-            TestDate = DateTime.Today;
 
             OralSkillsCommand = new Command(async () => await OpenOralSkillsSheet() );
             SpeechDevelopmentCommand = new Command(async () => await OpenSpeechDevelopmentSheet() );
+
+            _ageCalculatorService.GetCurrentAge();
         }
 
         public override async Task InitializeAsync(object navigationData)
@@ -107,7 +97,6 @@ namespace SpeechPathology.ViewModels
             await Task.Delay(1500);
             ResultOut = string.Empty;
         }
-
 
         private void Calculate(DateTime start, DateTime end)
         {

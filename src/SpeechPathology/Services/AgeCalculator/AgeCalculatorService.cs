@@ -29,7 +29,7 @@ namespace SpeechPathology.Services.AgeCalculator
         //    throw new NotImplementedException();
         //}
 
-        public Task GetCurrentAge()
+        public async Task GetCurrentAge()
         {
             throw new NotImplementedException();
         }
