@@ -1,6 +1,8 @@
+using SpeechPathology.Models;
 using SpeechPathology.Services.AgeCalculator;
 using SpeechPathology.Views;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using Xamarin.Forms;
@@ -14,6 +16,7 @@ namespace SpeechPathology.ViewModels
         private DateTime _endDate;
         private DateTime _startDate;
         private string _resultOut;
+        private List<AgeCalculation> _ageResultDocs;
 
         private int m_years;
         private int m_months;
@@ -58,8 +61,14 @@ namespace SpeechPathology.ViewModels
             }
         }
 
-        public Command OralSkillsCommand { get; }
-        public Command SpeechDevelopmentCommand { get; }
+        public List<AgeCalculation> AgeResultDocs
+        {
+            get => _ageResultDocs;
+            set => SetProperty(ref _ageResultDocs, value);
+        }
+
+        public Command LanguageSkillsCommand { get; }
+        public Command SpeechSoundsCommand { get; }
 
         public AgeCalculatorViewModel(IAgeCalculatorService ageCalculatorService)
         {
@@ -70,8 +79,8 @@ namespace SpeechPathology.ViewModels
             StartDate = DateTime.Now;
             EndDate = DateTime.Now;
 
-            OralSkillsCommand = new Command(async () => await OpenOralSkillsSheet() );
-            SpeechDevelopmentCommand = new Command(async () => await OpenSpeechDevelopmentSheet() );
+            LanguageSkillsCommand = new Command(async () => await OpenLanguageSkillsSheet() );
+            SpeechSoundsCommand = new Command(async () => await OpenSpeechSoundsSheet() );
 
             _ageCalculatorService.GetCurrentAge();
         }
@@ -79,21 +88,29 @@ namespace SpeechPathology.ViewModels
         public override async Task InitializeAsync(object navigationData)
         {
             await Task.FromResult(true);
+            await LoadData();
         }
 
-        async Task OpenOralSkillsSheet()
+        private async Task LoadData()
         {
-            Debug.Print("Opening Oral Skills Sheet");
-            ResultOut = "Opening Oral Skills Sheet";
+            // Get AgeResultDocs
+            var docs = await _ageCalculatorService.GetAllAsync();
+            AgeResultDocs = docs;
+        }
+
+        async Task OpenLanguageSkillsSheet()
+        {
+            Debug.Print("Opening Language Skills Sheet");
+            ResultOut = "Opening Language Skills Sheet";
             await Task.Delay(1500);
             ResultOut = string.Empty;
             
         }
 
-        async Task OpenSpeechDevelopmentSheet()
+        async Task OpenSpeechSoundsSheet()
         {
-            Debug.Print("Opening Speech Development Sheet");
-            ResultOut = "Opening Speech Development Sheet";
+            Debug.Print("Opening Speech Sounds Development Sheet");
+            ResultOut = "Opening Speech Sounds Development Sheet";
             await Task.Delay(1500);
             ResultOut = string.Empty;
         }

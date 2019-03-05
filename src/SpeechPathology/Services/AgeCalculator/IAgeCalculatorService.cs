@@ -1,5 +1,5 @@
 ﻿using SpeechPathology.Models;
-using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace SpeechPathology.Services.AgeCalculator
@@ -10,6 +10,7 @@ namespace SpeechPathology.Services.AgeCalculator
         //Task<AgeCalculation> TestDate(DateTime testDate);
         //Task<GetTodaysDate> Today(DateTime today);
         Task GetCurrentAge();
+        Task<List<AgeCalculation>> GetAllAsync();
     }
 
     public class GetTodaysDate

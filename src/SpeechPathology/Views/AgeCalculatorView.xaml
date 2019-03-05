@@ -47,14 +47,14 @@
                         TextColor="black"
                         HeightRequest="60"
                         Margin="10"
-                        Command="{Binding OralSkillsCommand}" />
+                        Command="{Binding LanguageSkillsCommand}" />
 
                 <Button Text="Show speech sound development"
                         BackgroundColor="#8eb4e3"
                         TextColor="black"
                         HeightRequest="60"
                         Margin="10"
-                        Command="{Binding SpeechDevelopmentCommand}" />
+                        Command="{Binding SpeechSoundsCommand}" />
 
             </FlexLayout>
 
