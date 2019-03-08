@@ -22,7 +22,6 @@ using Unity.ServiceLocation;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using SpeechPathology.Services.Worksheet;
-using SpeechPathology.Services.AgeCalculator;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace SpeechPathology
@@ -93,7 +92,6 @@ namespace SpeechPathology
             Container.RegisterType<IPDFGeneratorService, PDFGeneratorService>();
             Container.RegisterType<IFlashcardService, FlashcardService>();
             Container.RegisterType<IWorksheetService, WorksheetService>();
-            Container.RegisterType<IAgeCalculatorService, AgeCalculatorService>();
             
             // View models
             Container.RegisterType<MainViewModel>();
