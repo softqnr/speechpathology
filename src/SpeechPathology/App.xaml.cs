@@ -80,7 +80,7 @@ namespace SpeechPathology
             Container.RegisterType<IRepository<ArticulationTestExamAnswer>, Repository<ArticulationTestExamAnswer>>(new InjectionConstructor(DatabaseFilePath));
             Container.RegisterType<IRepository<Flashcard>, Repository<Flashcard>>(new InjectionConstructor(DatabaseFilePath));
             Container.RegisterType<IRepository<Worksheet>, Repository<Worksheet>>(new InjectionConstructor(DatabaseFilePath));
-            Container.RegisterType<IRepository<AgeCalculation>, Repository<AgeCalculation>>(new InjectionConstructor(DatabaseFilePath));
+            Container.RegisterInstance(new AgeCalculation(), new ContainerControlledLifetimeManager());
 
             // Infrastructure
             Container.RegisterInstance(NavigationService, new ContainerControlledLifetimeManager());

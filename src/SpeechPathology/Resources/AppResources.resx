@@ -239,4 +239,22 @@ This application does not replace a speech therapist, but offers an additional s
   <data name="DateOfTest" xml:space="preserve">
     <value>Test date</value>
   </data>
+  <data name="DayPlural" xml:space="preserve">
+    <value>Days</value>
+  </data>
+  <data name="DaySingular" xml:space="preserve">
+    <value>Day</value>
+  </data>
+  <data name="MonthPlural" xml:space="preserve">
+    <value>Months</value>
+  </data>
+  <data name="MonthSingular" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="YearPlural" xml:space="preserve">
+    <value>Years</value>
+  </data>
+  <data name="YearSingular" xml:space="preserve">
+    <value>Year</value>
+  </data>
 </root>

@@ -33,7 +33,7 @@
                    Style="{DynamicResource TitleStyle}"
                    HorizontalOptions="CenterAndExpand" />
 
-            <Label Text="{Binding CurrentAge}"
+            <Label Text="{Binding CurrentAgeString}"
                    Style="{DynamicResource TitleStyle}"
                    HorizontalOptions="CenterAndExpand" />
 

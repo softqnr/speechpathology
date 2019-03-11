@@ -6,22 +6,31 @@ namespace SpeechPathology.Models
 {
     public class AgeCalculation : ModelBase
     {
-        public DateTime BirthDate { get; set; }
-        public DateTime TestDate { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
 
         public int AgeInYears { get; set; }
         public int MonthsThisYear { get; set; }
         public int DaysThisMonth { get; set; }
+        public int TotalDays { get; set; }
         public int DaysThisYear { get; set; }
 
         public readonly string LanguageSkillsBase = "languageskills_";
         public readonly string SpeechSoundsBase = "speechsounds_";
 
+        public AgeCalculation()
+        {
+            StartDate = DateTime.Now;
+            EndDate = DateTime.Now;
+        }
+
         public void Calculate()
         {
             DateTime d;
-            var start = BirthDate;
-            var end = TestDate;
+            var start = StartDate;
+            var end = EndDate;
+
+            TotalDays = EndDate.Subtract(StartDate).Days;
 
             AgeInYears = 0;
             d = start;
@@ -30,9 +39,17 @@ namespace SpeechPathology.Models
                 AgeInYears++;
                 d = start.AddYears(AgeInYears);
             }
-
             AgeInYears--;
             start = start.AddYears(AgeInYears);
+
+            DaysThisYear = 0;
+            d = start;
+            while (d <= end)
+            {
+                DaysThisYear++;
+                d = start.AddDays(DaysThisYear);
+            }
+            DaysThisYear--;
 
             MonthsThisYear = 0;
             d = start;
@@ -41,7 +58,6 @@ namespace SpeechPathology.Models
                 MonthsThisYear++;
                 d = start.AddMonths(MonthsThisYear);
             }
-
             MonthsThisYear--;
             start = start.AddMonths(MonthsThisYear);
 
@@ -52,7 +68,6 @@ namespace SpeechPathology.Models
                 DaysThisMonth++;
                 d = start.AddDays(DaysThisMonth);
             }
-
             DaysThisMonth--;
         }
     }
