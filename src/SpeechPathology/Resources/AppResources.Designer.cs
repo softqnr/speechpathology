@@ -243,6 +243,15 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Language Skills.
+        /// </summary>
+        internal static string LanguageSkills {
+            get {
+                return ResourceManager.GetString("LanguageSkills", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Loading....
         /// </summary>
         internal static string Loading {

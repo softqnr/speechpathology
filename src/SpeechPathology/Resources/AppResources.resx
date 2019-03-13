@@ -257,4 +257,7 @@ This application does not replace a speech therapist, but offers an additional s
   <data name="YearSingular" xml:space="preserve">
     <value>Year</value>
   </data>
+  <data name="LanguageSkills" xml:space="preserve">
+    <value>Language Skills</value>
+  </data>
 </root>

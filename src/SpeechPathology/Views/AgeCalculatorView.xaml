@@ -58,10 +58,6 @@
 
             </FlexLayout>
 
-            <Label Text="{Binding ResultOut}"
-                   FontAttributes="Bold"
-                   HorizontalTextAlignment="Center" />
-
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

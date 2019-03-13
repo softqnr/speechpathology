@@ -2,8 +2,10 @@
 using DLToolkit.Forms.Controls;
 using Plugin.Multilingual;
 using SpeechPathology.Data;
+using SpeechPathology.Services.AgeCalculator;
 using SpeechPathology.Services.Articulation;
 using SpeechPathology.Services.Flashcard;
+using SpeechPathology.Services.Worksheet;
 using SpeechPathology.Interfaces;
 using SpeechPathology.Models;
 using SpeechPathology.Resources;
@@ -21,7 +23,6 @@ using Unity.Lifetime;
 using Unity.ServiceLocation;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using SpeechPathology.Services.Worksheet;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace SpeechPathology
@@ -80,7 +81,8 @@ namespace SpeechPathology
             Container.RegisterType<IRepository<ArticulationTestExamAnswer>, Repository<ArticulationTestExamAnswer>>(new InjectionConstructor(DatabaseFilePath));
             Container.RegisterType<IRepository<Flashcard>, Repository<Flashcard>>(new InjectionConstructor(DatabaseFilePath));
             Container.RegisterType<IRepository<Worksheet>, Repository<Worksheet>>(new InjectionConstructor(DatabaseFilePath));
-            Container.RegisterInstance(new AgeCalculation(), new ContainerControlledLifetimeManager());
+            Container.RegisterType<IRepository<AgeCalculation>, Repository<AgeCalculation>>(new InjectionConstructor(DatabaseFilePath));
+            //Container.RegisterInstance(new AgeCalculation(), new ContainerControlledLifetimeManager());
 
             // Infrastructure
             Container.RegisterInstance(NavigationService, new ContainerControlledLifetimeManager());
@@ -92,7 +94,8 @@ namespace SpeechPathology
             Container.RegisterType<IPDFGeneratorService, PDFGeneratorService>();
             Container.RegisterType<IFlashcardService, FlashcardService>();
             Container.RegisterType<IWorksheetService, WorksheetService>();
-            
+            Container.RegisterType<IAgeCalculatorService, AgeCalculatorService>();
+
             // View models
             Container.RegisterType<MainViewModel>();
             Container.RegisterType<ArticulationTestViewModel>();
