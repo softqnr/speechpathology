@@ -1,6 +1,4 @@
 ﻿using SQLite;
-using System;
-using System.Threading.Tasks;
 
 namespace SpeechPathology.Models
 {
@@ -8,6 +6,6 @@ namespace SpeechPathology.Models
     public class AgeCalculation : ModelBase
     {
         [Indexed]
-        public string LSFile { get; set; }
+        public string LanguageSkillsFile { get; set; }
     }
 }

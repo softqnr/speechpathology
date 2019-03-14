@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace SpeechPathology.ViewModels
+namespace SpeechPathology.Services.AgeCalculator
 {
     public interface IAgeCalculatorService
     {

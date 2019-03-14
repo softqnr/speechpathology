@@ -1,6 +1,7 @@
 using Plugin.Multilingual;
 using SpeechPathology.Models;
 using SpeechPathology.Resources;
+using SpeechPathology.Services.AgeCalculator;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -26,11 +27,11 @@ namespace SpeechPathology.ViewModels
 
         public DateTime StartDate
         {
-            get => StartDate;
+            get => _startDate;
             set
-            {
+            { 
                 SetProperty(ref _startDate, value);
-                StartDate = _startDate;
+                Application.Current.Properties["StartDate"] = _startDate;
                 CalculateAge();
                 OnPropertyChanged(nameof(CurrentAgeString));
             }
@@ -38,11 +39,11 @@ namespace SpeechPathology.ViewModels
 
         public DateTime EndDate
         {
-            get => EndDate;
+            get => _endDate;
             set
             {
                 SetProperty(ref _endDate, value);
-                EndDate = _endDate;
+                //Application.Current.Properties["EndDate"] = _endDate;
                 CalculateAge();
                 OnPropertyChanged(nameof(CurrentAgeString));
             }
@@ -98,6 +99,10 @@ namespace SpeechPathology.ViewModels
         public AgeCalculatorViewModel(IAgeCalculatorService ageCalculatorService)
         {
             _ageCalculatorService = ageCalculatorService;
+
+            StartDate = Application.Current.Properties.ContainsKey("StartDate") ? (DateTime)Application.Current.Properties["StartDate"] : DateTime.Today;
+            //EndDate = Application.Current.Properties.ContainsKey("EndDate") ? (DateTime)Application.Current.Properties["EndDate"] : DateTime.Today;
+            EndDate = DateTime.Today;
         }
 
         public override async Task InitializeAsync(object navigationData)
@@ -107,17 +112,18 @@ namespace SpeechPathology.ViewModels
 
         private async Task LoadData()
         {
-            // Get worksheets
+            // Get ageCalculation model data
             var ageCalculation = await _ageCalculatorService.GetAllAsync();
             AgeCalculation = ageCalculation;
         }
 
         async Task OnLanguageSkillsSelected(AgeCalculation ac)
         {
-            if (ac != null)
+            if (ac == null)
             {
+                ac = _ageCalculation[0];
                 DialogService.ShowLoading(Resources.AppResources.Loading);
-                await NavigationService.NavigateToAsync<PdfViewerViewModel>("LanguageSkills/" + ac.LSFile);
+                await NavigationService.NavigateToAsync<PdfViewerViewModel>("LanguageSkills/" + ac.LanguageSkillsFile);
                 DialogService.HideLoading();
             }
         }

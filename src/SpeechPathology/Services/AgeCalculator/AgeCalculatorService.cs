@@ -1,9 +1,6 @@
 ﻿using SpeechPathology.Data;
 using SpeechPathology.Models;
-using SpeechPathology.ViewModels;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace SpeechPathology.Services.AgeCalculator
