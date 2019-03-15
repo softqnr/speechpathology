@@ -17,12 +17,12 @@ namespace SpeechPathology.ViewModels
         private DateTime _startDate;
         private string _resultOut;
         private IAgeCalculatorService _ageCalculatorService;
-        private List<AgeCalculation> _ageCalculation;
+        private List<AgeCalculation> _ageCalculations;
 
-        public List<AgeCalculation> AgeCalculation
+        public List<AgeCalculation> AgeCalculations
         {
-            get => _ageCalculation;
-            set => SetProperty(ref _ageCalculation, value);
+            get => _ageCalculations;
+            set => SetProperty(ref _ageCalculations, value);
         }
 
         public DateTime StartDate
@@ -100,8 +100,9 @@ namespace SpeechPathology.ViewModels
         {
             _ageCalculatorService = ageCalculatorService;
 
-            StartDate = Application.Current.Properties.ContainsKey("StartDate") ? (DateTime)Application.Current.Properties["StartDate"] : DateTime.Today;
-            //EndDate = Application.Current.Properties.ContainsKey("EndDate") ? (DateTime)Application.Current.Properties["EndDate"] : DateTime.Today;
+            StartDate = Application.Current.Properties.ContainsKey("StartDate") ?
+                (DateTime)Application.Current.Properties["StartDate"] :
+                DateTime.Today;
             EndDate = DateTime.Today;
         }
 
@@ -113,15 +114,15 @@ namespace SpeechPathology.ViewModels
         private async Task LoadData()
         {
             // Get ageCalculation model data
-            var ageCalculation = await _ageCalculatorService.GetAllAsync();
-            AgeCalculation = ageCalculation;
+            var ageCalculations = await _ageCalculatorService.GetAllAsync();
+            AgeCalculations = ageCalculations;
         }
 
         async Task OnLanguageSkillsSelected(AgeCalculation ac)
         {
             if (ac == null)
             {
-                ac = _ageCalculation[0];
+                ac = _ageCalculations[0];
                 DialogService.ShowLoading(Resources.AppResources.Loading);
                 await NavigationService.NavigateToAsync<PdfViewerViewModel>("LanguageSkills/" + ac.LanguageSkillsFile);
                 DialogService.HideLoading();

@@ -405,6 +405,15 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Share language skills.
+        /// </summary>
+        internal static string ShareLanguageSkills {
+            get {
+                return ResourceManager.GetString("ShareLanguageSkills", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Share results.
         /// </summary>
         internal static string ShareResults {
@@ -450,7 +459,7 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Worksheet saved..
+        ///   Looks up a localized string similar to Worksheet saved.
         /// </summary>
         internal static string WorksheetSaved {
             get {

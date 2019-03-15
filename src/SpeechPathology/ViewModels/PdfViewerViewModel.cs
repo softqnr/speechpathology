@@ -43,8 +43,11 @@ namespace SpeechPathology.ViewModels
         public async Task OnSavePdfClicked()
         {
             IsBusy = true;
-            string filepath = await DependencyService.Get<IFileAccessHelper>().CopyAssetFileToTemp(PdfFile, "worksheet.pdf");
-            DependencyService.Get<IShare>().ShareFile(Resources.AppResources.ShareWorksheet, Resources.AppResources.ShareWorksheet, filepath);
+            var filename = "worksheet.pdf";
+            var shareTitle = Resources.AppResources.ShareWorksheet;
+            var shareMsg = Resources.AppResources.ShareWorksheet;
+            string filepath = await DependencyService.Get<IFileAccessHelper>().CopyAssetFileToTemp(PdfFile, filename);
+            DependencyService.Get<IShare>().ShareFile(shareTitle, shareMsg, filepath);
             IsBusy = false;
         }
     }

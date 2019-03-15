@@ -260,4 +260,7 @@ This application does not replace a speech therapist, but offers an additional s
   <data name="LanguageSkills" xml:space="preserve">
     <value>Language Skills</value>
   </data>
+  <data name="ShareLanguageSkills" xml:space="preserve">
+    <value>Share language skills</value>
+  </data>
 </root>

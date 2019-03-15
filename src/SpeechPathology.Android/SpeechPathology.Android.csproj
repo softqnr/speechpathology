@@ -2270,12 +2270,26 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\logo_notext.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidAsset Include="Assets\LanguageSkills\speechsounds_en_6.png" />
+  </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\LanguageSkills\speechsounds_tr.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\LanguageSkills\speechsounds_en.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\LanguageSkills\speechsounds_en_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\LanguageSkills\speechsounds_en_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\LanguageSkills\speechsounds_en_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\LanguageSkills\speechsounds_en_4.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
