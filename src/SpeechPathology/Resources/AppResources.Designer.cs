@@ -450,6 +450,15 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Speech Progress Ages.
+        /// </summary>
+        internal static string SpeechSounds {
+            get {
+                return ResourceManager.GetString("SpeechSounds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Worksheets.
         /// </summary>
         internal static string Worksheets {
@@ -459,7 +468,7 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Worksheet saved.
+        ///   Looks up a localized string similar to Worksheet saved..
         /// </summary>
         internal static string WorksheetSaved {
             get {

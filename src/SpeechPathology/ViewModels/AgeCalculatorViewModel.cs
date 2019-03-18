@@ -118,23 +118,22 @@ namespace SpeechPathology.ViewModels
             AgeCalculations = ageCalculations;
         }
 
-        async Task OnLanguageSkillsSelected(AgeCalculation ac)
+        private async Task OnLanguageSkillsSelected(AgeCalculation ac)
         {
-            if (ac == null)
-            {
-                ac = _ageCalculations[0];
-                DialogService.ShowLoading(Resources.AppResources.Loading);
-                await NavigationService.NavigateToAsync<PdfViewerViewModel>("LanguageSkills/" + ac.LanguageSkillsFile);
-                DialogService.HideLoading();
-            }
+            UpdateAgeCalculation();
+
+            DialogService.ShowLoading(Resources.AppResources.Loading);
+            await NavigationService.NavigateToAsync<PdfViewerViewModel>("LanguageSkills/" + ageCalculation.LanguageSkillsFile);
+            DialogService.HideLoading();
         }
 
-        async Task OnSpeechSoundsSelected(AgeCalculation ac)
+        private async Task OnSpeechSoundsSelected(AgeCalculation ac)
         {
-            Debug.Print("Opening Speech Sounds Development Sheet");
-            ResultOut = "Opening Speech Sounds Development Sheet";
-            await Task.Delay(1500);
-            ResultOut = string.Empty;
+            UpdateAgeCalculation();
+
+            DialogService.ShowLoading(Resources.AppResources.Loading);
+            await NavigationService.NavigateToAsync<SpeechSoundsViewModel>("LanguageSkills/" + ageCalculation.SpeechSoundsFile);
+            DialogService.HideLoading();
         }
 
         public int AgeInYears { get; set; }
@@ -142,6 +141,7 @@ namespace SpeechPathology.ViewModels
         public int DaysThisMonth { get; set; }
         public int TotalDays { get; set; }
         public int DaysThisYear { get; set; }
+        public AgeCalculation ageCalculation;
 
         public void CalculateAge()
         {
@@ -188,6 +188,15 @@ namespace SpeechPathology.ViewModels
                 d = start.AddDays(DaysThisMonth);
             }
             DaysThisMonth--;
+        }
+
+        private void UpdateAgeCalculation()
+        {
+            for (var i = 0; i < AgeCalculations.Count; i++)
+            {
+                ageCalculation = AgeCalculations[i];
+                if (ageCalculation.AgeInYears >= AgeInYears) break;
+            }
         }
     }
 }

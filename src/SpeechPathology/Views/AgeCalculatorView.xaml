@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:i18n="clr-namespace:SpeechPathology.Extensions"
              x:Class="SpeechPathology.Views.AgeCalculatorView"
-             Title="Age calculator">
+             Title="{i18n:Translate AgeCalculator}">
     <ContentPage.Content>
         <StackLayout Margin="10">
 

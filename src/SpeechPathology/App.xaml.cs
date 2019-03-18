@@ -63,7 +63,8 @@ namespace SpeechPathology
             NavigationService.Configure(typeof(PdfViewerViewModel), typeof(PdfViewerView));
             NavigationService.Configure(typeof(WebViewerViewModel), typeof(WebViewerView));
             NavigationService.Configure(typeof(AboutViewModel), typeof(AboutView));
-            
+            NavigationService.Configure(typeof(SpeechSoundsViewModel), typeof(SpeechSoundsView));
+
             await NavigationService.InitializeAsync();
         }
 
