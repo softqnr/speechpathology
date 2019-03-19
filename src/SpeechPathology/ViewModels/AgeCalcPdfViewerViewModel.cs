@@ -6,7 +6,7 @@ using Xamarin.Forms;
 
 namespace SpeechPathology.ViewModels
 {
-    public class PdfViewerViewModel : ViewModelBase
+    public class AgeCalcPdfViewerViewModel : ViewModelBase
     {
         private string _pdfFile;
 
@@ -27,9 +27,7 @@ namespace SpeechPathology.ViewModels
             set => SetProperty(ref _pdfFile, value);
         }
 
-        public PdfViewerViewModel()
-        {
-        }
+        public AgeCalcPdfViewerViewModel() { }
 
         public override async Task InitializeAsync(object navigationData)
         {
@@ -43,7 +41,7 @@ namespace SpeechPathology.ViewModels
         public async Task OnSavePdfClicked()
         {
             IsBusy = true;
-            string filepath = await DependencyService.Get<IFileAccessHelper>().CopyAssetFileToTemp(PdfFile, "worksheet.pdf");
+            string filepath = await DependencyService.Get<IFileAccessHelper>().CopyAssetFileToTemp(PdfFile, "speechsounds.pdf");
             DependencyService.Get<IShare>().ShareFile(Resources.AppResources.ShareWorksheet, Resources.AppResources.ShareWorksheet, filepath);
             IsBusy = false;
         }

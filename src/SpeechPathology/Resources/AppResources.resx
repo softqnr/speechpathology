@@ -264,6 +264,9 @@ This application does not replace a speech therapist, but offers an additional s
     <value>Share language skills</value>
   </data>
   <data name="SpeechSounds" xml:space="preserve">
-    <value>Speech Progress Ages</value>
+    <value>Speech Sounds</value>
+  </data>
+  <data name="SpeechSoundsDetail" xml:space="preserve">
+    <value>Speech Sound Progress by Age</value>
   </data>
 </root>

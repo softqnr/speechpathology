@@ -450,11 +450,20 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Speech Progress Ages.
+        ///   Looks up a localized string similar to Speech Sounds.
         /// </summary>
         internal static string SpeechSounds {
             get {
                 return ResourceManager.GetString("SpeechSounds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Speech Sound Progress by Age.
+        /// </summary>
+        internal static string SpeechSoundsDetail {
+            get {
+                return ResourceManager.GetString("SpeechSoundsDetail", resourceCulture);
             }
         }
         

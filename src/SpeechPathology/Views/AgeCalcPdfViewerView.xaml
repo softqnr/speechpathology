@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:i18n="clr-namespace:SpeechPathology.Extensions"
+             xmlns:controls="clr-namespace:SpeechPathology.Controls"
+             x:Class="SpeechPathology.Views.AgeCalcPdfViewerView"
+             Title="{i18n:Translate SpeechSounds}">
+    <ContentPage.ToolbarItems>
+        <controls:HideableToolbarItem Name="Save"
+                                      Priority="0"
+                                      Order="Primary" 
+                                      Command="{Binding SavePdfCommand}"  />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+
+        <Grid VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <controls:PdfView Grid.Row="0"
+                              x:Name="PdfDocView"
+                              VerticalOptions="FillAndExpand"
+                              Uri="{Binding PdfFile}"/>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

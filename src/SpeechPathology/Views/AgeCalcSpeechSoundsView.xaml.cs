@@ -4,9 +4,9 @@ using Xamarin.Forms.Xaml;
 namespace SpeechPathology.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class SpeechSoundsView : ContentPage
+	public partial class AgeCalcSpeechSoundsView : ContentPage
 	{
-		public SpeechSoundsView()
+		public AgeCalcSpeechSoundsView()
 		{
 			InitializeComponent ();
 		}

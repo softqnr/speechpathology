@@ -63,7 +63,8 @@ namespace SpeechPathology
             NavigationService.Configure(typeof(PdfViewerViewModel), typeof(PdfViewerView));
             NavigationService.Configure(typeof(WebViewerViewModel), typeof(WebViewerView));
             NavigationService.Configure(typeof(AboutViewModel), typeof(AboutView));
-            NavigationService.Configure(typeof(SpeechSoundsViewModel), typeof(SpeechSoundsView));
+            NavigationService.Configure(typeof(AgeCalcPdfViewerViewModel), typeof(AgeCalcPdfViewerView));
+            NavigationService.Configure(typeof(AgeCalcSpeechSoundsViewModel), typeof(AgeCalcSpeechSoundsView));
 
             await NavigationService.InitializeAsync();
         }
@@ -83,7 +84,6 @@ namespace SpeechPathology
             Container.RegisterType<IRepository<Flashcard>, Repository<Flashcard>>(new InjectionConstructor(DatabaseFilePath));
             Container.RegisterType<IRepository<Worksheet>, Repository<Worksheet>>(new InjectionConstructor(DatabaseFilePath));
             Container.RegisterType<IRepository<AgeCalculation>, Repository<AgeCalculation>>(new InjectionConstructor(DatabaseFilePath));
-            //Container.RegisterInstance(new AgeCalculation(), new ContainerControlledLifetimeManager());
 
             // Infrastructure
             Container.RegisterInstance(NavigationService, new ContainerControlledLifetimeManager());
@@ -109,6 +109,8 @@ namespace SpeechPathology
             Container.RegisterType<WorksheetsViewModel>();
             Container.RegisterType<PdfViewerViewModel>();
             Container.RegisterType<AboutViewModel>();
+            Container.RegisterType<AgeCalcPdfViewerViewModel>();
+            Container.RegisterType<AgeCalcSpeechSoundsViewModel>();
 
             // Set as service locator provider
             var unityServiceLocator = new UnityServiceLocator(Container);

@@ -123,7 +123,7 @@ namespace SpeechPathology.ViewModels
             UpdateAgeCalculation();
 
             DialogService.ShowLoading(Resources.AppResources.Loading);
-            await NavigationService.NavigateToAsync<PdfViewerViewModel>("LanguageSkills/" + ageCalculation.LanguageSkillsFile);
+            await NavigationService.NavigateToAsync<AgeCalcPdfViewerViewModel>("LanguageSkills/" + ageCalculation.LanguageSkillsFile);
             DialogService.HideLoading();
         }
 
@@ -132,7 +132,7 @@ namespace SpeechPathology.ViewModels
             UpdateAgeCalculation();
 
             DialogService.ShowLoading(Resources.AppResources.Loading);
-            await NavigationService.NavigateToAsync<SpeechSoundsViewModel>("LanguageSkills/" + ageCalculation.SpeechSoundsFile);
+            await NavigationService.NavigateToAsync<AgeCalcSpeechSoundsViewModel>("LanguageSkills/" + ageCalculation.SpeechSoundsFile);
             DialogService.HideLoading();
         }
 
