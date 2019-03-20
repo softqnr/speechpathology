@@ -8,6 +8,7 @@
              BackgroundColor="White">
     <ContentPage.Content>
         <StackLayout>
+            
             <Label Text="{i18n:Translate SpeechSoundsSubtitle}"
                    Style="{DynamicResource TitleStyle}"
                    HorizontalTextAlignment="Center"
@@ -22,6 +23,7 @@
                     BackgroundColor="{StaticResource primary}"
                     Margin="80"
                     Command="{Binding AgeSpecificTestCommand}"/>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

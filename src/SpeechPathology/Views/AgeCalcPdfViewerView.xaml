@@ -11,8 +11,9 @@
                                       Order="Primary" 
                                       Command="{Binding SavePdfCommand}"  />
     </ContentPage.ToolbarItems>
+    
     <ContentPage.Content>
-
+        
         <Grid VerticalOptions="FillAndExpand">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
@@ -22,7 +23,7 @@
                               x:Name="PdfDocView"
                               VerticalOptions="FillAndExpand"
                               Uri="{Binding PdfFile}"/>
-
         </Grid>
+        
     </ContentPage.Content>
 </ContentPage>

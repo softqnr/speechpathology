@@ -12,14 +12,12 @@ namespace SpeechPathology.ViewModels
 {
     public class AgeCalculatorViewModel : ViewModelBase
     {
+        private IAgeCalculatorService _ageCalculatorService;
+        private List<AgeCalculation> _ageCalculations;
+
         private DateTime _endDate;
         private DateTime _startDate;
         private string _resultOut;
-
-        public AgeCalculatorViewModel Instance { get; private set; }
-
-        private IAgeCalculatorService _ageCalculatorService;
-        private List<AgeCalculation> _ageCalculations;
 
         public List<AgeCalculation> AgeCalculations
         {
@@ -31,7 +29,7 @@ namespace SpeechPathology.ViewModels
         {
             get => _startDate;
             set
-            { 
+            {
                 SetProperty(ref _startDate, value);
                 Application.Current.Properties["StartDate"] = value;
                 Application.Current.SavePropertiesAsync();
@@ -101,8 +99,6 @@ namespace SpeechPathology.ViewModels
 
         public AgeCalculatorViewModel(IAgeCalculatorService ageCalculatorService)
         {
-            Instance = this;
-
             _ageCalculatorService = ageCalculatorService;
 
             StartDate = Application.Current.Properties.ContainsKey("StartDate") ?
