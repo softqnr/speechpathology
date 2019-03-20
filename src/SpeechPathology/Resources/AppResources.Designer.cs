@@ -252,6 +252,15 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Show oral language skills.
+        /// </summary>
+        internal static string LanguageSkillsButton {
+            get {
+                return ResourceManager.GetString("LanguageSkillsButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Loading....
         /// </summary>
         internal static string Loading {
@@ -459,11 +468,29 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Speech Sound Progress by Age.
+        ///   Looks up a localized string similar to Show speech sound development.
+        /// </summary>
+        internal static string SpeechSoundsButton {
+            get {
+                return ResourceManager.GetString("SpeechSoundsButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Continue to the test.
         /// </summary>
         internal static string SpeechSoundsDetail {
             get {
                 return ResourceManager.GetString("SpeechSoundsDetail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Speech Sound Progress by Age.
+        /// </summary>
+        internal static string SpeechSoundsSubtitle {
+            get {
+                return ResourceManager.GetString("SpeechSoundsSubtitle", resourceCulture);
             }
         }
         

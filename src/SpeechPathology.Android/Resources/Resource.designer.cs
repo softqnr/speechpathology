@@ -3105,26 +3105,26 @@ namespace SpeechPathology.Droid
 			// aapt resource value: 0x7f020059
 			public const int avd_hide_password = 2130837593;
 			
-			// aapt resource value: 0x7f020263
-			public const int avd_hide_password_1 = 2130838115;
+			// aapt resource value: 0x7f020268
+			public const int avd_hide_password_1 = 2130838120;
 			
-			// aapt resource value: 0x7f020264
-			public const int avd_hide_password_2 = 2130838116;
+			// aapt resource value: 0x7f020269
+			public const int avd_hide_password_2 = 2130838121;
 			
-			// aapt resource value: 0x7f020265
-			public const int avd_hide_password_3 = 2130838117;
+			// aapt resource value: 0x7f02026a
+			public const int avd_hide_password_3 = 2130838122;
 			
 			// aapt resource value: 0x7f02005a
 			public const int avd_show_password = 2130837594;
 			
-			// aapt resource value: 0x7f020266
-			public const int avd_show_password_1 = 2130838118;
+			// aapt resource value: 0x7f02026b
+			public const int avd_show_password_1 = 2130838123;
 			
-			// aapt resource value: 0x7f020267
-			public const int avd_show_password_2 = 2130838119;
+			// aapt resource value: 0x7f02026c
+			public const int avd_show_password_2 = 2130838124;
 			
-			// aapt resource value: 0x7f020268
-			public const int avd_show_password_3 = 2130838120;
+			// aapt resource value: 0x7f02026d
+			public const int avd_show_password_3 = 2130838125;
 			
 			// aapt resource value: 0x7f02005b
 			public const int baby = 2130837595;
@@ -4290,11 +4290,11 @@ namespace SpeechPathology.Droid
 			// aapt resource value: 0x7f0201de
 			public const int notification_icon_background = 2130837982;
 			
-			// aapt resource value: 0x7f020261
-			public const int notification_template_icon_bg = 2130838113;
+			// aapt resource value: 0x7f020266
+			public const int notification_template_icon_bg = 2130838118;
 			
-			// aapt resource value: 0x7f020262
-			public const int notification_template_icon_low_bg = 2130838114;
+			// aapt resource value: 0x7f020267
+			public const int notification_template_icon_low_bg = 2130838119;
 			
 			// aapt resource value: 0x7f0201df
 			public const int notification_tile_bg = 2130837983;
@@ -4489,202 +4489,217 @@ namespace SpeechPathology.Droid
 			public const int socks = 2130838046;
 			
 			// aapt resource value: 0x7f02021f
-			public const int sponge = 2130838047;
+			public const int speechsounds_en_3 = 2130838047;
 			
 			// aapt resource value: 0x7f020220
-			public const int spoons = 2130838048;
+			public const int speechsounds_en_4 = 2130838048;
 			
 			// aapt resource value: 0x7f020221
-			public const int springs = 2130838049;
+			public const int speechsounds_en_6 = 2130838049;
 			
 			// aapt resource value: 0x7f020222
-			public const int squirrel = 2130838050;
+			public const int speechsounds_en_7 = 2130838050;
 			
 			// aapt resource value: 0x7f020223
-			public const int stars = 2130838051;
+			public const int speechsounds_en_8 = 2130838051;
 			
 			// aapt resource value: 0x7f020224
-			public const int stork = 2130838052;
+			public const int sponge = 2130838052;
 			
 			// aapt resource value: 0x7f020225
-			public const int straw = 2130838053;
+			public const int spoons = 2130838053;
 			
 			// aapt resource value: 0x7f020226
-			public const int @string = 2130838054;
+			public const int springs = 2130838054;
 			
 			// aapt resource value: 0x7f020227
-			public const int sugar = 2130838055;
+			public const int squirrel = 2130838055;
 			
 			// aapt resource value: 0x7f020228
-			public const int sun = 2130838056;
+			public const int stars = 2130838056;
 			
 			// aapt resource value: 0x7f020229
-			public const int swing = 2130838057;
+			public const int stork = 2130838057;
 			
 			// aapt resource value: 0x7f02022a
-			public const int swinging = 2130838058;
+			public const int straw = 2130838058;
 			
 			// aapt resource value: 0x7f02022b
-			public const int swings = 2130838059;
+			public const int @string = 2130838059;
 			
 			// aapt resource value: 0x7f02022c
-			public const int table = 2130838060;
+			public const int sugar = 2130838060;
 			
 			// aapt resource value: 0x7f02022d
-			public const int tablet = 2130838061;
+			public const int sun = 2130838061;
 			
 			// aapt resource value: 0x7f02022e
-			public const int tablets = 2130838062;
+			public const int swing = 2130838062;
 			
 			// aapt resource value: 0x7f02022f
-			public const int tassels = 2130838063;
+			public const int swinging = 2130838063;
 			
 			// aapt resource value: 0x7f020230
-			public const int teacher = 2130838064;
+			public const int swings = 2130838064;
 			
 			// aapt resource value: 0x7f020231
-			public const int telephone = 2130838065;
+			public const int table = 2130838065;
 			
 			// aapt resource value: 0x7f020232
-			public const int tent = 2130838066;
+			public const int tablet = 2130838066;
 			
 			// aapt resource value: 0x7f020233
-			public const int test = 2130838067;
+			public const int tablets = 2130838067;
 			
 			// aapt resource value: 0x7f020234
-			public const int thimble = 2130838068;
+			public const int tassels = 2130838068;
 			
 			// aapt resource value: 0x7f020235
-			public const int think = 2130838069;
+			public const int teacher = 2130838069;
 			
 			// aapt resource value: 0x7f020236
-			public const int thistle = 2130838070;
+			public const int telephone = 2130838070;
 			
 			// aapt resource value: 0x7f020237
-			public const int three = 2130838071;
+			public const int tent = 2130838071;
 			
 			// aapt resource value: 0x7f020238
-			public const int thrush = 2130838072;
+			public const int test = 2130838072;
 			
 			// aapt resource value: 0x7f020239
-			public const int thumb = 2130838073;
+			public const int thimble = 2130838073;
 			
 			// aapt resource value: 0x7f02023a
-			public const int tiger = 2130838074;
+			public const int think = 2130838074;
 			
 			// aapt resource value: 0x7f02023b
-			public const int tongue = 2130838075;
+			public const int thistle = 2130838075;
 			
 			// aapt resource value: 0x7f02023c
-			public const int tooltip_frame_dark = 2130838076;
+			public const int three = 2130838076;
 			
 			// aapt resource value: 0x7f02023d
-			public const int tooltip_frame_light = 2130838077;
+			public const int thrush = 2130838077;
 			
 			// aapt resource value: 0x7f02023e
-			public const int tooth = 2130838078;
+			public const int thumb = 2130838078;
 			
 			// aapt resource value: 0x7f02023f
-			public const int tortoise = 2130838079;
+			public const int tiger = 2130838079;
 			
 			// aapt resource value: 0x7f020240
-			public const int tow = 2130838080;
+			public const int tongue = 2130838080;
 			
 			// aapt resource value: 0x7f020241
-			public const int tower = 2130838081;
+			public const int tooltip_frame_dark = 2130838081;
 			
 			// aapt resource value: 0x7f020242
-			public const int toy = 2130838082;
+			public const int tooltip_frame_light = 2130838082;
 			
 			// aapt resource value: 0x7f020243
-			public const int toys = 2130838083;
+			public const int tooth = 2130838083;
 			
 			// aapt resource value: 0x7f020244
-			public const int train = 2130838084;
+			public const int tortoise = 2130838084;
 			
 			// aapt resource value: 0x7f020245
-			public const int treasure = 2130838085;
+			public const int tow = 2130838085;
 			
 			// aapt resource value: 0x7f020246
-			public const int tree = 2130838086;
+			public const int tower = 2130838086;
 			
 			// aapt resource value: 0x7f020247
-			public const int tulip = 2130838087;
+			public const int toy = 2130838087;
 			
 			// aapt resource value: 0x7f020248
-			public const int twin = 2130838088;
+			public const int toys = 2130838088;
 			
 			// aapt resource value: 0x7f020249
-			public const int umbrella = 2130838089;
+			public const int train = 2130838089;
 			
 			// aapt resource value: 0x7f02024a
-			public const int van = 2130838090;
+			public const int treasure = 2130838090;
 			
 			// aapt resource value: 0x7f02024b
-			public const int vase = 2130838091;
+			public const int tree = 2130838091;
 			
 			// aapt resource value: 0x7f02024c
-			public const int vision = 2130838092;
+			public const int tulip = 2130838092;
 			
 			// aapt resource value: 0x7f02024d
-			public const int wafer = 2130838093;
+			public const int twin = 2130838093;
 			
 			// aapt resource value: 0x7f02024e
-			public const int walnut = 2130838094;
+			public const int umbrella = 2130838094;
 			
 			// aapt resource value: 0x7f02024f
-			public const int washing_machine = 2130838095;
+			public const int van = 2130838095;
 			
 			// aapt resource value: 0x7f020250
-			public const int watch = 2130838096;
+			public const int vase = 2130838096;
 			
 			// aapt resource value: 0x7f020251
-			public const int watermelon = 2130838097;
+			public const int vision = 2130838097;
 			
 			// aapt resource value: 0x7f020252
-			public const int waving = 2130838098;
+			public const int wafer = 2130838098;
 			
 			// aapt resource value: 0x7f020253
-			public const int wheel = 2130838099;
+			public const int walnut = 2130838099;
 			
 			// aapt resource value: 0x7f020254
-			public const int whisk = 2130838100;
+			public const int washing_machine = 2130838100;
 			
 			// aapt resource value: 0x7f020255
-			public const int whistles = 2130838101;
+			public const int watch = 2130838101;
 			
 			// aapt resource value: 0x7f020256
-			public const int window = 2130838102;
+			public const int watermelon = 2130838102;
 			
 			// aapt resource value: 0x7f020257
-			public const int wing = 2130838103;
+			public const int waving = 2130838103;
 			
 			// aapt resource value: 0x7f020258
-			public const int witch = 2130838104;
+			public const int wheel = 2130838104;
 			
 			// aapt resource value: 0x7f020259
-			public const int wolf = 2130838105;
+			public const int whisk = 2130838105;
 			
 			// aapt resource value: 0x7f02025a
-			public const int yak = 2130838106;
+			public const int whistles = 2130838106;
 			
 			// aapt resource value: 0x7f02025b
-			public const int yellow = 2130838107;
+			public const int window = 2130838107;
 			
 			// aapt resource value: 0x7f02025c
-			public const int yoghurt = 2130838108;
+			public const int wing = 2130838108;
 			
 			// aapt resource value: 0x7f02025d
-			public const int yolk = 2130838109;
+			public const int witch = 2130838109;
 			
 			// aapt resource value: 0x7f02025e
-			public const int youtube_icon = 2130838110;
+			public const int wolf = 2130838110;
 			
 			// aapt resource value: 0x7f02025f
-			public const int yoyo = 2130838111;
+			public const int yak = 2130838111;
 			
 			// aapt resource value: 0x7f020260
-			public const int zigzag = 2130838112;
+			public const int yellow = 2130838112;
+			
+			// aapt resource value: 0x7f020261
+			public const int yoghurt = 2130838113;
+			
+			// aapt resource value: 0x7f020262
+			public const int yolk = 2130838114;
+			
+			// aapt resource value: 0x7f020263
+			public const int youtube_icon = 2130838115;
+			
+			// aapt resource value: 0x7f020264
+			public const int yoyo = 2130838116;
+			
+			// aapt resource value: 0x7f020265
+			public const int zigzag = 2130838117;
 			
 			static Drawable()
 			{

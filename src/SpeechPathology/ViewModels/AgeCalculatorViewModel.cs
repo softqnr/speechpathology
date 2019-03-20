@@ -4,7 +4,6 @@ using SpeechPathology.Resources;
 using SpeechPathology.Services.AgeCalculator;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -16,6 +15,9 @@ namespace SpeechPathology.ViewModels
         private DateTime _endDate;
         private DateTime _startDate;
         private string _resultOut;
+
+        public AgeCalculatorViewModel Instance { get; private set; }
+
         private IAgeCalculatorService _ageCalculatorService;
         private List<AgeCalculation> _ageCalculations;
 
@@ -31,7 +33,8 @@ namespace SpeechPathology.ViewModels
             set
             { 
                 SetProperty(ref _startDate, value);
-                Application.Current.Properties["StartDate"] = _startDate;
+                Application.Current.Properties["StartDate"] = value;
+                Application.Current.SavePropertiesAsync();
                 CalculateAge();
                 OnPropertyChanged(nameof(CurrentAgeString));
             }
@@ -98,6 +101,8 @@ namespace SpeechPathology.ViewModels
 
         public AgeCalculatorViewModel(IAgeCalculatorService ageCalculatorService)
         {
+            Instance = this;
+
             _ageCalculatorService = ageCalculatorService;
 
             StartDate = Application.Current.Properties.ContainsKey("StartDate") ?
@@ -120,7 +125,7 @@ namespace SpeechPathology.ViewModels
 
         private async Task OnLanguageSkillsSelected(AgeCalculation ac)
         {
-            UpdateAgeCalculation();
+            RefreshAgeCalculation();
 
             DialogService.ShowLoading(Resources.AppResources.Loading);
             await NavigationService.NavigateToAsync<AgeCalcPdfViewerViewModel>("LanguageSkills/" + ageCalculation.LanguageSkillsFile);
@@ -129,10 +134,11 @@ namespace SpeechPathology.ViewModels
 
         private async Task OnSpeechSoundsSelected(AgeCalculation ac)
         {
-            UpdateAgeCalculation();
+            RefreshAgeCalculation();
 
             DialogService.ShowLoading(Resources.AppResources.Loading);
-            await NavigationService.NavigateToAsync<AgeCalcSpeechSoundsViewModel>("LanguageSkills/" + ageCalculation.SpeechSoundsFile);
+            string[] array = { ageCalculation.SpeechSoundsFile, AgeInYears.ToString() };
+            await NavigationService.NavigateToAsync<AgeCalcSpeechSoundsViewModel>(array);
             DialogService.HideLoading();
         }
 
@@ -190,7 +196,7 @@ namespace SpeechPathology.ViewModels
             DaysThisMonth--;
         }
 
-        private void UpdateAgeCalculation()
+        private void RefreshAgeCalculation()
         {
             for (var i = 0; i < AgeCalculations.Count; i++)
             {

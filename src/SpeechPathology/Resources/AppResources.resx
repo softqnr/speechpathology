@@ -266,7 +266,16 @@ This application does not replace a speech therapist, but offers an additional s
   <data name="SpeechSounds" xml:space="preserve">
     <value>Speech Sounds</value>
   </data>
-  <data name="SpeechSoundsDetail" xml:space="preserve">
+  <data name="SpeechSoundsSubtitle" xml:space="preserve">
     <value>Speech Sound Progress by Age</value>
+  </data>
+  <data name="SpeechSoundsDetail" xml:space="preserve">
+    <value>Continue to the test</value>
+  </data>
+  <data name="LanguageSkillsButton" xml:space="preserve">
+    <value>Show oral language skills</value>
+  </data>
+  <data name="SpeechSoundsButton" xml:space="preserve">
+    <value>Show speech sound development</value>
   </data>
 </root>

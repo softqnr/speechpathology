@@ -14,7 +14,6 @@
 
             <Label Text="{i18n:Translate DateOfBirth}"
                    Style="{DynamicResource SubtitleStyle}" />
-
             <DatePicker x:Name="startDatePicker"
                         Format="D"
                         Margin="30, 0, 30, 30"
@@ -22,7 +21,6 @@
 
             <Label Text="{i18n:Translate DateOfTest}"
                    Style="{DynamicResource SubtitleStyle}" />
-
             <DatePicker x:Name="endDatePicker"
                         MinimumDate="{Binding Source={x:Reference startDatePicker}, Path=Date}"
                         Format="D"
@@ -32,36 +30,28 @@
             <Label Text="{i18n:Translate AgeAtTest}"
                    Style="{DynamicResource TitleStyle}"
                    HorizontalOptions="CenterAndExpand" />
-
             <Label Text="{Binding CurrentAgeString}"
                    Style="{DynamicResource TitleStyle}"
                    HorizontalOptions="CenterAndExpand" />
 
             <FlexLayout Direction="Row"
-                    Margin="0, 30"
-                    AlignItems="Center"
-                    AlignContent="SpaceBetween">
-
-                <Button Text="Show oral language skills"
+                        Margin="0, 30"
+                        AlignItems="Center"
+                        AlignContent="SpaceBetween">
+                <Button Text="{i18n:Translate LanguageSkillsButton}"
                         BackgroundColor="#ffff99"
                         TextColor="black"
                         HeightRequest="60"
                         Margin="10"
                         Command="{Binding LanguageSkillsCommand}" />
-
-                <Button Text="Show speech sound development"
+                <Button Text="{i18n:Translate SpeechSoundsButton}"
                         BackgroundColor="#8eb4e3"
                         TextColor="black"
                         HeightRequest="60"
                         Margin="10"
                         Command="{Binding SpeechSoundsCommand}" />
-
             </FlexLayout>
-
-            <Label Text="{Binding ResultOut}"
-                   FontAttributes="Bold"
-                   HorizontalTextAlignment="Center" />
-
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
