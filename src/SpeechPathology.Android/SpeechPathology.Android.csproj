@@ -385,11 +385,6 @@
     <AndroidAsset Include="Assets\pdfjs\web\locale\zh-TW\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\zu\viewer.properties" />
     <AndroidAsset Include="Assets\LanguageSkills\languageskills_en_all.pdf" />
-    <AndroidAsset Include="Assets\LanguageSkills\languageskills_tr_4.pdf" />
-    <AndroidAsset Include="Assets\LanguageSkills\languageskills_tr_5.pdf" />
-    <AndroidAsset Include="Assets\LanguageSkills\languageskills_tr_6.pdf" />
-    <AndroidAsset Include="Assets\LanguageSkills\languageskills_tr_2.pdf" />
-    <AndroidAsset Include="Assets\LanguageSkills\languageskills_tr_3.pdf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml">
@@ -2269,27 +2264,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\logo_notext.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\LanguageSkills\speechsounds_en_6.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\LanguageSkills\speechsounds_tr.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\LanguageSkills\speechsounds_en.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\LanguageSkills\speechsounds_en_7.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\LanguageSkills\speechsounds_en_8.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\LanguageSkills\speechsounds_en_3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\LanguageSkills\speechsounds_en_4.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\speechsounds_en_6.png" />
