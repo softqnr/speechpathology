@@ -10,6 +10,8 @@ namespace SpeechPathology.Services.Articulation
     {
         Task<ArticulationTestExam> GenerateExam(SoundPosition soundPosition);
 
+        Task<ArticulationTestExam> GenerateExam(int age);
+
         Task<int> Answer(ArticulationTestExamAnswer articulationTest, bool isCorrect);
 
         Task<ArticulationTestExam> CloseExam(ArticulationTestExam exam);

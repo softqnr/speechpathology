@@ -22,6 +22,8 @@ namespace SpeechPathology.ViewModels
             }
         }
 
+        private int age;
+
         public string SpeechSoundsDetail
         {
             get => _speechSoundsDetail;
@@ -52,6 +54,7 @@ namespace SpeechPathology.ViewModels
 
                 SpeechSoundsFile = navigationDataArray[0];
                 var ageString = navigationDataArray[1];
+                age = Int32.Parse(ageString);
                 SpeechSoundsDetail = AppResources.SpeechSoundsDetail;
             }
             await Task.FromResult(true);
@@ -59,23 +62,24 @@ namespace SpeechPathology.ViewModels
 
         private async Task OnPerformTest(AgeCalculation ac)
         {
-            // Open dialog box
-            string location = await DialogService.SelectActionAsync(
-                Resources.AppResources.SelectSoundPosition,
-                Resources.AppResources.SelectSoundPosition,
-                Resources.AppResources.Cancel,
-                Enum.GetNames(typeof(SoundPosition)));
+            //// Open dialog box
+            //string location = await DialogService.SelectActionAsync(
+            //    Resources.AppResources.SelectSoundPosition,
+            //    Resources.AppResources.SelectSoundPosition,
+            //    Resources.AppResources.Cancel,
+            //    Enum.GetNames(typeof(SoundPosition)));
 
-            if (location != Resources.AppResources.Cancel)
-            {
-                DialogService.ShowLoading(Resources.AppResources.Loading);
-                // Convert string value to enum
-                SoundPosition soundPosition = (SoundPosition)Enum.Parse(typeof(SoundPosition), location);
-                // Navigate to articulation test
-                await NavigationService.NavigateToAsync<ArticulationTestViewModel>(soundPosition);
+            //if (location != Resources.AppResources.Cancel)
+            //{
 
-                DialogService.HideLoading();
-            }
+            DialogService.ShowLoading(Resources.AppResources.Loading);
+            //// Convert string value to enum
+            //SoundPosition soundPosition = (SoundPosition)Enum.Parse(typeof(SoundPosition), location);
+            //// Navigate to articulation test
+            await NavigationService.NavigateToAsync<ArticulationTestViewModel>(age);
+
+            DialogService.HideLoading();
+            //}
         }
     }
 }

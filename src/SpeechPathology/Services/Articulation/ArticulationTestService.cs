@@ -39,10 +39,32 @@ namespace SpeechPathology.Services.Articulation
             // Create exam answers for each test
             int indexNumber = 0;
             exam.Answers = tests.Select(test =>
-                {
-                    indexNumber += 1;
-                    return new ArticulationTestExamAnswer(indexNumber, test);
-                }).ToList();
+            {
+                indexNumber += 1;
+                return new ArticulationTestExamAnswer(indexNumber, test);
+            }).ToList();
+            // Save exam
+            await _repositoryTestExam.InsertWithChildrenAsync(exam, true);
+
+            return exam;
+        }
+
+        public async Task<ArticulationTestExam> GenerateExam(int age)
+        {
+            // Delete previous exams
+            await DeleteAllExams();
+
+            // Get tests by sound position
+            var tests = await _repositoryTest.GetAsync(predicate: x => x.Age <= age, orderBy: x => x.Age);
+            // Create new exam
+            var exam = new ArticulationTestExam(age);
+            // Create exam answers for each test
+            int indexNumber = 0;
+            exam.Answers = tests.Select(test =>
+            {
+                indexNumber += 1;
+                return new ArticulationTestExamAnswer(indexNumber, test);
+            }).ToList();
             // Save exam
             await _repositoryTestExam.InsertWithChildrenAsync(exam, true);
 
