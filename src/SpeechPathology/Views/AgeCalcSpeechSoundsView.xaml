@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:i18n="clr-namespace:SpeechPathology.Extensions"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             x:Class="SpeechPathology.Views.AgeCalcSpeechSoundsView"
+             Title="{i18n:Translate SpeechSounds}"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <Label Text="{i18n:Translate SpeechSoundsSubtitle}"
+                   Style="{DynamicResource TitleStyle}"
+                   HorizontalTextAlignment="Center"
+                   Margin="15"/>
+            <ffimageloading:CachedImage x:Name="image"
+                                        Source="{Binding SpeechSoundsFile}"
+                                        Aspect="AspectFit"
+                                        VerticalOptions="Center"
+                                        Margin="15"/>
+            <Button Text="{i18n:Translate SpeechSoundsDetail}"
+                    TextColor="White"
+                    BackgroundColor="{StaticResource primary}"
+                    Margin="80"
+                    Command="{Binding AgeSpecificTestCommand}"/>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

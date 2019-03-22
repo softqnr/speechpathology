@@ -1,6 +1,6 @@
 ﻿using SpeechPathology.Data;
 using SpeechPathology.Models;
-using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace SpeechPathology.Services.AgeCalculator
@@ -14,24 +14,11 @@ namespace SpeechPathology.Services.AgeCalculator
             _ageCalculation = ageCalculation;
         }
 
-        public async Task<AgeCalculation> BirthDate(DateTime birthDate)
+        public async Task<List<AgeCalculation>> GetAllAsync()
         {
-            throw new NotImplementedException();
-        }
+            var ac = await _ageCalculation.GetAllAsync();
 
-        public async Task<AgeCalculation> TestDate(DateTime testDate)
-        {
-            throw new NotImplementedException();
-        }
-
-        public async Task<GetTodaysDate> Today(DateTime today)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task GetCurrentAge()
-        {
-            throw new NotImplementedException();
+            return ac;
         }
     }
 }

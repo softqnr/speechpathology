@@ -230,4 +230,52 @@ This application does not replace a speech therapist, but offers an additional s
   <data name="ProjectTitle" xml:space="preserve">
     <value>Speech Pathology Tools</value>
   </data>
+  <data name="AgeAtTest" xml:space="preserve">
+    <value>Age at test date</value>
+  </data>
+  <data name="DateOfBirth" xml:space="preserve">
+    <value>Birth date</value>
+  </data>
+  <data name="DateOfTest" xml:space="preserve">
+    <value>Test date</value>
+  </data>
+  <data name="DayPlural" xml:space="preserve">
+    <value>Days</value>
+  </data>
+  <data name="DaySingular" xml:space="preserve">
+    <value>Day</value>
+  </data>
+  <data name="MonthPlural" xml:space="preserve">
+    <value>Months</value>
+  </data>
+  <data name="MonthSingular" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="YearPlural" xml:space="preserve">
+    <value>Years</value>
+  </data>
+  <data name="YearSingular" xml:space="preserve">
+    <value>Year</value>
+  </data>
+  <data name="LanguageSkills" xml:space="preserve">
+    <value>Language Skills</value>
+  </data>
+  <data name="ShareLanguageSkills" xml:space="preserve">
+    <value>Share language skills</value>
+  </data>
+  <data name="SpeechSounds" xml:space="preserve">
+    <value>Speech Sounds</value>
+  </data>
+  <data name="SpeechSoundsSubtitle" xml:space="preserve">
+    <value>Speech Sound Progress by Age</value>
+  </data>
+  <data name="SpeechSoundsDetail" xml:space="preserve">
+    <value>Continue to the test</value>
+  </data>
+  <data name="LanguageSkillsButton" xml:space="preserve">
+    <value>Show oral language skills</value>
+  </data>
+  <data name="SpeechSoundsButton" xml:space="preserve">
+    <value>Show speech sound development</value>
+  </data>
 </root>

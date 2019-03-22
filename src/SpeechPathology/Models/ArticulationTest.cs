@@ -12,5 +12,6 @@ namespace SpeechPathology.Models
         public string Image { get; set; }
         [Indexed]
         public string LanguageCode { get; set; }
+        public int Age { get; set; }
     }
 }

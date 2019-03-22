@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:i18n="clr-namespace:SpeechPathology.Extensions"
              x:Class="SpeechPathology.Views.AgeCalculatorView"
-             Title="Age calculator">
+             Title="{i18n:Translate AgeCalculator}">
     <ContentPage.Content>
         <StackLayout Margin="10">
 
@@ -12,60 +12,46 @@
                    Margin="0, 20"
                    HorizontalTextAlignment="Center" />
 
-            <Label Text="Birth date: "
+            <Label Text="{i18n:Translate DateOfBirth}"
                    Style="{DynamicResource SubtitleStyle}" />
-
             <DatePicker x:Name="startDatePicker"
                         Format="D"
                         Margin="30, 0, 30, 30"
                         Date="{Binding StartDate}" />
 
-            <Label Text="Test Date:"
+            <Label Text="{i18n:Translate DateOfTest}"
                    Style="{DynamicResource SubtitleStyle}" />
-
             <DatePicker x:Name="endDatePicker"
-                        MinimumDate="{Binding Source={x:Reference startDatePicker},
-                                                Path=Date}"
+                        MinimumDate="{Binding Source={x:Reference startDatePicker}, Path=Date}"
                         Format="D"
                         Margin="30, 0, 30, 30"
                         Date="{Binding EndDate}" />
 
-            <StackLayout Orientation="Horizontal"
-                         HorizontalOptions="CenterAndExpand">
-                <Label Text="Age at test date: " />
-                <Label Text="{Binding AgeAtTest}"
-                       HorizontalOptions="StartAndExpand"/>
-                <Label Text="Days" />
-            </StackLayout>
-            
-            <Label Text="{Binding CurrentAge}"
-                   HorizontalOptions="CenterAndExpand"/>
+            <Label Text="{i18n:Translate AgeAtTest}"
+                   Style="{DynamicResource TitleStyle}"
+                   HorizontalOptions="CenterAndExpand" />
+            <Label Text="{Binding CurrentAgeString}"
+                   Style="{DynamicResource TitleStyle}"
+                   HorizontalOptions="CenterAndExpand" />
 
             <FlexLayout Direction="Row"
                         Margin="0, 30"
                         AlignItems="Center"
                         AlignContent="SpaceBetween">
-
-                <Button Text="Show oral language skills"
+                <Button Text="{i18n:Translate LanguageSkillsButton}"
                         BackgroundColor="#ffff99"
                         TextColor="black"
                         HeightRequest="60"
                         Margin="10"
-                        Command="{Binding OralSkillsCommand}" />
-
-                <Button Text="Show speech sound development"
+                        Command="{Binding LanguageSkillsCommand}" />
+                <Button Text="{i18n:Translate SpeechSoundsButton}"
                         BackgroundColor="#8eb4e3"
                         TextColor="black"
                         HeightRequest="60"
                         Margin="10"
-                        Command="{Binding SpeechDevelopmentCommand}" />
-
+                        Command="{Binding SpeechSoundsCommand}" />
             </FlexLayout>
-
-            <Label Text="{Binding ResultOut}"
-                   FontAttributes="Bold"
-                   HorizontalTextAlignment="Center" />
-
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
