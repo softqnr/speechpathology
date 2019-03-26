@@ -94,6 +94,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
+    <Compile Update="Views\AgeCalcPdfViewerView.xaml.cs">
+      <DependentUpon>AgeCalcPdfViewerView.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\SoundTestResultsView.xaml.cs">
       <DependentUpon>SoundTestResultsView.xaml</DependentUpon>
     </Compile>

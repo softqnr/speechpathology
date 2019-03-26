@@ -122,16 +122,31 @@ namespace SpeechPathology.ViewModels
 
         public override async Task InitializeAsync(object navigationData)
         {
-            if (navigationData != null && 
-                Enum.TryParse<SoundPosition>(navigationData.ToString(), out var soundPosition))
+            if (navigationData != null && navigationData is SoundPosition)
             {
-                await LoadData(soundPosition);
+                if (Enum.TryParse<SoundPosition>(navigationData.ToString(), out var soundPosition))
+                {
+                    await LoadData(soundPosition);
+                }
+            }
+            else if (navigationData != null && navigationData is int)
+            {
+                await LoadData((int)navigationData);
             }
         }
         private async Task LoadData(SoundPosition soundPosition)
         { 
             // Create new test
             _articulationTestExam = await _articulationTestService.GenerateExam(soundPosition);
+            _articulationTestAnswersEnumerator = _articulationTestExam.Answers.GetEnumerator();
+
+            TestCount = _articulationTestExam.Answers.Count();
+
+            ShowNextTest();
+        }
+        private async Task LoadData(int age)
+        {
+            _articulationTestExam = await _articulationTestService.GenerateExam(age);
             _articulationTestAnswersEnumerator = _articulationTestExam.Answers.GetEnumerator();
 
             TestCount = _articulationTestExam.Answers.Count();

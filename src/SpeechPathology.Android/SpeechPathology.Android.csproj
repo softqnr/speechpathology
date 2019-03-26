@@ -384,6 +384,19 @@
     <AndroidAsset Include="Assets\pdfjs\web\locale\zh-CN\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\zh-TW\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\zu\viewer.properties" />
+    <AndroidAsset Include="Assets\LanguageSkills\languageskills_en_all.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\Z_English_NTU.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\B_English_NTU.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\D_English_NTU.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\H_English_NTU.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\NG_English_NTU.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\P_English_NTU.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\M_English_NTU.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\N_English_NTU.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\T_English_NTU.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\THv_English_NTU.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\THvl_English_NTU.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\V_English_NTU.pdf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml">
@@ -2263,6 +2276,54 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\logo_notext.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\speechsounds_en_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\speechsounds_en_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\speechsounds_en_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\speechsounds_en_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\speechsounds_en_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\cheese.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\bathe.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\birthday.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\fan.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\mushroom.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\puzzle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\teapot.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\them.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\thorn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\water.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\zip.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

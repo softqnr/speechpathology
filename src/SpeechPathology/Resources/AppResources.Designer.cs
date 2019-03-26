@@ -97,6 +97,15 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Age at test date.
+        /// </summary>
+        internal static string AgeAtTest {
+            get {
+                return ResourceManager.GetString("AgeAtTest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Age Calculator.
         /// </summary>
         internal static string AgeCalculator {
@@ -140,6 +149,42 @@ namespace SpeechPathology.Resources {
         internal static string Correct {
             get {
                 return ResourceManager.GetString("Correct", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Birth date.
+        /// </summary>
+        internal static string DateOfBirth {
+            get {
+                return ResourceManager.GetString("DateOfBirth", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Test date.
+        /// </summary>
+        internal static string DateOfTest {
+            get {
+                return ResourceManager.GetString("DateOfTest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Days.
+        /// </summary>
+        internal static string DayPlural {
+            get {
+                return ResourceManager.GetString("DayPlural", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Day.
+        /// </summary>
+        internal static string DaySingular {
+            get {
+                return ResourceManager.GetString("DaySingular", resourceCulture);
             }
         }
         
@@ -198,6 +243,24 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Language Skills.
+        /// </summary>
+        internal static string LanguageSkills {
+            get {
+                return ResourceManager.GetString("LanguageSkills", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show oral language skills.
+        /// </summary>
+        internal static string LanguageSkillsButton {
+            get {
+                return ResourceManager.GetString("LanguageSkillsButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Loading....
         /// </summary>
         internal static string Loading {
@@ -221,6 +284,24 @@ namespace SpeechPathology.Resources {
         internal static string Mixed {
             get {
                 return ResourceManager.GetString("Mixed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Months.
+        /// </summary>
+        internal static string MonthPlural {
+            get {
+                return ResourceManager.GetString("MonthPlural", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Month.
+        /// </summary>
+        internal static string MonthSingular {
+            get {
+                return ResourceManager.GetString("MonthSingular", resourceCulture);
             }
         }
         
@@ -333,6 +414,15 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Share language skills.
+        /// </summary>
+        internal static string ShareLanguageSkills {
+            get {
+                return ResourceManager.GetString("ShareLanguageSkills", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Share results.
         /// </summary>
         internal static string ShareResults {
@@ -369,6 +459,42 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Speech Sounds.
+        /// </summary>
+        internal static string SpeechSounds {
+            get {
+                return ResourceManager.GetString("SpeechSounds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show speech sound development.
+        /// </summary>
+        internal static string SpeechSoundsButton {
+            get {
+                return ResourceManager.GetString("SpeechSoundsButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Continue to the test.
+        /// </summary>
+        internal static string SpeechSoundsDetail {
+            get {
+                return ResourceManager.GetString("SpeechSoundsDetail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Speech Sound Progress by Age.
+        /// </summary>
+        internal static string SpeechSoundsSubtitle {
+            get {
+                return ResourceManager.GetString("SpeechSoundsSubtitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Worksheets.
         /// </summary>
         internal static string Worksheets {
@@ -392,6 +518,24 @@ namespace SpeechPathology.Resources {
         internal static string WorksheetsView {
             get {
                 return ResourceManager.GetString("WorksheetsView", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        internal static string YearPlural {
+            get {
+                return ResourceManager.GetString("YearPlural", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Year.
+        /// </summary>
+        internal static string YearSingular {
+            get {
+                return ResourceManager.GetString("YearSingular", resourceCulture);
             }
         }
     }
