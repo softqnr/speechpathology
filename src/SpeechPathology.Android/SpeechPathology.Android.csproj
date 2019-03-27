@@ -21,7 +21,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <AndroidKeyStore>false</AndroidKeyStore>
-    <AndroidSigningKeyStore>C:\Users\Fradelo\AppData\Local\Xamarin\Mono for Android\Keystore\softqnr-dev\softqnr-dev.keystore</AndroidSigningKeyStore>
+    <AndroidSigningKeyStore>/build/softqnr-dev/softqnr-dev.keystore</AndroidSigningKeyStore>
     <AndroidSigningStorePass>jijikos</AndroidSigningStorePass>
     <AndroidSigningKeyAlias>softqnr-dev</AndroidSigningKeyAlias>
     <AndroidSigningKeyPass>jijikos</AndroidSigningKeyPass>
@@ -41,6 +41,7 @@
     <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
     <AndroidStoreUncompressedFileExtensions>.mp3;jpg</AndroidStoreUncompressedFileExtensions>
     <AndroidSupportedAbis />
+    <BundleAssemblies>false</BundleAssemblies>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>false</DebugSymbols>
