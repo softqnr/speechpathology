@@ -1,5 +1,7 @@
-﻿using SpeechPathology.Models.Enums;
+﻿using SpeechPathology.Models;
+using SpeechPathology.Models.Enums;
 using System;
+using System.Linq;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -27,22 +29,30 @@ namespace SpeechPathology.ViewModels
             {
                 return new Command(async () =>
                 {
-                    // Open dialog box
-                    string location = await DialogService.SelectActionAsync(
-                        Resources.AppResources.SelectSoundPosition,
-                        Resources.AppResources.SelectSoundPosition, 
-                        Resources.AppResources.Cancel, 
-                        Enum.GetNames(typeof(SoundPosition)));
-                    
-                    if (location != Resources.AppResources.Cancel) {
-                        DialogService.ShowLoading(Resources.AppResources.Loading);
-                        // Convert string value to enum
-                        SoundPosition soundPosition = (SoundPosition)Enum.Parse(typeof(SoundPosition), location);
-                        // Navigate to articulation test
-                        await NavigationService.NavigateToAsync<ArticulationTestViewModel>(soundPosition);
+                    //// Open dialog box
+                    //string location = await DialogService.SelectActionAsync(
+                    //    Resources.AppResources.SelectSoundPosition,
+                    //    Resources.AppResources.SelectSoundPosition, 
+                    //    Resources.AppResources.Cancel, 
+                    //    Enum.GetNames(typeof(SoundPosition)));
 
-                        DialogService.HideLoading();
-                    }
+                    //if (location != Resources.AppResources.Cancel) {
+                    //    DialogService.ShowLoading(Resources.AppResources.Loading);
+                    //    // Convert string value to enum
+                    //    SoundPosition soundPosition = (SoundPosition)Enum.Parse(typeof(SoundPosition), location);
+                    //    // Navigate to articulation test
+                    //    await NavigationService.NavigateToAsync<ArticulationTestViewModel>(soundPosition);
+
+                    //    DialogService.HideLoading();
+                    //}
+
+                    //if (AgeCalculatorViewModel.IsValidAge)
+                    //{
+                        await DialogService.ShowAlertAsync(
+                            Resources.AppResources.AgeNotSetMsg,
+                            Resources.AppResources.AgeNotSetTitle,
+                            Resources.AppResources.Continue);
+                    //}
                 });
             }
         }
