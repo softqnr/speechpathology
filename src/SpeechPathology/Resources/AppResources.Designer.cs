@@ -115,7 +115,7 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You have not configured the app with an age for the test, or the age set is too young Please do that first..
+        ///   Looks up a localized string similar to You have not configured the app with an age for the test, or the age you set is too young. Please input a valid birth date..
         /// </summary>
         internal static string AgeNotSetMsg {
             get {
@@ -124,7 +124,7 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Age Not Set.
+        ///   Looks up a localized string similar to Age Not Testable.
         /// </summary>
         internal static string AgeNotSetTitle {
             get {
