@@ -1,5 +1,7 @@
-﻿using SpeechPathology.Models.Enums;
+﻿using SpeechPathology.Models;
+using SpeechPathology.Models.Enums;
 using System;
+using System.Linq;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -30,11 +32,12 @@ namespace SpeechPathology.ViewModels
                     // Open dialog box
                     string location = await DialogService.SelectActionAsync(
                         Resources.AppResources.SelectSoundPosition,
-                        Resources.AppResources.SelectSoundPosition, 
-                        Resources.AppResources.Cancel, 
+                        Resources.AppResources.SelectSoundPosition,
+                        Resources.AppResources.Cancel,
                         Enum.GetNames(typeof(SoundPosition)));
-                    
-                    if (location != Resources.AppResources.Cancel) {
+
+                    if (location != Resources.AppResources.Cancel)
+                    {
                         DialogService.ShowLoading(Resources.AppResources.Loading);
                         // Convert string value to enum
                         SoundPosition soundPosition = (SoundPosition)Enum.Parse(typeof(SoundPosition), location);

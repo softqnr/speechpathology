@@ -115,6 +115,24 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to You have not configured the app with an age for the test, or the age you set is too young. Please input a valid birth date..
+        /// </summary>
+        internal static string AgeNotSetMsg {
+            get {
+                return ResourceManager.GetString("AgeNotSetMsg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Age Not Testable.
+        /// </summary>
+        internal static string AgeNotSetTitle {
+            get {
+                return ResourceManager.GetString("AgeNotSetTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to IMPORTANT:
         ///If you suspect your child is in need of speech therapy, you should consult a speech therapist.
         ///This application does not replace a speech therapist, but offers an additional supporting tool..
@@ -140,6 +158,15 @@ namespace SpeechPathology.Resources {
         internal static string Cancel {
             get {
                 return ResourceManager.GetString("Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Continue.
+        /// </summary>
+        internal static string Continue {
+            get {
+                return ResourceManager.GetString("Continue", resourceCulture);
             }
         }
         

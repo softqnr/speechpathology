@@ -17,7 +17,6 @@ namespace SpeechPathology.ViewModels
 
         private DateTime _endDate;
         private DateTime _startDate;
-        private string _resultOut;
 
         public List<AgeCalculation> AgeCalculations
         {
@@ -44,7 +43,6 @@ namespace SpeechPathology.ViewModels
             set
             {
                 SetProperty(ref _endDate, value);
-                //Application.Current.Properties["EndDate"] = _endDate;
                 CalculateAge();
                 OnPropertyChanged(nameof(CurrentAgeString));
             }
@@ -65,13 +63,12 @@ namespace SpeechPathology.ViewModels
             }
         }
 
-        public string ResultOut
+        public bool IsValidAge
         {
-            get => _resultOut;
-            set
+            get
             {
-                _resultOut = value;
-                OnPropertyChanged();
+                var rslt = AgeCalculations.FindIndex(x => x.AgeInYears >= AgeInYears);
+                return (rslt != 0);
             }
         }
 
@@ -132,10 +129,20 @@ namespace SpeechPathology.ViewModels
         {
             RefreshAgeCalculation();
 
-            DialogService.ShowLoading(Resources.AppResources.Loading);
-            string[] array = { ageCalculation.SpeechSoundsFile, AgeInYears.ToString() };
-            await NavigationService.NavigateToAsync<AgeCalcSpeechSoundsViewModel>(array);
-            DialogService.HideLoading();
+            if (IsValidAge)
+            {
+                DialogService.ShowLoading(Resources.AppResources.Loading);
+                string[] array = { ageCalculation.SpeechSoundsFile, AgeInYears.ToString() };
+                await NavigationService.NavigateToAsync<AgeCalcSpeechSoundsViewModel>(array);
+                DialogService.HideLoading();
+            }
+            else
+            {
+                await DialogService.ShowAlertAsync(
+                    Resources.AppResources.AgeNotSetMsg,
+                    Resources.AppResources.AgeNotSetTitle,
+                    Resources.AppResources.Continue);
+            }
         }
 
         public int AgeInYears { get; set; }

@@ -278,4 +278,13 @@ This application does not replace a speech therapist, but offers an additional s
   <data name="SpeechSoundsButton" xml:space="preserve">
     <value>Show speech sound development</value>
   </data>
+  <data name="AgeNotSetMsg" xml:space="preserve">
+    <value>You have not configured the app with an age for the test, or the age you set is too young. Please input a valid birth date.</value>
+  </data>
+  <data name="AgeNotSetTitle" xml:space="preserve">
+    <value>Age Not Testable</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Continue</value>
+  </data>
 </root>
