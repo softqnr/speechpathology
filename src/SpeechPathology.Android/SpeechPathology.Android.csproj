@@ -663,9 +663,6 @@
     <AndroidResource Include="Resources\drawable\mansion.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\fishing_rod.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\brushes.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -1168,12 +1165,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\bed.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\_case.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\_throw.jpg" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Sounds\angel.mp3" />
@@ -2421,9 +2412,6 @@
     <AndroidAsset Include="Assets\Sounds\finger.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\fishing_rod.mp3" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidAsset Include="Assets\Sounds\grasshopper.mp3" />
   </ItemGroup>
   <ItemGroup>
@@ -2808,7 +2796,19 @@
     <AndroidResource Include="Resources\drawable\zoo.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\pear.jpg" />
+    <AndroidResource Include="Resources\drawable\fishing.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\_case.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\knife.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\octopus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\_throw.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
