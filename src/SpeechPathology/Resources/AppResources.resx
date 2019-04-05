@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AgeCalculator" xml:space="preserve">
-    <value>Age Calculator</value>
+    <value>Age Based Test</value>
   </data>
   <data name="ArticulationTest" xml:space="preserve">
     <value>Articulation Test</value>
@@ -136,13 +136,13 @@
     <value>Worksheets</value>
   </data>
   <data name="Final" xml:space="preserve">
-    <value>Final</value>
+    <value>final</value>
   </data>
   <data name="Initial" xml:space="preserve">
-    <value>Initial</value>
+    <value>initial</value>
   </data>
   <data name="Medial" xml:space="preserve">
-    <value>Medial</value>
+    <value>medial</value>
   </data>
   <data name="Mixed" xml:space="preserve">
     <value>Mixed</value>
@@ -166,7 +166,7 @@
     <value>Play</value>
   </data>
   <data name="Repeat" xml:space="preserve">
-    <value>Repeat</value>
+    <value>repeat</value>
   </data>
   <data name="Loading" xml:space="preserve">
     <value>Loading...</value>
@@ -201,7 +201,7 @@ This application does not replace a speech therapist, but offers an additional s
     <value>Recommended Usage</value>
   </data>
   <data name="GeneratingPDF" xml:space="preserve">
-    <value>Generating PDF …</value>
+    <value>Generating PDF…</value>
   </data>
   <data name="SelectView" xml:space="preserve">
     <value>Select View</value>
@@ -240,31 +240,31 @@ This application does not replace a speech therapist, but offers an additional s
     <value>Test date</value>
   </data>
   <data name="DayPlural" xml:space="preserve">
-    <value>Days</value>
+    <value>days</value>
   </data>
   <data name="DaySingular" xml:space="preserve">
-    <value>Day</value>
+    <value>day</value>
   </data>
   <data name="MonthPlural" xml:space="preserve">
-    <value>Months</value>
+    <value>months</value>
   </data>
   <data name="MonthSingular" xml:space="preserve">
-    <value>Month</value>
+    <value>month</value>
   </data>
   <data name="YearPlural" xml:space="preserve">
-    <value>Years</value>
+    <value>years</value>
   </data>
   <data name="YearSingular" xml:space="preserve">
-    <value>Year</value>
+    <value>year</value>
   </data>
   <data name="LanguageSkills" xml:space="preserve">
-    <value>Language Skills</value>
+    <value>Oral Language Skills</value>
   </data>
   <data name="ShareLanguageSkills" xml:space="preserve">
     <value>Share language skills</value>
   </data>
   <data name="SpeechSounds" xml:space="preserve">
-    <value>Speech Sounds</value>
+    <value>Speech Sound Development</value>
   </data>
   <data name="SpeechSoundsSubtitle" xml:space="preserve">
     <value>Speech Sound Progress by Age</value>
@@ -273,10 +273,10 @@ This application does not replace a speech therapist, but offers an additional s
     <value>Continue to the test</value>
   </data>
   <data name="LanguageSkillsButton" xml:space="preserve">
-    <value>Show oral language skills</value>
+    <value>Language Skills</value>
   </data>
   <data name="SpeechSoundsButton" xml:space="preserve">
-    <value>Show speech sound development</value>
+    <value>Speech Sounds</value>
   </data>
   <data name="AgeNotSetMsg" xml:space="preserve">
     <value>You have not configured the app with an age for the test, or the age you set is too young. Please input a valid birth date.</value>
@@ -286,5 +286,11 @@ This application does not replace a speech therapist, but offers an additional s
   </data>
   <data name="Continue" xml:space="preserve">
     <value>Continue</value>
+  </data>
+  <data name="AgeCalculatorTitle" xml:space="preserve">
+    <value>Age of the Student</value>
+  </data>
+  <data name="Blend" xml:space="preserve">
+    <value>blend</value>
   </data>
 </root>

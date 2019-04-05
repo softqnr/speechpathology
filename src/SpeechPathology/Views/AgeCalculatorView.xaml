@@ -7,7 +7,7 @@
     <ContentPage.Content>
         <StackLayout Margin="10">
 
-            <Label Text="{i18n:Translate AgeCalculator}"
+            <Label Text="{i18n:Translate AgeCalculatorTitle}"
                    Style="{DynamicResource TitleStyle}"
                    Margin="0, 20"
                    HorizontalTextAlignment="Center" />
@@ -36,8 +36,7 @@
 
             <FlexLayout Direction="Row"
                         Margin="0, 30"
-                        AlignItems="Center"
-                        AlignContent="SpaceBetween">
+                        JustifyContent="SpaceEvenly">
                 <Button Text="{i18n:Translate LanguageSkillsButton}"
                         BackgroundColor="#ffff99"
                         TextColor="black"
