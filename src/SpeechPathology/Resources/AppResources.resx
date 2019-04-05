@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AgeCalculator" xml:space="preserve">
-    <value>Age Calculator</value>
+    <value>Age Based Test</value>
   </data>
   <data name="ArticulationTest" xml:space="preserve">
     <value>Articulation Test</value>
@@ -258,13 +258,13 @@ This application does not replace a speech therapist, but offers an additional s
     <value>Year</value>
   </data>
   <data name="LanguageSkills" xml:space="preserve">
-    <value>Language Skills</value>
+    <value>Oral Language Skills</value>
   </data>
   <data name="ShareLanguageSkills" xml:space="preserve">
     <value>Share language skills</value>
   </data>
   <data name="SpeechSounds" xml:space="preserve">
-    <value>Speech Sounds</value>
+    <value>Speech Sound Development</value>
   </data>
   <data name="SpeechSoundsSubtitle" xml:space="preserve">
     <value>Speech Sound Progress by Age</value>
@@ -273,10 +273,10 @@ This application does not replace a speech therapist, but offers an additional s
     <value>Continue to the test</value>
   </data>
   <data name="LanguageSkillsButton" xml:space="preserve">
-    <value>Show oral language skills</value>
+    <value>Language Skills</value>
   </data>
   <data name="SpeechSoundsButton" xml:space="preserve">
-    <value>Show speech sound development</value>
+    <value>Speech Sounds</value>
   </data>
   <data name="AgeNotSetMsg" xml:space="preserve">
     <value>You have not configured the app with an age for the test, or the age you set is too young. Please input a valid birth date.</value>
@@ -286,5 +286,8 @@ This application does not replace a speech therapist, but offers an additional s
   </data>
   <data name="Continue" xml:space="preserve">
     <value>Continue</value>
+  </data>
+  <data name="AgeCalculatorTitle" xml:space="preserve">
+    <value>Age of the Student</value>
   </data>
 </root>

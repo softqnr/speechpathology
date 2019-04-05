@@ -106,11 +106,20 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Age Calculator.
+        ///   Looks up a localized string similar to Age Based Test.
         /// </summary>
         internal static string AgeCalculator {
             get {
                 return ResourceManager.GetString("AgeCalculator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Age of the Student.
+        /// </summary>
+        internal static string AgeCalculatorTitle {
+            get {
+                return ResourceManager.GetString("AgeCalculatorTitle", resourceCulture);
             }
         }
         
@@ -270,7 +279,7 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Language Skills.
+        ///   Looks up a localized string similar to Oral Language Skills.
         /// </summary>
         internal static string LanguageSkills {
             get {
@@ -279,7 +288,7 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Show oral language skills.
+        ///   Looks up a localized string similar to Language Skills.
         /// </summary>
         internal static string LanguageSkillsButton {
             get {
@@ -486,7 +495,7 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Speech Sounds.
+        ///   Looks up a localized string similar to Speech Sound Development.
         /// </summary>
         internal static string SpeechSounds {
             get {
@@ -495,7 +504,7 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Show speech sound development.
+        ///   Looks up a localized string similar to Speech Sounds.
         /// </summary>
         internal static string SpeechSoundsButton {
             get {
