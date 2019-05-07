@@ -402,6 +402,11 @@
     <AndroidAsset Include="Assets\Worksheets\THv_English_NTU.pdf" />
     <AndroidAsset Include="Assets\Worksheets\THvl_English_NTU.pdf" />
     <AndroidAsset Include="Assets\Worksheets\V_English_NTU.pdf" />
+    <AndroidAsset Include="Assets\LanguageSkills\languageskills_en_4.pdf" />
+    <AndroidAsset Include="Assets\LanguageSkills\languageskills_en_6.pdf" />
+    <AndroidAsset Include="Assets\LanguageSkills\languageskills_en_7.pdf" />
+    <AndroidAsset Include="Assets\LanguageSkills\languageskills_en_8.pdf" />
+    <AndroidAsset Include="Assets\LanguageSkills\languageskills_en_3.pdf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml">
