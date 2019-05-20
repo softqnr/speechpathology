@@ -17,7 +17,7 @@
                 <Label Text="{Binding Score, StringFormat=Score: '{0:0.0%}'}" FontSize="Large" TextColor="White"/>
             </StackLayout>
             <StackLayout Padding="10,0,10,0">
-            <Label Text="Results" FontSize="Large" />
+                <Label Text="{i18n:Translate Results}" FontSize="Large" />
             <ListView x:Name="listView"
                       VerticalOptions="FillAndExpand"
                       HasUnevenRows="true"
@@ -42,7 +42,8 @@
                                             </Grid.RowDefinitions>
                                             <StackLayout Orientation="Horizontal" Grid.Row="0" Margin="0">
                                                 <Label FontAttributes="Bold" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" FontSize="Medium" Text="{Binding ArticulationTest.Sound}" Margin="0" />
-                                                <Label HorizontalTextAlignment="Start" VerticalTextAlignment="Center" FontSize="Medium" Text=", Test " Margin="0" />
+                                                <Label HorizontalTextAlignment="Start" VerticalTextAlignment="Center" FontSize="Medium" Text=", " Margin="0" />
+                                                <Label HorizontalTextAlignment="Start" VerticalTextAlignment="Center" FontSize="Medium" Text="{i18n:Translate Test} " Margin="0" />
                                                 <Label HorizontalTextAlignment="Start" VerticalTextAlignment="Center" FontSize="Medium" Text="{Binding Number}" Margin="0" />
                                             </StackLayout>
                                             <Label Grid.Row="1" VerticalTextAlignment="Start" FontSize="Small" Text="{Binding ArticulationTest.Text}"  Margin="0" />

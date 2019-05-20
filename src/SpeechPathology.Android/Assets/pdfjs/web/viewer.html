@@ -27,21 +27,53 @@ See https://github.com/adobe-type-tools/cmap-resources
     <meta name="google" content="notranslate">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>PDF.js viewer</title>
-
     <link rel="stylesheet" href="viewer.css">
     <script src="compatibility.js"></script>
-
     <!-- This snippet is used in production (included from viewer.html) -->
     <link rel="resource" type="application/l10n" href="locale/locale.properties">
     <script src="l10n.js"></script>
     <script src="../build/pdf.js"></script>
-
+    <script src="../build/hammer.min.js"></script>
     <script src="viewer.js"></script>
     <script>
         (function () {
             window.print = function () {
                 alert('PdfViewer_app_scheme:print');
             }
+
+            var container = document.getElementById('viewer');
+
+            var hammer = new Hammer(container, {
+                domEvents: true
+            });
+
+            hammer.get('pinch').set({
+                enable: true
+            });
+
+            hammer.on('pinchend', function (event) {
+                // get the current zoom value
+                var zoom = this.currentZoom;
+                // get the scaled amount
+                var scale = zoom * event.scale / 10;
+                // if the user is zooming in
+                if (event.additionalEvent === 'pinchout') {
+                    zoom += scale;
+                } else {
+                    // if zooming out
+                    zoom -= scale * 10;
+                }
+
+                // if zoom is too small or too big set them to max values
+                if (zoom < 1) {
+                    zoom = 1;
+                } else if (zoom > 2) {
+                    zoom = 2;
+                }
+
+                // set the current zoom
+                this.currentZoom = zoom;
+            });
         })();
     </script>
 </head>

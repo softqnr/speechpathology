@@ -10,5 +10,7 @@ namespace SpeechPathology.Models
         public string LanguageSkillsFile { get; set; }
 
         public string SpeechSoundsFile { get; set; }
+
+        public string LanguageCode { get; set; }
     }
 }

@@ -7,16 +7,16 @@ namespace SpeechPathology.Services.AgeCalculator
 {
     public class AgeCalculatorService : IAgeCalculatorService
     {
-        private IRepository<AgeCalculation> _ageCalculation;
+        private IRepository<AgeCalculation> _repositoryAgeCalculation;
 
-        public AgeCalculatorService(IRepository<AgeCalculation> ageCalculation)
+        public AgeCalculatorService(IRepository<AgeCalculation> repositoryAgeCalculation)
         {
-            _ageCalculation = ageCalculation;
+            _repositoryAgeCalculation = repositoryAgeCalculation;
         }
 
-        public async Task<List<AgeCalculation>> GetAllAsync()
+        public async Task<List<AgeCalculation>> GetAllAsync(string languageCode)
         {
-            var ac = await _ageCalculation.GetAllAsync();
+            var ac = await _repositoryAgeCalculation.GetAsync(predicate: x => x.LanguageCode == languageCode, orderBy: x => x.AgeInYears);
 
             return ac;
         }

@@ -115,7 +115,7 @@ namespace SpeechPathology.ViewModels
         private async Task LoadData()
         {
             // Get ageCalculation model data
-            var ageCalculations = await _ageCalculatorService.GetAllAsync();
+            var ageCalculations = await _ageCalculatorService.GetAllAsync(App.Language);
             AgeCalculations = ageCalculations;
         }
 
@@ -124,7 +124,7 @@ namespace SpeechPathology.ViewModels
             RefreshAgeCalculation();
 
             DialogService.ShowLoading(Resources.AppResources.Loading);
-            await NavigationService.NavigateToAsync<AgeCalcPdfViewerViewModel>("LanguageSkills/" + ageCalculation.LanguageSkillsFile);
+            await NavigationService.NavigateToAsync<AgeCalcPdfViewerViewModel>(ageCalculation.LanguageSkillsFile);
             DialogService.HideLoading();
         }
 

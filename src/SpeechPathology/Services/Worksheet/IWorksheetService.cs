@@ -5,6 +5,6 @@ namespace SpeechPathology.Services.Worksheet
 {
     public interface IWorksheetService
     {
-        Task<List<Models.Worksheet>> GetAllAsync();
+        Task<List<Models.Worksheet>> GetAllAsync(string languageCode);
     }
 }

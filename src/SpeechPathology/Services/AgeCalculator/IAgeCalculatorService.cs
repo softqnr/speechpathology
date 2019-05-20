@@ -6,6 +6,6 @@ namespace SpeechPathology.Services.AgeCalculator
 {
     public interface IAgeCalculatorService
     {
-        Task<List<AgeCalculation>> GetAllAsync();
+        Task<List<AgeCalculation>> GetAllAsync(string languageCode);
     }
 }

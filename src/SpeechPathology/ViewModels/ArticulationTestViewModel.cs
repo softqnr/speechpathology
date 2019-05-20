@@ -137,7 +137,7 @@ namespace SpeechPathology.ViewModels
         private async Task LoadData(SoundPosition soundPosition)
         { 
             // Create new test
-            _articulationTestExam = await _articulationTestService.GenerateExam(soundPosition);
+            _articulationTestExam = await _articulationTestService.GenerateExam(soundPosition, App.Language);
             _articulationTestAnswersEnumerator = _articulationTestExam.Answers.GetEnumerator();
 
             TestCount = _articulationTestExam.Answers.Count();
@@ -146,7 +146,7 @@ namespace SpeechPathology.ViewModels
         }
         private async Task LoadData(int age)
         {
-            _articulationTestExam = await _articulationTestService.GenerateExam(age);
+            _articulationTestExam = await _articulationTestService.GenerateExam(age, App.Language);
             _articulationTestAnswersEnumerator = _articulationTestExam.Answers.GetEnumerator();
 
             TestCount = _articulationTestExam.Answers.Count();

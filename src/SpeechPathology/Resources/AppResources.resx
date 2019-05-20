@@ -278,4 +278,16 @@ This application does not replace a speech therapist, but offers an additional s
   <data name="SpeechSoundsButton" xml:space="preserve">
     <value>Show speech sound development</value>
   </data>
+  <data name="Blended" xml:space="preserve">
+    <value>Blended</value>
+  </data>
+  <data name="Results" xml:space="preserve">
+    <value>Results</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Test" xml:space="preserve">
+    <value>Test</value>
+  </data>
 </root>

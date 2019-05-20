@@ -8,9 +8,9 @@ namespace SpeechPathology.Services.Articulation
 {
     public interface IArticulationTestService
     {
-        Task<ArticulationTestExam> GenerateExam(SoundPosition soundPosition);
+        Task<ArticulationTestExam> GenerateExam(SoundPosition soundPosition, string languageCode);
 
-        Task<ArticulationTestExam> GenerateExam(int age);
+        Task<ArticulationTestExam> GenerateExam(int age, string languageCode);
 
         Task<int> Answer(ArticulationTestExamAnswer articulationTest, bool isCorrect);
 

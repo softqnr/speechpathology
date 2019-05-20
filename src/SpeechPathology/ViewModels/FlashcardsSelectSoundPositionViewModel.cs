@@ -64,14 +64,13 @@ namespace SpeechPathology.ViewModels
                 SelectedSound = navigationDataArray[0];
                 _selectedExcludedSound = navigationDataArray[1];
                 // Get sounds
-                SoundPositions = await _flashcardService.GetSoundPositions(SelectedSound, _selectedExcludedSound);
+                SoundPositions = await _flashcardService.GetSoundPositions(SelectedSound, _selectedExcludedSound, App.Language);
             }
         }
 
         public async Task OnPositionSelected(string soundPosition)
         {
             await NavigationService.NavigateToAsync<FlashcardsTestViewModel>(new[] { soundPosition, _selectedSound, _selectedExcludedSound });
-            await NavigationService.RemoveLastFromBackStackAsync();
         }
     }
 }

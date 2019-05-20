@@ -66,7 +66,7 @@ namespace SpeechPathology.ViewModels
         private async Task LoadData(object navigationData)
         {
             // Get sounds
-            Sounds = await _flashcardService.GetSounds();
+            Sounds = await _flashcardService.GetSounds(App.Language);
 
             _selectedSound = navigationData as string;
             if (_selectedSound == null)

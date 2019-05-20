@@ -1,5 +1,7 @@
 ﻿using SpeechPathology.Models.Enums;
+using SpeechPathology.Utils;
 using System;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -27,22 +29,7 @@ namespace SpeechPathology.ViewModels
             {
                 return new Command(async () =>
                 {
-                    // Open dialog box
-                    string location = await DialogService.SelectActionAsync(
-                        Resources.AppResources.SelectSoundPosition,
-                        Resources.AppResources.SelectSoundPosition, 
-                        Resources.AppResources.Cancel, 
-                        Enum.GetNames(typeof(SoundPosition)));
-                    
-                    if (location != Resources.AppResources.Cancel) {
-                        DialogService.ShowLoading(Resources.AppResources.Loading);
-                        // Convert string value to enum
-                        SoundPosition soundPosition = (SoundPosition)Enum.Parse(typeof(SoundPosition), location);
-                        // Navigate to articulation test
-                        await NavigationService.NavigateToAsync<ArticulationTestViewModel>(soundPosition);
-
-                        DialogService.HideLoading();
-                    }
+                    await OpenArticulationTestPopup();
                 });
             }
         }
@@ -77,6 +64,29 @@ namespace SpeechPathology.ViewModels
                 {
                     await NavigationService.NavigateToAsync<WorksheetsViewModel>();
                 });
+            }
+        }
+
+        private async Task OpenArticulationTestPopup()
+        {
+            // Open dialog box
+            string soundLocation = await DialogService.SelectActionAsync(
+                Resources.AppResources.SelectSoundPosition,
+                Resources.AppResources.SelectSoundPosition,
+                Resources.AppResources.Cancel,
+                ResourceHelper.TranslateArray(Enum.GetNames(typeof(SoundPosition))));
+
+            // Convert selected action back to enum
+            soundLocation = ResourceHelper.GetResourceNameByValue(soundLocation);
+            if (soundLocation != Resources.AppResources.Cancel)
+            {
+                DialogService.ShowLoading(Resources.AppResources.Loading);
+                // Convert string value to enum
+                SoundPosition soundPosition = (SoundPosition)Enum.Parse(typeof(SoundPosition), soundLocation);
+                // Navigate to articulation test
+                await NavigationService.NavigateToAsync<ArticulationTestViewModel>(soundPosition);
+
+                DialogService.HideLoading();
             }
         }
     }
