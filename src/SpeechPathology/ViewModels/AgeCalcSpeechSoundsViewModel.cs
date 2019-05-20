@@ -1,5 +1,4 @@
 ﻿using SpeechPathology.Models;
-using SpeechPathology.Models.Enums;
 using SpeechPathology.Resources;
 using System;
 using System.Threading.Tasks;
@@ -62,24 +61,9 @@ namespace SpeechPathology.ViewModels
 
         private async Task OnPerformTest(AgeCalculation ac)
         {
-            //// Open dialog box
-            //string location = await DialogService.SelectActionAsync(
-            //    Resources.AppResources.SelectSoundPosition,
-            //    Resources.AppResources.SelectSoundPosition,
-            //    Resources.AppResources.Cancel,
-            //    Enum.GetNames(typeof(SoundPosition)));
-
-            //if (location != Resources.AppResources.Cancel)
-            //{
-
             DialogService.ShowLoading(Resources.AppResources.Loading);
-            //// Convert string value to enum
-            //SoundPosition soundPosition = (SoundPosition)Enum.Parse(typeof(SoundPosition), location);
-            //// Navigate to articulation test
             await NavigationService.NavigateToAsync<ArticulationTestViewModel>(age);
-
             DialogService.HideLoading();
-            //}
         }
     }
 }

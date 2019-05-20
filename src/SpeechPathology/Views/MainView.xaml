@@ -28,21 +28,21 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
-            <Button Text="{i18n:Translate ArticulationTest}" x:Name="ArticulationButton" Image="baseline_record_voice_over_white_24.png"
+            <Button Text="{i18n:Translate AgeCalculator}" x:Name="AgeCalculatorButton" Image="baseline_calendar_today_white_24.png"
                     Grid.Column = "0" Grid.Row = "0" BorderWidth="1" Margin="0" ContentLayout="Top,10"  Padding="0,48" BorderRadius="0"
+                    BackgroundColor="{StaticResource primary}" BorderColor="{StaticResource primary_dark}" TextColor="White"
+                    Grid.ColumnSpan="2" 
+                Command="{Binding AgeCalculator}" 
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand" />
+            <!-- Button Text="{i18n:Translate ArticulationTest}" x:Name="ArticulationButton" Image="baseline_record_voice_over_white_24.png"
+                    Grid.Column = "1" Grid.Row = "0" BorderWidth="1" Margin="0" ContentLayout="Top,10"  Padding="0,48" BorderRadius="0"
                     BackgroundColor="{StaticResource primary}" BorderColor="{StaticResource primary_dark}" TextColor="White"
                 Command="{Binding ArticulationTest}"
                 HorizontalOptions="FillAndExpand"
-                VerticalOptions="FillAndExpand" />
-            <Button Text="{i18n:Translate AgeCalculator}" x:Name="AgeCalculatorButton" Image="baseline_calendar_today_white_24.png"
-                    Grid.Column = "1" Grid.Row = "0" BorderWidth="1" Margin="0" ContentLayout="Top,10"  Padding="0,48" BorderRadius="0"
-                    BackgroundColor="{StaticResource primary}" BorderColor="{StaticResource primary_dark}" TextColor="White"
-                Command="{Binding AgeCalculator}"
-                HorizontalOptions="FillAndExpand"
-                VerticalOptions="FillAndExpand" />
+                VerticalOptions="FillAndExpand" /-->
             <Button Text="{i18n:Translate Flashcards}" x:Name="FlashcardsButton" Image="baseline_wallpaper_white_24.png"
                     Grid.Column = "0" Grid.Row = "1" BorderWidth="1" Margin="0" ContentLayout="Top,10"  Padding="0,48" BorderRadius="0"
                     BackgroundColor="{StaticResource primary}" BorderColor="{StaticResource primary_dark}" TextColor="White"

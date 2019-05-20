@@ -31,8 +31,8 @@
               Grid.Row="2">
                     <Label.FormattedText>
                         <FormattedString>
-                                <Span Text="Speech Pathology Tools " FontSize="Large" Style="{DynamicResource SubtitleStyle}"/>
-                                <Span Text="v1.0" FontSize="Small" />
+                                <Span Text="{Binding ProjectTitle}" FontSize="Large" Style="{DynamicResource SubtitleStyle}"/>
+                                <Span Text="{Binding Version}" FontSize="Small" />
                         </FormattedString>
                     </Label.FormattedText>
             </Label>

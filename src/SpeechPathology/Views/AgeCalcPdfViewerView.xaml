@@ -4,7 +4,7 @@
              xmlns:i18n="clr-namespace:SpeechPathology.Extensions"
              xmlns:controls="clr-namespace:SpeechPathology.Controls"
              x:Class="SpeechPathology.Views.AgeCalcPdfViewerView"
-             Title="{i18n:Translate SpeechSounds}">
+             Title="{i18n:Translate LanguageSkills}">
     <ContentPage.ToolbarItems>
         <controls:HideableToolbarItem Name="Save"
                                       Priority="0"
