@@ -76,13 +76,13 @@ namespace SpeechPathology.ViewModels
                 Resources.AppResources.Cancel,
                 ResourceHelper.TranslateArray(Enum.GetNames(typeof(SoundPosition))));
 
-            // Convert selected action back to enum
-            soundLocation = ResourceHelper.GetResourceNameByValue(soundLocation);
             if (soundLocation != Resources.AppResources.Cancel)
             {
                 DialogService.ShowLoading(Resources.AppResources.Loading);
-                // Convert string value to enum
-                SoundPosition soundPosition = (SoundPosition)Enum.Parse(typeof(SoundPosition), soundLocation);
+                // Convert selected action to resource key
+                var soundLocationResourceKey = ResourceHelper.GetResourceNameByValue(soundLocation);
+                // Convert string key value to enum
+                SoundPosition soundPosition = (SoundPosition)Enum.Parse(typeof(SoundPosition), soundLocationResourceKey);
                 // Navigate to articulation test
                 await NavigationService.NavigateToAsync<ArticulationTestViewModel>(soundPosition);
 
