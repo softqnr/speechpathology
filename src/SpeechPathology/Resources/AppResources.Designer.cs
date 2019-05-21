@@ -106,11 +106,38 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Age Calculator.
+        ///   Looks up a localized string similar to Age Based Test.
         /// </summary>
         public static string AgeCalculator {
             get {
                 return ResourceManager.GetString("AgeCalculator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Age of the Student.
+        /// </summary>
+        public static string AgeCalculatorTitle {
+            get {
+                return ResourceManager.GetString("AgeCalculatorTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You have not configured the app with an age for the test, or the age you set is too young. Please input a valid birth date..
+        /// </summary>
+        public static string AgeNotSetMsg {
+            get {
+                return ResourceManager.GetString("AgeNotSetMsg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Age Not Testable.
+        /// </summary>
+        public static string AgeNotSetTitle {
+            get {
+                return ResourceManager.GetString("AgeNotSetTitle", resourceCulture);
             }
         }
         
@@ -135,6 +162,15 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to blend.
+        /// </summary>
+        public static string Blend {
+            get {
+                return ResourceManager.GetString("Blend", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Blended.
         /// </summary>
         public static string Blended {
@@ -149,6 +185,15 @@ namespace SpeechPathology.Resources {
         public static string Cancel {
             get {
                 return ResourceManager.GetString("Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Continue.
+        /// </summary>
+        public static string Continue {
+            get {
+                return ResourceManager.GetString("Continue", resourceCulture);
             }
         }
         
@@ -180,7 +225,7 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Days.
+        ///   Looks up a localized string similar to days.
         /// </summary>
         public static string DayPlural {
             get {
@@ -189,7 +234,7 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Day.
+        ///   Looks up a localized string similar to day.
         /// </summary>
         public static string DaySingular {
             get {
@@ -207,7 +252,7 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Final.
+        ///   Looks up a localized string similar to final.
         /// </summary>
         public static string Final {
             get {
@@ -225,7 +270,7 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Generating PDF ….
+        ///   Looks up a localized string similar to Generating PDF….
         /// </summary>
         public static string GeneratingPDF {
             get {
@@ -243,7 +288,7 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Initial.
+        ///   Looks up a localized string similar to initial.
         /// </summary>
         public static string Initial {
             get {
@@ -252,7 +297,7 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Language Skills.
+        ///   Looks up a localized string similar to Oral Language Skills.
         /// </summary>
         public static string LanguageSkills {
             get {
@@ -261,7 +306,7 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Show oral language skills.
+        ///   Looks up a localized string similar to Language Skills.
         /// </summary>
         public static string LanguageSkillsButton {
             get {
@@ -279,7 +324,7 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Medial.
+        ///   Looks up a localized string similar to medial.
         /// </summary>
         public static string Medial {
             get {
@@ -297,7 +342,7 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Months.
+        ///   Looks up a localized string similar to months.
         /// </summary>
         public static string MonthPlural {
             get {
@@ -306,7 +351,7 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Month.
+        ///   Looks up a localized string similar to month.
         /// </summary>
         public static string MonthSingular {
             get {
@@ -378,7 +423,7 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Repeat.
+        ///   Looks up a localized string similar to repeat.
         /// </summary>
         public static string Repeat {
             get {
@@ -486,7 +531,7 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Speech Sounds.
+        ///   Looks up a localized string similar to Speech Sound Development.
         /// </summary>
         public static string SpeechSounds {
             get {
@@ -495,7 +540,7 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Show speech sound development.
+        ///   Looks up a localized string similar to Speech Sounds.
         /// </summary>
         public static string SpeechSoundsButton {
             get {
@@ -558,7 +603,7 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Years.
+        ///   Looks up a localized string similar to years.
         /// </summary>
         public static string YearPlural {
             get {
@@ -567,7 +612,7 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Year.
+        ///   Looks up a localized string similar to year.
         /// </summary>
         public static string YearSingular {
             get {

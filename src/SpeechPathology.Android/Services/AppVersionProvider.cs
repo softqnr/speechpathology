@@ -1,7 +1,7 @@
 ﻿using SpeechPathology.Interfaces;
 
-[assembly: Xamarin.Forms.Dependency(typeof(SpeechPathology.Droid.AppVersionProvider))]
-namespace SpeechPathology.Droid
+[assembly: Xamarin.Forms.Dependency(typeof(SpeechPathology.Droid.Services.AppVersionProvider))]
+namespace SpeechPathology.Droid.Services
 {
     public class AppVersionProvider : IAppVersionProvider
     {

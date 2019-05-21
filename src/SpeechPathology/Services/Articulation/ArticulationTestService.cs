@@ -54,7 +54,8 @@ namespace SpeechPathology.Services.Articulation
             // Delete previous exams
             await DeleteAllExams();
             // Get tests by sound position
-            var tests = await _repositoryTest.GetAsync(predicate: x => x.Age <= age && x.SoundPosition != "Blended", orderBy: x => x.Age);
+            var tests = await _repositoryTest.GetAsync(predicate: x => x.Age <= age && x.SoundPosition != SoundPosition.Blended.ToString(),
+                orderBy: x => x.Age);
             // Create new exam
             var exam = new ArticulationTestExam(age);
             // Create exam answers for each test

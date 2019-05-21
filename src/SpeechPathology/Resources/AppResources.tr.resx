@@ -290,4 +290,16 @@ Bu uygulama konuşma terapistinin yerini almaz, ancak öğretmenler için bir de
   <data name="Test" xml:space="preserve">
     <value>Test</value>
   </data>
+  <data name="Blend" xml:space="preserve">
+    <value>Karışık durum</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Continue</value>
+  </data>
+  <data name="AgeNotSetMsg" xml:space="preserve">
+    <value>Age not set</value>
+  </data>
+  <data name="AgeNotSetTitle" xml:space="preserve">
+    <value>Age not set</value>
+  </data>
 </root>
