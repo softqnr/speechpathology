@@ -3878,6 +3878,189 @@
   <ItemGroup>
     <None Include="Resources\drawable\en_speechsounds.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_zoo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_zebra.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_wedding.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_violin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_weather.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_vet.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_vest.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_velvet.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_toad.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_tassles.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_swim.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_swiss_cheese.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_spider.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_sing.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_spade.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_seven.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_seahorse.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_sausage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_rubber.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_rose.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_rod.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_robin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_road.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_reading.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_razor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_rabbit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_pine_cone.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_octopus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_nurse.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_nine.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_mud.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_maximum.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_lizard.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_lid.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_knife.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_ladle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_jungle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_hulahoop.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_ice_cream.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_hug.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_hop.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_hook.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_hob.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_happy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_hand.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_hammerhead.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_gravy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_grasshopper.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_fishing.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_drive.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_doughnut.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_doorknob.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_dive.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_dandelion.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_daisy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_crab.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_cave.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_cabin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_cab.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_beehive.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_beaver.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>PowerShell -ExecutionPolicy Unrestricted -File "$(SolutionDir)build\update-packagename.ps1" $(ProjectDir) tr

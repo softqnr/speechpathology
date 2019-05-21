@@ -55,7 +55,7 @@ namespace SpeechPathology.Services.Articulation
             await DeleteAllExams();
             // Get tests by sound position
             string blended = Enum.GetName(typeof(SoundPosition), SoundPosition.Blended);
-            var tests = await _repositoryTest.GetAsync(predicate: x => x.Age <= age && x.SoundPosition != blended,
+            var tests = await _repositoryTest.GetAsync(predicate: x => x.Age <= age && x.SoundPosition != blended && x.LanguageCode == languageCode,
                 orderBy: x => x.Age);
             // Create new exam
             var exam = new ArticulationTestExam(age);
