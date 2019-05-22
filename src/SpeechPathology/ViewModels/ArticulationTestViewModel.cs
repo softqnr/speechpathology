@@ -122,6 +122,23 @@ namespace SpeechPathology.ViewModels
 
         public override async Task InitializeAsync(object navigationData)
         {
+            // Check if we have a pending test
+            var pendingArticulationTest = await _articulationTestService.GetLastNotFinishedTest();
+            if (pendingArticulationTest != null)
+            {
+                bool resume = await DialogService.ShowConfirmAsync(Resources.AppResources.ResumeTestMessage,
+                    Resources.AppResources.ResumeTestTitle,
+                    Resources.AppResources.OK,
+                    Resources.AppResources.Cancel
+                );
+
+                if (resume)
+                {
+                    ResumeTest(pendingArticulationTest);
+                    return;
+                }
+            }
+
             if (navigationData != null && navigationData is SoundPosition)
             {
                 if (Enum.TryParse<SoundPosition>(navigationData.ToString(), out var soundPosition))
@@ -133,7 +150,28 @@ namespace SpeechPathology.ViewModels
             {
                 await LoadData((int)navigationData);
             }
+
         }
+        private void ResumeTest(ArticulationTestExam articulationTestExam)
+        {
+            // Load pending test
+            _articulationTestExam = articulationTestExam;
+            _articulationTestAnswersEnumerator = _articulationTestExam.Answers.GetEnumerator();
+
+            TestCount = _articulationTestExam.Answers.Count();
+
+            // Advance enumerator until first unanswered test
+            while (_articulationTestAnswersEnumerator.MoveNext())
+            {
+                // If IsCorrect is null this meand that test is unanswered
+                if (!_articulationTestAnswersEnumerator.Current.IsCorrect.HasValue)
+                {
+                    RenderCurrentTest();
+                    break;
+                }
+            }
+        }
+
         private async Task LoadData(SoundPosition soundPosition)
         { 
             // Create new test
@@ -144,6 +182,7 @@ namespace SpeechPathology.ViewModels
 
             ShowNextTest();
         }
+
         private async Task LoadData(int age)
         {
             _articulationTestExam = await _articulationTestService.GenerateExam(age, App.Language);
@@ -159,13 +198,18 @@ namespace SpeechPathology.ViewModels
             var moved = _articulationTestAnswersEnumerator.MoveNext();
             if (moved)
             {
-                _articulationTestAnswer = _articulationTestAnswersEnumerator.Current;
-
-                TestIndex = _articulationTestAnswer.Number.ToString();
-                Text = _articulationTestAnswer.ArticulationTest.Text;
-                Image = _articulationTestAnswer.ArticulationTest.Image;
+                RenderCurrentTest();
             }
             return moved;
+        }
+
+        private void RenderCurrentTest()
+        {
+            _articulationTestAnswer = _articulationTestAnswersEnumerator.Current;
+
+            TestIndex = _articulationTestAnswer.Number.ToString();
+            Text = _articulationTestAnswer.ArticulationTest.Text;
+            Image = _articulationTestAnswer.ArticulationTest.Image;
         }
     }
 }

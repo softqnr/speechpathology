@@ -12,6 +12,7 @@ namespace SpeechPathology.Data
         Task<List<object>> QueryAsync(string query, params object[] args);
         Task<List<T>> GetAllAsync();
         Task<T> GetAsync(Int64 id);
+        Task<List<T>> GetAllWithChildrenAsync(Expression<Func<T, bool>> predicate = null);
         Task<List<T>> GetAsync<TValue>(Expression<Func<T, bool>> predicate = null, Expression<Func<T, TValue>> orderBy = null);
         Task<T> GetAsync(Expression<Func<T, bool>> predicate);
         AsyncTableQuery<T> AsQueryable();

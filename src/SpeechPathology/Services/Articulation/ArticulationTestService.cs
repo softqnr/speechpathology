@@ -24,6 +24,17 @@ namespace SpeechPathology.Services.Articulation
             _repositoryTestExamAnswer = repositoryExamAnswer;
         }
 
+        public async Task<ArticulationTestExam> GetLastNotFinishedTest()
+        {
+            ArticulationTestExam exam = null;
+            var exams = await _repositoryTestExam.GetAllWithChildrenAsync(predicate: x => x.DateEnded == null);
+            // Exam with empty DateEnded means not finished test 
+            if (exams.Count > 0){
+                exam = exams[0];
+            }
+            return exam;
+        }
+
         public async Task<ArticulationTestExam> GenerateExam(SoundPosition soundPosition, string languageCode)
         {
             // Delete previous exams

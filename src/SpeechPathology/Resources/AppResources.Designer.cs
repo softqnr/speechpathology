@@ -369,6 +369,15 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ok.
+        /// </summary>
+        public static string OK {
+            get {
+                return ResourceManager.GetString("OK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Open in browser.
         /// </summary>
         public static string OpenInBrowser {
@@ -437,6 +446,24 @@ namespace SpeechPathology.Resources {
         public static string Results {
             get {
                 return ResourceManager.GetString("Results", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Resume test?.
+        /// </summary>
+        public static string ResumeTestMessage {
+            get {
+                return ResourceManager.GetString("ResumeTestMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pending test found.
+        /// </summary>
+        public static string ResumeTestTitle {
+            get {
+                return ResourceManager.GetString("ResumeTestTitle", resourceCulture);
             }
         }
         

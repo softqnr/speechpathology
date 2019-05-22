@@ -21,9 +21,12 @@ namespace SpeechPathology.Data
 
         public AsyncTableQuery<T> AsQueryable() => 
             db.Table<T>();
-        
+
         public async Task<List<T>> GetAllWithChildrenAsync() =>
-           await db.GetAllWithChildrenAsync<T>();
+            await db.GetAllWithChildrenAsync<T>();
+
+        public async Task<List<T>> GetAllWithChildrenAsync(Expression<Func<T, bool>> predicate = null) =>
+           await db.GetAllWithChildrenAsync<T>(predicate, true);
 
         public async Task<T> GetWithChildrenAsync(Int64 id, bool recursive = false) =>
             await db.FindWithChildrenAsync<T>(id, recursive);

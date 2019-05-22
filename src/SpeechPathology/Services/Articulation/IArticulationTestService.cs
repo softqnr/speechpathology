@@ -8,6 +8,8 @@ namespace SpeechPathology.Services.Articulation
 {
     public interface IArticulationTestService
     {
+        Task<ArticulationTestExam> GetLastNotFinishedTest();
+
         Task<ArticulationTestExam> GenerateExam(SoundPosition soundPosition, string languageCode);
 
         Task<ArticulationTestExam> GenerateExam(int age, string languageCode);
