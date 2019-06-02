@@ -31,8 +31,9 @@ namespace SpeechPathology
     {
         public static MasterDetailPage MasterPage { get; set; }
         public static UnityContainer Container { get; private set; }
-        public string DatabaseFilePath { get; private set; }
+        public static string DatabaseFilePath { get; private set; }
         public static string Language = "EN";
+        public static bool Initialized = false;
         public readonly static INavigationService NavigationService = new NavigationService();
 
         public App()
@@ -40,13 +41,16 @@ namespace SpeechPathology
             InitializeComponent();
             FlowListView.Init();
 
-            // Init DB
-            InitializeDatabase();
-            // Init DI
-            InitializeDI();
-            // Localization
-            InitializeLocalization();
+            if (!Initialized){
+                // Init DB
+                InitializeDatabase();
+                // Init DI
+                InitializeDI();
+                // Localization
+                InitializeLocalization();
 
+                Initialized = true;
+            }
             // Nav
             MainPage = new MasterDetailView();
         }
@@ -133,7 +137,7 @@ namespace SpeechPathology
         protected override async void OnStart()
         {
             // Handle when your app starts
-            // Nav service configuration
+            // Navigation
             await InitializeNavigation();
         }
 

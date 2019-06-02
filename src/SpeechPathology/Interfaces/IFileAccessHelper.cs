@@ -7,5 +7,7 @@ namespace SpeechPathology.Interfaces
         string GetDBPathAndCreateIfNotExists(string databaseFilename);
 
         Task<string> CopyAssetFileToTemp(string assetFile, string destinationFileName);
+
+        void CopyAssetFileTo(string assetFile, string destinationFileName);
     }
 }

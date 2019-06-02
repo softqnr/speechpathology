@@ -23,12 +23,8 @@ namespace SpeechPathology.Droid
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
 
             LoadApplication(new App());
-        }
-
-        protected override void OnResume()
-        {
-            base.OnResume();
             StartActivity(typeof(MainActivity));
+            Finish();
         }
     }
 }
