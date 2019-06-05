@@ -228,7 +228,7 @@ Bu uygulama konuşma terapistinin yerini almaz, ancak öğretmenler için bir de
     <value>Çalışma kağıdını görüntüleme</value>
   </data>
   <data name="ProjectTitle" xml:space="preserve">
-    <value>Speech Pathology Tools</value>
+    <value>Dil ve Konuşma Araçları</value>
   </data>
   <data name="AgeAtTest" xml:space="preserve">
     <value>Uygulama tarihindeki yaş</value>
@@ -264,7 +264,7 @@ Bu uygulama konuşma terapistinin yerini almaz, ancak öğretmenler için bir de
     <value>Share language skills</value>
   </data>
   <data name="SpeechSounds" xml:space="preserve">
-    <value>Speech Sounds</value>
+    <value>Dil ve onuşma sesleri</value>
   </data>
   <data name="SpeechSoundsSubtitle" xml:space="preserve">
     <value>Yaşa göre dil ve konuşma süreci</value>
@@ -273,7 +273,7 @@ Bu uygulama konuşma terapistinin yerini almaz, ancak öğretmenler için bir de
     <value>Teste devam et</value>
   </data>
   <data name="LanguageSkillsButton" xml:space="preserve">
-    <value>Show oral language skills</value>
+    <value>Sözlü dil becerisi</value>
   </data>
   <data name="SpeechSoundsButton" xml:space="preserve">
     <value>Dil ve onuşma sesleri</value>
@@ -313,5 +313,8 @@ Bu uygulama konuşma terapistinin yerini almaz, ancak öğretmenler için bir de
   </data>
   <data name="Score" xml:space="preserve">
     <value>Skor</value>
+  </data>
+  <data name="AgeCalculatorTitle" xml:space="preserve">
+    <value>Öğrencinin yaşı</value>
   </data>
 </root>

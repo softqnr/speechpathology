@@ -1,9 +1,5 @@
 ﻿using SpeechPathology.Services.Flashcard;
-using SpeechPathology.Models.Enums;
-using SpeechPathology.Infrastructure.Navigation;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using SpeechPathology.Utils;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -15,7 +11,7 @@ namespace SpeechPathology.ViewModels
         private IFlashcardService _flashcardService;
         private string _selectedSound;
         private string _selectedExcludedSound;
-        private List<string> _soundPositions;
+        private string[] _soundPositions;
 
         public string SelectedSound
         {
@@ -29,7 +25,7 @@ namespace SpeechPathology.ViewModels
             set => SetProperty(ref _selectedExcludedSound, value);
         }
 
-        public List<string> SoundPositions
+        public string[] SoundPositions
         {
             get => _soundPositions;
             set => SetProperty(ref _soundPositions, value);
@@ -63,14 +59,18 @@ namespace SpeechPathology.ViewModels
             {
                 SelectedSound = navigationDataArray[0];
                 _selectedExcludedSound = navigationDataArray[1];
-                // Get sounds
-                SoundPositions = await _flashcardService.GetSoundPositions(SelectedSound, _selectedExcludedSound, App.Language);
+                // Get sound positions
+                var soundPositions = await _flashcardService.GetSoundPositions(SelectedSound, _selectedExcludedSound, App.Language);
+                var soundPositionsTranslated = ResourceHelper.TranslateArray(soundPositions.ToArray());
+                SoundPositions = soundPositionsTranslated;
             }
         }
 
         public async Task OnPositionSelected(string soundPosition)
         {
-            await NavigationService.NavigateToAsync<FlashcardsTestViewModel>(new[] { soundPosition, _selectedSound, _selectedExcludedSound });
+            // Convert selected action to resource key
+            var soundLocationResourceKey = ResourceHelper.GetResourceNameByValue(soundPosition);
+            await NavigationService.NavigateToAsync<FlashcardsTestViewModel>(new[] { soundLocationResourceKey, _selectedSound, _selectedExcludedSound });
         }
     }
 }
