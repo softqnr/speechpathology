@@ -25,6 +25,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{CEC20035-238
 		lib\PdfSharpCore.pdb = lib\PdfSharpCore.pdb
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{F6170113-D331-424D-B46D-94BD5A832E5B}"
+	ProjectSection(SolutionItems) = preProject
+		build\update-language-setting.ps1 = build\update-language-setting.ps1
+		build\update-packagename.ps1 = build\update-packagename.ps1
+		build\update-resources.ps1 = build\update-resources.ps1
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU

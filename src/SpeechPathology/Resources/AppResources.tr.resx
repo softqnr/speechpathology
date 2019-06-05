@@ -261,7 +261,7 @@ Bu uygulama konuşma terapistinin yerini almaz, ancak öğretmenler için bir de
     <value>Sözlü dil becerisi</value>
   </data>
   <data name="ShareLanguageSkills" xml:space="preserve">
-    <value>Share language skills</value>
+    <value>Dil becerileri sonucunu paylaş</value>
   </data>
   <data name="SpeechSounds" xml:space="preserve">
     <value>Dil ve onuşma sesleri</value>
@@ -306,10 +306,10 @@ Bu uygulama konuşma terapistinin yerini almaz, ancak öğretmenler için bir de
     <value>Ok</value>
   </data>
   <data name="ResumeTestMessage" xml:space="preserve">
-    <value>Resume Test?</value>
+    <value>Teste devam et</value>
   </data>
   <data name="ResumeTestTitle" xml:space="preserve">
-    <value>Pending test found</value>
+    <value>Tamamlanmamış testiniz var</value>
   </data>
   <data name="Score" xml:space="preserve">
     <value>Skor</value>

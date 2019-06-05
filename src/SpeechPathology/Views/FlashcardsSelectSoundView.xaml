@@ -22,7 +22,7 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.ToolbarItems>
-        <controls:HideableToolbarItem Name="Skip" Priority="0" Order="Primary" 
+        <controls:HideableToolbarItem Name="Skip" Priority="0" Order="Primary" Text="{i18n:Translate Skip}"
                                       Command="{Binding SkipClickedCommand}" IsVisible="{Binding SkipIsVisible}" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
