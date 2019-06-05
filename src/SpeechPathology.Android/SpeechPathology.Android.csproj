@@ -53,7 +53,7 @@
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
     <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
     <Debugger>Xamarin</Debugger>
-    <AndroidLinkMode>Full</AndroidLinkMode>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
@@ -377,9 +377,15 @@
     <AndroidAsset Include="Assets\pdfjs\web\locale\zh-CN\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\zh-TW\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\zu\viewer.properties" />
+    <AndroidAsset Include="Assets\LanguageSkills\TR\languageskills_tr_2.pdf" />
+    <AndroidAsset Include="Assets\LanguageSkills\TR\languageskills_tr_3.pdf" />
+    <AndroidAsset Include="Assets\LanguageSkills\TR\languageskills_tr_4.pdf" />
+    <AndroidAsset Include="Assets\LanguageSkills\TR\languageskills_tr_5.pdf" />
+    <AndroidAsset Include="Assets\LanguageSkills\TR\languageskills_tr_6.pdf" />
     <AndroidAsset Include="Assets\Worksheets\TR\Worksheet_TR_Z.pdf" />
     <AndroidAsset Include="Assets\Worksheets\TR\Worksheet_TR_Y.pdf" />
     <AndroidAsset Include="Assets\Worksheets\TR\Worksheet_TR_V.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\TR\Worksheet_TR_T.pdf" />
     <AndroidAsset Include="Assets\Worksheets\TR\Worksheet_TR_S_.pdf" />
     <AndroidAsset Include="Assets\Worksheets\TR\Worksheet_TR_S.pdf" />
     <AndroidAsset Include="Assets\Worksheets\TR\Worksheet_TR_R.pdf" />
@@ -389,13 +395,12 @@
     <AndroidAsset Include="Assets\Worksheets\TR\Worksheet_TR_L.pdf" />
     <AndroidAsset Include="Assets\Worksheets\TR\Worksheet_TR_K.pdf" />
     <AndroidAsset Include="Assets\Worksheets\TR\Worksheet_TR_H.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\TR\Worksheet_TR_F.pdf" />
     <AndroidAsset Include="Assets\Worksheets\TR\Worksheet_TR_G.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\TR\Worksheet_TR_F.pdf" />
     <AndroidAsset Include="Assets\Worksheets\TR\Worksheet_TR_D.pdf" />
     <AndroidAsset Include="Assets\Worksheets\TR\Worksheet_TR_C_.pdf" />
     <AndroidAsset Include="Assets\Worksheets\TR\Worksheet_TR_C.pdf" />
     <AndroidAsset Include="Assets\Worksheets\TR\Worksheet_TR_B.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\TR\Worksheet_TR_T.pdf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml">
@@ -4080,6 +4085,7 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\splash_screen.xml" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>PowerShell -ExecutionPolicy Unrestricted -File "$(SolutionDir)build\update-packagename.ps1" $(ProjectDir) tr

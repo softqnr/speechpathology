@@ -314,4 +314,7 @@ This application does not replace a speech therapist, but offers an additional s
   <data name="ResumeTestTitle" xml:space="preserve">
     <value>Pending test found</value>
   </data>
+  <data name="Score" xml:space="preserve">
+    <value>Score</value>
+  </data>
 </root>

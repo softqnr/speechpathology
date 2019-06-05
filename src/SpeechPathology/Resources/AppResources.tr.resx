@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AgeCalculator" xml:space="preserve">
-    <value>Age Calculator</value>
+    <value>Yaşa göre test</value>
   </data>
   <data name="ArticulationTest" xml:space="preserve">
     <value>Artikülasyon Testi</value>
@@ -177,7 +177,7 @@
 Bu uygulama konuşma terapistinin yerini almaz, ancak öğretmenler için bir destek aracıdır.</value>
   </data>
   <data name="WorksheetSaved" xml:space="preserve">
-    <value>WÇalışma kağıdını kaydedildi.</value>
+    <value>Çalışma kağıdını kaydedildi.</value>
   </data>
   <data name="AboutIntro" xml:space="preserve">
     <value>Bu uygulama “TEMEL EĞİTİMDE ÖĞRETMENLER VE ÖĞRENCİLER İÇİN İNTERAKTİF ARAÇLAR” başlıklı Erasmus+ KA2 Stratejik Ortaklık Projesi ortakları tarafından </value>
@@ -231,34 +231,34 @@ Bu uygulama konuşma terapistinin yerini almaz, ancak öğretmenler için bir de
     <value>Speech Pathology Tools</value>
   </data>
   <data name="AgeAtTest" xml:space="preserve">
-    <value>Age at test date</value>
+    <value>Uygulama tarihindeki yaş</value>
   </data>
   <data name="DateOfBirth" xml:space="preserve">
-    <value>Birth date</value>
+    <value>Doğum tarihi</value>
   </data>
   <data name="DateOfTest" xml:space="preserve">
-    <value>Test date</value>
+    <value>Test uygulama tarihi</value>
   </data>
   <data name="DayPlural" xml:space="preserve">
-    <value>Days</value>
+    <value>Gün</value>
   </data>
   <data name="DaySingular" xml:space="preserve">
-    <value>Day</value>
+    <value>Gün</value>
   </data>
   <data name="MonthPlural" xml:space="preserve">
-    <value>Months</value>
+    <value>Ay</value>
   </data>
   <data name="MonthSingular" xml:space="preserve">
-    <value>Month</value>
+    <value>Ay</value>
   </data>
   <data name="YearPlural" xml:space="preserve">
-    <value>Years</value>
+    <value>Yil</value>
   </data>
   <data name="YearSingular" xml:space="preserve">
-    <value>Year</value>
+    <value>Yıl</value>
   </data>
   <data name="LanguageSkills" xml:space="preserve">
-    <value>Language Skills</value>
+    <value>Sözlü dil becerisi</value>
   </data>
   <data name="ShareLanguageSkills" xml:space="preserve">
     <value>Share language skills</value>
@@ -267,16 +267,16 @@ Bu uygulama konuşma terapistinin yerini almaz, ancak öğretmenler için bir de
     <value>Speech Sounds</value>
   </data>
   <data name="SpeechSoundsSubtitle" xml:space="preserve">
-    <value>Speech Sound Progress by Age</value>
+    <value>Yaşa göre dil ve konuşma süreci</value>
   </data>
   <data name="SpeechSoundsDetail" xml:space="preserve">
-    <value>Continue to the test</value>
+    <value>Teste devam et</value>
   </data>
   <data name="LanguageSkillsButton" xml:space="preserve">
     <value>Show oral language skills</value>
   </data>
   <data name="SpeechSoundsButton" xml:space="preserve">
-    <value>Show speech sound development</value>
+    <value>Dil ve onuşma sesleri</value>
   </data>
   <data name="Blended" xml:space="preserve">
     <value>Karışık durum</value>
@@ -294,13 +294,13 @@ Bu uygulama konuşma terapistinin yerini almaz, ancak öğretmenler için bir de
     <value>Karışık durum</value>
   </data>
   <data name="Continue" xml:space="preserve">
-    <value>Continue</value>
+    <value>Devam</value>
   </data>
   <data name="AgeNotSetMsg" xml:space="preserve">
-    <value>Age not set</value>
+    <value>Geçerli biçimde bir yaş giriniz.</value>
   </data>
   <data name="AgeNotSetTitle" xml:space="preserve">
-    <value>Age not set</value>
+    <value>Bu yaş için test uygun değildir.</value>
   </data>
   <data name="OK" xml:space="preserve">
     <value>Ok</value>
@@ -310,5 +310,8 @@ Bu uygulama konuşma terapistinin yerini almaz, ancak öğretmenler için bir de
   </data>
   <data name="ResumeTestTitle" xml:space="preserve">
     <value>Pending test found</value>
+  </data>
+  <data name="Score" xml:space="preserve">
+    <value>Skor</value>
   </data>
 </root>
