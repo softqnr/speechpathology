@@ -50,6 +50,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Resources\AppResources.nl.resx">
+      <LastGenOutput>AppResources-nl.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Resources\AppResources.tr.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
     </EmbeddedResource>

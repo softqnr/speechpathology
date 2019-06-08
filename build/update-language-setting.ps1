@@ -1,13 +1,23 @@
-param ([string] $ProjectDir, [string] $Language)
+param ([string] $DatabasePath, [string] $Language)
 Write-Host "ProjectDir: $ProjectDir"
 Write-Host "Language: $Language"
 
-$DatabasePath = $ProjectDir + "Assets\sp.db"
-
 Write-Host "DBPath: $DatabasePath"
+Write-Host "PSScriptRoot: $PSScriptRoot"
 
 # Note: Permissions needed
-Add-Type -Path "$PSScriptRoot\System.Data.SQLite.dll"
+try{
+	#Add-Type -Path "$PSScriptRoot\System.Data.SQLite.dll"
+	$assembly = [Reflection.Assembly]::LoadFile("$PSScriptRoot\System.Data.SQLite.dll")
+	$instance = New-Object Class.Of.Assembly
+}
+catch [System.Reflection.ReflectionTypeLoadException]
+{
+   Write-Host "Message: $($_.Exception.Message)"
+   Write-Host "StackTrace: $($_.Exception.StackTrace)"
+   Write-Host "LoaderExceptions: $($_.Exception.LoaderExceptions)"
+}
+
 $con = New-Object -TypeName System.Data.SQLite.SQLiteConnection
 $con.ConnectionString = "Data Source=$DatabasePath" 
 # Open the connection

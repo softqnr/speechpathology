@@ -28,14 +28,30 @@ namespace SpeechPathology.Services.Flashcard
 
         public async Task<List<string>> GetSoundPositions(string sound, string excludedSound, string languageCode)
         {
+            // Order by sound position enum
+            var order = Enum.GetValues(typeof(SoundPosition))
+                .OfType<SoundPosition>()
+                .Select(x => new {
+                    Name = x.ToString(),
+                    Value = (int)x
+            });
+
+            // Get flashcards
             var flashcards = await _repositoryFlashcard.GetAsync<String>(predicate: x => x.Sound == sound
                 && x.LanguageCode == languageCode
                 && (excludedSound == "" || !x.Text.Contains(excludedSound)));
 
-            var soundPositions = flashcards.GroupBy(x => new { x.SoundPosition }).Select(x => x.FirstOrDefault()).Select(x => x.SoundPosition).ToList<string>();
-            
-            // Convert to Enum
-            //var soundPositionsEnum =  soundPositions.Select(s => (FlashcardSoundPosition)Enum.Parse(typeof(FlashcardSoundPosition), s, true)).ToList();
+            // Group & Order
+            var soundPositions = flashcards
+                .Join(order,
+                          f => f.SoundPosition,
+                          o => o.Name,
+                          (f, o) => new { f.SoundPosition, o.Value })
+                .OrderBy(r => r.Value)
+                .GroupBy(x => new { x.SoundPosition })
+                .Select(x => x.FirstOrDefault())
+                .Select(x => x.SoundPosition)
+                .ToList<string>();
 
             return soundPositions;
         }

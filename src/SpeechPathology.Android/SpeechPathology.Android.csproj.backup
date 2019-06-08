@@ -37,7 +37,7 @@
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
     <AotAssemblies>false</AotAssemblies>
     <EnableLLVM>false</EnableLLVM>
-    <AndroidUseSharedRuntime>true</AndroidUseSharedRuntime>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
     <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
     <AndroidStoreUncompressedFileExtensions>.mp3;jpg</AndroidStoreUncompressedFileExtensions>
     <AndroidSupportedAbis />
@@ -53,6 +53,7 @@
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
     <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
     <Debugger>Xamarin</Debugger>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
@@ -73,10 +74,10 @@
       <Version>28.0.0.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.FFImageLoading.Forms">
-      <Version>2.4.9.961</Version>
+      <Version>2.4.11.982</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.FFImageLoading.Svg">
-      <Version>2.4.9.961</Version>
+      <Version>2.4.11.982</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="3.6.0.344457" />
     <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0.1" />
@@ -99,7 +100,7 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\sp.db">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </AndroidAsset>
     <AndroidAsset Include="Assets\pdfjs\LICENSE" />
     <AndroidAsset Include="Assets\pdfjs\web\cmaps\78-EUC-H.bcmap" />
@@ -376,9 +377,15 @@
     <AndroidAsset Include="Assets\pdfjs\web\locale\zh-CN\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\zh-TW\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\zu\viewer.properties" />
+    <AndroidAsset Include="Assets\LanguageSkills\TR\languageskills_tr_2.pdf" />
+    <AndroidAsset Include="Assets\LanguageSkills\TR\languageskills_tr_3.pdf" />
+    <AndroidAsset Include="Assets\LanguageSkills\TR\languageskills_tr_4.pdf" />
+    <AndroidAsset Include="Assets\LanguageSkills\TR\languageskills_tr_5.pdf" />
+    <AndroidAsset Include="Assets\LanguageSkills\TR\languageskills_tr_6.pdf" />
     <AndroidAsset Include="Assets\Worksheets\TR\Worksheet_TR_Z.pdf" />
     <AndroidAsset Include="Assets\Worksheets\TR\Worksheet_TR_Y.pdf" />
     <AndroidAsset Include="Assets\Worksheets\TR\Worksheet_TR_V.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\TR\Worksheet_TR_T.pdf" />
     <AndroidAsset Include="Assets\Worksheets\TR\Worksheet_TR_S_.pdf" />
     <AndroidAsset Include="Assets\Worksheets\TR\Worksheet_TR_S.pdf" />
     <AndroidAsset Include="Assets\Worksheets\TR\Worksheet_TR_R.pdf" />
@@ -388,13 +395,12 @@
     <AndroidAsset Include="Assets\Worksheets\TR\Worksheet_TR_L.pdf" />
     <AndroidAsset Include="Assets\Worksheets\TR\Worksheet_TR_K.pdf" />
     <AndroidAsset Include="Assets\Worksheets\TR\Worksheet_TR_H.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\TR\Worksheet_TR_F.pdf" />
     <AndroidAsset Include="Assets\Worksheets\TR\Worksheet_TR_G.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\TR\Worksheet_TR_F.pdf" />
     <AndroidAsset Include="Assets\Worksheets\TR\Worksheet_TR_D.pdf" />
     <AndroidAsset Include="Assets\Worksheets\TR\Worksheet_TR_C_.pdf" />
     <AndroidAsset Include="Assets\Worksheets\TR\Worksheet_TR_C.pdf" />
     <AndroidAsset Include="Assets\Worksheets\TR\Worksheet_TR_B.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\TR\Worksheet_TR_T.pdf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml">
@@ -3558,9 +3564,6 @@
     <AndroidResource Include="Resources\drawable\tr_zil.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\splash.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\tr_speechsounds_5.png" />
   </ItemGroup>
   <ItemGroup>
@@ -3879,192 +3882,1116 @@
     <None Include="Resources\drawable\en_speechsounds.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_zoo.jpg" />
+    <None Include="Resources\drawable\en_zoo.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_zebra.jpg" />
+    <None Include="Resources\drawable\en_zebra.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_wedding.jpg" />
+    <None Include="Resources\drawable\en_wedding.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_violin.jpg" />
+    <None Include="Resources\drawable\en_violin.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_weather.jpg" />
+    <None Include="Resources\drawable\en_weather.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_vet.jpg" />
+    <None Include="Resources\drawable\en_vet.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_vest.jpg" />
+    <None Include="Resources\drawable\en_vest.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_velvet.jpg" />
+    <None Include="Resources\drawable\en_velvet.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_toad.jpg" />
+    <None Include="Resources\drawable\en_toad.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_tassles.jpg" />
+    <None Include="Resources\drawable\en_tassles.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_swim.jpg" />
+    <None Include="Resources\drawable\en_swim.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_swiss_cheese.jpg" />
+    <None Include="Resources\drawable\en_swiss_cheese.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_spider.jpg" />
+    <None Include="Resources\drawable\en_spider.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_sing.jpg" />
+    <None Include="Resources\drawable\en_sing.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_spade.jpg" />
+    <None Include="Resources\drawable\en_spade.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_seven.jpg" />
+    <None Include="Resources\drawable\en_seven.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_seahorse.jpg" />
+    <None Include="Resources\drawable\en_seahorse.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_sausage.jpg" />
+    <None Include="Resources\drawable\en_sausage.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_rubber.jpg" />
+    <None Include="Resources\drawable\en_rubber.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_rose.jpg" />
+    <None Include="Resources\drawable\en_rose.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_rod.jpg" />
+    <None Include="Resources\drawable\en_rod.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_robin.jpg" />
+    <None Include="Resources\drawable\en_robin.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_road.jpg" />
+    <None Include="Resources\drawable\en_road.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_reading.jpg" />
+    <None Include="Resources\drawable\en_reading.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_razor.jpg" />
+    <None Include="Resources\drawable\en_razor.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_rabbit.jpg" />
+    <None Include="Resources\drawable\en_rabbit.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_pine_cone.jpg" />
+    <None Include="Resources\drawable\en_pine_cone.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_octopus.jpg" />
+    <None Include="Resources\drawable\en_octopus.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_nurse.jpg" />
+    <None Include="Resources\drawable\en_nurse.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_nine.jpg" />
+    <None Include="Resources\drawable\en_nine.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_mud.jpg" />
+    <None Include="Resources\drawable\en_mud.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_maximum.jpg" />
+    <None Include="Resources\drawable\en_maximum.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_lizard.jpg" />
+    <None Include="Resources\drawable\en_lizard.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_lid.jpg" />
+    <None Include="Resources\drawable\en_lid.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_knife.jpg" />
+    <None Include="Resources\drawable\en_knife.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_ladle.jpg" />
+    <None Include="Resources\drawable\en_ladle.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_jungle.jpg" />
+    <None Include="Resources\drawable\en_jungle.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_hulahoop.jpg" />
+    <None Include="Resources\drawable\en_hulahoop.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_ice_cream.jpg" />
+    <None Include="Resources\drawable\en_ice_cream.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_hug.jpg" />
+    <None Include="Resources\drawable\en_hug.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_hop.jpg" />
+    <None Include="Resources\drawable\en_hop.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_hook.jpg" />
+    <None Include="Resources\drawable\en_hook.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_hob.jpg" />
+    <None Include="Resources\drawable\en_hob.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_happy.jpg" />
+    <None Include="Resources\drawable\en_happy.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_hand.jpg" />
+    <None Include="Resources\drawable\en_hand.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_hammerhead.jpg" />
+    <None Include="Resources\drawable\en_hammerhead.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_gravy.jpg" />
+    <None Include="Resources\drawable\en_gravy.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_grasshopper.jpg" />
+    <None Include="Resources\drawable\en_grasshopper.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_fishing.jpg" />
+    <None Include="Resources\drawable\en_fishing.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_drive.jpg" />
+    <None Include="Resources\drawable\en_drive.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_doughnut.jpg" />
+    <None Include="Resources\drawable\en_doughnut.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_doorknob.jpg" />
+    <None Include="Resources\drawable\en_doorknob.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_dive.jpg" />
+    <None Include="Resources\drawable\en_dive.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_dandelion.jpg" />
+    <None Include="Resources\drawable\en_dandelion.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_daisy.jpg" />
+    <None Include="Resources\drawable\en_daisy.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_crab.jpg" />
+    <None Include="Resources\drawable\en_crab.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_cave.jpg" />
+    <None Include="Resources\drawable\en_cave.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_cabin.jpg" />
+    <None Include="Resources\drawable\en_cabin.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_cab.jpg" />
+    <None Include="Resources\drawable\en_cab.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_beehive.jpg" />
+    <None Include="Resources\drawable\en_beehive.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\en_beaver.jpg" />
+    <None Include="Resources\drawable\en_beaver.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\splash_bg.9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\baseline_speaker_notes_white_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\splash_bg.9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\splash_bg.9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\splash_bg.9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\splash_bg.9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\splash_screen.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\sp_animation.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values-tr\strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\LanguageSkills\NL\" />
+    <Folder Include="Assets\Worksheets\NL\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_yet.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_vases.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_turn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_totem.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_throw.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_throat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_suit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_spoon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_sow.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_sensual.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_school.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_ready.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_rarities.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_quiz.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_psychic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_perpetrator.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_pass.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_package.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_letter.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_laugh.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_juice.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_himself.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_hay.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_hail.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_grow.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_going.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_gigantic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_fit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_eyes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_educated.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_dry.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_cockroach.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_chaotic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_cart.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_boats.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_bath.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_bar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_advice.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_adder.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\verzot.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\uitzetten.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\bijzonder.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\zon.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\zomer.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\zinken.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\quiz.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\jazz.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\fez.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\zwemzak.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\zijzelf.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\zichzelf.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\veter.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\mottig.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\letter.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\trein.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\temmen.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\tafel.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\net.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\mat.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\kat.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\totem.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\tablet.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\straat.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\weegschaal.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\vriendschap.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\handschrift.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\school.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\schat.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\schaar.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\onhygiënisch.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\melancholisch.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\hysterisch.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\schoonschrift.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\schokschouderen.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\schematisch.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\pastoor.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\meester.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\kasteel.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\steen.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\soep.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\salade.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\roos.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\neus.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\kaas.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\saus.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\sas.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\salaris.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\peren.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\karren.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\heren.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\rond.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\rij.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\reep.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\jager.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\dader.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\anjer.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\radar.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\racer.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\order.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\zalen.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\verhalen.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\delen.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\leraar.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\lawine.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\lading.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\verhaal.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\meel.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\geel.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\loslaten.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\loskoppelen.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\leeghalen.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\pukkel.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\drukker.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\bunker.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\kruid.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\kelner.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\kar.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\raak.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\preek.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\draak.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\kraskaart.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\kopstuk.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\kamerkast.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\overheid.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\gehakketak.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\hotel.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\hesp.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\heg.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\bh.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\ayatollah.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\ah.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\huishouden.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\hoffelijkheid.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\gehoorzaamheid.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\wegen.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\magen.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\degen.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\goud.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\gaar.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\gaan.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\zwijg.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\kroeg.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\kring.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\graag.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\gezag.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\geestig.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\veder.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\vader.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\moeder.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\dronk.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\drie.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\dom.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\zwaard.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\haard.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\bed.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\draad.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\dalend.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\aanduiding.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\vechten.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\lachen.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\kachel.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\choco.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\chinees.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\charcuterie.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\vacht.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\recht.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\lach.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\technisch.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\eucharistisch.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sounds\NL\chaotisch.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_zwijg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_zwemzak.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_zwaard.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_zon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_zomer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_zinken.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_zijzelf.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_zichzelf.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_zalen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_wegen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_weegschaal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_vriendschap.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_veter.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_verzot.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_verhalen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_verhaal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_veder.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_vechten.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_vader.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_vacht.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_uitzetten.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_trein.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_temmen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_technisch.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_tafel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_tablet.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_straat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_steen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_soep.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_schoonschrift.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_schokschouderen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_schematisch.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_schat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_schaar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_saus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_sas.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_salaris.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_salade.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_roos.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_rond.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_rij.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_reep.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_recht.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_radar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_racer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_raak.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_pukkel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_preek.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_peren.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_pastoor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_overheid.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_order.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_onhygiënisch.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_neus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_net.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_mottig.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_moeder.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_melancholisch.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_meester.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_meel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_mat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_magen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_loslaten.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_loskoppelen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_leraar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_leeghalen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_lawine.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_lading.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_lachen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_lach.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_kruid.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_kroeg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_kring.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_kraskaart.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_kopstuk.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_kelner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_kat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_kasteel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_karren.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_kar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_kamerkast.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_kachel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_kaas.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_jazz.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_jager.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_hysterisch.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_huishouden.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_hotel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_hoffelijkheid.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_hesp.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_heren.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_heg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_handschrift.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_haard.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_graag.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_goud.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_gezag.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_gehoorzaamheid.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_gehakketak.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_geestig.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_geel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_gaar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_gaan.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_fez.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_eucharistisch.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_drukker.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_dronk.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_drie.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_draak.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_draad.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_dom.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_delen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_degen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_dalend.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_dader.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_choco.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_chinees.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_charcuterie.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_chaotisch.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_bunker.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_bijzonder.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_bh.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_bed.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_ayatollah.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_anjer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_ah.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\nl_aanduiding.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <PropertyGroup>
-    <PreBuildEvent>PowerShell -ExecutionPolicy Unrestricted -File "$(SolutionDir)build\update-packagename.ps1" $(ProjectDir) tr
-PowerShell -ExecutionPolicy Unrestricted -File "$(SolutionDir)build\update-language-setting.ps1" $(ProjectDir) tr
-PowerShell -ExecutionPolicy Unrestricted -File "$(SolutionDir)build\update-resources.ps1" $(ProjectDir) tr "en|tr"</PreBuildEvent>
+    <PreBuildEvent>PowerShell -ExecutionPolicy Unrestricted -File "$(SolutionDir)build\update-packagename.ps1" $(ProjectDir) nl
+
+
+PowerShell -ExecutionPolicy Unrestricted -File "$(SolutionDir)build\update-language-setting.ps1" $(ProjectDir) nl
+PowerShell -ExecutionPolicy Unrestricted -File "$(SolutionDir)build\update-resources.ps1" $(ProjectDir) nl "en|tr|nl"</PreBuildEvent>
   </PropertyGroup>
 </Project>
