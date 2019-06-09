@@ -378,6 +378,17 @@
     <AndroidAsset Include="Assets\pdfjs\web\locale\zh-TW\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\zu\viewer.properties" />
     <AndroidAsset Include="Assets\LanguageSkills\NL\languageskills_nl_all.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\NL\Worksheet_NL_CH.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\NL\Worksheet_NL_D.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\NL\Worksheet_NL_G.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\NL\Worksheet_NL_H.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\NL\Worksheet_NL_K.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\NL\Worksheet_NL_L.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\NL\Worksheet_NL_R.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\NL\Worksheet_NL_S.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\NL\Worksheet_NL_SCH.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\NL\Worksheet_NL_T.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\NL\Worksheet_NL_Z.pdf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml">
@@ -4092,9 +4103,7 @@
   <ItemGroup>
     <AndroidResource Include="Resources\values-tr\strings.xml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Assets\Worksheets\NL\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\nl_yet.jpg" />
   </ItemGroup>
