@@ -16,14 +16,14 @@
                 <Setter Property="TextColor" Value="White" />
                 <Setter Property="FontSize" Value="48" />
                 <Setter Property="FontAttributes" Value="Bold" />
-                <Setter Property="HeightRequest" Value="60" />
-                <Setter Property="WidthRequest" Value="60" />
+                <Setter Property="HeightRequest" Value="80" />
+                <Setter Property="WidthRequest" Value="80" />
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout>
-            <flv:FlowListView FlowColumnCount="5" SeparatorVisibility="None" HasUnevenRows="false" RowHeight="100" FlowColumnMinWidth="100"
+            <flv:FlowListView FlowColumnCount="4" SeparatorVisibility="None" HasUnevenRows="false" RowHeight="130" FlowColumnMinWidth="130"
 	            FlowItemTappedCommand="{Binding ItemTappedCommand}" FlowItemsSource="{Binding Worksheets}" >
 
                 <flv:FlowListView.FlowColumnTemplate>
