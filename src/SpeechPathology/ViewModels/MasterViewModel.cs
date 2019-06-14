@@ -8,15 +8,20 @@ namespace SpeechPathology.ViewModels
 {
     public class MasterViewModel : ViewModelBase
     {
-        public string ProjectTitle { get => Resources.AppResources.ProjectTitle; }
+        public string ProjectTitle
+        {
+            get => Resources.AppResources.ProjectTitle;
+        }
+
         public string Version
         {
-            get
-            {
-                var version = DependencyService.Get<Interfaces.IAppVersionProvider>();
-                return " v" + version.AppVersion;
-            }
+            get => " v." + DependencyService.Get<Interfaces.IAppVersionProvider>().AppVersion;
         }
+
+        public string Language {
+            get => $"-{App.Language}";
+        }
+
         private string _title;
         public string Title
         {

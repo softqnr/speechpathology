@@ -33,47 +33,12 @@ See https://github.com/adobe-type-tools/cmap-resources
     <link rel="resource" type="application/l10n" href="locale/locale.properties">
     <script src="l10n.js"></script>
     <script src="../build/pdf.js"></script>
-    <script src="../build/hammer.min.js"></script>
     <script src="viewer.js"></script>
     <script>
         (function () {
             window.print = function () {
                 alert('PdfViewer_app_scheme:print');
             }
-
-            var container = document.getElementById('viewer');
-
-            var hammer = new Hammer(container, {
-                domEvents: true
-            });
-
-            hammer.get('pinch').set({
-                enable: true
-            });
-
-            hammer.on('pinchend', function (event) {
-                // get the current zoom value
-                var zoom = this.currentZoom;
-                // get the scaled amount
-                var scale = zoom * event.scale / 10;
-                // if the user is zooming in
-                if (event.additionalEvent === 'pinchout') {
-                    zoom += scale;
-                } else {
-                    // if zooming out
-                    zoom -= scale * 10;
-                }
-
-                // if zoom is too small or too big set them to max values
-                if (zoom < 1) {
-                    zoom = 1;
-                } else if (zoom > 2) {
-                    zoom = 2;
-                }
-
-                // set the current zoom
-                this.currentZoom = zoom;
-            });
         })();
     </script>
 </head>

@@ -4,12 +4,10 @@ Write-Host "Language: $Language"
 
 Write-Host "DBPath: $DatabasePath"
 Write-Host "PSScriptRoot: $PSScriptRoot"
-
 # Note: Permissions needed
 try{
 	#Add-Type -Path "$PSScriptRoot\System.Data.SQLite.dll"
 	$assembly = [Reflection.Assembly]::LoadFile("$PSScriptRoot\System.Data.SQLite.dll")
-	$instance = New-Object Class.Of.Assembly
 }
 catch [System.Reflection.ReflectionTypeLoadException]
 {

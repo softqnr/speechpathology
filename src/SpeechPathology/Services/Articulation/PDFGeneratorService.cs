@@ -250,7 +250,7 @@ namespace SpeechPathology.Services.Articulation
 
         private void SavePDF(string fileName)
         {
-            PdfDocumentRenderer pdfRenderer = new PdfDocumentRenderer()
+            PdfDocumentRenderer pdfRenderer = new PdfDocumentRenderer(true)
             {
                 Document = _document
             };

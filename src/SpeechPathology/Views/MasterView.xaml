@@ -33,7 +33,8 @@
                         <FormattedString>
                                 <Span Text="{Binding ProjectTitle}" FontSize="Large" Style="{DynamicResource SubtitleStyle}"/>
                                 <Span Text="{Binding Version}" FontSize="Small" />
-                        </FormattedString>
+                                <Span Text="{Binding Language}" FontSize="Small" />
+                            </FormattedString>
                     </Label.FormattedText>
             </Label>
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="5" Grid.Column="1" Grid.Row="3">
