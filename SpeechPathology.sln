@@ -30,6 +30,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{F6170113
 		build\update-language-setting.ps1 = build\update-language-setting.ps1
 		build\update-packagename.ps1 = build\update-packagename.ps1
 		build\update-resources.ps1 = build\update-resources.ps1
+		build\update-version-from-git.ps1 = build\update-version-from-git.ps1
 	EndProjectSection
 EndProject
 Global

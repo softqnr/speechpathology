@@ -5059,7 +5059,7 @@
     <AndroidAsset Include="Assets\Sounds\SR\swing.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\SR\to swing.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\to_swing.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Sounds\SR\coal.mp3" />
@@ -5119,7 +5119,7 @@
     <AndroidAsset Include="Assets\Sounds\SR\tulip.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\SR\monopol.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\monopoly.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Sounds\SR\pitcher.mp3" />
@@ -5128,7 +5128,7 @@
     <AndroidAsset Include="Assets\Sounds\SR\ballroom.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\SR\bycucle.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\bicycle.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Sounds\SR\hotel.mp3" />
@@ -5260,7 +5260,7 @@
     <AndroidAsset Include="Assets\Sounds\SR\hat.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\SR\broosh.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\brooch.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Sounds\SR\mouse.mp3" />
@@ -5326,7 +5326,7 @@
     <AndroidAsset Include="Assets\Sounds\SR\chimney.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\SR\chimney sweeper.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\chimney_sweeper.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Sounds\SR\milkman.mp3" />
@@ -5374,7 +5374,7 @@
     <AndroidAsset Include="Assets\Sounds\SR\sack.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\SR\to squat.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\to_squat.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Sounds\SR\toothpick.mp3" />
@@ -5383,7 +5383,7 @@
     <AndroidAsset Include="Assets\Sounds\SR\driver.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\SR\pencil sharpener.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\pencil_sharpener.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Sounds\SR\singer.mp3" />
@@ -5413,7 +5413,7 @@
     <AndroidAsset Include="Assets\Sounds\SR\glasses.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\SR\small stickers.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\small_sticker.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Sounds\SR\eyes.mp3" />
@@ -5434,10 +5434,10 @@
     <AndroidAsset Include="Assets\Sounds\SR\man.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\SR\boath.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\boat.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\SR\hairbrush.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\hair_brush.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Sounds\SR\socks.mp3" />
@@ -5452,10 +5452,10 @@
     <AndroidAsset Include="Assets\Sounds\SR\kindergarden.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\SR\small bird.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\small_bird.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\SR\young man.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\young_man.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Sounds\SR\night.mp3" />
@@ -5467,7 +5467,7 @@
     <AndroidAsset Include="Assets\Sounds\SR\fruit.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\SR\shoe.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\shoes.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Sounds\SR\candle.mp3" />
@@ -5488,7 +5488,7 @@
     <AndroidAsset Include="Assets\Sounds\SR\blanket.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\SR\lilly of the valley.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\lily_of_the_valley.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Sounds\SR\perch.mp3" />
@@ -5524,13 +5524,13 @@
     <AndroidAsset Include="Assets\Sounds\SR\student.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\SR\babynipple.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\baby_nipple.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Sounds\SR\policman.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\SR\teetertotter.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\teeter_totter.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Sounds\SR\castle.mp3" />
@@ -5569,16 +5569,16 @@
     <AndroidAsset Include="Assets\Sounds\SR\street.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\SR\pappydog.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\pappy_dog.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\SR\pussycat.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\pussy_cat.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Sounds\SR\beet.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\SR\flower garden.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\flower_garden.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Sounds\SR\bricks.mp3" />
@@ -5593,7 +5593,7 @@
     <AndroidAsset Include="Assets\Sounds\SR\freezer.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\SR\walledup.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\walled_up.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Sounds\SR\stars.mp3" />
@@ -5659,16 +5659,16 @@
     <AndroidAsset Include="Assets\Sounds\SR\winter.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\SR\tocleanusingvacuumcleaner.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\to_clean_using_vacuum_cleaner.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Sounds\SR\confectioner.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\SR\vacumcleaner.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\vacuum_vleaner.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\SR\barefoot.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\barefooted.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Sounds\SR\cabbage.mp3" />
@@ -5698,7 +5698,7 @@
     <AndroidAsset Include="Assets\Sounds\SR\meat.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\SR\plasticbag.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\plastic_bag.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Sounds\SR\snowdrop.mp3" />
@@ -5731,7 +5731,7 @@
     <AndroidAsset Include="Assets\Sounds\SR\soap.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\SR\tosleep.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\to_sleep.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\sr_zebra.jpg" />
@@ -6503,7 +6503,9 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <PropertyGroup>
-    <PreBuildEvent>PowerShell -ExecutionPolicy Unrestricted -File "$(SolutionDir)build\update-packagename.ps1" $(ProjectDir) sr
+    <PreBuildEvent>PowerShell -ExecutionPolicy Unrestricted -File "$(SolutionDir)build\update-version-from-git.ps1" $(ProjectDir)
+
+PowerShell -ExecutionPolicy Unrestricted -File "$(SolutionDir)build\update-packagename.ps1" $(ProjectDir) sr
 
 "C:\Windows\syswow64\WindowsPowerShell\v1.0\powershell.exe" -ExecutionPolicy Unrestricted -File "$(SolutionDir)build\update-language-setting.ps1" "$(ProjectDir)Assets\sp.db" sr
 
