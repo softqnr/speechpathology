@@ -17,12 +17,12 @@ namespace SpeechPathology.Droid
             if (!File.Exists(dbFile))
             {
                 // Copy from assets
-                FileStream writeStream = new FileStream(dbFile, FileMode.OpenOrCreate, FileAccess.Write);
-                Android.App.Application.Context.Assets.Open(databaseName).CopyTo(writeStream);
+                CopyAssetFileTo(databaseName, dbFile);
             }
          
             return dbFile;
         }
+
         public async Task<string> CopyAssetFileToTemp(string assetFile, string destinationFileName)
         {
             destinationFileName = Path.Combine(Path.GetTempPath(), destinationFileName);
@@ -32,6 +32,14 @@ namespace SpeechPathology.Droid
             }
 
             return destinationFileName;
+        }
+
+        public void CopyAssetFileTo(string assetFile, string destinationFileName)
+        {
+            using (var fileStream = new FileStream(destinationFileName, FileMode.OpenOrCreate, FileAccess.Write))
+            {
+                Android.App.Application.Context.Assets.Open(assetFile).CopyTo(fileStream);
+            }
         }
     }
 }

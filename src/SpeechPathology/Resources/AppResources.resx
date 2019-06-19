@@ -293,4 +293,28 @@ This application does not replace a speech therapist, but offers an additional s
   <data name="Blend" xml:space="preserve">
     <value>blend</value>
   </data>
+  <data name="Blended" xml:space="preserve">
+    <value>Blended</value>
+  </data>
+  <data name="Results" xml:space="preserve">
+    <value>Results</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Test" xml:space="preserve">
+    <value>Test</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="ResumeTestMessage" xml:space="preserve">
+    <value>Resume test?</value>
+  </data>
+  <data name="ResumeTestTitle" xml:space="preserve">
+    <value>Pending test found</value>
+  </data>
+  <data name="Score" xml:space="preserve">
+    <value>Score</value>
+  </data>
 </root>

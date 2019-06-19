@@ -18,11 +18,13 @@ namespace SpeechPathology.ViewModels
             get => _worksheets;
             set => SetProperty(ref _worksheets, value);
         }
+
         public string Uri
         {
             get => _uri;
             set => SetProperty(ref _uri, value);
         }
+
         public ICommand ItemTappedCommand
         {
             get
@@ -33,26 +35,29 @@ namespace SpeechPathology.ViewModels
                 });
             }
         }
+
         public WorksheetsViewModel(IWorksheetService worksheetService)
         {
             _worksheetService = worksheetService;
         }
+
         public override async Task InitializeAsync(object navigationData)
         {
             await LoadData();
         }
+
         private async Task LoadData()
         {
             // Get worksheets
-            var worksheets = await _worksheetService.GetAllAsync();
-            Worksheets = worksheets;
+            Worksheets = await _worksheetService.GetAllAsync(App.Language);
         }
+
         public async Task OnLetterSelected(Worksheet ws)
         {
             if (ws != null)
             {
                 DialogService.ShowLoading(Resources.AppResources.Loading);
-                await NavigationService.NavigateToAsync<PdfViewerViewModel>("Worksheets/" + ws.File);
+                await NavigationService.NavigateToAsync<PdfViewerViewModel>(ws.File);
                 DialogService.HideLoading();
             }
         }

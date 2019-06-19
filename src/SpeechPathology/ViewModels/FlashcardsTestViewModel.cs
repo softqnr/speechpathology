@@ -1,7 +1,6 @@
 ﻿using SpeechPathology.Services.Flashcard;
 using SpeechPathology.Models;
 using SpeechPathology.Models.Enums;
-using SpeechPathology.Infrastructure.Navigation;
 using SpeechPathology.Infrastructure.Sound;
 using System;
 using System.Collections.ObjectModel;
@@ -16,6 +15,7 @@ namespace SpeechPathology.ViewModels
         private IFlashcardService _flashcardService;
         private ISoundService _soundService;
         private ObservableCollection<Flashcard> _flashcards;
+        private int _currentIndex;
 
         public ObservableCollection<Flashcard> Flashcards
         {
@@ -23,21 +23,29 @@ namespace SpeechPathology.ViewModels
             set => SetProperty(ref _flashcards, value);
         }
 
+        public int CurrentIndex
+        {
+            get => _currentIndex;
+            set => SetProperty(ref _currentIndex, value);
+        }
+
         public ICommand PlaySoundCommand
         {
             get
             {
-                return new Command<string>(async (s) =>
+                return new Command(async () =>
                 {
-                    await OnPlaySound(s);
+                    await OnPlaySound();
                 });
             }
         }
+
         public FlashcardsTestViewModel(IFlashcardService flashcardService, ISoundService soundService)
         {
             _flashcardService = flashcardService;
             _soundService = soundService;
         }
+
         public override async Task InitializeAsync(object navigationData)
         {
             if (navigationData != null)
@@ -47,16 +55,18 @@ namespace SpeechPathology.ViewModels
                 await LoadData(soundPosition, navigationDataArray[1], navigationDataArray[2]);
             }
         }
+
         private async Task LoadData(FlashcardSoundPosition soundPosition, string sound, string excludedSound)
         {
             // Get flashcards
-            var flashcards = await _flashcardService.GetFlashcards(soundPosition, sound, excludedSound);
+            var flashcards = await _flashcardService.GetFlashcards(soundPosition, sound, excludedSound, App.Language);
             Flashcards = new ObservableCollection<Flashcard>(flashcards);
         }
-        public async Task OnPlaySound(string fileName)
+
+        public async Task OnPlaySound()
         {
-            if (!string.IsNullOrWhiteSpace(fileName)) { 
-                await _soundService.PlaySoundAsync(fileName);
+            if (CurrentIndex > -1 && !string.IsNullOrWhiteSpace(Flashcards[CurrentIndex].SoundFile)) { 
+                await _soundService.PlaySoundAsync(Flashcards[CurrentIndex].SoundFile);
             }
         }
     }

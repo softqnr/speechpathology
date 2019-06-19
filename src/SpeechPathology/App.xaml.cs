@@ -15,7 +15,6 @@ using SpeechPathology.Infrastructure.PDF;
 using SpeechPathology.Infrastructure.Sound;
 using SpeechPathology.ViewModels;
 using SpeechPathology.Views;
-using SQLite;
 using System.Threading.Tasks;
 using Unity;
 using Unity.Injection;
@@ -23,6 +22,7 @@ using Unity.Lifetime;
 using Unity.ServiceLocation;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using SpeechPathology.Services.Setting;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace SpeechPathology
@@ -31,21 +31,36 @@ namespace SpeechPathology
     {
         public static MasterDetailPage MasterPage { get; set; }
         public static UnityContainer Container { get; private set; }
-        public string DatabaseFilePath { get; private set; }
+        public static string DatabaseFilePath { get; private set; }
+        public static string Language = "EN";
+        public static bool Initialized = false;
         public readonly static INavigationService NavigationService = new NavigationService();
+
         public App()
         {
             InitializeComponent();
             FlowListView.Init();
-            // Localization
-            AppResources.Culture = CrossMultilingual.Current.DeviceCultureInfo;
-            // Init DB
-            InitializeDatabase();
-            // Init DI
-            InitializeDI();
 
+            if (!Initialized){
+                // Init DB
+                InitializeDatabase();
+                // Init DI
+                InitializeDI();
+                // Localization
+                InitializeLocalization();
+
+                Initialized = true;
+            }
             // Nav
             MainPage = new MasterDetailView();
+        }
+
+        private async Task InitializeLocalization()
+        {
+            ISettingService settingService  = ServiceLocator.Current.GetInstance<ISettingService>();
+            Language = await settingService.GetByName("language");
+            CrossMultilingual.Current.CurrentCultureInfo = new System.Globalization.CultureInfo(Language);
+            AppResources.Culture = CrossMultilingual.Current.CurrentCultureInfo;
         }
 
         private async Task InitializeNavigation()
@@ -71,13 +86,14 @@ namespace SpeechPathology
 
         private void InitializeDatabase()
         {
-            DatabaseFilePath = DependencyService.Get<IFileAccessHelper>().GetDBPathAndCreateIfNotExists("db_en.db");
+            DatabaseFilePath = DependencyService.Get<IFileAccessHelper>().GetDBPathAndCreateIfNotExists("sp.db");
         }
 
         private void InitializeDI()
         {
             Container = new UnityContainer();
             // Data repositories
+            Container.RegisterType<IRepository<Setting>, Repository<Setting>>(new InjectionConstructor(DatabaseFilePath));
             Container.RegisterType<IRepository<ArticulationTest>, Repository<ArticulationTest>>(new InjectionConstructor(DatabaseFilePath));
             Container.RegisterType<IRepository<ArticulationTestExam>, Repository<ArticulationTestExam>>(new InjectionConstructor(DatabaseFilePath));
             Container.RegisterType<IRepository<ArticulationTestExamAnswer>, Repository<ArticulationTestExamAnswer>>(new InjectionConstructor(DatabaseFilePath));
@@ -96,6 +112,7 @@ namespace SpeechPathology
             Container.RegisterType<IFlashcardService, FlashcardService>();
             Container.RegisterType<IWorksheetService, WorksheetService>();
             Container.RegisterType<IAgeCalculatorService, AgeCalculatorService>();
+            Container.RegisterType<ISettingService, SettingService>();
 
             // View models
             Container.RegisterType<MainViewModel>();
@@ -120,7 +137,7 @@ namespace SpeechPathology
         protected override async void OnStart()
         {
             // Handle when your app starts
-            // Nav service configuration
+            // Navigation
             await InitializeNavigation();
         }
 

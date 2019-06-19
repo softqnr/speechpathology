@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using PanCardView.iOS;
 using UIKit;
 
 namespace SpeechPathology.iOS
@@ -24,7 +25,9 @@ namespace SpeechPathology.iOS
         {
             Rg.Plugins.Popup.Popup.Init();
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
+            global::Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental"); // Carouselview
             global::Xamarin.Forms.Forms.Init();
+            CardsViewRenderer.Preserve();
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

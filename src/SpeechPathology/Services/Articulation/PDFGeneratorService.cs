@@ -109,7 +109,7 @@ namespace SpeechPathology.Services.Articulation
                 par.Format.Alignment = ParagraphAlignment.Center;
                 iCount++;
             }
-            par = row.Cells[iCount].AddParagraph("Score");
+            par = row.Cells[iCount].AddParagraph(Resources.AppResources.Score);
             par.Format.Font.Bold = true;
             // Answers row
             row = table.AddRow();
@@ -250,7 +250,7 @@ namespace SpeechPathology.Services.Articulation
 
         private void SavePDF(string fileName)
         {
-            PdfDocumentRenderer pdfRenderer = new PdfDocumentRenderer()
+            PdfDocumentRenderer pdfRenderer = new PdfDocumentRenderer(true)
             {
                 Document = _document
             };

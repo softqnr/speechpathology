@@ -16,34 +16,53 @@ namespace SpeechPathology.Services.Flashcard
             _repositoryFlashcard = repositoryFlashcard;
         }
 
-        public async Task<List<string>> GetSounds()
+        public async Task<List<string>> GetSounds(string languageCode)
         {
-            var flashcards = await _repositoryFlashcard.AsQueryable().OrderBy(x => x.Sound).ToListAsync();
+            //var flashcards = await _repositoryFlashcard.AsQueryable().OrderBy(x => x.Sound).ToListAsync();
+            var flashcards = await _repositoryFlashcard.GetAsync(predicate: x => x.LanguageCode == languageCode, orderBy: x => x.Sound); 
 
             var sounds = flashcards.GroupBy(x => new { x.Sound }).Select(x => x.FirstOrDefault()).Select(x => x.Sound).ToList<string>();
 
             return sounds;
         }
 
-        public async Task<List<string>> GetSoundPositions(string sound, string excludedSound)
+        public async Task<List<string>> GetSoundPositions(string sound, string excludedSound, string languageCode)
         {
+            // Order by sound position enum
+            var order = Enum.GetValues(typeof(SoundPosition))
+                .OfType<SoundPosition>()
+                .Select(x => new {
+                    Name = x.ToString(),
+                    Value = (int)x
+            });
+
+            // Get flashcards
             var flashcards = await _repositoryFlashcard.GetAsync<String>(predicate: x => x.Sound == sound
+                && x.LanguageCode == languageCode
                 && (excludedSound == "" || !x.Text.Contains(excludedSound)));
 
-            var soundPositions = flashcards.GroupBy(x => new { x.SoundPosition }).Select(x => x.FirstOrDefault()).Select(x => x.SoundPosition).ToList<string>();
-            
-            // Convert to Enum
-            //var soundPositionsEnum =  soundPositions.Select(s => (FlashcardSoundPosition)Enum.Parse(typeof(FlashcardSoundPosition), s, true)).ToList();
+            // Group & Order
+            var soundPositions = flashcards
+                .Join(order,
+                          f => f.SoundPosition,
+                          o => o.Name,
+                          (f, o) => new { f.SoundPosition, o.Value })
+                .OrderBy(r => r.Value)
+                .GroupBy(x => new { x.SoundPosition })
+                .Select(x => x.FirstOrDefault())
+                .Select(x => x.SoundPosition)
+                .ToList<string>();
 
             return soundPositions;
         }
 
-        public async Task<List<Models.Flashcard>> GetFlashcards(FlashcardSoundPosition soundPosition, string sound, string excludedSound)
+        public async Task<List<Models.Flashcard>> GetFlashcards(FlashcardSoundPosition soundPosition, string sound, string excludedSound, string languageCode)
         {
             string soundPositionName = Enum.GetName(typeof(FlashcardSoundPosition), soundPosition);
 
             var flashcards = await _repositoryFlashcard.GetAsync<Models.Flashcard>(predicate: x => x.Sound == sound 
                 && x.SoundPosition == soundPositionName 
+                && x.LanguageCode == languageCode
                 && (excludedSound == "" || !x.Text.Contains(excludedSound)));
 
             return flashcards;

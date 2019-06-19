@@ -24,7 +24,18 @@ namespace SpeechPathology.Services.Articulation
             _repositoryTestExamAnswer = repositoryExamAnswer;
         }
 
-        public async Task<ArticulationTestExam> GenerateExam(SoundPosition soundPosition)
+        public async Task<ArticulationTestExam> GetLastNotFinishedTest()
+        {
+            ArticulationTestExam exam = null;
+            var exams = await _repositoryTestExam.GetAllWithChildrenAsync(predicate: x => x.DateEnded == null);
+            // Exam with empty DateEnded means not finished test 
+            if (exams.Count > 0){
+                exam = exams[0];
+            }
+            return exam;
+        }
+
+        public async Task<ArticulationTestExam> GenerateExam(SoundPosition soundPosition, string languageCode)
         {
             // Delete previous exams
             await DeleteAllExams();
@@ -32,7 +43,7 @@ namespace SpeechPathology.Services.Articulation
             // Get position name from enum
             string soundPositionName = Enum.GetName(typeof(SoundPosition), soundPosition);
             // Get tests by sound position
-            var tests = await _repositoryTest.GetAsync(predicate: x => x.SoundPosition == soundPositionName,
+            var tests = await _repositoryTest.GetAsync(predicate: x => x.SoundPosition == soundPositionName && x.LanguageCode == languageCode,
                 orderBy: x => x.Sound);
             // Create new exam
             var exam = new ArticulationTestExam(soundPositionName);
@@ -49,12 +60,14 @@ namespace SpeechPathology.Services.Articulation
             return exam;
         }
 
-        public async Task<ArticulationTestExam> GenerateExam(int age)
+        public async Task<ArticulationTestExam> GenerateExam(int age, string languageCode)
         {
             // Delete previous exams
             await DeleteAllExams();
             // Get tests by sound position
-            var tests = await _repositoryTest.GetAsync(predicate: x => x.Age <= age && x.SoundPosition != "Blended", orderBy: x => x.Age);
+            string blended = Enum.GetName(typeof(SoundPosition), SoundPosition.Blended);
+            var tests = await _repositoryTest.GetAsync(predicate: x => x.Age <= age && x.SoundPosition != blended && x.LanguageCode == languageCode,
+                orderBy: x => x.Age);
             // Create new exam
             var exam = new ArticulationTestExam(age);
             // Create exam answers for each test
