@@ -174,7 +174,7 @@
   <data name="ApplicationNotice" xml:space="preserve">
     <value>BELANGRIJK:
 Als u vermoedt dat uw kind spraaktherapie nodig heeft, dient u een logopedist te raadplegen.
-Deze applicatie vervangt geen logopedist, maar biedt een extra ondersteunend hulpmiddel.</value>
+Deze applicatie vervangt geen logopedist, maar biedt een extra ondersteunend hulpmiddel ann.</value>
   </data>
   <data name="WorksheetSaved" xml:space="preserve">
     <value>Werkblad opgeslagen.</value>
@@ -228,7 +228,7 @@ Deze applicatie vervangt geen logopedist, maar biedt een extra ondersteunend hul
     <value>Werkbladenweergave</value>
   </data>
   <data name="ProjectTitle" xml:space="preserve">
-    <value>Spraakpathologie-instrumenten</value>
+    <value>Spraakpathologie Instrumenten</value>
   </data>
   <data name="AgeAtTest" xml:space="preserve">
     <value>Leeftijd op testdatum</value>

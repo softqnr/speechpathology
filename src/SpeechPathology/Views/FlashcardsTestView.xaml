@@ -4,11 +4,12 @@
              xmlns:i18n="clr-namespace:SpeechPathology.Extensions"
              xmlns:ffimage="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              xmlns:cards="clr-namespace:PanCardView;assembly=PanCardView"
+             xmlns:behaviors="clr-namespace:SpeechPathology.Behaviors"
              x:Class="SpeechPathology.Views.FlashcardsTestView"
              Title="{i18n:Translate Flashcards}" BackgroundColor="White">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Start">
                 <Label Text="{Binding Source={x:Reference Flashcards}, Path=SelectedIndex, Converter={StaticResource ZeroToOneBaseConverter}}" FontSize="Large" />
                 <Label Text="{i18n:Translate of}" FontSize="Large" />
                 <Label Text="{Binding Source={x:Reference Flashcards}, Path=ItemsSource.Count}" FontSize="Large" />
@@ -18,7 +19,8 @@
               ItemsSource="{Binding Flashcards}"
               IsCyclical="false"
               IsAutoNavigatingAimationEnabled="false"
-              SelectedIndex="{Binding CurrentIndex}">
+              SelectedIndex="{Binding CurrentIndex}"
+              VerticalOptions="CenterAndExpand">
             <cards:CarouselView.ItemTemplate>
               <DataTemplate>
                 <ContentView>
@@ -28,7 +30,7 @@
                       Padding="0"
                       HasShadow="false"
                       IsClippedToBounds="true"
-                      CornerRadius="10">
+                      CornerRadius="0">
 
                     <Grid>
                       <Grid.RowDefinitions>
@@ -49,11 +51,17 @@
             </cards:CarouselView.ItemTemplate>
           </cards:CarouselView>
           
-            <StackLayout  BackgroundColor="{StaticResource primary_light}" Padding="12">
-                <Button Text="{i18n:Translate Play}" BackgroundColor="{StaticResource accent}" TextColor="White" 
-                                        WidthRequest="60" HeightRequest="60" HorizontalOptions="Center" BorderRadius="30" 
-                                        Command="{Binding PlaySoundCommand}"
-                                        />
+            <StackLayout  BackgroundColor="{StaticResource primary_light}" Padding="12" VerticalOptions="End">
+                <Frame CornerRadius="50" BackgroundColor="{StaticResource accent}" 
+                       WidthRequest="50" HeightRequest="50"
+                       HorizontalOptions="Center" VerticalOptions="Center">
+                    <Image Source="baseline_play_arrow_white_24.png">
+                        <Image.Behaviors>
+                            <behaviors:ViewTappedButtonBehavior Command="{Binding PlaySoundCommand}"
+                                                        AnimationType="Fade"/>
+                        </Image.Behaviors>
+                    </Image>
+                </Frame>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
