@@ -15,7 +15,7 @@ namespace SpeechPathology.ViewModels
 
         public string Version
         {
-            get => " v." + DependencyService.Get<Interfaces.IAppVersionProvider>().AppVersion;
+            get => DependencyService.Get<Interfaces.IAppVersionProvider>().AppVersion;
         }
 
         public string Language {

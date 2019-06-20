@@ -21,24 +21,22 @@
             <ColumnDefinition Width="10"/>
           </Grid.ColumnDefinitions>
           <Grid.RowDefinitions>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="30"/>
+            <RowDefinition Height="40"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="30"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
           </Grid.RowDefinitions>
+            <StackLayout
+                Grid.Column="1"
+                Grid.Row="1"
+                VerticalOptions="End">
+                <Label TextColor="White" Text="{Binding ProjectTitle}" 
+                       FontSize="Large" Style="{DynamicResource SubtitleStyle}"/>
+            </StackLayout>
+            
             <Label TextColor="White"
               Grid.Column="1"
               Grid.Row="2">
-                    <Label.FormattedText>
-                        <FormattedString>
-                                <Span Text="{Binding ProjectTitle}" FontSize="Large" Style="{DynamicResource SubtitleStyle}"/>
-                            </FormattedString>
-                    </Label.FormattedText>
-            </Label>
-            <Label TextColor="White"
-              Grid.Column="1"
-              Grid.Row="3">
                 <Label.FormattedText>
                     <FormattedString>
                         <Span Text="{Binding Version}" FontSize="Small" />
@@ -46,23 +44,23 @@
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="5" Grid.Column="1" Grid.Row="4">
-              <Image Source="facebook_icon.png" WidthRequest="30" >
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Grid.Column="1" Grid.Row="3" Padding="6">
+              <Image Source="facebook_icon.png" WidthRequest="40" HeightRequest="40" >
                 <Image.GestureRecognizers>
                   <TapGestureRecognizer Command="{Binding LinkTappedCommand}"
-                                    CommandParameter="https://www.facebook.com/Speech-Pathology-Tools-157827324801986/"/>
+                                    CommandParameter="{StaticResource facebookUrl}"/>
                 </Image.GestureRecognizers>
               </Image>
-              <Image Source="home_icon.png" WidthRequest="30" >
+                <Image Source="home_icon.png" WidthRequest="40" HeightRequest="40">
                 <Image.GestureRecognizers>
                   <TapGestureRecognizer Command="{Binding LinkTappedCommand}"
-                                    CommandParameter="http://www.speechpathologytools.eu/"/>
+                                    CommandParameter="{StaticResource homePageUrl}"/>
                 </Image.GestureRecognizers>
               </Image>
-              <Image Source="mail_icon.png" WidthRequest="30" >
+              <Image Source="mail_icon.png" WidthRequest="40" HeightRequest="40">
                 <Image.GestureRecognizers>
                   <TapGestureRecognizer Command="{Binding LinkTappedCommand}"
-                                    CommandParameter="mailto:info@speechpathologytools.eu"/>
+                                    CommandParameter="{StaticResource email}"/>
                 </Image.GestureRecognizers>
               </Image>
             </StackLayout>

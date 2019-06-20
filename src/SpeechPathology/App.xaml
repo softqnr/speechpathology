@@ -20,6 +20,10 @@
             <converters:RandomColorConverter x:Key="RandomColorConverter" />
             <converters:ZeroToOneBaseConverter x:Key="ZeroToOneBaseConverter" />
             <converters:RandomNumberConverter x:Key="RandomNumberConverter" />
+            <!--  strings  -->
+            <x:String x:Key="facebookUrl">https://www.facebook.com/Speech-Pathology-Tools-157827324801986/</x:String>
+            <x:String x:Key="homePageUrl">http://www.speechpathologytools.eu/</x:String>
+            <x:String x:Key="email">mailto:info@speechpathologytools.eu</x:String>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

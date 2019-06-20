@@ -20,8 +20,8 @@
     <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <AndroidKeyStore>false</AndroidKeyStore>
-    <AndroidSigningKeyStore>C:\Users\Fradelo\AppData\Local\Xamarin\Mono for Android\Keystore\softqnr-dev\softqnr-dev.keystore</AndroidSigningKeyStore>
+    <AndroidKeyStore>true</AndroidKeyStore>
+    <AndroidSigningKeyStore>$(SolutionDir)build\softqnr-dev\softqnr-dev.keystore</AndroidSigningKeyStore>
     <AndroidSigningStorePass>jijikos</AndroidSigningStorePass>
     <AndroidSigningKeyAlias>softqnr-dev</AndroidSigningKeyAlias>
     <AndroidSigningKeyPass>jijikos</AndroidSigningKeyPass>
@@ -377,30 +377,22 @@
     <AndroidAsset Include="Assets\pdfjs\web\locale\zh-CN\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\zh-TW\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\zu\viewer.properties" />
-    <AndroidAsset Include="Assets\LanguageSkills\NL\languageskills_nl_all.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\NL\Worksheet_NL_CH.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\NL\Worksheet_NL_D.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\NL\Worksheet_NL_G.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\NL\Worksheet_NL_H.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\NL\Worksheet_NL_K.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\NL\Worksheet_NL_L.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\NL\Worksheet_NL_R.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\NL\Worksheet_NL_S.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\NL\Worksheet_NL_SCH.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\NL\Worksheet_NL_T.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\NL\Worksheet_NL_Z.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\RS\Worksheets-Letter-W.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\RS\Worksheets-Letter-LI.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\RS\Worksheets-Letter-Y.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\RS\Worksheets-Letter-U.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\RS\Worksheets-Letter-Th.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\RS\Worksheets-Letter-С.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\RS\Worksheets-Letter-P.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\RS\Worksheets-Letter-Pb.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\RS\Worksheets-Letter-Pi.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\RS\Worksheets-Letter-3.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\RS\Worksheets-Letter-X.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\RS\Worksheets-Letter-Tb.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\SR\Worksheets-Letter-SH.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\SR\Worksheets-Letter-DZ.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\SR\Worksheets-Letter-CH.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\SR\Worksheets-Letter-C.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\SR\Worksheets-Letter-CJ.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\SR\Worksheets-Letter-S.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\SR\Worksheets-Letter-R.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\SR\Worksheets-Letter-LJ.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\SR\Worksheets-Letter-L.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\SR\Worksheets-Letter-Z.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\SR\Worksheets-Letter-ZH.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\SR\Worksheets-Letter-DJ.pdf" />
+    <AndroidAsset Include="Assets\LanguageSkills\SR\Age_5_language_developement.pdf" />
+    <AndroidAsset Include="Assets\LanguageSkills\SR\Age_4_language_developement.pdf" />
+    <AndroidAsset Include="Assets\LanguageSkills\SR\Age_3_language_developement.pdf" />
+    <AndroidAsset Include="Assets\LanguageSkills\SR\Age_6_7_language_developement.pdf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml">
@@ -461,6 +453,18 @@
     <None Include="Assets\LanguageSkills\TR\languageskills_tr_4.pdf" />
     <None Include="Assets\LanguageSkills\TR\languageskills_tr_5.pdf" />
     <None Include="Assets\LanguageSkills\TR\languageskills_tr_6.pdf" />
+    <None Include="Assets\Worksheets\NL\Worksheet_NL_CH.pdf" />
+    <None Include="Assets\Worksheets\NL\Worksheet_NL_D.pdf" />
+    <None Include="Assets\Worksheets\NL\Worksheet_NL_G.pdf" />
+    <None Include="Assets\Worksheets\NL\Worksheet_NL_H.pdf" />
+    <None Include="Assets\Worksheets\NL\Worksheet_NL_K.pdf" />
+    <None Include="Assets\Worksheets\NL\Worksheet_NL_L.pdf" />
+    <None Include="Assets\Worksheets\NL\Worksheet_NL_R.pdf" />
+    <None Include="Assets\Worksheets\NL\Worksheet_NL_S.pdf" />
+    <None Include="Assets\Worksheets\NL\Worksheet_NL_SCH.pdf" />
+    <None Include="Assets\Worksheets\NL\Worksheet_NL_T.pdf" />
+    <None Include="Assets\Worksheets\NL\Worksheet_NL_Z.pdf" />
+    <None Include="Assets\LanguageSkills\NL\languageskills_nl_all.pdf" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Tabbar.axml" />
@@ -4116,2366 +4120,2446 @@
     <AndroidResource Include="Resources\values-tr\strings.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Assets\LanguageSkills\RS\" />
+    <AndroidResource Include="Resources\drawable\sr_deki_02.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_yet.jpg" />
+    <None Include="Resources\drawable\nl_yet.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_vases.jpg" />
+    <None Include="Resources\drawable\nl_vases.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_turn.jpg" />
+    <None Include="Resources\drawable\nl_turn.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_totem.jpg" />
+    <None Include="Resources\drawable\nl_totem.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_throw.jpg" />
+    <None Include="Resources\drawable\nl_throw.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_throat.jpg" />
+    <None Include="Resources\drawable\nl_throat.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_suit.jpg" />
+    <None Include="Resources\drawable\nl_suit.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_spoon.jpg" />
+    <None Include="Resources\drawable\nl_spoon.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_sow.jpg" />
+    <None Include="Resources\drawable\nl_sow.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_sensual.jpg" />
+    <None Include="Resources\drawable\nl_sensual.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_school.jpg" />
+    <None Include="Resources\drawable\nl_school.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_ready.jpg" />
+    <None Include="Resources\drawable\nl_ready.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_rarities.jpg" />
+    <None Include="Resources\drawable\nl_rarities.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_quiz.jpg" />
+    <None Include="Resources\drawable\nl_quiz.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_psychic.jpg" />
+    <None Include="Resources\drawable\nl_psychic.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_perpetrator.jpg" />
+    <None Include="Resources\drawable\nl_perpetrator.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_pass.jpg" />
+    <None Include="Resources\drawable\nl_pass.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_package.jpg" />
+    <None Include="Resources\drawable\nl_package.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_letter.jpg" />
+    <None Include="Resources\drawable\nl_letter.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_laugh.jpg" />
+    <None Include="Resources\drawable\nl_laugh.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_juice.jpg" />
+    <None Include="Resources\drawable\nl_juice.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_himself.jpg" />
+    <None Include="Resources\drawable\nl_himself.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_hay.jpg" />
+    <None Include="Resources\drawable\nl_hay.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_hail.jpg" />
+    <None Include="Resources\drawable\nl_hail.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_grow.jpg" />
+    <None Include="Resources\drawable\nl_grow.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_going.jpg" />
+    <None Include="Resources\drawable\nl_going.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_gigantic.jpg" />
+    <None Include="Resources\drawable\nl_gigantic.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_fit.jpg" />
+    <None Include="Resources\drawable\nl_fit.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_eyes.jpg" />
+    <None Include="Resources\drawable\nl_eyes.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_educated.jpg" />
+    <None Include="Resources\drawable\nl_educated.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_dry.jpg" />
+    <None Include="Resources\drawable\nl_dry.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_cockroach.jpg" />
+    <None Include="Resources\drawable\nl_cockroach.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_chaotic.jpg" />
+    <None Include="Resources\drawable\nl_chaotic.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_cart.jpg" />
+    <None Include="Resources\drawable\nl_cart.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_boats.jpg" />
+    <None Include="Resources\drawable\nl_boats.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_bath.jpg" />
+    <None Include="Resources\drawable\nl_bath.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_bar.jpg" />
+    <None Include="Resources\drawable\nl_bar.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_advice.jpg" />
+    <None Include="Resources\drawable\nl_advice.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_adder.jpg" />
+    <None Include="Resources\drawable\nl_adder.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\verzot.mp3" />
+    <None Include="Assets\Sounds\NL\verzot.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\uitzetten.mp3" />
+    <None Include="Assets\Sounds\NL\uitzetten.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\bijzonder.mp3" />
+    <None Include="Assets\Sounds\NL\bijzonder.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\zon.mp3" />
+    <None Include="Assets\Sounds\NL\zon.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\zomer.mp3" />
+    <None Include="Assets\Sounds\NL\zomer.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\zinken.mp3" />
+    <None Include="Assets\Sounds\NL\zinken.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\quiz.mp3" />
+    <None Include="Assets\Sounds\NL\quiz.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\jazz.mp3" />
+    <None Include="Assets\Sounds\NL\jazz.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\fez.mp3" />
+    <None Include="Assets\Sounds\NL\fez.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\zwemzak.mp3" />
+    <None Include="Assets\Sounds\NL\zwemzak.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\zijzelf.mp3" />
+    <None Include="Assets\Sounds\NL\zijzelf.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\zichzelf.mp3" />
+    <None Include="Assets\Sounds\NL\zichzelf.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\veter.mp3" />
+    <None Include="Assets\Sounds\NL\veter.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\mottig.mp3" />
+    <None Include="Assets\Sounds\NL\mottig.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\letter.mp3" />
+    <None Include="Assets\Sounds\NL\letter.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\trein.mp3" />
+    <None Include="Assets\Sounds\NL\trein.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\temmen.mp3" />
+    <None Include="Assets\Sounds\NL\temmen.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\tafel.mp3" />
+    <None Include="Assets\Sounds\NL\tafel.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\net.mp3" />
+    <None Include="Assets\Sounds\NL\net.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\mat.mp3" />
+    <None Include="Assets\Sounds\NL\mat.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\kat.mp3" />
+    <None Include="Assets\Sounds\NL\kat.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\totem.mp3" />
+    <None Include="Assets\Sounds\NL\totem.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\tablet.mp3" />
+    <None Include="Assets\Sounds\NL\tablet.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\straat.mp3" />
+    <None Include="Assets\Sounds\NL\straat.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\weegschaal.mp3" />
+    <None Include="Assets\Sounds\NL\weegschaal.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\vriendschap.mp3" />
+    <None Include="Assets\Sounds\NL\vriendschap.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\handschrift.mp3" />
+    <None Include="Assets\Sounds\NL\handschrift.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\school.mp3" />
+    <None Include="Assets\Sounds\NL\school.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\schat.mp3" />
+    <None Include="Assets\Sounds\NL\schat.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\schaar.mp3" />
+    <None Include="Assets\Sounds\NL\schaar.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\onhygiënisch.mp3" />
+    <None Include="Assets\Sounds\NL\onhygiënisch.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\melancholisch.mp3" />
+    <None Include="Assets\Sounds\NL\melancholisch.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\hysterisch.mp3" />
+    <None Include="Assets\Sounds\NL\hysterisch.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\schoonschrift.mp3" />
+    <None Include="Assets\Sounds\NL\schoonschrift.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\schokschouderen.mp3" />
+    <None Include="Assets\Sounds\NL\schokschouderen.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\schematisch.mp3" />
+    <None Include="Assets\Sounds\NL\schematisch.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\pastoor.mp3" />
+    <None Include="Assets\Sounds\NL\pastoor.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\meester.mp3" />
+    <None Include="Assets\Sounds\NL\meester.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\kasteel.mp3" />
+    <None Include="Assets\Sounds\NL\kasteel.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\steen.mp3" />
+    <None Include="Assets\Sounds\NL\steen.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\soep.mp3" />
+    <None Include="Assets\Sounds\NL\soep.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\salade.mp3" />
+    <None Include="Assets\Sounds\NL\salade.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\roos.mp3" />
+    <None Include="Assets\Sounds\NL\roos.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\neus.mp3" />
+    <None Include="Assets\Sounds\NL\neus.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\kaas.mp3" />
+    <None Include="Assets\Sounds\NL\kaas.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\saus.mp3" />
+    <None Include="Assets\Sounds\NL\saus.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\sas.mp3" />
+    <None Include="Assets\Sounds\NL\sas.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\salaris.mp3" />
+    <None Include="Assets\Sounds\NL\salaris.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\peren.mp3" />
+    <None Include="Assets\Sounds\NL\peren.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\karren.mp3" />
+    <None Include="Assets\Sounds\NL\karren.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\heren.mp3" />
+    <None Include="Assets\Sounds\NL\heren.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\rond.mp3" />
+    <None Include="Assets\Sounds\NL\rond.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\rij.mp3" />
+    <None Include="Assets\Sounds\NL\rij.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\reep.mp3" />
+    <None Include="Assets\Sounds\NL\reep.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\jager.mp3" />
+    <None Include="Assets\Sounds\NL\jager.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\dader.mp3" />
+    <None Include="Assets\Sounds\NL\dader.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\anjer.mp3" />
+    <None Include="Assets\Sounds\NL\anjer.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\radar.mp3" />
+    <None Include="Assets\Sounds\NL\radar.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\racer.mp3" />
+    <None Include="Assets\Sounds\NL\racer.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\order.mp3" />
+    <None Include="Assets\Sounds\NL\order.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\zalen.mp3" />
+    <None Include="Assets\Sounds\NL\zalen.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\verhalen.mp3" />
+    <None Include="Assets\Sounds\NL\verhalen.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\delen.mp3" />
+    <None Include="Assets\Sounds\NL\delen.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\leraar.mp3" />
+    <None Include="Assets\Sounds\NL\leraar.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\lawine.mp3" />
+    <None Include="Assets\Sounds\NL\lawine.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\lading.mp3" />
+    <None Include="Assets\Sounds\NL\lading.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\verhaal.mp3" />
+    <None Include="Assets\Sounds\NL\verhaal.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\meel.mp3" />
+    <None Include="Assets\Sounds\NL\meel.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\geel.mp3" />
+    <None Include="Assets\Sounds\NL\geel.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\loslaten.mp3" />
+    <None Include="Assets\Sounds\NL\loslaten.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\loskoppelen.mp3" />
+    <None Include="Assets\Sounds\NL\loskoppelen.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\leeghalen.mp3" />
+    <None Include="Assets\Sounds\NL\leeghalen.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\pukkel.mp3" />
+    <None Include="Assets\Sounds\NL\pukkel.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\drukker.mp3" />
+    <None Include="Assets\Sounds\NL\drukker.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\bunker.mp3" />
+    <None Include="Assets\Sounds\NL\bunker.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\kruid.mp3" />
+    <None Include="Assets\Sounds\NL\kruid.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\kelner.mp3" />
+    <None Include="Assets\Sounds\NL\kelner.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\kar.mp3" />
+    <None Include="Assets\Sounds\NL\kar.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\raak.mp3" />
+    <None Include="Assets\Sounds\NL\raak.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\preek.mp3" />
+    <None Include="Assets\Sounds\NL\preek.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\draak.mp3" />
+    <None Include="Assets\Sounds\NL\draak.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\kraskaart.mp3" />
+    <None Include="Assets\Sounds\NL\kraskaart.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\kopstuk.mp3" />
+    <None Include="Assets\Sounds\NL\kopstuk.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\kamerkast.mp3" />
+    <None Include="Assets\Sounds\NL\kamerkast.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\overheid.mp3" />
+    <None Include="Assets\Sounds\NL\overheid.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\gehakketak.mp3" />
+    <None Include="Assets\Sounds\NL\gehakketak.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\hotel.mp3" />
+    <None Include="Assets\Sounds\NL\hotel.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\hesp.mp3" />
+    <None Include="Assets\Sounds\NL\hesp.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\heg.mp3" />
+    <None Include="Assets\Sounds\NL\heg.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\bh.mp3" />
+    <None Include="Assets\Sounds\NL\bh.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\ayatollah.mp3" />
+    <None Include="Assets\Sounds\NL\ayatollah.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\ah.mp3" />
+    <None Include="Assets\Sounds\NL\ah.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\huishouden.mp3" />
+    <None Include="Assets\Sounds\NL\huishouden.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\hoffelijkheid.mp3" />
+    <None Include="Assets\Sounds\NL\hoffelijkheid.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\gehoorzaamheid.mp3" />
+    <None Include="Assets\Sounds\NL\gehoorzaamheid.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\wegen.mp3" />
+    <None Include="Assets\Sounds\NL\wegen.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\magen.mp3" />
+    <None Include="Assets\Sounds\NL\magen.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\degen.mp3" />
+    <None Include="Assets\Sounds\NL\degen.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\goud.mp3" />
+    <None Include="Assets\Sounds\NL\goud.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\gaar.mp3" />
+    <None Include="Assets\Sounds\NL\gaar.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\gaan.mp3" />
+    <None Include="Assets\Sounds\NL\gaan.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\zwijg.mp3" />
+    <None Include="Assets\Sounds\NL\zwijg.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\kroeg.mp3" />
+    <None Include="Assets\Sounds\NL\kroeg.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\kring.mp3" />
+    <None Include="Assets\Sounds\NL\kring.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\graag.mp3" />
+    <None Include="Assets\Sounds\NL\graag.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\gezag.mp3" />
+    <None Include="Assets\Sounds\NL\gezag.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\geestig.mp3" />
+    <None Include="Assets\Sounds\NL\geestig.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\veder.mp3" />
+    <None Include="Assets\Sounds\NL\veder.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\vader.mp3" />
+    <None Include="Assets\Sounds\NL\vader.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\moeder.mp3" />
+    <None Include="Assets\Sounds\NL\moeder.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\dronk.mp3" />
+    <None Include="Assets\Sounds\NL\dronk.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\drie.mp3" />
+    <None Include="Assets\Sounds\NL\drie.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\dom.mp3" />
+    <None Include="Assets\Sounds\NL\dom.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\zwaard.mp3" />
+    <None Include="Assets\Sounds\NL\zwaard.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\haard.mp3" />
+    <None Include="Assets\Sounds\NL\haard.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\bed.mp3" />
+    <None Include="Assets\Sounds\NL\bed.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\draad.mp3" />
+    <None Include="Assets\Sounds\NL\draad.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\dalend.mp3" />
+    <None Include="Assets\Sounds\NL\dalend.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\aanduiding.mp3" />
+    <None Include="Assets\Sounds\NL\aanduiding.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\vechten.mp3" />
+    <None Include="Assets\Sounds\NL\vechten.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\lachen.mp3" />
+    <None Include="Assets\Sounds\NL\lachen.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\kachel.mp3" />
+    <None Include="Assets\Sounds\NL\kachel.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\choco.mp3" />
+    <None Include="Assets\Sounds\NL\choco.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\chinees.mp3" />
+    <None Include="Assets\Sounds\NL\chinees.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\charcuterie.mp3" />
+    <None Include="Assets\Sounds\NL\charcuterie.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\vacht.mp3" />
+    <None Include="Assets\Sounds\NL\vacht.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\recht.mp3" />
+    <None Include="Assets\Sounds\NL\recht.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\lach.mp3" />
+    <None Include="Assets\Sounds\NL\lach.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\technisch.mp3" />
+    <None Include="Assets\Sounds\NL\technisch.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\eucharistisch.mp3" />
+    <None Include="Assets\Sounds\NL\eucharistisch.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\NL\chaotisch.mp3" />
+    <None Include="Assets\Sounds\NL\chaotisch.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_zwijg.jpg" />
+    <None Include="Resources\drawable\nl_zwijg.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_zwemzak.jpg" />
+    <None Include="Resources\drawable\nl_zwemzak.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_zwaard.jpg" />
+    <None Include="Resources\drawable\nl_zwaard.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_zon.jpg" />
+    <None Include="Resources\drawable\nl_zon.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_zomer.jpg" />
+    <None Include="Resources\drawable\nl_zomer.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_zinken.jpg" />
+    <None Include="Resources\drawable\nl_zinken.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_zijzelf.jpg" />
+    <None Include="Resources\drawable\nl_zijzelf.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_zichzelf.jpg" />
+    <None Include="Resources\drawable\nl_zichzelf.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_zalen.jpg" />
+    <None Include="Resources\drawable\nl_zalen.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_wegen.jpg" />
+    <None Include="Resources\drawable\nl_wegen.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_weegschaal.jpg" />
+    <None Include="Resources\drawable\nl_weegschaal.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_vriendschap.jpg" />
+    <None Include="Resources\drawable\nl_vriendschap.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_veter.jpg" />
+    <None Include="Resources\drawable\nl_veter.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_verzot.jpg" />
+    <None Include="Resources\drawable\nl_verzot.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_verhalen.jpg" />
+    <None Include="Resources\drawable\nl_verhalen.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_verhaal.jpg" />
+    <None Include="Resources\drawable\nl_verhaal.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_veder.jpg" />
+    <None Include="Resources\drawable\nl_veder.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_vechten.jpg" />
+    <None Include="Resources\drawable\nl_vechten.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_vader.jpg" />
+    <None Include="Resources\drawable\nl_vader.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_vacht.jpg" />
+    <None Include="Resources\drawable\nl_vacht.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_uitzetten.jpg" />
+    <None Include="Resources\drawable\nl_uitzetten.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_trein.jpg" />
+    <None Include="Resources\drawable\nl_trein.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_temmen.jpg" />
+    <None Include="Resources\drawable\nl_temmen.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_technisch.jpg" />
+    <None Include="Resources\drawable\nl_technisch.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_tafel.jpg" />
+    <None Include="Resources\drawable\nl_tafel.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_tablet.jpg" />
+    <None Include="Resources\drawable\nl_tablet.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_straat.jpg" />
+    <None Include="Resources\drawable\nl_straat.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_steen.jpg" />
+    <None Include="Resources\drawable\nl_steen.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_soep.jpg" />
+    <None Include="Resources\drawable\nl_soep.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_schoonschrift.jpg" />
+    <None Include="Resources\drawable\nl_schoonschrift.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_schokschouderen.jpg" />
+    <None Include="Resources\drawable\nl_schokschouderen.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_schematisch.jpg" />
+    <None Include="Resources\drawable\nl_schematisch.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_schat.jpg" />
+    <None Include="Resources\drawable\nl_schat.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_schaar.jpg" />
+    <None Include="Resources\drawable\nl_schaar.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_saus.jpg" />
+    <None Include="Resources\drawable\nl_saus.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_sas.jpg" />
+    <None Include="Resources\drawable\nl_sas.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_salaris.jpg" />
+    <None Include="Resources\drawable\nl_salaris.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_salade.jpg" />
+    <None Include="Resources\drawable\nl_salade.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_roos.jpg" />
+    <None Include="Resources\drawable\nl_roos.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_rond.jpg" />
+    <None Include="Resources\drawable\nl_rond.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_rij.jpg" />
+    <None Include="Resources\drawable\nl_rij.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_reep.jpg" />
+    <None Include="Resources\drawable\nl_reep.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_recht.jpg" />
+    <None Include="Resources\drawable\nl_recht.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_radar.jpg" />
+    <None Include="Resources\drawable\nl_radar.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_racer.jpg" />
+    <None Include="Resources\drawable\nl_racer.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_raak.jpg" />
+    <None Include="Resources\drawable\nl_raak.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_pukkel.jpg" />
+    <None Include="Resources\drawable\nl_pukkel.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_preek.jpg" />
+    <None Include="Resources\drawable\nl_preek.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_peren.jpg" />
+    <None Include="Resources\drawable\nl_peren.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_pastoor.jpg" />
+    <None Include="Resources\drawable\nl_pastoor.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_overheid.jpg" />
+    <None Include="Resources\drawable\nl_overheid.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_order.jpg" />
+    <None Include="Resources\drawable\nl_order.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_onhygiënisch.jpg" />
+    <None Include="Resources\drawable\nl_onhygiënisch.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_neus.jpg" />
+    <None Include="Resources\drawable\nl_neus.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_net.jpg" />
+    <None Include="Resources\drawable\nl_net.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_mottig.jpg" />
+    <None Include="Resources\drawable\nl_mottig.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_moeder.jpg" />
+    <None Include="Resources\drawable\nl_moeder.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_melancholisch.jpg" />
+    <None Include="Resources\drawable\nl_melancholisch.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_meester.jpg" />
+    <None Include="Resources\drawable\nl_meester.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_meel.jpg" />
+    <None Include="Resources\drawable\nl_meel.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_mat.jpg" />
+    <None Include="Resources\drawable\nl_mat.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_magen.jpg" />
+    <None Include="Resources\drawable\nl_magen.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_loslaten.jpg" />
+    <None Include="Resources\drawable\nl_loslaten.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_loskoppelen.jpg" />
+    <None Include="Resources\drawable\nl_loskoppelen.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_leraar.jpg" />
+    <None Include="Resources\drawable\nl_leraar.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_leeghalen.jpg" />
+    <None Include="Resources\drawable\nl_leeghalen.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_lawine.jpg" />
+    <None Include="Resources\drawable\nl_lawine.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_lading.jpg" />
+    <None Include="Resources\drawable\nl_lading.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_lachen.jpg" />
+    <None Include="Resources\drawable\nl_lachen.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_lach.jpg" />
+    <None Include="Resources\drawable\nl_lach.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_kruid.jpg" />
+    <None Include="Resources\drawable\nl_kruid.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_kroeg.jpg" />
+    <None Include="Resources\drawable\nl_kroeg.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_kring.jpg" />
+    <None Include="Resources\drawable\nl_kring.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_kraskaart.jpg" />
+    <None Include="Resources\drawable\nl_kraskaart.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_kopstuk.jpg" />
+    <None Include="Resources\drawable\nl_kopstuk.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_kelner.jpg" />
+    <None Include="Resources\drawable\nl_kelner.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_kat.jpg" />
+    <None Include="Resources\drawable\nl_kat.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_kasteel.jpg" />
+    <None Include="Resources\drawable\nl_kasteel.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_karren.jpg" />
+    <None Include="Resources\drawable\nl_karren.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_kar.jpg" />
+    <None Include="Resources\drawable\nl_kar.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_kamerkast.jpg" />
+    <None Include="Resources\drawable\nl_kamerkast.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_kachel.jpg" />
+    <None Include="Resources\drawable\nl_kachel.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_kaas.jpg" />
+    <None Include="Resources\drawable\nl_kaas.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_jazz.jpg" />
+    <None Include="Resources\drawable\nl_jazz.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_jager.jpg" />
+    <None Include="Resources\drawable\nl_jager.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_hysterisch.jpg" />
+    <None Include="Resources\drawable\nl_hysterisch.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_huishouden.jpg" />
+    <None Include="Resources\drawable\nl_huishouden.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_hotel.jpg" />
+    <None Include="Resources\drawable\nl_hotel.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_hoffelijkheid.jpg" />
+    <None Include="Resources\drawable\nl_hoffelijkheid.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_hesp.jpg" />
+    <None Include="Resources\drawable\nl_hesp.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_heren.jpg" />
+    <None Include="Resources\drawable\nl_heren.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_heg.jpg" />
+    <None Include="Resources\drawable\nl_heg.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_handschrift.jpg" />
+    <None Include="Resources\drawable\nl_handschrift.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_haard.jpg" />
+    <None Include="Resources\drawable\nl_haard.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_graag.jpg" />
+    <None Include="Resources\drawable\nl_graag.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_goud.jpg" />
+    <None Include="Resources\drawable\nl_goud.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_gezag.jpg" />
+    <None Include="Resources\drawable\nl_gezag.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_gehoorzaamheid.jpg" />
+    <None Include="Resources\drawable\nl_gehoorzaamheid.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_gehakketak.jpg" />
+    <None Include="Resources\drawable\nl_gehakketak.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_geestig.jpg" />
+    <None Include="Resources\drawable\nl_geestig.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_geel.jpg" />
+    <None Include="Resources\drawable\nl_geel.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_gaar.jpg" />
+    <None Include="Resources\drawable\nl_gaar.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_gaan.jpg" />
+    <None Include="Resources\drawable\nl_gaan.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_fez.jpg" />
+    <None Include="Resources\drawable\nl_fez.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_eucharistisch.jpg" />
+    <None Include="Resources\drawable\nl_eucharistisch.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_drukker.jpg" />
+    <None Include="Resources\drawable\nl_drukker.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_dronk.jpg" />
+    <None Include="Resources\drawable\nl_dronk.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_drie.jpg" />
+    <None Include="Resources\drawable\nl_drie.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_draak.jpg" />
+    <None Include="Resources\drawable\nl_draak.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_draad.jpg" />
+    <None Include="Resources\drawable\nl_draad.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_dom.jpg" />
+    <None Include="Resources\drawable\nl_dom.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_delen.jpg" />
+    <None Include="Resources\drawable\nl_delen.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_degen.jpg" />
+    <None Include="Resources\drawable\nl_degen.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_dalend.jpg" />
+    <None Include="Resources\drawable\nl_dalend.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_dader.jpg" />
+    <None Include="Resources\drawable\nl_dader.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_choco.jpg" />
+    <None Include="Resources\drawable\nl_choco.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_chinees.jpg" />
+    <None Include="Resources\drawable\nl_chinees.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_charcuterie.jpg" />
+    <None Include="Resources\drawable\nl_charcuterie.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_chaotisch.jpg" />
+    <None Include="Resources\drawable\nl_chaotisch.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_bunker.jpg" />
+    <None Include="Resources\drawable\nl_bunker.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_bijzonder.jpg" />
+    <None Include="Resources\drawable\nl_bijzonder.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_bh.jpg" />
+    <None Include="Resources\drawable\nl_bh.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_bed.jpg" />
+    <None Include="Resources\drawable\nl_bed.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_ayatollah.jpg" />
+    <None Include="Resources\drawable\nl_ayatollah.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_anjer.jpg" />
+    <None Include="Resources\drawable\nl_anjer.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_ah.jpg" />
+    <None Include="Resources\drawable\nl_ah.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_aanduiding.jpg" />
+    <None Include="Resources\drawable\nl_aanduiding.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_speechsounds_5.png" />
+    <None Include="Resources\drawable\nl_speechsounds_5.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_speechsounds_4.png" />
+    <None Include="Resources\drawable\nl_speechsounds_4.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_speechsounds_1_5.png" />
+    <None Include="Resources\drawable\nl_speechsounds_1_5.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nl_speechsounds_2.png" />
+    <None Include="Resources\drawable\nl_speechsounds_2.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\hedgehog.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\hedgehog.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\knife.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\knife.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\walrus.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\walrus.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\snail.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\snail.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\hedgehogs.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\hedgehogs.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\knives.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\knives.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\rose.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\rose.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\snails.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\snails.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\dragon.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\dragon.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\lily.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\lily.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\swing.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\swing.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\to swing.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\to_swing.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\coal.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\coal.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\cough.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\cough.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\friend.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\friend.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\kale.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\kale.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\king.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\king.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\teacher.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\teacher.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\key.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\key.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\dwarf.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\dwarf.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\earth.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\earth.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\thorn.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\thorn.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\dress.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\dress.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\medal.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\medal.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\angry.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\angry.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\people.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\people.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\violet.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\violet.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\kissing.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\kissing.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\love.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\love.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\mirror.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\mirror.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\tulip.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\tulip.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\monopol.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\monopoly.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\pitcher.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\pitcher.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\ballroom.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\ballroom.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\bycucle.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\bicycle.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\hotel.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\hotel.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\bench.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\bench.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\broom.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\broom.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\milk.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\milk.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\pencil.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\pencil.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\balloon.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\balloon.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\car.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\car.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\fairy.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\fairy.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\lion.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\lion.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\doll.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\doll.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\lemon.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\lemon.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\onion.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\onion.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\ball.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\ball.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\lamp.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\lamp.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\leaf.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\leaf.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\medicine.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\medicine.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\swan.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\swan.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\hairdresser.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\hairdresser.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\tractor.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\tractor.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\potato.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\potato.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\sailor.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\sailor.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\butterfly.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\butterfly.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\wind.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\wind.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\cook.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\cook.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\engine.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\engine.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\metre.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\metre.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\old.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\old.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\ship.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\ship.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\ant.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\ant.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\bag.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\bag.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\cow.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\cow.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\grass.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\grass.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\tree.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\tree.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\walnut.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\walnut.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\basket.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\basket.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\cancer.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\cancer.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\gloves.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\gloves.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\fish.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\fish.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\tail.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\tail.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\pinecone.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\pinecone.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\promenade.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\promenade.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\bat.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\bat.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\hat.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\hat.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\broosh.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\brooch.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\mouse.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\mouse.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\shower.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\shower.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\headphones.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\headphones.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\spoon.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\spoon.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\pear.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\pear.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\shirt.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\shirt.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\towel.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\towel.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\ears.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\ears.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\machine.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\machine.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\rain.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\rain.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\cup.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\cup.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\forest.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\forest.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\scarf.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\scarf.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\sticks.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\sticks.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\chess.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\chess.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\sew.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\sew.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\tent.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\tent.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\school.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\school.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\badge.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\badge.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\sparrow.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\sparrow.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\chimney.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\chimney.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\chimney sweeper.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\chimney_sweeper.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\milkman.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\milkman.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\orange.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\orange.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\watchmaker.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\watchmaker.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\claws.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\claws.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\eggplant.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\eggplant.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\pajamas.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\pajamas.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\joker.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\joker.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\judo.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\judo.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\jungle.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\jungle.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\sweater.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\sweater.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\giant.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\giant.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\jam.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\jam.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\jeep.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\jeep.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\pocket.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\pocket.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\sack.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\sack.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\to squat.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\to_squat.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\toothpick.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\toothpick.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\driver.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\driver.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\pencil sharpener.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\pencil_sharpener.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\singer.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\singer.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\sofa.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\sofa.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\cake.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\cake.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\sword.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\sword.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\whip.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\whip.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\cat.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\cat.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\crying.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\crying.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\cutting.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\cutting.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\glasses.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\glasses.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\small stickers.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\small_sticker.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\eyes.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\eyes.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\comb.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\comb.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\glass.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\glass.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\boots.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\boots.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\chocolate.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\chocolate.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\man.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\man.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\boath.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\boat.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\hairbrush.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\hair_brush.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\socks.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\socks.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\tea.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\tea.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\woodpecker.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\woodpecker.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\kindergarden.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\kindergarden.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\small bird.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\small_bird.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\young man.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\young_man.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\night.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\night.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\flowers.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\flowers.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\fruit.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\fruit.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\shoe.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\shoes.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\candle.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\candle.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\house.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\house.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\bowl.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\bowl.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\rug.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\rug.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\turkey.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\turkey.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\blanket.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\blanket.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\lilly of the valley.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\lily_of_the_valley.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\perch.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\perch.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\angel.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\angel.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\eyebrow.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\eyebrow.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\birthday.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\birthday.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\dishes.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\dishes.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\magician.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\magician.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\bagel.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\bagel.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\shadoof.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\shadoof.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\garbage.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\garbage.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\ginger.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\ginger.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\student.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\student.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\babynipple.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\baby_nipple.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\policman.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\policman.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\teetertotter.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\teeter_totter.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\castle.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\castle.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\padlock.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\padlock.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\father.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\father.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\money.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\money.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\thread.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\thread.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\hunter.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\hunter.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\fox.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\fox.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\handkerchief.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\handkerchief.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\sun.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\sun.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\bird.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\bird.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\sheep.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\sheep.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\street.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\street.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\pappydog.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\pappy_dog.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\pussycat.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\pussy_cat.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\beet.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\beet.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\flower garden.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\flower_garden.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\bricks.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\bricks.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\emperor.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\emperor.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\flower.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\flower.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\freezer.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\freezer.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\walledup.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\walled_up.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\stars.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\stars.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\embroidery.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\embroidery.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\cage.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\cage.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\guidepost.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\guidepost.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\train.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\train.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\class.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\class.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\birch.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\birch.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\greeting.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\greeting.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\tears.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\tears.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\nest.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\nest.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\window.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\window.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\bizon.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\bizon.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\goat.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\goat.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\bell.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\bell.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\bandage.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\bandage.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\snake.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\snake.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\tooth.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\tooth.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\rabbit.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\rabbit.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\wall.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\wall.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\zebra.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\zebra.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\winter.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\winter.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\tocleanusingvacuumcleaner.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\to_clean_using_vacuum_cleaner.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\confectioner.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\confectioner.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\vacumcleaner.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\vacuum_vleaner.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\barefoot.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\barefooted.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\cabbage.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\cabbage.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\dog.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\dog.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\nose.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\nose.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\tenis.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\tenis.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\bridge.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\bridge.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\hair.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\hair.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\letter.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\letter.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\mask.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\mask.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\meat.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\meat.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\plasticbag.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\plastic_bag.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\snowdrop.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\snowdrop.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\tofalldown.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\tofalldown.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\skirt.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\skirt.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\cheese.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\cheese.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\clock.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\clock.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\elephant.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\elephant.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\owl.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\owl.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\room.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\room.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\snow.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\snow.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\soap.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\soap.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\RS\tosleep.mp3" />
+    <AndroidAsset Include="Assets\Sounds\SR\to_sleep.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_zebra.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_zebra.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_young-man.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_young_man.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_yellow.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_yellow.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_woodpecker.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_woodpecker.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_winter.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_winter.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_window.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_window.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_wind.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_wind.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_whip.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_whip.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_wheat.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_wheat.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_watchmaker.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_watchmaker.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_walrus.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_walrus.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_walnut.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_walnut.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_walled-up.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_walled_up.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_wall.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_wall.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_violet.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_violet.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_vacuum-cleaner.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_vacuum_cleaner.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_turkey.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_turkey.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_tulip.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_tulip.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_tree.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_tree.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_train.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_train.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_tractor.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_tractor.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_towel.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_towel.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_toothpick.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_toothpick.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_tooth.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_tooth.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_to-swing.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_to_swing.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_to-sleep.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_to_sleep.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_to-fall-down.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_to_fall_down.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_thread.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_thread.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_thorn.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_thorn.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_tent.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_tent.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_tennis.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_tennis.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_teeter-totter.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_teeter_totter.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_tears.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_tears.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_teacher.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_teacher.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_tea.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_tea.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_tail.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_tail.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_sword.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_sword.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_swing.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_swing.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_swimming-pool.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_swimming_pool.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_sweater.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_sweater.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_swan.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_swan.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_sun.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_sun.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_student.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_student.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_street.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_street.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_sticks.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_sticks.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_stars.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_stars.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_squat.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_squat.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_spoon.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_spoon.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_sparrow.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_sparrow.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_sofa.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_sofa.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_socks.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_socks.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_soap.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_soap.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_snowdrop.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_snowdrop.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_snow.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_snow.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_snake.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_snake.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_snails.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_snails.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_snail.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_snail.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_small-stickers.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_small_stickers.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_small-bird.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_small_bird.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_skirt.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_skirt.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_singer.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_singer.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_shower.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_shower.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_shoes.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_shoes.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_shoe.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_shoe.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_shirt.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_shirt.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_ship.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_ship.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_sheep.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_sheep.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_shadoof.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_shadoof.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_sew.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_sew.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_school.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_school.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_scarf.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_scarf.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_sailor.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_sailor.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_sack.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_sack.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_rug.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_rug.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_rose.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_rose.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_room.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_room.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_rain.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_rain.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_rabbit.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_rabbit.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_pussy-cat.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_pussy_cat.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_puppy-dog.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_puppy_dog.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_promenade.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_promenade.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_potato.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_potato.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_policeman.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_policeman.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_pocket.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_pocket.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_plastic-bag.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_plastic_bag.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_pitcher.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_pitcher.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_pinecone.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_pinecone.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_perch.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_perch.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_people.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_people.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_pencil.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_pencil.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_pencil-sharpener.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_pencil_sharpener.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_pear.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_pear.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_pajamas.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_pajamas.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_padlock.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_padlock.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_owl.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_owl.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_orange.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_orange.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_onion.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_onion.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_old-%28man%29.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_old.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_oak.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_oak.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_nose.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_nose.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_night.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_night.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_nest.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_nest.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_mouse.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_mouse.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_monopoly.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_monopoly.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_money.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_money.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_mirror.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_mirror.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_milkman.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_milkman.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_milk.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_milk.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_metre.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_metre.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_medicine.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_medicine.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_medal.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_medal.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_meat.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_meat.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_mask.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_mask.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_man.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_man.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_magician.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_magician.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_machine.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_machine.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_love.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_love.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_lion.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_lion.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_lily.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_lily.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_lily-of-the-valley.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_lily_of_the_valley.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_letter.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_letter.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_lemon.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_lemon.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_leaf.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_leaf.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_lamp.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_lamp.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_knives.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_knives.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_knife.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_knife.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_kissing.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_kissing.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_king.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_king.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_kindergarden.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_kindergarden.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_key.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_key.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_kale.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_kale.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_jungle.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_jungle.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_judo.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_judo.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_joker.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_joker.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_jeep.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_jeep.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_jam.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_jam.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_hunter.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_hunter.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_house.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_house.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_hotel.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_hotel.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_hedgehogs.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_hedgehogs.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_hedgehog.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_hedgehog.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_headphone.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_headphone.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_hat.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_hat.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_handkerchief.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_handkerchief.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_hairdresser.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_hairdresser.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_hair.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_hair.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_hair-brush.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_hair_brush.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_gum.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_gum.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_guidepost.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_guidepost.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_greeting.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_greeting.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_grass.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_grass.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_goat.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_goat.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_gloves.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_gloves.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_glasses.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_glasses.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_glass.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_glass.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_giraffe.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_giraffe.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_ginger.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_ginger.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_giant.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_giant.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_garbage.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_garbage.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_fruit.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_fruit.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_frog.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_frog.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_friend.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_friend.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_freezer.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_freezer.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_fox.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_fox.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_forest.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_forest.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_foal.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_foal.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_flowers.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_flowers.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_flower.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_flower.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_flower-garden.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_flower_garden.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_fish.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_fish.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_father.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_father.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_fairy.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_fairy.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_eyes.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_eyes.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_eyebrow.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_eyebrow.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_engine.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_engine.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_emperor.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_emperor.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_embroidery.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_embroidery.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_ember.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_ember.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_elephant.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_elephant.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_eggplant.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_eggplant.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_earth.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_earth.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_ears.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_ears.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_dwarf.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_dwarf.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_driver.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_driver.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_dress.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_dress.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_dragon.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_dragon.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_doll.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_doll.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_dog.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_dog.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_dishes.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_dishes.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_cutting.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_cutting.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_cup.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_cup.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_crying.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_crying.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_cow.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_cow.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_cough.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_cough.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_cook.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_cook.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_confectioner.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_confectioner.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_comb.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_comb.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_coal.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_coal.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_clock.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_clock.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_clean-using-vacuum-cleaner.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_cleanusingvacuumcleaner.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_claws.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_claws.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_class.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_class.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_chocolate.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_chocolate.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_chimney.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_chimney.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_chimney-sweeper.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_chimney_sweeper.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_chess.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_chess.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_cheese.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_cheese.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_cat.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_cat.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_castle.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_castle.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_car.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_car.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_candle.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_candle.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_cancer.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_cancer.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_cake.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_cake.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_cage.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_cage.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_cabbage.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_cabbage.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_butterfly.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_butterfly.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_bush.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_bush.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_broom.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_broom.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_brooch.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_brooch.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_bridge.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_bridge.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_bricks.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_bricks.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_bowl.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_bowl.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_boots.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_boots.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_boat.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_boat.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_blanket.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_blanket.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_bizon.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_bizon.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_birthday.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_birthday.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_bird.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_bird.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_birch.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_birch.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_bicycle.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_bicycle.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_bench.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_bench.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_bell.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_bell.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_beet.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_beet.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_bat.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_bat.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_basket.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_basket.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_barefoot.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_barefoot.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_bandage.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_bandage.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_baloon.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_baloon.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_ballroom.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_ballroom.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_ball.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_ball.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_bagel.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_bagel.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_bag.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_bag.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_badge.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_badge.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_baby-nipple.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_baby_nipple.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_ant.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_ant.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_angry.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_angry.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\rs_angel.jpg" />
+    <AndroidResource Include="Resources\drawable\sr_angel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\sr_deki_03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\sr_deki_04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\sr_deki_05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\sr_deki_06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\sr_deki_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values-nl\strings.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values-sr\strings.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SR\bush.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SR\ember.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SR\foal.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SR\giraffe.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SR\frog.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SR\gum.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SR\wheat.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SR\oak_nut.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SR\yellow.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SR\stick.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SR\to_fall_down.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\baseline_play_arrow_24.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\baseline_play_arrow_white_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\baseline_play_arrow_white_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\baseline_play_arrow_white_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\baseline_play_arrow_white_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\baseline_play_arrow_white_24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <PropertyGroup>
-    <PreBuildEvent>PowerShell -ExecutionPolicy Unrestricted -File "$(SolutionDir)build\update-packagename.ps1" $(ProjectDir) rs
+    <PreBuildEvent>PowerShell -ExecutionPolicy Unrestricted -File "$(SolutionDir)build\update-version-from-git.ps1" $(ProjectDir)
 
-PowerShell -ExecutionPolicy Unrestricted -File "$(SolutionDir)build\update-language-setting.ps1" "$(ProjectDir)Assets\sp.db" rs
+PowerShell -ExecutionPolicy Unrestricted -File "$(SolutionDir)build\update-packagename.ps1" $(ProjectDir) nl
 
-PowerShell -ExecutionPolicy Unrestricted -File "$(SolutionDir)build\update-resources.ps1" $(ProjectDir) rs "en|tr|nl|rs"</PreBuildEvent>
+PowerShell -ExecutionPolicy Unrestricted -File "$(SolutionDir)build\update-language-setting.ps1" "$(ProjectDir)Assets\sp.db" nl
+
+PowerShell -ExecutionPolicy Unrestricted -File "$(SolutionDir)build\update-resources.ps1" $(ProjectDir) nl "en|tr|nl|sr"</PreBuildEvent>
   </PropertyGroup>
 </Project>

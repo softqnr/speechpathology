@@ -20,19 +20,19 @@
                 <Image Source="facebook_icon.png" WidthRequest="40" >
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding LinkTappedCommand}" 
-                                          CommandParameter="https://www.facebook.com/Speech-Pathology-Tools-157827324801986/"/>
+                                          CommandParameter="{StaticResource facebookUrl}"/>
                     </Image.GestureRecognizers>
                 </Image>
                 <Image Source="home_icon.png" WidthRequest="40" >
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding LinkTappedCommand}" 
-                                          CommandParameter="http://www.speechpathologytools.eu/"/>
+                                          CommandParameter="{StaticResource homePageUrl}"/>
                     </Image.GestureRecognizers>
                 </Image>
                 <Image Source="mail_icon.png" WidthRequest="40" >
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding LinkTappedCommand}" 
-                                          CommandParameter="mailto:info@speechpathologytools.eu"/>
+                                          CommandParameter="{StaticResource email}"/>
                     </Image.GestureRecognizers>
                 </Image>
             </StackLayout>
