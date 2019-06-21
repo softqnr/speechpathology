@@ -32,7 +32,6 @@ namespace SpeechPathology.ViewModels
             set => SetProperty(ref _articulationTestAnswers, value);
         }
 
-
         public string SoundPosition
         {
             get => _soundPosition;
@@ -44,6 +43,7 @@ namespace SpeechPathology.ViewModels
             get => _score;
             set => SetProperty(ref _score, value);
         }
+
         public ICommand PDFExport
         {
             get
@@ -68,7 +68,7 @@ namespace SpeechPathology.ViewModels
             
             ArticulationTestAnswers = new ObservableCollection<Grouping<string, ArticulationTestExamAnswer>>(_articulationTestService.GenerateGroupings(ArticulationTestExam));
             Score = ArticulationTestExam.Score ?? ArticulationTestExam.Score.Value;
-            SoundPosition = ArticulationTestExam.SoundPosition;
+            SoundPosition = ArticulationTestExam.SoundPosition != "" ? ArticulationTestExam.SoundPosition : Resources.AppResources.All.ToUpper();
 
             return Task.FromResult(true);
         }
@@ -76,8 +76,8 @@ namespace SpeechPathology.ViewModels
         private async Task GenerateAndSharePdfAsync()
         {
             DialogService.ShowLoading(Resources.AppResources.GeneratingPDF);
-            string fileName = await _pdfGeneratorService.GeneratePDFForSoundTestResultsAsync(_articulationTestExam, 
-                (IEnumerable<Grouping<string, ArticulationTestExamAnswer>>)ArticulationTestAnswers);
+            string fileName = await _pdfGeneratorService.GeneratePDFForSoundTestResultsAsync(_articulationTestExam,
+                ArticulationTestAnswers);
             DialogService.HideLoading();
             DependencyService.Get<IShare>().ShareFile(Resources.AppResources.ShareResults, Resources.AppResources.ShareResults, fileName);
         }

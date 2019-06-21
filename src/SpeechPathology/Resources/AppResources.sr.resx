@@ -315,4 +315,10 @@
   <data name="Score" xml:space="preserve">
     <value>резултат</value>
   </data>
+  <data name="All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="Letters" xml:space="preserve">
+    <value>Letters</value>
+  </data>
 </root>

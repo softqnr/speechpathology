@@ -12,7 +12,7 @@ namespace SpeechPathology.ViewModels
         public ViewModelBase()
         {
             DialogService = ServiceLocator.Current.GetInstance<IDialogService>();
-            NavigationService = ServiceLocator.Current.GetInstance<INavigationService>(); ;
+            NavigationService = ServiceLocator.Current.GetInstance<INavigationService>();
         }
 
         private bool _isBusy;

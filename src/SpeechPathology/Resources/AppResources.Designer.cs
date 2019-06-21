@@ -142,6 +142,15 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to All.
+        /// </summary>
+        public static string All {
+            get {
+                return ResourceManager.GetString("All", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to IMPORTANT:
         ///If you suspect your child is in need of speech therapy, you should consult a speech therapist.
         ///This application does not replace a speech therapist, but offers an additional supporting tool..
@@ -311,6 +320,15 @@ namespace SpeechPathology.Resources {
         public static string LanguageSkillsButton {
             get {
                 return ResourceManager.GetString("LanguageSkillsButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Letters.
+        /// </summary>
+        public static string Letters {
+            get {
+                return ResourceManager.GetString("Letters", resourceCulture);
             }
         }
         

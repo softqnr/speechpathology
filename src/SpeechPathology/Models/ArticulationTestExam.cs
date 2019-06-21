@@ -18,6 +18,7 @@ namespace SpeechPathology.Models
         public List<ArticulationTestExamAnswer> Answers { get; set; }
 
         public ArticulationTestExam() { }
+
         public ArticulationTestExam(string soundPosition) {
             DateStarted = DateTime.Now;
             SoundPosition = soundPosition;
@@ -26,7 +27,7 @@ namespace SpeechPathology.Models
         public ArticulationTestExam(int age)
         {
             DateStarted = DateTime.Now;
-            SoundPosition = "ALL";
+            SoundPosition = "";
             Age = age;
         }
     }

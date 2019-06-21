@@ -1,6 +1,4 @@
 ﻿using MigraDocCore.DocumentObjectModel;
-using MigraDocCore.DocumentObjectModel.MigraDoc.DocumentObjectModel.Shapes;
-using MigraDocCore.DocumentObjectModel.Shapes;
 using MigraDocCore.DocumentObjectModel.Tables;
 using MigraDocCore.Rendering;
 using PdfSharpCore.Fonts;
@@ -89,7 +87,7 @@ namespace SpeechPathology.Services.Articulation
             row.Cells[0].Borders.Top.Visible = false;
             row.Cells[0].Borders.Left.Visible = false;
             row.Cells[0].Borders.Bottom.Visible = false;
-            par = row.Cells[1].AddParagraph("Letters");
+            par = row.Cells[1].AddParagraph(Resources.AppResources.Letters);
             par.Format.Font.Bold = true;
             par.Format.Alignment = ParagraphAlignment.Center;
             row.Cells[1].MergeRight = articulationTestExam.Answers.Count - 1;
@@ -115,7 +113,8 @@ namespace SpeechPathology.Services.Articulation
             row = table.AddRow();
             row.Height = 20;
             // Location column
-            row.Cells[0].AddParagraph(articulationTestExam.SoundPosition);
+            string soundPosition = articulationTestExam.SoundPosition != "" ? articulationTestExam.SoundPosition : Resources.AppResources.All.ToUpper();
+            row.Cells[0].AddParagraph(soundPosition);
             iCount = 1;
             foreach (ArticulationTestExamAnswer answer in articulationTestExam.Answers)
             {
@@ -192,7 +191,8 @@ namespace SpeechPathology.Services.Articulation
             par.Format.SpaceAfter = "1cm";
 
             // Sub title 
-            par = _section.AddParagraph(articulationTestExam.SoundPosition);
+            string soundPosition = articulationTestExam.SoundPosition != "" ? articulationTestExam.SoundPosition : Resources.AppResources.All.ToUpper();
+            par = _section.AddParagraph(soundPosition);
             par.Format.Font.Size = 12;
             par.Format.Font.Bold = true;
             par.Format.Alignment = ParagraphAlignment.Center;
