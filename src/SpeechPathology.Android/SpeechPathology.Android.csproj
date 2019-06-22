@@ -6577,7 +6577,7 @@
     <AndroidResource Include="Resources\drawable\tr_yastik.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\tr_cecic.jpg" />
+    <AndroidResource Include="Resources\drawable\tr_cekic.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <PropertyGroup>
