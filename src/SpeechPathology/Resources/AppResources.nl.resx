@@ -318,4 +318,10 @@ Deze applicatie vervangt geen logopedist, maar biedt een extra ondersteunend hul
     <value>Score</value>
     <comment>.</comment>
   </data>
+  <data name="All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="Letters" xml:space="preserve">
+    <value>Letters</value>
+  </data>
 </root>

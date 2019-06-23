@@ -163,7 +163,7 @@
     <value>Geçiniz</value>
   </data>
   <data name="Play" xml:space="preserve">
-    <value>Başla</value>
+    <value>Ses</value>
   </data>
   <data name="Repeat" xml:space="preserve">
     <value>Tekrarlat</value>
@@ -204,7 +204,7 @@ Bu uygulama konuşma terapistinin yerini almaz, ancak öğretmenler için bir de
     <value>PDF olarak hazırlanıyor…</value>
   </data>
   <data name="SelectView" xml:space="preserve">
-    <value>Görüntüleme</value>
+    <value>Test sonucunu görüntüleme</value>
   </data>
   <data name="ShareResults" xml:space="preserve">
     <value>Sonuçları paylaşın</value>
@@ -252,7 +252,7 @@ Bu uygulama konuşma terapistinin yerini almaz, ancak öğretmenler için bir de
     <value>Ay</value>
   </data>
   <data name="YearPlural" xml:space="preserve">
-    <value>Yil</value>
+    <value>Yıl</value>
   </data>
   <data name="YearSingular" xml:space="preserve">
     <value>Yıl</value>
@@ -264,7 +264,7 @@ Bu uygulama konuşma terapistinin yerini almaz, ancak öğretmenler için bir de
     <value>Dil becerileri sonucunu paylaş</value>
   </data>
   <data name="SpeechSounds" xml:space="preserve">
-    <value>Dil ve onuşma sesleri</value>
+    <value>Dil ve konuşma sesleri</value>
   </data>
   <data name="SpeechSoundsSubtitle" xml:space="preserve">
     <value>Yaşa göre dil ve konuşma süreci</value>
@@ -276,7 +276,7 @@ Bu uygulama konuşma terapistinin yerini almaz, ancak öğretmenler için bir de
     <value>Sözlü dil becerisi</value>
   </data>
   <data name="SpeechSoundsButton" xml:space="preserve">
-    <value>Dil ve onuşma sesleri</value>
+    <value>Dil ve konuşma sesleri</value>
   </data>
   <data name="Blended" xml:space="preserve">
     <value>Karışık durum</value>
@@ -316,5 +316,11 @@ Bu uygulama konuşma terapistinin yerini almaz, ancak öğretmenler için bir de
   </data>
   <data name="AgeCalculatorTitle" xml:space="preserve">
     <value>Öğrencinin yaşı</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>Bütün harfler</value>
+  </data>
+  <data name="Letters" xml:space="preserve">
+    <value>Letters</value>
   </data>
 </root>

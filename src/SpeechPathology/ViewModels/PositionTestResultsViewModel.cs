@@ -56,7 +56,7 @@ namespace SpeechPathology.ViewModels
             ArticulationTestExam = (ArticulationTestExam)navigationData;
             ArticulationTestAnswers = ArticulationTestExam.Answers;
             Score = ArticulationTestExam.Score ?? ArticulationTestExam.Score.Value;
-            SoundPosition = ArticulationTestExam.SoundPosition;
+            SoundPosition = ArticulationTestExam.SoundPosition != "" ? ArticulationTestExam.SoundPosition : Resources.AppResources.All.ToUpper();
             return Task.FromResult(true);
         }
 
