@@ -8794,7 +8794,7 @@ namespace SpeechPathology.Droid
 			public const int tr_cay = 2130837867;
 			
 			// aapt resource value: 0x7f02016c
-			public const int tr_cecic = 2130837868;
+			public const int tr_cekic = 2130837868;
 			
 			// aapt resource value: 0x7f02016d
 			public const int tr_cep = 2130837869;

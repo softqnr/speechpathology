@@ -174,13 +174,13 @@
   <data name="ApplicationNotice" xml:space="preserve">
     <value>BELANGRIJK:
 Als u vermoedt dat uw kind spraaktherapie nodig heeft, dient u een logopedist te raadplegen.
-Deze applicatie vervangt geen logopedist, maar biedt een extra ondersteunend hulpmiddel ann.</value>
+Deze applicatie vervangt geen logopedist, maar biedt een extra ondersteunend hulpmiddel aan.</value>
   </data>
   <data name="WorksheetSaved" xml:space="preserve">
     <value>Werkblad opgeslagen.</value>
   </data>
   <data name="AboutIntro" xml:space="preserve">
-    <value>Deze applicatie is ontworpen door het Erasmus + KA2 Strategic Partnership Project-consortium van "Interactieve tools voor leraren en kinderen tijdens initiële educatie"</value>
+    <value>Deze applicatie is ontworpen door het Erasmus + KA2 Strategic Partnership Project-consortium van "Interactieve tools voor leerkrachten en kinderen tijdens initiële educatie"</value>
   </data>
   <data name="AboutSocial" xml:space="preserve">
     <value>Bezoek onze website en sociale-mediakanalen voor meer informatie.</value>
@@ -204,7 +204,7 @@ Deze applicatie vervangt geen logopedist, maar biedt een extra ondersteunend hul
     <value>PDF genereren ...</value>
   </data>
   <data name="SelectView" xml:space="preserve">
-    <value>Selecteer Bekijken</value>
+    <value>Selecteer "Bekijken"</value>
   </data>
   <data name="ShareResults" xml:space="preserve">
     <value>Deel resultaten</value>
@@ -267,7 +267,7 @@ Deze applicatie vervangt geen logopedist, maar biedt een extra ondersteunend hul
     <value>Spraak Geluid Ontwikkeling</value>
   </data>
   <data name="SpeechSoundsSubtitle" xml:space="preserve">
-    <value>Spraak Geluid voortgang per leeftijd</value>
+    <value>Spraak Geluid evolutie per leeftijd</value>
   </data>
   <data name="SpeechSoundsDetail" xml:space="preserve">
     <value>Ga door naar de test</value>
@@ -319,7 +319,7 @@ Deze applicatie vervangt geen logopedist, maar biedt een extra ondersteunend hul
     <comment>.</comment>
   </data>
   <data name="All" xml:space="preserve">
-    <value>All</value>
+    <value>Allemaal</value>
   </data>
   <data name="Letters" xml:space="preserve">
     <value>Letters</value>
