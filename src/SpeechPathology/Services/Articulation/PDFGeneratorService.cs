@@ -113,14 +113,16 @@ namespace SpeechPathology.Services.Articulation
             row = table.AddRow();
             row.Height = 20;
             // Location column
-            string soundPosition = articulationTestExam.SoundPosition != "" ? articulationTestExam.SoundPosition : Resources.AppResources.All.ToUpper();
+            string soundPosition = articulationTestExam.SoundPosition != "" ? articulationTestExam.SoundPosition : 
+                Resources.AppResources.All.ToUpper();
             row.Cells[0].AddParagraph(soundPosition);
             iCount = 1;
             foreach (ArticulationTestExamAnswer answer in articulationTestExam.Answers)
             {
                 if (answer.IsCorrect.HasValue)
                 {
-                    string answerText = answer.IsCorrect.Value ? "T" : "F";
+                    string answerText = answer.IsCorrect.Value ? Resources.AppResources.CorrectAbbreviation : 
+                        Resources.AppResources.NotCorrectAbbreviation;
                     par = row.Cells[iCount].AddParagraph(answerText);
                     par.Format.Alignment = ParagraphAlignment.Center;
                 }
@@ -191,7 +193,8 @@ namespace SpeechPathology.Services.Articulation
             par.Format.SpaceAfter = "1cm";
 
             // Sub title 
-            string soundPosition = articulationTestExam.SoundPosition != "" ? articulationTestExam.SoundPosition : Resources.AppResources.All.ToUpper();
+            string soundPosition = articulationTestExam.SoundPosition != "" ? articulationTestExam.SoundPosition :
+                Resources.AppResources.All.ToUpper();
             par = _section.AddParagraph(soundPosition);
             par.Format.Font.Size = 12;
             par.Format.Font.Bold = true;
@@ -219,8 +222,9 @@ namespace SpeechPathology.Services.Articulation
 
                     if (answer.IsCorrect.HasValue)
                     {
-                        string answerText = answer.IsCorrect.Value ? "T" : "F";
-                        par = row.Cells[0].AddParagraph($"Test {answer.Number} - {answer.ArticulationTest.Text} - {answerText}");
+                        string answerText = answer.IsCorrect.Value ? Resources.AppResources.CorrectAbbreviation : 
+                            Resources.AppResources.NotCorrectAbbreviation;
+                        par = row.Cells[0].AddParagraph($"{answer.ArticulationTest.Text} - {answerText}");
                         par.Format.Font.Size = 12;
                         par.Format.Alignment = ParagraphAlignment.Center;
                     }

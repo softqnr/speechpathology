@@ -216,6 +216,15 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to C.
+        /// </summary>
+        public static string CorrectAbbreviation {
+            get {
+                return ResourceManager.GetString("CorrectAbbreviation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Birth date.
         /// </summary>
         public static string DateOfBirth {
@@ -374,6 +383,15 @@ namespace SpeechPathology.Resources {
         public static string MonthSingular {
             get {
                 return ResourceManager.GetString("MonthSingular", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to NC.
+        /// </summary>
+        public static string NotCorrectAbbreviation {
+            get {
+                return ResourceManager.GetString("NotCorrectAbbreviation", resourceCulture);
             }
         }
         

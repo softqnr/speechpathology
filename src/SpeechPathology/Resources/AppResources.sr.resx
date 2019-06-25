@@ -324,4 +324,10 @@
   <data name="SoundTestResultsButton" xml:space="preserve">
     <value>Резултати по гласовима</value>
   </data>
+  <data name="CorrectAbbreviation" xml:space="preserve">
+    <value>C</value>
+  </data>
+  <data name="NotCorrectAbbreviation" xml:space="preserve">
+    <value>NC</value>
+  </data>
 </root>
