@@ -148,10 +148,10 @@
     <value>Karışık</value>
   </data>
   <data name="Correct" xml:space="preserve">
-    <value>TRUE</value>
+    <value>Doğru</value>
   </data>
   <data name="Incorrect" xml:space="preserve">
-    <value>FALSE</value>
+    <value>Yanlış</value>
   </data>
   <data name="Selectexcludedsound" xml:space="preserve">
     <value>Mevcut olmayan ses seçimi</value>
