@@ -323,4 +323,7 @@ This application does not replace a speech therapist, but offers an additional s
   <data name="Letters" xml:space="preserve">
     <value>Letters</value>
   </data>
+  <data name="SoundTestResultsButton" xml:space="preserve">
+    <value>Sound test results</value>
+  </data>
 </root>

@@ -321,4 +321,7 @@
   <data name="Letters" xml:space="preserve">
     <value>Letters</value>
   </data>
+  <data name="SoundTestResultsButton" xml:space="preserve">
+    <value>Резултати по гласовима</value>
+  </data>
 </root>
