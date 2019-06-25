@@ -48,7 +48,7 @@
                          HorizontalOptions="FillAndExpand"
                          IsVisible="{Binding TestViewIsVisible, Converter={converters:InverseBoolConverter}}">
                 <Label Text="{i18n:Translate SelectView}" HorizontalOptions="Center" FontSize="Large" />
-                <Button Text="{i18n:Translate SoundTestResults}" Command="{Binding OpenSoundTestResultsCommand}" BackgroundColor="LightGray"/>
+                <Button Text="{i18n:Translate SoundTestResultsButton}" Command="{Binding OpenSoundTestResultsCommand}" BackgroundColor="LightGray"/>
                 <Button Text="{i18n:Translate PositionTestResults}"  Command="{Binding OpenPositionTestResultsCommand}" BackgroundColor="LightGray"/>
                 <Button Text="{i18n:Translate Cancel}" Command="{Binding CancelTestResultsCommand}" BackgroundColor="DarkGray"/>
             </StackLayout>

@@ -324,4 +324,7 @@ Deze applicatie vervangt geen logopedist, maar biedt een extra ondersteunend hul
   <data name="Letters" xml:space="preserve">
     <value>Letters</value>
   </data>
+  <data name="SoundTestResultsButton" xml:space="preserve">
+    <value>Geluidstestresultaten</value>
+  </data>
 </root>

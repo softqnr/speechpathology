@@ -585,6 +585,15 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sound test results.
+        /// </summary>
+        public static string SoundTestResultsButton {
+            get {
+                return ResourceManager.GetString("SoundTestResultsButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Speech Sound Development.
         /// </summary>
         public static string SpeechSounds {

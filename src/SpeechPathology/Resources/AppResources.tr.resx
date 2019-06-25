@@ -273,10 +273,10 @@ Bu uygulama konuşma terapistinin yerini almaz, ancak öğretmenler için bir de
     <value>Teste devam et</value>
   </data>
   <data name="LanguageSkillsButton" xml:space="preserve">
-    <value>Sözlü dil becerisi</value>
+    <value>SÖZLÜ DİL BECERİSİ</value>
   </data>
   <data name="SpeechSoundsButton" xml:space="preserve">
-    <value>Dil ve konuşma sesleri</value>
+    <value>DİL VE KONUŞMA SESLERİ</value>
   </data>
   <data name="Blended" xml:space="preserve">
     <value>Karışık durum</value>
@@ -322,5 +322,8 @@ Bu uygulama konuşma terapistinin yerini almaz, ancak öğretmenler için bir de
   </data>
   <data name="Letters" xml:space="preserve">
     <value>Letters</value>
+  </data>
+  <data name="SoundTestResultsButton" xml:space="preserve">
+    <value>SESLERE AİT TEST SONUCU</value>
   </data>
 </root>
