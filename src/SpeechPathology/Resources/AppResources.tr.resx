@@ -326,4 +326,10 @@ Bu uygulama konuşma terapistinin yerini almaz, ancak öğretmenler için bir de
   <data name="SoundTestResultsButton" xml:space="preserve">
     <value>SESLERE AİT TEST SONUCU</value>
   </data>
+  <data name="CorrectAbbreviation" xml:space="preserve">
+    <value>C</value>
+  </data>
+  <data name="NotCorrectAbbreviation" xml:space="preserve">
+    <value>NC</value>
+  </data>
 </root>

@@ -326,4 +326,10 @@ This application does not replace a speech therapist, but offers an additional s
   <data name="SoundTestResultsButton" xml:space="preserve">
     <value>Sound test results</value>
   </data>
+  <data name="CorrectAbbreviation" xml:space="preserve">
+    <value>C</value>
+  </data>
+  <data name="NotCorrectAbbreviation" xml:space="preserve">
+    <value>NC</value>
+  </data>
 </root>
