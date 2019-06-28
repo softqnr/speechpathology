@@ -130,22 +130,22 @@
     <value>За проекта</value>
   </data>
   <data name="AgeAtTest" xml:space="preserve">
-    <value>Възраст на датата на теста</value>
+    <value>Възраст в деня на теста</value>
   </data>
   <data name="AgeCalculator" xml:space="preserve">
-    <value>Тест спрямо възрастта</value>
+    <value>Тест базиран на възрастта</value>
   </data>
   <data name="AgeCalculatorTitle" xml:space="preserve">
-    <value>Възраст на детето</value>
+    <value>Възраст на ученика</value>
   </data>
   <data name="AgeNotSetMsg" xml:space="preserve">
-    <value>Не сте задали възраст за теста или възрастта, която сте посочили, е твърде малка. Моля, въведете валидна дата на раждане.</value>
+    <value>Не сте конфигурирали приложението с възрастта за теста или възрастта, която сте задали, е твърде млада. Моля, въведете валидна дата на раждане.</value>
   </data>
   <data name="AgeNotSetTitle" xml:space="preserve">
-    <value>Възраст, която не се тества</value>
+    <value>Възраст, която не може да се тества</value>
   </data>
   <data name="All" xml:space="preserve">
-    <value>Всички</value>
+    <value>всички</value>
   </data>
   <data name="ApplicationNotice" xml:space="preserve">
     <value>ВАЖНО:
@@ -156,7 +156,7 @@
     <value>Артикулационен тест</value>
   </data>
   <data name="Blend" xml:space="preserve">
-    <value>Смесвам</value>
+    <value>бленда</value>
   </data>
   <data name="Blended" xml:space="preserve">
     <value>Смесен</value>
@@ -165,7 +165,7 @@
     <value>Затвори</value>
   </data>
   <data name="Continue" xml:space="preserve">
-    <value>Продължи</value>
+    <value>Продължавам</value>
   </data>
   <data name="Correct" xml:space="preserve">
     <value>Правилно</value>
@@ -201,13 +201,13 @@
     <value>В началото</value>
   </data>
   <data name="LanguageSkills" xml:space="preserve">
-    <value>Говорни езикови умения</value>
+    <value>Устни езикови умения</value>
   </data>
   <data name="LanguageSkillsButton" xml:space="preserve">
     <value>Езикови умения</value>
   </data>
   <data name="Letters" xml:space="preserve">
-    <value>Букви</value>
+    <value>Писма</value>
   </data>
   <data name="Loading" xml:space="preserve">
     <value>Зареждане...</value>
@@ -219,7 +219,7 @@
     <value>Струпани</value>
   </data>
   <data name="MonthPlural" xml:space="preserve">
-    <value>месеца</value>
+    <value>месеци</value>
   </data>
   <data name="MonthSingular" xml:space="preserve">
     <value>месец</value>
@@ -228,7 +228,7 @@
     <value>от</value>
   </data>
   <data name="OK" xml:space="preserve">
-    <value>Ок</value>
+    <value>ок</value>
   </data>
   <data name="OpenInBrowser" xml:space="preserve">
     <value>Отворете в браузъра</value>
@@ -243,7 +243,7 @@
     <value>Позиция на резултатите от теста</value>
   </data>
   <data name="ProjectTitle" xml:space="preserve">
-    <value>Инструменти за речева патология</value>
+    <value>Препоръчителна употреба</value>
   </data>
   <data name="RecomendedUsage" xml:space="preserve">
     <value>Препоръчителна употреба</value>
@@ -258,7 +258,7 @@
     <value>Възобновяване на теста?</value>
   </data>
   <data name="ResumeTestTitle" xml:space="preserve">
-    <value>Наличен е предходен тест</value>
+    <value>Беше намерен предишен тест</value>
   </data>
   <data name="Save" xml:space="preserve">
     <value>Запази</value>
@@ -294,16 +294,16 @@
     <value>Резултати от звуковите тестове</value>
   </data>
   <data name="SpeechSounds" xml:space="preserve">
-    <value>Развитие на звуковото произношение</value>
+    <value>Развитие на речта</value>
   </data>
   <data name="SpeechSoundsButton" xml:space="preserve">
-    <value>Речеви звуци</value>
+    <value>Звуци на речта</value>
   </data>
   <data name="SpeechSoundsDetail" xml:space="preserve">
-    <value>Продължете теста</value>
+    <value>Продължете с теста</value>
   </data>
   <data name="SpeechSoundsSubtitle" xml:space="preserve">
-    <value>Развитие на произношението според възрастта</value>
+    <value>Прогрес на звука по време на възрастта</value>
   </data>
   <data name="Test" xml:space="preserve">
     <value>Тест</value>
