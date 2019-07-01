@@ -120,7 +120,7 @@ namespace SpeechPathology.ViewModels
         {
             RefreshAgeCalculation();
 
-            DialogService.ShowLoading(Resources.AppResources.Loading);
+            DialogService.ShowLoading(AppResources.Loading);
             await NavigationService.NavigateToAsync<AgeCalcPdfViewerViewModel>(ageCalculation.LanguageSkillsFile);
             DialogService.HideLoading();
         }
