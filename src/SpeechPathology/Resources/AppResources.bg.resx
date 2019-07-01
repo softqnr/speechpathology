@@ -225,7 +225,7 @@
     <value>месец</value>
   </data>
   <data name="of" xml:space="preserve">
-    <value>от</value>
+    <value> от </value>
   </data>
   <data name="OK" xml:space="preserve">
     <value>ок</value>
