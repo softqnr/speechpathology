@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutFooter" xml:space="preserve">
+    <value>Podpora Evropske komisije za produkcijo te mobilne aplikacije ne pomeni odobravanja vsebine, ki odraža samo stališča avtorjev, in Komisija ne more biti odgovorna za kakršno koli uporabo informacij, ki jih vsebuje.</value>
+  </data>
+  <data name="AboutIntro" xml:space="preserve">
+    <value>Ta program je oblikoval konzorcij projekta Erasmus + KA2 za strateško partnerstvo »Interaktivna orodja za učitelje in otroke v začetnem izobraževanju«</value>
+  </data>
+  <data name="AboutSocial" xml:space="preserve">
+    <value>Za več informacij obiščite našo spletno stran in socialne kanale.</value>
+  </data>
+  <data name="AboutTheProject" xml:space="preserve">
+    <value>O projektu</value>
+  </data>
+  <data name="AgeAtTest" xml:space="preserve">
+    <value>Starost na datum preskusa</value>
+  </data>
+  <data name="AgeCalculator" xml:space="preserve">
+    <value>Starostni test</value>
+  </data>
+  <data name="AgeCalculatorTitle" xml:space="preserve">
+    <value>Starost študenta</value>
+  </data>
+  <data name="AgeNotSetMsg" xml:space="preserve">
+    <value>Aplikacijo niste konfigurirali s starostjo za test ali starost, ki ste jo nastavili, je premlada. Vnesite veljaven datum rojstva.</value>
+  </data>
+  <data name="AgeNotSetTitle" xml:space="preserve">
+    <value>Starost ni mogoče preveriti</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>Vse</value>
+  </data>
+  <data name="ApplicationNotice" xml:space="preserve">
+    <value>POMEMBNO:
+Če sumite, da vaš otrok potrebuje govorno terapijo, se posvetujte s terapevtom.
+Ta aplikacija ne nadomešča logopeda, ampak ponuja dodatno podporno orodje.</value>
+  </data>
+  <data name="ArticulationTest" xml:space="preserve">
+    <value>Artikulacijski test</value>
+  </data>
+  <data name="Blend" xml:space="preserve">
+    <value>Mešanica</value>
+  </data>
+  <data name="Blended" xml:space="preserve">
+    <value>Mešano</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Prekliči</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Nadaljuj</value>
+  </data>
+  <data name="Correct" xml:space="preserve">
+    <value>Pravilno</value>
+  </data>
+  <data name="DateOfBirth" xml:space="preserve">
+    <value>Rojstni datum</value>
+  </data>
+  <data name="DateOfTest" xml:space="preserve">
+    <value>Datum preizkusa</value>
+  </data>
+  <data name="DayPlural" xml:space="preserve">
+    <value>dnevi</value>
+  </data>
+  <data name="DaySingular" xml:space="preserve">
+    <value>dan</value>
+  </data>
+  <data name="Disclaimer" xml:space="preserve">
+    <value>Opozorilo</value>
+  </data>
+  <data name="Final" xml:space="preserve">
+    <value>Končno</value>
+  </data>
+  <data name="Flashcards" xml:space="preserve">
+    <value>Flashcards</value>
+  </data>
+  <data name="GeneratingPDF" xml:space="preserve">
+    <value>Ustvarjanje PDF-ja…</value>
+  </data>
+  <data name="Incorrect" xml:space="preserve">
+    <value>Nepravilno</value>
+  </data>
+  <data name="Initial" xml:space="preserve">
+    <value>Začetno</value>
+  </data>
+  <data name="LanguageSkills" xml:space="preserve">
+    <value>Veščine za ustni jezik</value>
+  </data>
+  <data name="LanguageSkillsButton" xml:space="preserve">
+    <value>Jezikovne spretnosti</value>
+  </data>
+  <data name="Letters" xml:space="preserve">
+    <value>Pisma</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Nalaganje...</value>
+  </data>
+  <data name="Medial" xml:space="preserve">
+    <value>Srednji</value>
+  </data>
+  <data name="Mixed" xml:space="preserve">
+    <value>Mešano</value>
+  </data>
+  <data name="MonthPlural" xml:space="preserve">
+    <value>mesecev</value>
+  </data>
+  <data name="MonthSingular" xml:space="preserve">
+    <value>mesec</value>
+  </data>
+  <data name="of" xml:space="preserve">
+    <value> od </value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>V redu</value>
+  </data>
+  <data name="OpenInBrowser" xml:space="preserve">
+    <value>Odpri v brskalniku</value>
+  </data>
+  <data name="PhonologicalTestResults" xml:space="preserve">
+    <value>Rezultati fonoloških testov</value>
+  </data>
+  <data name="Play" xml:space="preserve">
+    <value>Igraj</value>
+  </data>
+  <data name="PositionTestResults" xml:space="preserve">
+    <value>Rezultati testiranja položaja</value>
+  </data>
+  <data name="ProjectTitle" xml:space="preserve">
+    <value>Orodja za patologijo govora</value>
+  </data>
+  <data name="RecomendedUsage" xml:space="preserve">
+    <value>Priporočena uporaba</value>
+  </data>
+  <data name="Repeat" xml:space="preserve">
+    <value>ponovite</value>
+  </data>
+  <data name="Results" xml:space="preserve">
+    <value>Rezultati</value>
+  </data>
+  <data name="ResumeTestMessage" xml:space="preserve">
+    <value>Nadaljevanje testa?</value>
+  </data>
+  <data name="ResumeTestTitle" xml:space="preserve">
+    <value>Najden je test v teku</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Shrani</value>
+  </data>
+  <data name="Score" xml:space="preserve">
+    <value>Ocena</value>
+  </data>
+  <data name="Selectexcludedsound" xml:space="preserve">
+    <value>Izberite izključen zvok</value>
+  </data>
+  <data name="Selectsound" xml:space="preserve">
+    <value>Izberite zvok</value>
+  </data>
+  <data name="SelectSoundPosition" xml:space="preserve">
+    <value>Izberite položaj zvoka</value>
+  </data>
+  <data name="SelectView" xml:space="preserve">
+    <value>Izberite Prikaži</value>
+  </data>
+  <data name="ShareLanguageSkills" xml:space="preserve">
+    <value>Delite jezikovno znanje</value>
+  </data>
+  <data name="ShareResults" xml:space="preserve">
+    <value>Delite rezultate</value>
+  </data>
+  <data name="ShareWorksheet" xml:space="preserve">
+    <value>Delite delovni list</value>
+  </data>
+  <data name="Skip" xml:space="preserve">
+    <value>Preskoči</value>
+  </data>
+  <data name="SoundTestResults" xml:space="preserve">
+    <value>Rezultati testa zvoka</value>
+  </data>
+  <data name="SpeechSounds" xml:space="preserve">
+    <value>Razvoj zvoka govora</value>
+  </data>
+  <data name="SpeechSoundsButton" xml:space="preserve">
+    <value>Zvoki govora</value>
+  </data>
+  <data name="SpeechSoundsDetail" xml:space="preserve">
+    <value>Nadaljujte s testom</value>
+  </data>
+  <data name="SpeechSoundsSubtitle" xml:space="preserve">
+    <value>Govorni zvok napreduje po starosti</value>
+  </data>
+  <data name="Test" xml:space="preserve">
+    <value>Test</value>
+  </data>
+  <data name="Worksheets" xml:space="preserve">
+    <value>Delovni listi</value>
+  </data>
+  <data name="WorksheetSaved" xml:space="preserve">
+    <value>Delovni list je shranjen.</value>
+  </data>
+  <data name="WorksheetsView" xml:space="preserve">
+    <value>Pogled na delovne liste</value>
+  </data>
+  <data name="YearPlural" xml:space="preserve">
+    <value>let</value>
+  </data>
+  <data name="YearSingular" xml:space="preserve">
+    <value>leto</value>
+  </data>
+  <data name="SoundTestResultsButton" xml:space="preserve">
+    <value>Rezultati testa zvoka</value>
+  </data>
+</root>

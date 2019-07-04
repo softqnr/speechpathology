@@ -323,4 +323,7 @@
   <data name="YearSingular" xml:space="preserve">
     <value>година</value>
   </data>
+  <data name="SoundTestResultsButton" xml:space="preserve">
+    <value>Резултати от звуковите тестове</value>
+  </data>
 </root>

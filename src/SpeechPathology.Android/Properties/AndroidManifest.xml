@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="121" android:versionName="v0.2.4-44-g44b4d47" android:theme="@style/MainTheme" package="com.softqnr.SpeechPathologyBG" android:installLocation="auto">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="124" android:versionName="v0.2.4-47-gac608e4" android:theme="@style/MainTheme" package="com.softqnr.SpeechPathologySI" android:installLocation="auto">
   <uses-sdk android:minSdkVersion="17" android:targetSdkVersion="28" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />

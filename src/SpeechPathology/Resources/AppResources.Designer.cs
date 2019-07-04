@@ -19,7 +19,7 @@ namespace SpeechPathology.Resources {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class AppResources {
@@ -270,7 +270,7 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to final.
+        ///   Looks up a localized string similar to Final.
         /// </summary>
         public static string Final {
             get {
@@ -306,7 +306,7 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to initial.
+        ///   Looks up a localized string similar to Initial.
         /// </summary>
         public static string Initial {
             get {
@@ -351,7 +351,7 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to medial.
+        ///   Looks up a localized string similar to Medial.
         /// </summary>
         public static string Medial {
             get {
