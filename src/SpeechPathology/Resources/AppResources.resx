@@ -136,13 +136,13 @@
     <value>Worksheets</value>
   </data>
   <data name="Final" xml:space="preserve">
-    <value>final</value>
+    <value>Final</value>
   </data>
   <data name="Initial" xml:space="preserve">
-    <value>initial</value>
+    <value>Initial</value>
   </data>
   <data name="Medial" xml:space="preserve">
-    <value>medial</value>
+    <value>Medial</value>
   </data>
   <data name="Mixed" xml:space="preserve">
     <value>Mixed</value>

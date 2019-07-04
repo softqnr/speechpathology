@@ -118,212 +118,212 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AboutFooter" xml:space="preserve">
-    <value>Подкрепата на Европейската комисия за представянето на това мобилно приложение не представлява одобрение на съдържанието, което отразява само възгледите на авторите и Комисията не носи отговорност за каквото и да е използване на съдържащата се в нея информация.</value>
+    <value>Podpora Evropske komisije za produkcijo te mobilne aplikacije ne pomeni odobravanja vsebine, ki odraža samo stališča avtorjev, in Komisija ne more biti odgovorna za kakršno koli uporabo informacij, ki jih vsebuje.</value>
   </data>
   <data name="AboutIntro" xml:space="preserve">
-    <value>Това приложение е разработено от консорциума по проект Стратегическо партньорство „Еразъм+ КД2“ на „Интерактивни инструменти за учители и деца в предучилищно и начално образование"</value>
+    <value>Ta program je oblikoval konzorcij projekta Erasmus + KA2 za strateško partnerstvo »Interaktivna orodja za učitelje in otroke v začetnem izobraževanju«</value>
   </data>
   <data name="AboutSocial" xml:space="preserve">
-    <value>За повече информация, моля посететe нашия уебсайт и профилите в социални мрежи.</value>
+    <value>Za več informacij obiščite našo spletno stran in socialne kanale.</value>
   </data>
   <data name="AboutTheProject" xml:space="preserve">
-    <value>За проекта</value>
+    <value>O projektu</value>
   </data>
   <data name="AgeAtTest" xml:space="preserve">
-    <value>Възраст в деня на теста</value>
+    <value>Starost na datum preskusa</value>
   </data>
   <data name="AgeCalculator" xml:space="preserve">
-    <value>Тест базиран на възрастта</value>
+    <value>Starostni test</value>
   </data>
   <data name="AgeCalculatorTitle" xml:space="preserve">
-    <value>Възраст на ученика</value>
+    <value>Starost študenta</value>
   </data>
   <data name="AgeNotSetMsg" xml:space="preserve">
-    <value>Не сте конфигурирали приложението с възрастта за теста или възрастта, която сте задали, е твърде млада. Моля, въведете валидна дата на раждане.</value>
+    <value>Aplikacijo niste konfigurirali s starostjo za test ali starost, ki ste jo nastavili, je premlada. Vnesite veljaven datum rojstva.</value>
   </data>
   <data name="AgeNotSetTitle" xml:space="preserve">
-    <value>Възраст, която не може да се тества</value>
+    <value>Starost ni mogoče preveriti</value>
   </data>
   <data name="All" xml:space="preserve">
-    <value>всички</value>
+    <value>Vse</value>
   </data>
   <data name="ApplicationNotice" xml:space="preserve">
-    <value>ВАЖНО:
-Ако подозирате, че детето ви се нуждае от логопедична терапия, трябва да се консултирате с логопед.
-Това приложение не замества логопеда, а предлага допълнителен помощен инструмент.</value>
+    <value>POMEMBNO:
+Če sumite, da vaš otrok potrebuje govorno terapijo, se posvetujte s terapevtom.
+Ta aplikacija ne nadomešča logopeda, ampak ponuja dodatno podporno orodje.</value>
   </data>
   <data name="ArticulationTest" xml:space="preserve">
-    <value>Артикулационен тест</value>
+    <value>Artikulacijski test</value>
   </data>
   <data name="Blend" xml:space="preserve">
-    <value>бленда</value>
+    <value>Mešanica</value>
   </data>
   <data name="Blended" xml:space="preserve">
-    <value>Смесен</value>
+    <value>Mešano</value>
   </data>
   <data name="Cancel" xml:space="preserve">
-    <value>Затвори</value>
+    <value>Prekliči</value>
   </data>
   <data name="Continue" xml:space="preserve">
-    <value>Продължавам</value>
+    <value>Nadaljuj</value>
   </data>
   <data name="Correct" xml:space="preserve">
-    <value>Правилно</value>
+    <value>Pravilno</value>
   </data>
   <data name="DateOfBirth" xml:space="preserve">
-    <value>Дата на раждане</value>
+    <value>Rojstni datum</value>
   </data>
   <data name="DateOfTest" xml:space="preserve">
-    <value>Дата на теста</value>
+    <value>Datum preizkusa</value>
   </data>
   <data name="DayPlural" xml:space="preserve">
-    <value>дни</value>
+    <value>dnevi</value>
   </data>
   <data name="DaySingular" xml:space="preserve">
-    <value>ден</value>
+    <value>dan</value>
   </data>
   <data name="Disclaimer" xml:space="preserve">
-    <value>Авторски права</value>
+    <value>Opozorilo</value>
   </data>
   <data name="Final" xml:space="preserve">
-    <value>В края</value>
+    <value>Končno</value>
   </data>
   <data name="Flashcards" xml:space="preserve">
-    <value>Флашкарти</value>
+    <value>Flashcards</value>
   </data>
   <data name="GeneratingPDF" xml:space="preserve">
-    <value>Генериране в PDF формат...</value>
+    <value>Ustvarjanje PDF-ja…</value>
   </data>
   <data name="Incorrect" xml:space="preserve">
-    <value>Неправилно</value>
+    <value>Nepravilno</value>
   </data>
   <data name="Initial" xml:space="preserve">
-    <value>В началото</value>
+    <value>Začetno</value>
   </data>
   <data name="LanguageSkills" xml:space="preserve">
-    <value>Устни езикови умения</value>
+    <value>Veščine za ustni jezik</value>
   </data>
   <data name="LanguageSkillsButton" xml:space="preserve">
-    <value>Езикови умения</value>
+    <value>Jezikovne spretnosti</value>
   </data>
   <data name="Letters" xml:space="preserve">
-    <value>Писма</value>
+    <value>Pisma</value>
   </data>
   <data name="Loading" xml:space="preserve">
-    <value>Зареждане...</value>
+    <value>Nalaganje...</value>
   </data>
   <data name="Medial" xml:space="preserve">
-    <value>В средата</value>
+    <value>Srednji</value>
   </data>
   <data name="Mixed" xml:space="preserve">
-    <value>Струпани</value>
+    <value>Mešano</value>
   </data>
   <data name="MonthPlural" xml:space="preserve">
-    <value>месеци</value>
+    <value>mesecev</value>
   </data>
   <data name="MonthSingular" xml:space="preserve">
-    <value>месец</value>
+    <value>mesec</value>
   </data>
   <data name="of" xml:space="preserve">
-    <value> от </value>
+    <value> od </value>
   </data>
   <data name="OK" xml:space="preserve">
-    <value>ок</value>
+    <value>V redu</value>
   </data>
   <data name="OpenInBrowser" xml:space="preserve">
-    <value>Отворете в браузъра</value>
+    <value>Odpri v brskalniku</value>
   </data>
   <data name="PhonologicalTestResults" xml:space="preserve">
-    <value>Резултати от фонологичните тестове</value>
+    <value>Rezultati fonoloških testov</value>
   </data>
   <data name="Play" xml:space="preserve">
-    <value>Пускане</value>
+    <value>Igraj</value>
   </data>
   <data name="PositionTestResults" xml:space="preserve">
-    <value>Позиция на резултатите от теста</value>
+    <value>Rezultati testiranja položaja</value>
   </data>
   <data name="ProjectTitle" xml:space="preserve">
-    <value>Препоръчителна употреба</value>
+    <value>Orodja za patologijo govora</value>
   </data>
   <data name="RecomendedUsage" xml:space="preserve">
-    <value>Препоръчителна употреба</value>
+    <value>Priporočena uporaba</value>
   </data>
   <data name="Repeat" xml:space="preserve">
-    <value>Повторение</value>
+    <value>ponovite</value>
   </data>
   <data name="Results" xml:space="preserve">
-    <value>Резултати</value>
+    <value>Rezultati</value>
   </data>
   <data name="ResumeTestMessage" xml:space="preserve">
-    <value>Възобновяване на теста?</value>
+    <value>Nadaljevanje testa?</value>
   </data>
   <data name="ResumeTestTitle" xml:space="preserve">
-    <value>Беше намерен предишен тест</value>
+    <value>Najden je test v teku</value>
   </data>
   <data name="Save" xml:space="preserve">
-    <value>Запази</value>
+    <value>Shrani</value>
   </data>
   <data name="Score" xml:space="preserve">
-    <value>Резултат</value>
+    <value>Ocena</value>
   </data>
   <data name="Selectexcludedsound" xml:space="preserve">
-    <value>Изберете изключване на звука</value>
+    <value>Izberite izključen zvok</value>
   </data>
   <data name="Selectsound" xml:space="preserve">
-    <value>Изберете звук</value>
+    <value>Izberite zvok</value>
   </data>
   <data name="SelectSoundPosition" xml:space="preserve">
-    <value>Изберете позиция на звука</value>
+    <value>Izberite položaj zvoka</value>
   </data>
   <data name="SelectView" xml:space="preserve">
-    <value>Изберете "Преглед"</value>
+    <value>Izberite Prikaži</value>
   </data>
   <data name="ShareLanguageSkills" xml:space="preserve">
-    <value>Споделете речевите способности</value>
+    <value>Delite jezikovno znanje</value>
   </data>
   <data name="ShareResults" xml:space="preserve">
-    <value>Споделете резултатите</value>
+    <value>Delite rezultate</value>
   </data>
   <data name="ShareWorksheet" xml:space="preserve">
-    <value>Споделете работните листове</value>
+    <value>Delite delovni list</value>
   </data>
   <data name="Skip" xml:space="preserve">
-    <value>Пропусни</value>
+    <value>Preskoči</value>
   </data>
   <data name="SoundTestResults" xml:space="preserve">
-    <value>Резултати от звуковите тестове</value>
+    <value>Rezultati testa zvoka</value>
   </data>
   <data name="SpeechSounds" xml:space="preserve">
-    <value>Развитие на речта</value>
+    <value>Razvoj zvoka govora</value>
   </data>
   <data name="SpeechSoundsButton" xml:space="preserve">
-    <value>Звуци на речта</value>
+    <value>Zvoki govora</value>
   </data>
   <data name="SpeechSoundsDetail" xml:space="preserve">
-    <value>Продължете с теста</value>
+    <value>Nadaljujte s testom</value>
   </data>
   <data name="SpeechSoundsSubtitle" xml:space="preserve">
-    <value>Прогрес на звука по време на възрастта</value>
+    <value>Govorni zvok napreduje po starosti</value>
   </data>
   <data name="Test" xml:space="preserve">
-    <value>Тест</value>
+    <value>Test</value>
   </data>
   <data name="Worksheets" xml:space="preserve">
-    <value>Работни листове</value>
+    <value>Delovni listi</value>
   </data>
   <data name="WorksheetSaved" xml:space="preserve">
-    <value>Работният лист е запазен.</value>
+    <value>Delovni list je shranjen.</value>
   </data>
   <data name="WorksheetsView" xml:space="preserve">
-    <value>Преглед на работните листове</value>
+    <value>Pogled na delovne liste</value>
   </data>
   <data name="YearPlural" xml:space="preserve">
-    <value>години</value>
+    <value>let</value>
   </data>
   <data name="YearSingular" xml:space="preserve">
-    <value>година</value>
+    <value>leto</value>
   </data>
   <data name="SoundTestResultsButton" xml:space="preserve">
-    <value>Резултати от звуковите тестове</value>
+    <value>Rezultati testa zvoka</value>
   </data>
 </root>
