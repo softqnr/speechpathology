@@ -37,7 +37,7 @@
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
     <AotAssemblies>false</AotAssemblies>
     <EnableLLVM>false</EnableLLVM>
-    <AndroidUseSharedRuntime>true</AndroidUseSharedRuntime>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
     <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
     <AndroidStoreUncompressedFileExtensions>.mp3;jpg</AndroidStoreUncompressedFileExtensions>
     <AndroidSupportedAbis />
@@ -378,6 +378,19 @@
     <AndroidAsset Include="Assets\pdfjs\web\locale\zh-CN\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\zh-TW\viewer.properties" />
     <AndroidAsset Include="Assets\pdfjs\web\locale\zu\viewer.properties" />
+    <AndroidAsset Include="Assets\LanguageSkills\SI\Age_3_4_language_developement_SI.pdf" />
+    <AndroidAsset Include="Assets\LanguageSkills\SI\Age_4_5_language_developement_SI.pdf" />
+    <AndroidAsset Include="Assets\LanguageSkills\SI\Age_5_6_language_developement_SI.pdf" />
+    <AndroidAsset Include="Assets\LanguageSkills\SI\Age_0_1_language_developement_SI.pdf" />
+    <AndroidAsset Include="Assets\LanguageSkills\SI\Age_1_2_language_developement_SI.pdf" />
+    <AndroidAsset Include="Assets\LanguageSkills\SI\Age_2_3_language_developement_SI.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\SI\worksheet-letter-Z.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\SI\worksheet-letter-ZH.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\SI\worksheet-letter-C.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\SI\worksheet-letter-CH.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\SI\worksheet-letter-R.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\SI\worksheet-letter-S.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\SI\worksheet-letter-SH.pdf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml">
@@ -442,26 +455,26 @@
     <None Include="Assets\Worksheets\NL\Worksheet_NL_T.pdf" />
     <None Include="Assets\Worksheets\NL\Worksheet_NL_Z.pdf" />
     <None Include="Assets\LanguageSkills\NL\languageskills_nl_all.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_Дж%28DZH%29.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_Ж%28J%29.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_З%28Z%29.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_К%28K%29.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_Л%28L%29.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_М%28M%29.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_П%28P%29.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_Т%28T%29.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_Ф%28F%29.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_Ц%28TS%29.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_Ч%28TCH%29.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_Щ%28ST%29.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_B%28V%29.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_C%28S%29.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_H%28R%29.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_P%28R%29.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_W%28SH%29.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_Б%28B%29.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_Г%28G%29.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_Д%28D%29.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_DZH.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_ZH.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_Z.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_K.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_L.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_M.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_P.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_T.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_F.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_TS.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_CH.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_SHT.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_V.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_S.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_N.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_R.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_SH.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_B.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_G.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_D.pdf" />
     <None Include="Assets\Worksheets\TR\Worksheet_TR_Z.pdf" />
     <None Include="Assets\Worksheets\TR\Worksheet_TR_Y.pdf" />
     <None Include="Assets\Worksheets\TR\Worksheet_TR_V.pdf" />
@@ -4109,7 +4122,7 @@
     <None Include="Resources\drawable\en_cab.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\drawable\bg_beehive.jpg" />
+    <AndroidResource Include="Resources\drawable\bg_beehive.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\drawable\en_beaver.jpg" />
@@ -7277,7 +7290,7 @@
     <AndroidResource Include="Resources\drawable\bg_fork.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\bg_water-mill.jpg" />
+    <AndroidResource Include="Resources\drawable\bg_watermill.jpg" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\bg_diver.jpg" />
@@ -7331,7 +7344,7 @@
     <AndroidResource Include="Resources\drawable\bg_child.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\bg_flip-flop.jpg" />
+    <AndroidResource Include="Resources\drawable\bg_flipflop.jpg" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\bg_ginger.jpg" />
@@ -7421,7 +7434,7 @@
     <AndroidResource Include="Resources\drawable\bg_cart.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\bg_cash-box.jpg" />
+    <AndroidResource Include="Resources\drawable\bg_cashbox.jpg" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\bg_cage.jpg" />
@@ -7814,7 +7827,7 @@
     <AndroidResource Include="Resources\drawable\bg_scarf.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\bg_knitted-cap.jpg" />
+    <AndroidResource Include="Resources\drawable\bg_knittedcap.jpg" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\bg_pinecone.jpg" />
@@ -7846,21 +7859,1051 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\bg_sea.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\bg_speechsounds_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\bg_speechsounds_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\bg_speechsounds_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\bg_speechsounds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_muc.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_muca.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_natasha.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_nezha.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_nos.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_nosha.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_nusha.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_ochi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_omara.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_osa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_ovca.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_palec.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_par.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_pas.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_pazi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_pech.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_peche.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_pesa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_pica.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_pire.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_pishe.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_pishkot.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_pochi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_polica.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_posoda.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_pozhar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_praprot.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_ptica.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_ptich.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_pushka.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_raca.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_rachka.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_raketa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_rama.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_repa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_ris.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_robot.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_roka.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_rozha.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_rudar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_ruta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_salama.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_sani.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_semafor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_sesa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_sestanek.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_sestavljanka.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_sestra.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_shah.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_shal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_shala.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_shapa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_shef.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_shema.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_shiva.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_shkatla.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_shkoljka.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_shotor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_shunka.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_sipa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_sir.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_sirena.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_siva.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_soba.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_solata.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_sosed.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_strela.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_suh.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_sulica.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_tiger.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_tocha.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_torba.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_traktor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_tri.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_tush.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_ura.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_usta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_vaza.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_zaboj.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_zala.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_zapor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_zeha.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_zelena.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_zhaba.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_zhaga.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_zhep.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_zhito.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_zhiva.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_zhlica.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_zhoga.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_zhuzhelka.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_zhvizhga.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_zidar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_zima.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_zob.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_zunaj.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_zvezda.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_zvezek.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_ananas.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_bober.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_breskev.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_carinik.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_cena.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_cene.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_cev.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_chachke.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_chaj.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_chaka.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_chelo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_chevelj.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_chof.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_chopich.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_chuk.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_cica.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_cik_cak.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_cin_cin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_cirkus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_cof.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_copati.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_cula.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_dechek.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_denar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_dezhela.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_drevo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_fizhol.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_gnezdo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_gora.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_grah.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_heca_se.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_hisha.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_hlache.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_jeza.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_jozhe.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_kaktus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_kasha.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_kitara.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_kljuch.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_kocha.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_kokosh.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_konec.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_korna.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_kosh.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_kosilo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_kost.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_kovach.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_koza.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_kravata.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_krokar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_kuzha.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_las.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_les.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_lestev.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_leze.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_lonec.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_lovec.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_luch.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_luzha.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_majica.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_masha.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_maslo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_mazhe.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_meri.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_meri1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_mesar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_mesha.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_mish.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_miza.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_mrezha.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\c_initial_cev.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\c_initial_cikcak.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\c_initial_cincin.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\c_initial_cirkus.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\c_initial_cof.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\c_initial_copati.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\c_initial_cula.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\c_medial_heca_se.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\c_medial_majica.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\c_medial_muca.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\c_medial_ovca.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\c_medial_pica.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\c_medial_polica.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\c_medial_ptica.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\ch_blended_chachke.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\ch_blended_chopich.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\ch_final_kljuch.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\ch_final_kovach.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\ch_final_luch.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\ch_final_pech.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\ch_final_ptich.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\ch_initial_chaj.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\ch_initial_chaka.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\ch_initial_chelo.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\ch_initial_chevelj.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\ch_initial_chof.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\ch_initial_chuk.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\ch_medial_dechek.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\ch_medial_hlache.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\ch_medial_kocha.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\ch_medial_ochi.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\ch_medial_peche.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\ch_medial_pochi.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\ch_medial_rachka.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\ch_medial_tocha.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\r_blended_krokar.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\r_blended_praprot.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\r_blended_rudar.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\r_blended_traktor.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\r_final_bober.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\r_final_denar.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\r_final_mesar.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\r_final_par.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\r_final_pozhar.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\r_final_sir.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\r_final_tiger.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\r_final_zapor.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\r_final_zidar.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\r_initial_raca.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\r_initial_raketa.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\r_initial_rama.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\r_initial_repa.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\r_initial_ris.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\r_initial_robot.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\r_initial_roka.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\r_initial_ruta.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\r_medial_breskev.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\r_medial_drevo.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\r_medial_gora.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\r_medial_grah.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\r_medial_kitara.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\r_medial_kravata.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\r_medial_krona.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\r_medial_meri.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\r_medial_omara.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\r_medial_pire.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\r_medial_sirena.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\r_medial_strela.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\r_medial_torba.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\r_medial_tri.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\r_medial_ura.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\s_blended_sesa.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\s_blended_sestanek.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\s_blended_sestavljanka.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\s_blended_sestra.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\s_blended_sosed.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\s_final_ananas.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\s_final_kaktus.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\s_final_las.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\s_final_les.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\s_final_nos.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\s_final_pas.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\s_final_ris.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\s_initial_salama.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\s_initial_sani.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\s_initial_semafor.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\s_initial_sipa.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\s_initial_siva.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\s_initial_soba.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\s_initial_solata.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\s_initial_suh.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\s_initial_sulica.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\s_medial_kosilo.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\s_medial_kost.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\s_medial_lestev.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\s_medial_maslo.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\s_medial_osa.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\s_medial_pesa.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\s_medial_posoda.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\s_medial_usta.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\sh_final_kokosh.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\sh_final_kosh.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\sh_final_mish.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\sh_final_tush.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\sh_initial_shah.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\sh_initial_shal.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\sh_initial_shala.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\sh_initial_shapa.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\sh_initial_shef.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\sh_initial_shema.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\sh_initial_shiva.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\sh_initial_shkatla.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\sh_initial_shkoljka.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\sh_initial_shotor.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\sh_initial_shunka.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\sh_medial_hisha.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\sh_medial_kasha.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\sh_medial_masha.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\sh_medial_mesha.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\sh_medial_natasha.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\sh_medial_nosha.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\sh_medial_nusha.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\sh_medial_pishe.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\sh_medial_pishkot.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\sh_medial_pushka.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\z_blended_zvezda.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\z_blended_zvezek.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\z_initial_zaboj.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\z_initial_zala.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\z_initial_zeha.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\z_initial_zelena.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\z_initial_zima.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\z_initial_zob.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\z_initial_zunaj.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\z_medial_gnezdo.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\z_medial_jeza.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\z_medial_koza.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\z_medial_leze.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\z_medial_miza.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\z_medial_pazi.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\z_medial_vaza.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\zh_blended_zhuzhelka.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\zh_blended_zhvizhga.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\zh_initial_zhaba.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\zh_initial_zhaga.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\zh_initial_zhep.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\zh_initial_zhito.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\zh_initial_zhiva.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\zh_initial_zhlica.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\zh_initial_zhoga.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\zh_medial_dezhela.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\zh_medial_fizhol.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\zh_medial_jozhe.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\zh_medial_kuzha.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\zh_medial_luzha.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\zh_medial_mazhe.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\zh_medial_mrezha.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\zh_medial_nezha.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\zh_medial_rozha.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\c_blended_cica.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\c_final_konec.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\c_final_lonec.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\c_final_lovec.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\c_final_muc.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\c_final_palec.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\c_initial_carinik.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\c_initial_cena.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Sounds\SI\c_initial_cene.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_speechsounds.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_speechsounds_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_speechsounds_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_speechsounds_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\si_speechsounds_5.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>PowerShell -ExecutionPolicy Unrestricted -File "$(SolutionDir)build\update-version-from-git.ps1" $(ProjectDir)
 
+PowerShell -ExecutionPolicy Unrestricted -File "$(SolutionDir)build\update-packagename.ps1" $(ProjectDir) si
 
+PowerShell -ExecutionPolicy Unrestricted -File "$(SolutionDir)build\update-language-setting.ps1" "$(ProjectDir)Assets\sp.db" si
 
-PowerShell -ExecutionPolicy Unrestricted -File "$(SolutionDir)build\update-packagename.ps1" $(ProjectDir) bg
+PowerShell -ExecutionPolicy Unrestricted -File "$(SolutionDir)build\update-resources.ps1" $(ProjectDir) si "bg|en|tr|nl|sr"
 
-
-
-PowerShell -ExecutionPolicy Unrestricted -File "$(SolutionDir)build\update-language-setting.ps1" "$(ProjectDir)Assets\sp.db" bg
-
-
-
-PowerShell -ExecutionPolicy Unrestricted -File "$(SolutionDir)build\update-resources.ps1" $(ProjectDir) bg "bg|en|tr|nl|sr"
 </PreBuildEvent>
   </PropertyGroup>
 </Project>
