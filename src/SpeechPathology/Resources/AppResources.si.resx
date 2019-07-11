@@ -118,45 +118,45 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AboutFooter" xml:space="preserve">
-    <value>Podpora Evropske komisije za produkcijo te mobilne aplikacije ne pomeni odobravanja vsebine, ki odraža samo stališča avtorjev, in Komisija ne more biti odgovorna za kakršno koli uporabo informacij, ki jih vsebuje.</value>
+    <value>Vsebina mobilne aplikacije je izključno odgovornost avtorja in v nobenem primeru ne predstavlja stališč Evropske komisije.</value>
   </data>
   <data name="AboutIntro" xml:space="preserve">
-    <value>Ta program je oblikoval konzorcij projekta Erasmus + KA2 za strateško partnerstvo »Interaktivna orodja za učitelje in otroke v začetnem izobraževanju«</value>
+    <value>Ta aplikacija je bila izdelana s strani projektnega konzorcija "Interaktivna orodja za učitelje in otroke v začetnem izobraževanju" v okviru programa Erasmus+ KA2: Strateška partnerstva.</value>
   </data>
   <data name="AboutSocial" xml:space="preserve">
-    <value>Za več informacij obiščite našo spletno stran in socialne kanale.</value>
+    <value>Za več informacij prosimo obiščite našo spletno stran in kanale druženih medijev.</value>
   </data>
   <data name="AboutTheProject" xml:space="preserve">
     <value>O projektu</value>
   </data>
   <data name="AgeAtTest" xml:space="preserve">
-    <value>Starost na datum preskusa</value>
+    <value>Starost na dan preizkusa</value>
   </data>
   <data name="AgeCalculator" xml:space="preserve">
-    <value>Starostni test</value>
+    <value>Razvojni mejniki </value>
   </data>
   <data name="AgeCalculatorTitle" xml:space="preserve">
-    <value>Starost študenta</value>
+    <value>Starost uporabnika</value>
   </data>
   <data name="AgeNotSetMsg" xml:space="preserve">
-    <value>Aplikacijo niste konfigurirali s starostjo za test ali starost, ki ste jo nastavili, je premlada. Vnesite veljaven datum rojstva.</value>
+    <value>V aplikacijo niste vnesli starosti v skladu s preizkusom ali pa je starost, ki ste jo nastavili, prenizka. Vnesite veljaven datum rojstva.</value>
   </data>
   <data name="AgeNotSetTitle" xml:space="preserve">
-    <value>Starost ni mogoče preveriti</value>
+    <value>Neveljavna starost </value>
   </data>
   <data name="All" xml:space="preserve">
     <value>Vse</value>
   </data>
   <data name="ApplicationNotice" xml:space="preserve">
     <value>POMEMBNO:
-Če sumite, da vaš otrok potrebuje govorno terapijo, se posvetujte s terapevtom.
-Ta aplikacija ne nadomešča logopeda, ampak ponuja dodatno podporno orodje.</value>
+Če menite, da bi vaš otrok morda potreboval logopedsko terapijo, se posvetujte z logopedom.
+Ta aplikacija ne nadomešča logopeda, pač pa predstavlja le podporno orodje.</value>
   </data>
   <data name="ArticulationTest" xml:space="preserve">
-    <value>Artikulacijski test</value>
+    <value>Artikulacijski preizkus</value>
   </data>
   <data name="Blend" xml:space="preserve">
-    <value>Mešanica</value>
+    <value>Mešano</value>
   </data>
   <data name="Blended" xml:space="preserve">
     <value>Mešano</value>
@@ -177,22 +177,22 @@ Ta aplikacija ne nadomešča logopeda, ampak ponuja dodatno podporno orodje.</va
     <value>Datum preizkusa</value>
   </data>
   <data name="DayPlural" xml:space="preserve">
-    <value>dnevi</value>
+    <value>dni</value>
   </data>
   <data name="DaySingular" xml:space="preserve">
     <value>dan</value>
   </data>
   <data name="Disclaimer" xml:space="preserve">
-    <value>Opozorilo</value>
+    <value>Izjava o omejitvi odgovornosti</value>
   </data>
   <data name="Final" xml:space="preserve">
     <value>Končno</value>
   </data>
   <data name="Flashcards" xml:space="preserve">
-    <value>Flashcards</value>
+    <value>Slikovne kartice</value>
   </data>
   <data name="GeneratingPDF" xml:space="preserve">
-    <value>Ustvarjanje PDF-ja…</value>
+    <value>Ustvarjanje PDF …</value>
   </data>
   <data name="Incorrect" xml:space="preserve">
     <value>Nepravilno</value>
@@ -201,19 +201,19 @@ Ta aplikacija ne nadomešča logopeda, ampak ponuja dodatno podporno orodje.</va
     <value>Začetno</value>
   </data>
   <data name="LanguageSkills" xml:space="preserve">
-    <value>Veščine za ustni jezik</value>
+    <value>Govorno jezikovne spretnosti</value>
   </data>
   <data name="LanguageSkillsButton" xml:space="preserve">
-    <value>Jezikovne spretnosti</value>
+    <value>Jezikovne veščine</value>
   </data>
   <data name="Letters" xml:space="preserve">
-    <value>Pisma</value>
+    <value>Črke</value>
   </data>
   <data name="Loading" xml:space="preserve">
-    <value>Nalaganje...</value>
+    <value>Nalaganje …</value>
   </data>
   <data name="Medial" xml:space="preserve">
-    <value>Srednji</value>
+    <value>Sredinsko</value>
   </data>
   <data name="Mixed" xml:space="preserve">
     <value>Mešano</value>
@@ -225,105 +225,105 @@ Ta aplikacija ne nadomešča logopeda, ampak ponuja dodatno podporno orodje.</va
     <value>mesec</value>
   </data>
   <data name="of" xml:space="preserve">
-    <value> od </value>
+    <value> od </value>
   </data>
   <data name="OK" xml:space="preserve">
-    <value>V redu</value>
+    <value>OK</value>
   </data>
   <data name="OpenInBrowser" xml:space="preserve">
     <value>Odpri v brskalniku</value>
   </data>
   <data name="PhonologicalTestResults" xml:space="preserve">
-    <value>Rezultati fonoloških testov</value>
+    <value>Rezultati fonološkega preizkusa</value>
   </data>
   <data name="Play" xml:space="preserve">
-    <value>Igraj</value>
+    <value>Predvajaj</value>
   </data>
   <data name="PositionTestResults" xml:space="preserve">
-    <value>Rezultati testiranja položaja</value>
+    <value>Rezultati preizkusa glede na položaj glasu</value>
   </data>
   <data name="ProjectTitle" xml:space="preserve">
-    <value>Orodja za patologijo govora</value>
+    <value>Mobilna orodja za otroke z govorno-jezikovnimi težavami </value>
   </data>
   <data name="RecomendedUsage" xml:space="preserve">
     <value>Priporočena uporaba</value>
   </data>
   <data name="Repeat" xml:space="preserve">
-    <value>ponovite</value>
+    <value>Ponovi</value>
   </data>
   <data name="Results" xml:space="preserve">
     <value>Rezultati</value>
   </data>
   <data name="ResumeTestMessage" xml:space="preserve">
-    <value>Nadaljevanje testa?</value>
+    <value>Nadaljuj s preizkusom?</value>
   </data>
   <data name="ResumeTestTitle" xml:space="preserve">
-    <value>Najden je test v teku</value>
+    <value>Preizkusa niste zaključili.</value>
   </data>
   <data name="Save" xml:space="preserve">
     <value>Shrani</value>
   </data>
   <data name="Score" xml:space="preserve">
-    <value>Ocena</value>
+    <value>Rezultat</value>
   </data>
   <data name="Selectexcludedsound" xml:space="preserve">
-    <value>Izberite izključen zvok</value>
+    <value>Izberi izključen glas</value>
   </data>
   <data name="Selectsound" xml:space="preserve">
-    <value>Izberite zvok</value>
+    <value>Izberi glas</value>
   </data>
   <data name="SelectSoundPosition" xml:space="preserve">
-    <value>Izberite položaj zvoka</value>
+    <value>Izberi položaj glasu</value>
   </data>
   <data name="SelectView" xml:space="preserve">
-    <value>Izberite Prikaži</value>
+    <value>Izberi pogled</value>
   </data>
   <data name="ShareLanguageSkills" xml:space="preserve">
-    <value>Delite jezikovno znanje</value>
+    <value>Deli govorne veščine</value>
   </data>
   <data name="ShareResults" xml:space="preserve">
-    <value>Delite rezultate</value>
+    <value>Deli rezultate</value>
   </data>
   <data name="ShareWorksheet" xml:space="preserve">
-    <value>Delite delovni list</value>
+    <value>Deli delovni list</value>
   </data>
   <data name="Skip" xml:space="preserve">
     <value>Preskoči</value>
   </data>
   <data name="SoundTestResults" xml:space="preserve">
-    <value>Rezultati testa zvoka</value>
+    <value>Rezultati preizkusa glede na glas</value>
+  </data>
+  <data name="SoundTestResultsButton" xml:space="preserve">
+    <value>Rezultati preizkusa glede na glas</value>
   </data>
   <data name="SpeechSounds" xml:space="preserve">
-    <value>Razvoj zvoka govora</value>
+    <value>Razvoj govorne izreke</value>
   </data>
   <data name="SpeechSoundsButton" xml:space="preserve">
-    <value>Zvoki govora</value>
+    <value>Glasovi govora</value>
   </data>
   <data name="SpeechSoundsDetail" xml:space="preserve">
-    <value>Nadaljujte s testom</value>
+    <value>Nadaljuj do preizkusa</value>
   </data>
   <data name="SpeechSoundsSubtitle" xml:space="preserve">
-    <value>Govorni zvok napreduje po starosti</value>
+    <value>Napredek pri govoru  glede na starost</value>
   </data>
   <data name="Test" xml:space="preserve">
-    <value>Test</value>
+    <value>Preizkus</value>
   </data>
   <data name="Worksheets" xml:space="preserve">
     <value>Delovni listi</value>
   </data>
   <data name="WorksheetSaved" xml:space="preserve">
-    <value>Delovni list je shranjen.</value>
+    <value>Delovni list shranjen.</value>
   </data>
   <data name="WorksheetsView" xml:space="preserve">
-    <value>Pogled na delovne liste</value>
+    <value>Ogled delovnega lista</value>
   </data>
   <data name="YearPlural" xml:space="preserve">
     <value>let</value>
   </data>
   <data name="YearSingular" xml:space="preserve">
     <value>leto</value>
-  </data>
-  <data name="SoundTestResultsButton" xml:space="preserve">
-    <value>Rezultati testa zvoka</value>
   </data>
 </root>

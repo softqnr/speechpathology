@@ -7,11 +7,12 @@
              x:Class="SpeechPathology.Views.MainView"
              Title="">
     <StackLayout Padding="0" Spacing="0" VerticalOptions="FillAndExpand">
-        <StackLayout VerticalOptions="Start" BackgroundColor="White" Padding="0,0,0,10">
+        <StackLayout VerticalOptions="Start" BackgroundColor="White" Padding="0,0,0,10" Margin="20,0">
             <ffimageloadingsvg:SvgCachedImage WidthRequest="100" HeightRequest="100" BackgroundColor="Transparent"
                                           Source="logo.svg" HorizontalOptions="CenterAndExpand"/>
-            <Label Text="{i18n:Translate ProjectTitle}" TextColor="{StaticResource accent}" 
-                   FontSize="Medium" HorizontalOptions="CenterAndExpand" />
+            <Label Text="{i18n:Translate ProjectTitle}" TextColor="{StaticResource accent}"
+                   FontSize="Medium" HorizontalOptions="CenterAndExpand"
+                   HorizontalTextAlignment="Center"/>
         </StackLayout>
         
         <Grid RowSpacing="0" ColumnSpacing="0" Margin="0" Padding="0"
