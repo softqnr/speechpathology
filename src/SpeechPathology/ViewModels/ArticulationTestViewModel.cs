@@ -146,9 +146,9 @@ namespace SpeechPathology.ViewModels
                     await LoadData(soundPosition);
                 }
             }
-            else if (navigationData != null && navigationData is int)
+            else if (navigationData != null && navigationData is Tuple<int,int>)
             {
-                await LoadData((int)navigationData);
+                await LoadData((Tuple<int,int>)navigationData);
             }
 
         }
@@ -183,7 +183,7 @@ namespace SpeechPathology.ViewModels
             ShowNextTest();
         }
 
-        private async Task LoadData(int age)
+        private async Task LoadData(Tuple<int,int> age)
         {
             _articulationTestExam = await _articulationTestService.GenerateExam(age, App.Language);
             _articulationTestAnswersEnumerator = _articulationTestExam.Answers.GetEnumerator();

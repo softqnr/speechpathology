@@ -60,14 +60,17 @@ namespace SpeechPathology.Services.Articulation
             return exam;
         }
 
-        public async Task<ArticulationTestExam> GenerateExam(int age, string languageCode)
+        public async Task<ArticulationTestExam> GenerateExam(Tuple<int,int> age, string languageCode)
         {
             // Delete previous exams
             await DeleteAllExams();
             // Get tests by sound position
             string blended = Enum.GetName(typeof(SoundPosition), SoundPosition.Blended);
-            var tests = await _repositoryTest.GetAsync(predicate: x => x.Age <= age && x.SoundPosition != blended && x.LanguageCode == languageCode,
-                orderBy: x => x.Age);
+            var tests = await _repositoryTest.GetAsync(predicate: x => x.AgeY <= age.Item1 && x.AgeM <= age.Item2 && x.SoundPosition != blended && x.LanguageCode == languageCode,
+                orderBy: x => x.AgeY);
+
+            tests.OrderBy(x => x.AgeY).ThenBy(x => x.AgeM);
+
             // Create new exam
             var exam = new ArticulationTestExam(age);
             // Create exam answers for each test

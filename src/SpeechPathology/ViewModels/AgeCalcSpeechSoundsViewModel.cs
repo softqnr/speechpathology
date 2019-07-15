@@ -21,7 +21,7 @@ namespace SpeechPathology.ViewModels
             }
         }
 
-        private int age;
+        private Tuple <int, int> age;
 
         public string SpeechSoundsDetail
         {
@@ -53,7 +53,8 @@ namespace SpeechPathology.ViewModels
 
                 SpeechSoundsFile = navigationDataArray[0];
                 var ageString = navigationDataArray[1];
-                age = Int32.Parse(ageString);
+                var monthString = navigationDataArray[2];
+                age = Tuple.Create(int.Parse(ageString), int.Parse(monthString));
                 SpeechSoundsDetail = AppResources.SpeechSoundsDetail;
             }
             await Task.FromResult(true);

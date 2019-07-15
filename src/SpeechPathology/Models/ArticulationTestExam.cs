@@ -11,7 +11,8 @@ namespace SpeechPathology.Models
         public DateTime DateStarted { get; set; }
         public DateTime? DateEnded { get; set; }
         public string SoundPosition { get; set; }
-        public int Age { get; set; }
+        public int AgeY { get; set; }
+        public int AgeM { get; set; }
         public double? Score { get; set; }
 
         [OneToMany(CascadeOperations = CascadeOperation.All)]
@@ -24,11 +25,12 @@ namespace SpeechPathology.Models
             SoundPosition = soundPosition;
         }
 
-        public ArticulationTestExam(int age)
+        public ArticulationTestExam(Tuple<int,int> age)
         {
             DateStarted = DateTime.Now;
             SoundPosition = "";
-            Age = age;
+            AgeY = age.Item1;
+            AgeM = age.Item2;
         }
     }
 }
