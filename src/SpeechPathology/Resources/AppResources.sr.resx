@@ -330,4 +330,7 @@
   <data name="NotCorrectAbbreviation" xml:space="preserve">
     <value>NC</value>
   </data>
+  <data name="LetterFocus" xml:space="preserve">
+    <value>Да ли ваше дијете исправно изговара {0}?</value>
+  </data>
 </root>

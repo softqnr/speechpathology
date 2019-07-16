@@ -326,4 +326,7 @@ Ta aplikacija ne nadomešča logopeda, pač pa predstavlja le podporno orodje.</
   <data name="YearSingular" xml:space="preserve">
     <value>leto</value>
   </data>
+  <data name="LetterFocus" xml:space="preserve">
+    <value>Ali vaš otrok pravilno izgovori {0}?</value>
+  </data>
 </root>

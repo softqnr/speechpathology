@@ -22,6 +22,7 @@ namespace SpeechPathology.ViewModels
         private string _text;
         private string _image;
         private bool _testViewIsVisible = true;
+        private string _letter;
 
         public ICommand AnswerTestCommand { get; private set; } //=> new AsyncCommand(AnswerAsync);
 
@@ -53,6 +54,13 @@ namespace SpeechPathology.ViewModels
         {
             get => _testViewIsVisible;
             set => SetProperty(ref _testViewIsVisible, value);
+        }
+
+ 
+        public string Letter
+        {
+            get => _letter;
+            set => SetProperty(ref _letter, value);
         }
 
         public ICommand OpenSoundTestResultsCommand
@@ -210,6 +218,7 @@ namespace SpeechPathology.ViewModels
             TestIndex = _articulationTestAnswer.Number.ToString();
             Text = _articulationTestAnswer.ArticulationTest.Text;
             Image = _articulationTestAnswer.ArticulationTest.Image;
+            Letter = _articulationTestAnswer.ArticulationTest.Sound;
         }
     }
 }

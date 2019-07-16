@@ -67,7 +67,7 @@ namespace SpeechPathology.ViewModels
         {
             get
             {
-                var rslt = AgeCalculations.FindIndex(x => x.AgeInYears >= AgeInYears);
+                var rslt = AgeCalculations.FindIndex(x => x.AgeInYears >= AgeInYears && x.Months >= MonthsThisYear);
                 return (rslt != 0);
             }
         }
