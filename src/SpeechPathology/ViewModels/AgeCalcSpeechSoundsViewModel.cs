@@ -18,7 +18,6 @@ namespace SpeechPathology.ViewModels
             set => SetProperty(ref _speechSoundsFile, value);
         }
 
-        private Tuple<int, int> ageLimit;
         private Tuple <int, int> age;
 
         public string SpeechSoundsDetail
@@ -38,7 +37,7 @@ namespace SpeechPathology.ViewModels
             }
         }
 
-        public AgeCalcSpeechSoundsViewModel() {}
+        public AgeCalcSpeechSoundsViewModel() { }
 
         public override async Task InitializeAsync(object navigationData)
         {
@@ -65,6 +64,8 @@ namespace SpeechPathology.ViewModels
             }
             catch
             {
+                DialogService.HideLoading();
+                await NavigationService.NavigateBackAsync();
                 await DialogService.ShowAlertAsync(
                     Resources.AppResources.AgeNotSetMsg,
                     Resources.AppResources.AgeNotSetTitle,
