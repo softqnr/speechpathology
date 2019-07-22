@@ -15,35 +15,30 @@ namespace SpeechPathology.ViewModels
         public string SpeechSoundsFile
         {
             get => _speechSoundsFile;
-            set
-            {
-                SetProperty(ref _speechSoundsFile, value);
-            }
+            set => SetProperty(ref _speechSoundsFile, value);
         }
 
-        private int age;
+        private Tuple<int, int> ageLimit;
+        private Tuple <int, int> age;
 
         public string SpeechSoundsDetail
         {
             get => _speechSoundsDetail;
-            set
-            {
-                SetProperty(ref _speechSoundsDetail, value);
-            }
+            set => SetProperty(ref _speechSoundsDetail, value);
         }
 
         public ICommand AgeSpecificTestCommand
         {
             get
             {
-                return new Command<AgeCalculation>(async (ac) =>
+                return new Command(async () =>
                 {
-                    await OnPerformTest(ac);
+                    await OnPerformTest();
                 });
             }
         }
 
-        public AgeCalcSpeechSoundsViewModel() { }
+        public AgeCalcSpeechSoundsViewModel() {}
 
         public override async Task InitializeAsync(object navigationData)
         {
@@ -53,17 +48,28 @@ namespace SpeechPathology.ViewModels
 
                 SpeechSoundsFile = navigationDataArray[0];
                 var ageString = navigationDataArray[1];
-                age = Int32.Parse(ageString);
+                var monthString = navigationDataArray[2];
+                age = Tuple.Create(int.Parse(ageString), int.Parse(monthString));
                 SpeechSoundsDetail = AppResources.SpeechSoundsDetail;
             }
             await Task.FromResult(true);
         }
 
-        private async Task OnPerformTest(AgeCalculation ac)
+        private async Task OnPerformTest()
         {
-            DialogService.ShowLoading(Resources.AppResources.Loading);
-            await NavigationService.NavigateToAsync<ArticulationTestViewModel>(age);
-            DialogService.HideLoading();
+            try
+            {
+                DialogService.ShowLoading(Resources.AppResources.Loading);
+                await NavigationService.NavigateToAsync<ArticulationTestViewModel>(age);
+                DialogService.HideLoading();
+            }
+            catch
+            {
+                await DialogService.ShowAlertAsync(
+                    Resources.AppResources.AgeNotSetMsg,
+                    Resources.AppResources.AgeNotSetTitle,
+                    Resources.AppResources.Continue);
+            }
         }
     }
 }

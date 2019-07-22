@@ -326,4 +326,7 @@
   <data name="SoundTestResultsButton" xml:space="preserve">
     <value>Резултати от звуковите тестове</value>
   </data>
+  <data name="LetterFocus" xml:space="preserve">
+    <value>Произнася ли детето {0} правилно?</value>
+  </data>
 </root>

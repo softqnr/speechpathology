@@ -332,4 +332,7 @@ This application does not replace a speech therapist, but offers an additional s
   <data name="NotCorrectAbbreviation" xml:space="preserve">
     <value>NC</value>
   </data>
+  <data name="LetterFocus" xml:space="preserve">
+    <value>Does your child pronounce {0} correctly?</value>
+  </data>
 </root>
