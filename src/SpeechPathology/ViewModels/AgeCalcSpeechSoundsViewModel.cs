@@ -20,7 +20,6 @@ namespace SpeechPathology.ViewModels
 
         private Tuple<int, int> ageLimit;
         private Tuple <int, int> age;
-        private AgeCalculation ageCalculation;
 
         public string SpeechSoundsDetail
         {
@@ -39,8 +38,6 @@ namespace SpeechPathology.ViewModels
             }
         }
 
-        private AgeCalculation _ageCalculation;
-
         public AgeCalcSpeechSoundsViewModel() {}
 
         public override async Task InitializeAsync(object navigationData)
@@ -50,11 +47,8 @@ namespace SpeechPathology.ViewModels
                 string[] navigationDataArray = (string[])navigationData;
 
                 SpeechSoundsFile = navigationDataArray[0];
-                var yearLimitString = navigationDataArray[1];
-                var monthLimitString = navigationDataArray[2];
-                ageLimit = Tuple.Create(int.Parse(yearLimitString), int.Parse(monthLimitString));
-                var ageString = navigationDataArray[3];
-                var monthString = navigationDataArray[4];
+                var ageString = navigationDataArray[1];
+                var monthString = navigationDataArray[2];
                 age = Tuple.Create(int.Parse(ageString), int.Parse(monthString));
                 SpeechSoundsDetail = AppResources.SpeechSoundsDetail;
             }
@@ -63,17 +57,19 @@ namespace SpeechPathology.ViewModels
 
         private async Task OnPerformTest()
         {
-            if (age.Item1 >= ageLimit.Item1 && age.Item2 >= ageLimit.Item2)
+            try
             {
                 DialogService.ShowLoading(Resources.AppResources.Loading);
                 await NavigationService.NavigateToAsync<ArticulationTestViewModel>(age);
                 DialogService.HideLoading();
             }
-            else
+            catch
+            {
                 await DialogService.ShowAlertAsync(
                     Resources.AppResources.AgeNotSetMsg,
                     Resources.AppResources.AgeNotSetTitle,
                     Resources.AppResources.Continue);
+            }
         }
     }
 }

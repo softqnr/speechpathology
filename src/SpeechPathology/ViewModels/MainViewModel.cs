@@ -11,10 +11,7 @@ namespace SpeechPathology.ViewModels
     {
         public MainViewModel() 
         {
-            if (App.Language == "EN" || App.Language == "SI")
-            {
-                //ArticulationButton
-            }
+
         }
         public ICommand ImageTappedCommand
         {

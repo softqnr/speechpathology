@@ -131,7 +131,7 @@ namespace SpeechPathology.ViewModels
             if (IsValidAge)
             {
                 DialogService.ShowLoading(Resources.AppResources.Loading);
-                string[] array = { ageCalculation.SpeechSoundsFile, ageCalculation.AgeInYears.ToString(), ageCalculation.Months.ToString(), AgeInYears.ToString(), MonthsThisYear.ToString() };
+                string[] array = { ageCalculation.SpeechSoundsFile, AgeInYears.ToString(), MonthsThisYear.ToString() };
                 await NavigationService.NavigateToAsync<AgeCalcSpeechSoundsViewModel>(array);
                 DialogService.HideLoading();
             }
