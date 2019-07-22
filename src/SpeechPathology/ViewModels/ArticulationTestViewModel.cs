@@ -22,6 +22,7 @@ namespace SpeechPathology.ViewModels
         private string _text;
         private string _image;
         private bool _testViewIsVisible = true;
+        private string _letter;
 
         public ICommand AnswerTestCommand { get; private set; } //=> new AsyncCommand(AnswerAsync);
 
@@ -53,6 +54,13 @@ namespace SpeechPathology.ViewModels
         {
             get => _testViewIsVisible;
             set => SetProperty(ref _testViewIsVisible, value);
+        }
+
+ 
+        public string Letter
+        {
+            get => _letter;
+            set => SetProperty(ref _letter, value);
         }
 
         public ICommand OpenSoundTestResultsCommand
@@ -146,9 +154,9 @@ namespace SpeechPathology.ViewModels
                     await LoadData(soundPosition);
                 }
             }
-            else if (navigationData != null && navigationData is int)
+            else if (navigationData != null && navigationData is Tuple<int,int>)
             {
-                await LoadData((int)navigationData);
+                await LoadData((Tuple<int,int>)navigationData);
             }
 
         }
@@ -183,7 +191,7 @@ namespace SpeechPathology.ViewModels
             ShowNextTest();
         }
 
-        private async Task LoadData(int age)
+        private async Task LoadData(Tuple<int,int> age)
         {
             _articulationTestExam = await _articulationTestService.GenerateExam(age, App.Language);
             _articulationTestAnswersEnumerator = _articulationTestExam.Answers.GetEnumerator();
@@ -210,6 +218,7 @@ namespace SpeechPathology.ViewModels
             TestIndex = _articulationTestAnswer.Number.ToString();
             Text = _articulationTestAnswer.ArticulationTest.Text;
             Image = _articulationTestAnswer.ArticulationTest.Image;
+            Letter = _articulationTestAnswer.ArticulationTest.Sound;
         }
     }
 }

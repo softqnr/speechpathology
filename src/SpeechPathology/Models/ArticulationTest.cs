@@ -13,6 +13,8 @@ namespace SpeechPathology.Models
         [Indexed]
         public string LanguageCode { get; set; }
         [Indexed]
-        public int Age { get; set; }
+        public int AgeY { get; set; }
+        [Indexed]
+        public int AgeM { get; set; }
     }
 }

@@ -7932,26 +7932,26 @@ namespace SpeechPathology.Droid
 			// aapt resource value: 0x7f020054
 			public const int avd_hide_password = 2130837588;
 			
-			// aapt resource value: 0x7f0201f8
-			public const int avd_hide_password_1 = 2130838008;
+			// aapt resource value: 0x7f020233
+			public const int avd_hide_password_1 = 2130838067;
 			
-			// aapt resource value: 0x7f0201f9
-			public const int avd_hide_password_2 = 2130838009;
+			// aapt resource value: 0x7f020234
+			public const int avd_hide_password_2 = 2130838068;
 			
-			// aapt resource value: 0x7f0201fa
-			public const int avd_hide_password_3 = 2130838010;
+			// aapt resource value: 0x7f020235
+			public const int avd_hide_password_3 = 2130838069;
 			
 			// aapt resource value: 0x7f020055
 			public const int avd_show_password = 2130837589;
 			
-			// aapt resource value: 0x7f0201fb
-			public const int avd_show_password_1 = 2130838011;
+			// aapt resource value: 0x7f020236
+			public const int avd_show_password_1 = 2130838070;
 			
-			// aapt resource value: 0x7f0201fc
-			public const int avd_show_password_2 = 2130838012;
+			// aapt resource value: 0x7f020237
+			public const int avd_show_password_2 = 2130838071;
 			
-			// aapt resource value: 0x7f0201fd
-			public const int avd_show_password_3 = 2130838013;
+			// aapt resource value: 0x7f020238
+			public const int avd_show_password_3 = 2130838072;
 			
 			// aapt resource value: 0x7f020056
 			public const int baseline_calendar_today_white_24 = 2130837590;
@@ -8652,11 +8652,11 @@ namespace SpeechPathology.Droid
 			// aapt resource value: 0x7f02013e
 			public const int notification_icon_background = 2130837822;
 			
-			// aapt resource value: 0x7f0201f6
-			public const int notification_template_icon_bg = 2130838006;
+			// aapt resource value: 0x7f020231
+			public const int notification_template_icon_bg = 2130838065;
 			
-			// aapt resource value: 0x7f0201f7
-			public const int notification_template_icon_low_bg = 2130838007;
+			// aapt resource value: 0x7f020232
+			public const int notification_template_icon_low_bg = 2130838066;
 			
 			// aapt resource value: 0x7f02013f
 			public const int notification_tile_bg = 2130837823;
@@ -8674,538 +8674,715 @@ namespace SpeechPathology.Droid
 			public const int si_ananas = 2130837827;
 			
 			// aapt resource value: 0x7f020144
-			public const int si_bober = 2130837828;
+			public const int si_bik = 2130837828;
 			
 			// aapt resource value: 0x7f020145
-			public const int si_breskev = 2130837829;
+			public const int si_boben = 2130837829;
 			
 			// aapt resource value: 0x7f020146
-			public const int si_carinik = 2130837830;
+			public const int si_bober = 2130837830;
 			
 			// aapt resource value: 0x7f020147
-			public const int si_cena = 2130837831;
+			public const int si_bonbon = 2130837831;
 			
 			// aapt resource value: 0x7f020148
-			public const int si_cene = 2130837832;
+			public const int si_breskev = 2130837832;
 			
 			// aapt resource value: 0x7f020149
-			public const int si_cev = 2130837833;
+			public const int si_carinik = 2130837833;
 			
 			// aapt resource value: 0x7f02014a
-			public const int si_chachke = 2130837834;
+			public const int si_cena = 2130837834;
 			
 			// aapt resource value: 0x7f02014b
-			public const int si_chaj = 2130837835;
+			public const int si_cene = 2130837835;
 			
 			// aapt resource value: 0x7f02014c
-			public const int si_chaka = 2130837836;
+			public const int si_cev = 2130837836;
 			
 			// aapt resource value: 0x7f02014d
-			public const int si_chelo = 2130837837;
+			public const int si_chachke = 2130837837;
 			
 			// aapt resource value: 0x7f02014e
-			public const int si_chevelj = 2130837838;
+			public const int si_chaj = 2130837838;
 			
 			// aapt resource value: 0x7f02014f
-			public const int si_chof = 2130837839;
+			public const int si_chaka = 2130837839;
 			
 			// aapt resource value: 0x7f020150
-			public const int si_chopich = 2130837840;
+			public const int si_chebela = 2130837840;
 			
 			// aapt resource value: 0x7f020151
-			public const int si_chuk = 2130837841;
+			public const int si_chelo = 2130837841;
 			
 			// aapt resource value: 0x7f020152
-			public const int si_cica = 2130837842;
+			public const int si_chevelj = 2130837842;
 			
 			// aapt resource value: 0x7f020153
-			public const int si_cik_cak = 2130837843;
+			public const int si_chof = 2130837843;
 			
 			// aapt resource value: 0x7f020154
-			public const int si_cin_cin = 2130837844;
+			public const int si_chopich = 2130837844;
 			
 			// aapt resource value: 0x7f020155
-			public const int si_cirkus = 2130837845;
+			public const int si_chuk = 2130837845;
 			
 			// aapt resource value: 0x7f020156
-			public const int si_cof = 2130837846;
+			public const int si_cica = 2130837846;
 			
 			// aapt resource value: 0x7f020157
-			public const int si_copati = 2130837847;
+			public const int si_cik_cak = 2130837847;
 			
 			// aapt resource value: 0x7f020158
-			public const int si_cula = 2130837848;
+			public const int si_cin_cin = 2130837848;
 			
 			// aapt resource value: 0x7f020159
-			public const int si_dechek = 2130837849;
+			public const int si_cirkus = 2130837849;
 			
 			// aapt resource value: 0x7f02015a
-			public const int si_denar = 2130837850;
+			public const int si_cof = 2130837850;
 			
 			// aapt resource value: 0x7f02015b
-			public const int si_dezhela = 2130837851;
+			public const int si_cof_1 = 2130837851;
 			
 			// aapt resource value: 0x7f02015c
-			public const int si_drevo = 2130837852;
+			public const int si_copat = 2130837852;
 			
 			// aapt resource value: 0x7f02015d
-			public const int si_fizhol = 2130837853;
+			public const int si_copati = 2130837853;
 			
 			// aapt resource value: 0x7f02015e
-			public const int si_gnezdo = 2130837854;
+			public const int si_cula = 2130837854;
 			
 			// aapt resource value: 0x7f02015f
-			public const int si_gora = 2130837855;
+			public const int si_debel = 2130837855;
 			
 			// aapt resource value: 0x7f020160
-			public const int si_grah = 2130837856;
+			public const int si_dechek = 2130837856;
 			
 			// aapt resource value: 0x7f020161
-			public const int si_heca_se = 2130837857;
+			public const int si_delfin = 2130837857;
 			
 			// aapt resource value: 0x7f020162
-			public const int si_hisha = 2130837858;
+			public const int si_denar = 2130837858;
 			
 			// aapt resource value: 0x7f020163
-			public const int si_hlache = 2130837859;
+			public const int si_dezhela = 2130837859;
 			
 			// aapt resource value: 0x7f020164
-			public const int si_jeza = 2130837860;
+			public const int si_drevo = 2130837860;
 			
 			// aapt resource value: 0x7f020165
-			public const int si_jozhe = 2130837861;
+			public const int si_duda = 2130837861;
 			
 			// aapt resource value: 0x7f020166
-			public const int si_kaktus = 2130837862;
+			public const int si_duh = 2130837862;
 			
 			// aapt resource value: 0x7f020167
-			public const int si_kasha = 2130837863;
+			public const int si_fant = 2130837863;
 			
 			// aapt resource value: 0x7f020168
-			public const int si_kitara = 2130837864;
+			public const int si_fizhol = 2130837864;
 			
 			// aapt resource value: 0x7f020169
-			public const int si_kljuch = 2130837865;
+			public const int si_gnezdo = 2130837865;
 			
 			// aapt resource value: 0x7f02016a
-			public const int si_kocha = 2130837866;
+			public const int si_goba = 2130837866;
 			
 			// aapt resource value: 0x7f02016b
-			public const int si_kokosh = 2130837867;
+			public const int si_gol = 2130837867;
 			
 			// aapt resource value: 0x7f02016c
-			public const int si_konec = 2130837868;
+			public const int si_gora = 2130837868;
 			
 			// aapt resource value: 0x7f02016d
-			public const int si_korna = 2130837869;
+			public const int si_grah = 2130837869;
 			
 			// aapt resource value: 0x7f02016e
-			public const int si_kosh = 2130837870;
+			public const int si_guga = 2130837870;
 			
 			// aapt resource value: 0x7f02016f
-			public const int si_kosilo = 2130837871;
+			public const int si_heca_se = 2130837871;
 			
 			// aapt resource value: 0x7f020170
-			public const int si_kost = 2130837872;
+			public const int si_hisha = 2130837872;
 			
 			// aapt resource value: 0x7f020171
-			public const int si_kovach = 2130837873;
+			public const int si_hlache = 2130837873;
 			
 			// aapt resource value: 0x7f020172
-			public const int si_koza = 2130837874;
+			public const int si_hodi = 2130837874;
 			
 			// aapt resource value: 0x7f020173
-			public const int si_kravata = 2130837875;
+			public const int si_jagoda = 2130837875;
 			
 			// aapt resource value: 0x7f020174
-			public const int si_krokar = 2130837876;
+			public const int si_jajce = 2130837876;
 			
 			// aapt resource value: 0x7f020175
-			public const int si_kuzha = 2130837877;
+			public const int si_jeza = 2130837877;
 			
 			// aapt resource value: 0x7f020176
-			public const int si_las = 2130837878;
+			public const int si_jezik = 2130837878;
 			
 			// aapt resource value: 0x7f020177
-			public const int si_les = 2130837879;
+			public const int si_jozhe = 2130837879;
 			
 			// aapt resource value: 0x7f020178
-			public const int si_lestev = 2130837880;
+			public const int si_kacha = 2130837880;
 			
 			// aapt resource value: 0x7f020179
-			public const int si_leze = 2130837881;
+			public const int si_kaktus = 2130837881;
 			
 			// aapt resource value: 0x7f02017a
-			public const int si_lonec = 2130837882;
+			public const int si_kamela = 2130837882;
 			
 			// aapt resource value: 0x7f02017b
-			public const int si_lovec = 2130837883;
+			public const int si_kapa = 2130837883;
 			
 			// aapt resource value: 0x7f02017c
-			public const int si_luch = 2130837884;
+			public const int si_kasha = 2130837884;
 			
 			// aapt resource value: 0x7f02017d
-			public const int si_luzha = 2130837885;
+			public const int si_kava = 2130837885;
 			
 			// aapt resource value: 0x7f02017e
-			public const int si_majica = 2130837886;
+			public const int si_kitara = 2130837886;
 			
 			// aapt resource value: 0x7f02017f
-			public const int si_masha = 2130837887;
+			public const int si_kljuch = 2130837887;
 			
 			// aapt resource value: 0x7f020180
-			public const int si_maslo = 2130837888;
+			public const int si_kljuch_1 = 2130837888;
 			
 			// aapt resource value: 0x7f020181
-			public const int si_mazhe = 2130837889;
+			public const int si_klop = 2130837889;
 			
 			// aapt resource value: 0x7f020182
-			public const int si_meri = 2130837890;
+			public const int si_kocha = 2130837890;
 			
 			// aapt resource value: 0x7f020183
-			public const int si_meri1 = 2130837891;
+			public const int si_kocke = 2130837891;
 			
 			// aapt resource value: 0x7f020184
-			public const int si_mesar = 2130837892;
+			public const int si_kokosh = 2130837892;
 			
 			// aapt resource value: 0x7f020185
-			public const int si_mesha = 2130837893;
+			public const int si_kolo = 2130837893;
 			
 			// aapt resource value: 0x7f020186
-			public const int si_mish = 2130837894;
+			public const int si_konec = 2130837894;
 			
 			// aapt resource value: 0x7f020187
-			public const int si_miza = 2130837895;
+			public const int si_korna = 2130837895;
 			
 			// aapt resource value: 0x7f020188
-			public const int si_mrezha = 2130837896;
+			public const int si_kosh = 2130837896;
 			
 			// aapt resource value: 0x7f020189
-			public const int si_muc = 2130837897;
+			public const int si_kosilo = 2130837897;
 			
 			// aapt resource value: 0x7f02018a
-			public const int si_muca = 2130837898;
+			public const int si_kost = 2130837898;
 			
 			// aapt resource value: 0x7f02018b
-			public const int si_natasha = 2130837899;
+			public const int si_kovach = 2130837899;
 			
 			// aapt resource value: 0x7f02018c
-			public const int si_nezha = 2130837900;
+			public const int si_koza = 2130837900;
 			
 			// aapt resource value: 0x7f02018d
-			public const int si_nos = 2130837901;
+			public const int si_kravata = 2130837901;
 			
 			// aapt resource value: 0x7f02018e
-			public const int si_nosha = 2130837902;
+			public const int si_krokar = 2130837902;
 			
 			// aapt resource value: 0x7f02018f
-			public const int si_nusha = 2130837903;
+			public const int si_kup = 2130837903;
 			
 			// aapt resource value: 0x7f020190
-			public const int si_ochi = 2130837904;
+			public const int si_kuzha = 2130837904;
 			
 			// aapt resource value: 0x7f020191
-			public const int si_omara = 2130837905;
+			public const int si_kuzha_1 = 2130837905;
 			
 			// aapt resource value: 0x7f020192
-			public const int si_osa = 2130837906;
+			public const int si_las = 2130837906;
 			
 			// aapt resource value: 0x7f020193
-			public const int si_ovca = 2130837907;
+			public const int si_les = 2130837907;
 			
 			// aapt resource value: 0x7f020194
-			public const int si_palec = 2130837908;
+			public const int si_lestev = 2130837908;
 			
 			// aapt resource value: 0x7f020195
-			public const int si_par = 2130837909;
+			public const int si_letalo = 2130837909;
 			
 			// aapt resource value: 0x7f020196
-			public const int si_pas = 2130837910;
+			public const int si_leze = 2130837910;
 			
 			// aapt resource value: 0x7f020197
-			public const int si_pazi = 2130837911;
+			public const int si_limona = 2130837911;
 			
 			// aapt resource value: 0x7f020198
-			public const int si_pech = 2130837912;
+			public const int si_lonec = 2130837912;
 			
 			// aapt resource value: 0x7f020199
-			public const int si_peche = 2130837913;
+			public const int si_lovec = 2130837913;
 			
 			// aapt resource value: 0x7f02019a
-			public const int si_pesa = 2130837914;
+			public const int si_luch = 2130837914;
 			
 			// aapt resource value: 0x7f02019b
-			public const int si_pica = 2130837915;
+			public const int si_luzha = 2130837915;
 			
 			// aapt resource value: 0x7f02019c
-			public const int si_pire = 2130837916;
+			public const int si_majica = 2130837916;
 			
 			// aapt resource value: 0x7f02019d
-			public const int si_pishe = 2130837917;
+			public const int si_mama = 2130837917;
 			
 			// aapt resource value: 0x7f02019e
-			public const int si_pishkot = 2130837918;
+			public const int si_masha = 2130837918;
 			
 			// aapt resource value: 0x7f02019f
-			public const int si_pochi = 2130837919;
+			public const int si_maslo = 2130837919;
 			
 			// aapt resource value: 0x7f0201a0
-			public const int si_polica = 2130837920;
+			public const int si_mazhe = 2130837920;
 			
 			// aapt resource value: 0x7f0201a1
-			public const int si_posoda = 2130837921;
+			public const int si_meri = 2130837921;
 			
 			// aapt resource value: 0x7f0201a2
-			public const int si_pozhar = 2130837922;
+			public const int si_meri1 = 2130837922;
 			
 			// aapt resource value: 0x7f0201a3
-			public const int si_praprot = 2130837923;
+			public const int si_mesar = 2130837923;
 			
 			// aapt resource value: 0x7f0201a4
-			public const int si_ptica = 2130837924;
+			public const int si_mesha = 2130837924;
 			
 			// aapt resource value: 0x7f0201a5
-			public const int si_ptich = 2130837925;
+			public const int si_mish = 2130837925;
 			
 			// aapt resource value: 0x7f0201a6
-			public const int si_pushka = 2130837926;
+			public const int si_miza = 2130837926;
 			
 			// aapt resource value: 0x7f0201a7
-			public const int si_raca = 2130837927;
+			public const int si_mleko = 2130837927;
 			
 			// aapt resource value: 0x7f0201a8
-			public const int si_rachka = 2130837928;
+			public const int si_mrezha = 2130837928;
 			
 			// aapt resource value: 0x7f0201a9
-			public const int si_raketa = 2130837929;
+			public const int si_muc = 2130837929;
 			
 			// aapt resource value: 0x7f0201aa
-			public const int si_rama = 2130837930;
+			public const int si_muca = 2130837930;
 			
 			// aapt resource value: 0x7f0201ab
-			public const int si_repa = 2130837931;
+			public const int si_muha = 2130837931;
 			
 			// aapt resource value: 0x7f0201ac
-			public const int si_ris = 2130837932;
+			public const int si_natasha = 2130837932;
 			
 			// aapt resource value: 0x7f0201ad
-			public const int si_robot = 2130837933;
+			public const int si_nebo = 2130837933;
 			
 			// aapt resource value: 0x7f0201ae
-			public const int si_roka = 2130837934;
+			public const int si_nezha = 2130837934;
 			
 			// aapt resource value: 0x7f0201af
-			public const int si_rozha = 2130837935;
+			public const int si_noga = 2130837935;
 			
 			// aapt resource value: 0x7f0201b0
-			public const int si_rudar = 2130837936;
+			public const int si_nos = 2130837936;
 			
 			// aapt resource value: 0x7f0201b1
-			public const int si_ruta = 2130837937;
+			public const int si_nosha = 2130837937;
 			
 			// aapt resource value: 0x7f0201b2
-			public const int si_salama = 2130837938;
+			public const int si_nusha = 2130837938;
 			
 			// aapt resource value: 0x7f0201b3
-			public const int si_sani = 2130837939;
+			public const int si_ochi = 2130837939;
 			
 			// aapt resource value: 0x7f0201b4
-			public const int si_semafor = 2130837940;
+			public const int si_odeja = 2130837940;
 			
 			// aapt resource value: 0x7f0201b5
-			public const int si_sesa = 2130837941;
+			public const int si_omaka = 2130837941;
 			
 			// aapt resource value: 0x7f0201b6
-			public const int si_sestanek = 2130837942;
+			public const int si_omara = 2130837942;
 			
 			// aapt resource value: 0x7f0201b7
-			public const int si_sestavljanka = 2130837943;
+			public const int si_omara_1 = 2130837943;
 			
 			// aapt resource value: 0x7f0201b8
-			public const int si_sestra = 2130837944;
+			public const int si_osa = 2130837944;
 			
 			// aapt resource value: 0x7f0201b9
-			public const int si_shah = 2130837945;
+			public const int si_otok = 2130837945;
 			
 			// aapt resource value: 0x7f0201ba
-			public const int si_shal = 2130837946;
+			public const int si_ovca = 2130837946;
 			
 			// aapt resource value: 0x7f0201bb
-			public const int si_shala = 2130837947;
+			public const int si_palec = 2130837947;
 			
 			// aapt resource value: 0x7f0201bc
-			public const int si_shapa = 2130837948;
+			public const int si_par = 2130837948;
 			
 			// aapt resource value: 0x7f0201bd
-			public const int si_shef = 2130837949;
+			public const int si_pas = 2130837949;
 			
 			// aapt resource value: 0x7f0201be
-			public const int si_shema = 2130837950;
+			public const int si_pazi = 2130837950;
 			
 			// aapt resource value: 0x7f0201bf
-			public const int si_shiva = 2130837951;
+			public const int si_pech = 2130837951;
 			
 			// aapt resource value: 0x7f0201c0
-			public const int si_shkatla = 2130837952;
+			public const int si_peche = 2130837952;
 			
 			// aapt resource value: 0x7f0201c1
-			public const int si_shkoljka = 2130837953;
+			public const int si_pesa = 2130837953;
 			
 			// aapt resource value: 0x7f0201c2
-			public const int si_shotor = 2130837954;
+			public const int si_pica = 2130837954;
 			
 			// aapt resource value: 0x7f0201c3
-			public const int si_shunka = 2130837955;
+			public const int si_pika = 2130837955;
 			
 			// aapt resource value: 0x7f0201c4
-			public const int si_sipa = 2130837956;
+			public const int si_pipa = 2130837956;
 			
 			// aapt resource value: 0x7f0201c5
-			public const int si_sir = 2130837957;
+			public const int si_pire = 2130837957;
 			
 			// aapt resource value: 0x7f0201c6
-			public const int si_sirena = 2130837958;
+			public const int si_pishe = 2130837958;
 			
 			// aapt resource value: 0x7f0201c7
-			public const int si_siva = 2130837959;
+			public const int si_pishkot = 2130837959;
 			
 			// aapt resource value: 0x7f0201c8
-			public const int si_soba = 2130837960;
+			public const int si_pochi = 2130837960;
 			
 			// aapt resource value: 0x7f0201c9
-			public const int si_solata = 2130837961;
+			public const int si_polica = 2130837961;
 			
 			// aapt resource value: 0x7f0201ca
-			public const int si_sosed = 2130837962;
+			public const int si_posoda = 2130837962;
 			
 			// aapt resource value: 0x7f0201cb
-			public const int si_speechsounds = 2130837963;
+			public const int si_pot = 2130837963;
 			
 			// aapt resource value: 0x7f0201cc
-			public const int si_speechsounds_2 = 2130837964;
+			public const int si_pozhar = 2130837964;
 			
 			// aapt resource value: 0x7f0201cd
-			public const int si_speechsounds_3 = 2130837965;
+			public const int si_praprot = 2130837965;
 			
 			// aapt resource value: 0x7f0201ce
-			public const int si_speechsounds_4 = 2130837966;
+			public const int si_ptica = 2130837966;
 			
 			// aapt resource value: 0x7f0201cf
-			public const int si_speechsounds_5 = 2130837967;
+			public const int si_ptich = 2130837967;
 			
 			// aapt resource value: 0x7f0201d0
-			public const int si_strela = 2130837968;
+			public const int si_pujs = 2130837968;
 			
 			// aapt resource value: 0x7f0201d1
-			public const int si_suh = 2130837969;
+			public const int si_pushka = 2130837969;
 			
 			// aapt resource value: 0x7f0201d2
-			public const int si_sulica = 2130837970;
+			public const int si_pushka_1 = 2130837970;
 			
 			// aapt resource value: 0x7f0201d3
-			public const int si_tiger = 2130837971;
+			public const int si_raca = 2130837971;
 			
 			// aapt resource value: 0x7f0201d4
-			public const int si_tocha = 2130837972;
+			public const int si_rachka = 2130837972;
 			
 			// aapt resource value: 0x7f0201d5
-			public const int si_torba = 2130837973;
+			public const int si_radirka = 2130837973;
 			
 			// aapt resource value: 0x7f0201d6
-			public const int si_traktor = 2130837974;
+			public const int si_raketa = 2130837974;
 			
 			// aapt resource value: 0x7f0201d7
-			public const int si_tri = 2130837975;
+			public const int si_rama = 2130837975;
 			
 			// aapt resource value: 0x7f0201d8
-			public const int si_tush = 2130837976;
+			public const int si_repa = 2130837976;
 			
 			// aapt resource value: 0x7f0201d9
-			public const int si_ura = 2130837977;
+			public const int si_riba = 2130837977;
 			
 			// aapt resource value: 0x7f0201da
-			public const int si_usta = 2130837978;
+			public const int si_ris = 2130837978;
 			
 			// aapt resource value: 0x7f0201db
-			public const int si_vaza = 2130837979;
+			public const int si_robot = 2130837979;
 			
 			// aapt resource value: 0x7f0201dc
-			public const int si_zaboj = 2130837980;
+			public const int si_roka = 2130837980;
 			
 			// aapt resource value: 0x7f0201dd
-			public const int si_zala = 2130837981;
+			public const int si_rozha = 2130837981;
 			
 			// aapt resource value: 0x7f0201de
-			public const int si_zapor = 2130837982;
+			public const int si_rudar = 2130837982;
 			
 			// aapt resource value: 0x7f0201df
-			public const int si_zeha = 2130837983;
+			public const int si_ruta = 2130837983;
 			
 			// aapt resource value: 0x7f0201e0
-			public const int si_zelena = 2130837984;
+			public const int si_salama = 2130837984;
 			
 			// aapt resource value: 0x7f0201e1
-			public const int si_zhaba = 2130837985;
+			public const int si_sani = 2130837985;
 			
 			// aapt resource value: 0x7f0201e2
-			public const int si_zhaga = 2130837986;
+			public const int si_semafor = 2130837986;
 			
 			// aapt resource value: 0x7f0201e3
-			public const int si_zhep = 2130837987;
+			public const int si_sesa = 2130837987;
 			
 			// aapt resource value: 0x7f0201e4
-			public const int si_zhito = 2130837988;
+			public const int si_sesalec = 2130837988;
 			
 			// aapt resource value: 0x7f0201e5
-			public const int si_zhiva = 2130837989;
+			public const int si_sestanek = 2130837989;
 			
 			// aapt resource value: 0x7f0201e6
-			public const int si_zhlica = 2130837990;
+			public const int si_sestavljanka = 2130837990;
 			
 			// aapt resource value: 0x7f0201e7
-			public const int si_zhoga = 2130837991;
+			public const int si_sestra = 2130837991;
 			
 			// aapt resource value: 0x7f0201e8
-			public const int si_zhuzhelka = 2130837992;
+			public const int si_shah = 2130837992;
 			
 			// aapt resource value: 0x7f0201e9
-			public const int si_zhvizhga = 2130837993;
+			public const int si_shal = 2130837993;
 			
 			// aapt resource value: 0x7f0201ea
-			public const int si_zidar = 2130837994;
+			public const int si_shala = 2130837994;
 			
 			// aapt resource value: 0x7f0201eb
-			public const int si_zima = 2130837995;
+			public const int si_shapa = 2130837995;
 			
 			// aapt resource value: 0x7f0201ec
-			public const int si_zob = 2130837996;
+			public const int si_shef = 2130837996;
 			
 			// aapt resource value: 0x7f0201ed
-			public const int si_zunaj = 2130837997;
+			public const int si_shema = 2130837997;
 			
 			// aapt resource value: 0x7f0201ee
-			public const int si_zvezda = 2130837998;
+			public const int si_shiva = 2130837998;
 			
 			// aapt resource value: 0x7f0201ef
-			public const int si_zvezek = 2130837999;
+			public const int si_shkatla = 2130837999;
 			
 			// aapt resource value: 0x7f0201f0
-			public const int sp_animation = 2130838000;
+			public const int si_shkoljka = 2130838000;
 			
 			// aapt resource value: 0x7f0201f1
-			public const int splash_bg = 2130838001;
+			public const int si_shotor = 2130838001;
 			
 			// aapt resource value: 0x7f0201f2
-			public const int splash_screen = 2130838002;
+			public const int si_shotor_1 = 2130838002;
 			
 			// aapt resource value: 0x7f0201f3
-			public const int tooltip_frame_dark = 2130838003;
+			public const int si_shunka = 2130838003;
 			
 			// aapt resource value: 0x7f0201f4
-			public const int tooltip_frame_light = 2130838004;
+			public const int si_sipa = 2130838004;
 			
 			// aapt resource value: 0x7f0201f5
-			public const int youtube_icon = 2130838005;
+			public const int si_sir = 2130838005;
+			
+			// aapt resource value: 0x7f0201f6
+			public const int si_sirena = 2130838006;
+			
+			// aapt resource value: 0x7f0201f7
+			public const int si_siva = 2130838007;
+			
+			// aapt resource value: 0x7f0201f8
+			public const int si_soba = 2130838008;
+			
+			// aapt resource value: 0x7f0201f9
+			public const int si_solata = 2130838009;
+			
+			// aapt resource value: 0x7f0201fa
+			public const int si_sosed = 2130838010;
+			
+			// aapt resource value: 0x7f0201fb
+			public const int si_sova = 2130838011;
+			
+			// aapt resource value: 0x7f0201fc
+			public const int si_speechsounds = 2130838012;
+			
+			// aapt resource value: 0x7f0201fd
+			public const int si_speechsounds_2 = 2130838013;
+			
+			// aapt resource value: 0x7f0201fe
+			public const int si_speechsounds_3 = 2130838014;
+			
+			// aapt resource value: 0x7f0201ff
+			public const int si_speechsounds_4 = 2130838015;
+			
+			// aapt resource value: 0x7f020200
+			public const int si_speechsounds_5 = 2130838016;
+			
+			// aapt resource value: 0x7f020201
+			public const int si_strela = 2130838017;
+			
+			// aapt resource value: 0x7f020202
+			public const int si_suh = 2130838018;
+			
+			// aapt resource value: 0x7f020203
+			public const int si_sulica = 2130838019;
+			
+			// aapt resource value: 0x7f020204
+			public const int si_tabla = 2130838020;
+			
+			// aapt resource value: 0x7f020205
+			public const int si_tiger = 2130838021;
+			
+			// aapt resource value: 0x7f020206
+			public const int si_tocha = 2130838022;
+			
+			// aapt resource value: 0x7f020207
+			public const int si_torba = 2130838023;
+			
+			// aapt resource value: 0x7f020208
+			public const int si_torta = 2130838024;
+			
+			// aapt resource value: 0x7f020209
+			public const int si_traktor = 2130838025;
+			
+			// aapt resource value: 0x7f02020a
+			public const int si_tri = 2130838026;
+			
+			// aapt resource value: 0x7f02020b
+			public const int si_tuna = 2130838027;
+			
+			// aapt resource value: 0x7f02020c
+			public const int si_tush = 2130838028;
+			
+			// aapt resource value: 0x7f02020d
+			public const int si_ura = 2130838029;
+			
+			// aapt resource value: 0x7f02020e
+			public const int si_usta = 2130838030;
+			
+			// aapt resource value: 0x7f02020f
+			public const int si_vaza = 2130838031;
+			
+			// aapt resource value: 0x7f020210
+			public const int si_veja = 2130838032;
+			
+			// aapt resource value: 0x7f020211
+			public const int si_veverica = 2130838033;
+			
+			// aapt resource value: 0x7f020212
+			public const int si_voda = 2130838034;
+			
+			// aapt resource value: 0x7f020213
+			public const int si_zaboj = 2130838035;
+			
+			// aapt resource value: 0x7f020214
+			public const int si_zala = 2130838036;
+			
+			// aapt resource value: 0x7f020215
+			public const int si_zapor = 2130838037;
+			
+			// aapt resource value: 0x7f020216
+			public const int si_zeha = 2130838038;
+			
+			// aapt resource value: 0x7f020217
+			public const int si_zelena = 2130838039;
+			
+			// aapt resource value: 0x7f020218
+			public const int si_zhaba = 2130838040;
+			
+			// aapt resource value: 0x7f020219
+			public const int si_zhaga = 2130838041;
+			
+			// aapt resource value: 0x7f02021a
+			public const int si_zhep = 2130838042;
+			
+			// aapt resource value: 0x7f02021b
+			public const int si_zhito = 2130838043;
+			
+			// aapt resource value: 0x7f02021c
+			public const int si_zhiva = 2130838044;
+			
+			// aapt resource value: 0x7f02021d
+			public const int si_zhlica = 2130838045;
+			
+			// aapt resource value: 0x7f02021e
+			public const int si_zhoga = 2130838046;
+			
+			// aapt resource value: 0x7f02021f
+			public const int si_zhoga_1 = 2130838047;
+			
+			// aapt resource value: 0x7f020220
+			public const int si_zhuzhelka = 2130838048;
+			
+			// aapt resource value: 0x7f020221
+			public const int si_zhvizhga = 2130838049;
+			
+			// aapt resource value: 0x7f020222
+			public const int si_zidar = 2130838050;
+			
+			// aapt resource value: 0x7f020223
+			public const int si_zima = 2130838051;
+			
+			// aapt resource value: 0x7f020224
+			public const int si_zima_1 = 2130838052;
+			
+			// aapt resource value: 0x7f020225
+			public const int si_zmaj = 2130838053;
+			
+			// aapt resource value: 0x7f020226
+			public const int si_zob = 2130838054;
+			
+			// aapt resource value: 0x7f020227
+			public const int si_zunaj = 2130838055;
+			
+			// aapt resource value: 0x7f020228
+			public const int si_zvezda = 2130838056;
+			
+			// aapt resource value: 0x7f020229
+			public const int si_zvezda_1 = 2130838057;
+			
+			// aapt resource value: 0x7f02022a
+			public const int si_zvezek = 2130838058;
+			
+			// aapt resource value: 0x7f02022b
+			public const int sp_animation = 2130838059;
+			
+			// aapt resource value: 0x7f02022c
+			public const int splash_bg = 2130838060;
+			
+			// aapt resource value: 0x7f02022d
+			public const int splash_screen = 2130838061;
+			
+			// aapt resource value: 0x7f02022e
+			public const int tooltip_frame_dark = 2130838062;
+			
+			// aapt resource value: 0x7f02022f
+			public const int tooltip_frame_light = 2130838063;
+			
+			// aapt resource value: 0x7f020230
+			public const int youtube_icon = 2130838064;
 			
 			static Drawable()
 			{

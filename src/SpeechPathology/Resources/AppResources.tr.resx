@@ -321,7 +321,7 @@ Bu uygulama konuşma terapistinin yerini almaz, ancak öğretmenler için bir de
     <value>Bütün harfler</value>
   </data>
   <data name="Letters" xml:space="preserve">
-    <value>Letters</value>
+    <value>Harfler</value>
   </data>
   <data name="SoundTestResultsButton" xml:space="preserve">
     <value>SESLERE AİT TEST SONUCU</value>
@@ -331,5 +331,8 @@ Bu uygulama konuşma terapistinin yerini almaz, ancak öğretmenler için bir de
   </data>
   <data name="NotCorrectAbbreviation" xml:space="preserve">
     <value>NC</value>
+  </data>
+  <data name="LetterFocus" xml:space="preserve">
+    <value>Çocuğunuz {0} doğru telaffuz ediyor mu?</value>
   </data>
 </root>

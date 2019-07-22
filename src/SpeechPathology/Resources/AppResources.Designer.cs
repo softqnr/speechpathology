@@ -333,6 +333,15 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Does your child pronounce {0} correctly?.
+        /// </summary>
+        public static string LetterFocus {
+            get {
+                return ResourceManager.GetString("LetterFocus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Letters.
         /// </summary>
         public static string Letters {
