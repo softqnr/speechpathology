@@ -9080,6 +9080,12 @@
   <ItemGroup>
     <None Include="Resources\drawable\si_sesalec.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\en_theatre.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\en_beehive.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>PowerShell -ExecutionPolicy Unrestricted -File "$(SolutionDir)build\update-version-from-git.ps1" $(ProjectDir)
