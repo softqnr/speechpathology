@@ -7932,26 +7932,26 @@ namespace SpeechPathology.Droid
 			// aapt resource value: 0x7f020054
 			public const int avd_hide_password = 2130837588;
 			
-			// aapt resource value: 0x7f020248
-			public const int avd_hide_password_1 = 2130838088;
+			// aapt resource value: 0x7f02021f
+			public const int avd_hide_password_1 = 2130838047;
 			
-			// aapt resource value: 0x7f020249
-			public const int avd_hide_password_2 = 2130838089;
+			// aapt resource value: 0x7f020220
+			public const int avd_hide_password_2 = 2130838048;
 			
-			// aapt resource value: 0x7f02024a
-			public const int avd_hide_password_3 = 2130838090;
+			// aapt resource value: 0x7f020221
+			public const int avd_hide_password_3 = 2130838049;
 			
 			// aapt resource value: 0x7f020055
 			public const int avd_show_password = 2130837589;
 			
-			// aapt resource value: 0x7f02024b
-			public const int avd_show_password_1 = 2130838091;
+			// aapt resource value: 0x7f020222
+			public const int avd_show_password_1 = 2130838050;
 			
-			// aapt resource value: 0x7f02024c
-			public const int avd_show_password_2 = 2130838092;
+			// aapt resource value: 0x7f020223
+			public const int avd_show_password_2 = 2130838051;
 			
-			// aapt resource value: 0x7f02024d
-			public const int avd_show_password_3 = 2130838093;
+			// aapt resource value: 0x7f020224
+			public const int avd_show_password_3 = 2130838052;
 			
 			// aapt resource value: 0x7f020056
 			public const int baseline_calendar_today_white_24 = 2130837590;
@@ -8652,11 +8652,11 @@ namespace SpeechPathology.Droid
 			// aapt resource value: 0x7f02013e
 			public const int notification_icon_background = 2130837822;
 			
-			// aapt resource value: 0x7f020246
-			public const int notification_template_icon_bg = 2130838086;
+			// aapt resource value: 0x7f02021d
+			public const int notification_template_icon_bg = 2130838045;
 			
-			// aapt resource value: 0x7f020247
-			public const int notification_template_icon_low_bg = 2130838087;
+			// aapt resource value: 0x7f02021e
+			public const int notification_template_icon_low_bg = 2130838046;
 			
 			// aapt resource value: 0x7f02013f
 			public const int notification_tile_bg = 2130837823;
@@ -8680,772 +8680,649 @@ namespace SpeechPathology.Droid
 			public const int splash_screen = 2130837829;
 			
 			// aapt resource value: 0x7f020146
-			public const int sr_angel = 2130837830;
+			public const int tooltip_frame_dark = 2130837830;
 			
 			// aapt resource value: 0x7f020147
-			public const int sr_angry = 2130837831;
+			public const int tooltip_frame_light = 2130837831;
 			
 			// aapt resource value: 0x7f020148
-			public const int sr_ant = 2130837832;
+			public const int tr_alev = 2130837832;
 			
 			// aapt resource value: 0x7f020149
-			public const int sr_baby_nipple = 2130837833;
+			public const int tr_anahtar = 2130837833;
 			
 			// aapt resource value: 0x7f02014a
-			public const int sr_badge = 2130837834;
+			public const int tr_ananas = 2130837834;
 			
 			// aapt resource value: 0x7f02014b
-			public const int sr_bag = 2130837835;
+			public const int tr_anne = 2130837835;
 			
 			// aapt resource value: 0x7f02014c
-			public const int sr_bagel = 2130837836;
+			public const int tr_ari = 2130837836;
 			
 			// aapt resource value: 0x7f02014d
-			public const int sr_ball = 2130837837;
+			public const int tr_armut = 2130837837;
 			
 			// aapt resource value: 0x7f02014e
-			public const int sr_ballroom = 2130837838;
+			public const int tr_at = 2130837838;
 			
 			// aapt resource value: 0x7f02014f
-			public const int sr_baloon = 2130837839;
+			public const int tr_atki = 2130837839;
 			
 			// aapt resource value: 0x7f020150
-			public const int sr_bandage = 2130837840;
+			public const int tr_ay = 2130837840;
 			
 			// aapt resource value: 0x7f020151
-			public const int sr_barefoot = 2130837841;
+			public const int tr_ayakkabi = 2130837841;
 			
 			// aapt resource value: 0x7f020152
-			public const int sr_basket = 2130837842;
+			public const int tr_ayi = 2130837842;
 			
 			// aapt resource value: 0x7f020153
-			public const int sr_bat = 2130837843;
+			public const int tr_baba = 2130837843;
 			
 			// aapt resource value: 0x7f020154
-			public const int sr_beet = 2130837844;
+			public const int tr_baca = 2130837844;
 			
 			// aapt resource value: 0x7f020155
-			public const int sr_bell = 2130837845;
+			public const int tr_bakkal = 2130837845;
 			
 			// aapt resource value: 0x7f020156
-			public const int sr_bench = 2130837846;
+			public const int tr_balon = 2130837846;
 			
 			// aapt resource value: 0x7f020157
-			public const int sr_bicycle = 2130837847;
+			public const int tr_bank = 2130837847;
 			
 			// aapt resource value: 0x7f020158
-			public const int sr_birch = 2130837848;
+			public const int tr_bardak = 2130837848;
 			
 			// aapt resource value: 0x7f020159
-			public const int sr_bird = 2130837849;
+			public const int tr_battaniye = 2130837849;
 			
 			// aapt resource value: 0x7f02015a
-			public const int sr_birthday = 2130837850;
+			public const int tr_baykus = 2130837850;
 			
 			// aapt resource value: 0x7f02015b
-			public const int sr_bizon = 2130837851;
+			public const int tr_bebek = 2130837851;
 			
 			// aapt resource value: 0x7f02015c
-			public const int sr_blanket = 2130837852;
+			public const int tr_besik = 2130837852;
 			
 			// aapt resource value: 0x7f02015d
-			public const int sr_boat = 2130837853;
+			public const int tr_biber = 2130837853;
 			
 			// aapt resource value: 0x7f02015e
-			public const int sr_boots = 2130837854;
+			public const int tr_bisiklet = 2130837854;
 			
 			// aapt resource value: 0x7f02015f
-			public const int sr_bowl = 2130837855;
+			public const int tr_boga = 2130837855;
 			
 			// aapt resource value: 0x7f020160
-			public const int sr_bricks = 2130837856;
+			public const int tr_bogaz = 2130837856;
 			
 			// aapt resource value: 0x7f020161
-			public const int sr_bridge = 2130837857;
+			public const int tr_bot = 2130837857;
 			
 			// aapt resource value: 0x7f020162
-			public const int sr_brooch = 2130837858;
+			public const int tr_bugday = 2130837858;
 			
 			// aapt resource value: 0x7f020163
-			public const int sr_broom = 2130837859;
+			public const int tr_burun = 2130837859;
 			
 			// aapt resource value: 0x7f020164
-			public const int sr_bush = 2130837860;
+			public const int tr_cacik = 2130837860;
 			
 			// aapt resource value: 0x7f020165
-			public const int sr_butterfly = 2130837861;
+			public const int tr_cadde = 2130837861;
 			
 			// aapt resource value: 0x7f020166
-			public const int sr_cabbage = 2130837862;
+			public const int tr_cadi = 2130837862;
 			
 			// aapt resource value: 0x7f020167
-			public const int sr_cage = 2130837863;
+			public const int tr_cadir = 2130837863;
 			
 			// aapt resource value: 0x7f020168
-			public const int sr_cake = 2130837864;
+			public const int tr_cali = 2130837864;
 			
 			// aapt resource value: 0x7f020169
-			public const int sr_cancer = 2130837865;
+			public const int tr_canta = 2130837865;
 			
 			// aapt resource value: 0x7f02016a
-			public const int sr_candle = 2130837866;
+			public const int tr_cati = 2130837866;
 			
 			// aapt resource value: 0x7f02016b
-			public const int sr_car = 2130837867;
+			public const int tr_cay = 2130837867;
 			
 			// aapt resource value: 0x7f02016c
-			public const int sr_castle = 2130837868;
+			public const int tr_cekic = 2130837868;
 			
 			// aapt resource value: 0x7f02016d
-			public const int sr_cat = 2130837869;
+			public const int tr_cep = 2130837869;
 			
 			// aapt resource value: 0x7f02016e
-			public const int sr_cheese = 2130837870;
+			public const int tr_cerceve = 2130837870;
 			
 			// aapt resource value: 0x7f02016f
-			public const int sr_chess = 2130837871;
+			public const int tr_ceviz = 2130837871;
 			
 			// aapt resource value: 0x7f020170
-			public const int sr_chimney = 2130837872;
+			public const int tr_cicek = 2130837872;
 			
 			// aapt resource value: 0x7f020171
-			public const int sr_chimney_sweeper = 2130837873;
+			public const int tr_cikolata = 2130837873;
 			
 			// aapt resource value: 0x7f020172
-			public const int sr_chocolate = 2130837874;
+			public const int tr_cilek = 2130837874;
 			
 			// aapt resource value: 0x7f020173
-			public const int sr_class = 2130837875;
+			public const int tr_cim = 2130837875;
 			
 			// aapt resource value: 0x7f020174
-			public const int sr_claws = 2130837876;
+			public const int tr_cips = 2130837876;
 			
 			// aapt resource value: 0x7f020175
-			public const int sr_cleanusingvacuumcleaner = 2130837877;
+			public const int tr_civciv = 2130837877;
 			
 			// aapt resource value: 0x7f020176
-			public const int sr_clock = 2130837878;
+			public const int tr_cocuk = 2130837878;
 			
 			// aapt resource value: 0x7f020177
-			public const int sr_coal = 2130837879;
+			public const int tr_corap = 2130837879;
 			
 			// aapt resource value: 0x7f020178
-			public const int sr_comb = 2130837880;
+			public const int tr_cuce = 2130837880;
 			
 			// aapt resource value: 0x7f020179
-			public const int sr_confectioner = 2130837881;
+			public const int tr_dalgic = 2130837881;
 			
 			// aapt resource value: 0x7f02017a
-			public const int sr_cook = 2130837882;
+			public const int tr_dans = 2130837882;
 			
 			// aapt resource value: 0x7f02017b
-			public const int sr_cough = 2130837883;
+			public const int tr_davul = 2130837883;
 			
 			// aapt resource value: 0x7f02017c
-			public const int sr_cow = 2130837884;
+			public const int tr_dede = 2130837884;
 			
 			// aapt resource value: 0x7f02017d
-			public const int sr_crying = 2130837885;
+			public const int tr_deve = 2130837885;
 			
 			// aapt resource value: 0x7f02017e
-			public const int sr_cup = 2130837886;
+			public const int tr_dil = 2130837886;
 			
 			// aapt resource value: 0x7f02017f
-			public const int sr_cutting = 2130837887;
+			public const int tr_dis = 2130837887;
 			
 			// aapt resource value: 0x7f020180
-			public const int sr_deki_01 = 2130837888;
+			public const int tr_dolap = 2130837888;
 			
 			// aapt resource value: 0x7f020181
-			public const int sr_deki_02 = 2130837889;
+			public const int tr_duduk = 2130837889;
 			
 			// aapt resource value: 0x7f020182
-			public const int sr_deki_03 = 2130837890;
+			public const int tr_ekmek = 2130837890;
 			
 			// aapt resource value: 0x7f020183
-			public const int sr_deki_04 = 2130837891;
+			public const int tr_elmas = 2130837891;
 			
 			// aapt resource value: 0x7f020184
-			public const int sr_deki_05 = 2130837892;
+			public const int tr_esek = 2130837892;
 			
 			// aapt resource value: 0x7f020185
-			public const int sr_deki_06 = 2130837893;
+			public const int tr_ev = 2130837893;
 			
 			// aapt resource value: 0x7f020186
-			public const int sr_dishes = 2130837894;
+			public const int tr_fare = 2130837894;
 			
 			// aapt resource value: 0x7f020187
-			public const int sr_dog = 2130837895;
+			public const int tr_fici = 2130837895;
 			
 			// aapt resource value: 0x7f020188
-			public const int sr_doll = 2130837896;
+			public const int tr_fil = 2130837896;
 			
 			// aapt resource value: 0x7f020189
-			public const int sr_dragon = 2130837897;
+			public const int tr_firca = 2130837897;
 			
 			// aapt resource value: 0x7f02018a
-			public const int sr_dress = 2130837898;
+			public const int tr_fotograf = 2130837898;
 			
 			// aapt resource value: 0x7f02018b
-			public const int sr_driver = 2130837899;
+			public const int tr_gaga = 2130837899;
 			
 			// aapt resource value: 0x7f02018c
-			public const int sr_dwarf = 2130837900;
+			public const int tr_gazoz = 2130837900;
 			
 			// aapt resource value: 0x7f02018d
-			public const int sr_ears = 2130837901;
+			public const int tr_gece = 2130837901;
 			
 			// aapt resource value: 0x7f02018e
-			public const int sr_earth = 2130837902;
+			public const int tr_gemi = 2130837902;
 			
 			// aapt resource value: 0x7f02018f
-			public const int sr_eggplant = 2130837903;
+			public const int tr_gergedan = 2130837903;
 			
 			// aapt resource value: 0x7f020190
-			public const int sr_elephant = 2130837904;
+			public const int tr_golge = 2130837904;
 			
 			// aapt resource value: 0x7f020191
-			public const int sr_ember = 2130837905;
+			public const int tr_gozluk = 2130837905;
 			
 			// aapt resource value: 0x7f020192
-			public const int sr_embroidery = 2130837906;
+			public const int tr_gunes = 2130837906;
 			
 			// aapt resource value: 0x7f020193
-			public const int sr_emperor = 2130837907;
+			public const int tr_guvercin = 2130837907;
 			
 			// aapt resource value: 0x7f020194
-			public const int sr_engine = 2130837908;
+			public const int tr_hali = 2130837908;
 			
 			// aapt resource value: 0x7f020195
-			public const int sr_eyebrow = 2130837909;
+			public const int tr_hamur = 2130837909;
 			
 			// aapt resource value: 0x7f020196
-			public const int sr_eyes = 2130837910;
+			public const int tr_harf = 2130837910;
 			
 			// aapt resource value: 0x7f020197
-			public const int sr_fairy = 2130837911;
+			public const int tr_havuc = 2130837911;
 			
 			// aapt resource value: 0x7f020198
-			public const int sr_father = 2130837912;
+			public const int tr_hesap_makinesi = 2130837912;
 			
 			// aapt resource value: 0x7f020199
-			public const int sr_fish = 2130837913;
+			public const int tr_horoz = 2130837913;
 			
 			// aapt resource value: 0x7f02019a
-			public const int sr_flower = 2130837914;
+			public const int tr_ilac = 2130837914;
 			
 			// aapt resource value: 0x7f02019b
-			public const int sr_flower_garden = 2130837915;
+			public const int tr_kafes = 2130837915;
 			
 			// aapt resource value: 0x7f02019c
-			public const int sr_flowers = 2130837916;
+			public const int tr_kahve = 2130837916;
 			
 			// aapt resource value: 0x7f02019d
-			public const int sr_foal = 2130837917;
+			public const int tr_kahverengi = 2130837917;
 			
 			// aapt resource value: 0x7f02019e
-			public const int sr_forest = 2130837918;
+			public const int tr_kalem = 2130837918;
 			
 			// aapt resource value: 0x7f02019f
-			public const int sr_fox = 2130837919;
+			public const int tr_kalp = 2130837919;
 			
 			// aapt resource value: 0x7f0201a0
-			public const int sr_freezer = 2130837920;
+			public const int tr_kamyon = 2130837920;
 			
 			// aapt resource value: 0x7f0201a1
-			public const int sr_friend = 2130837921;
+			public const int tr_kapi = 2130837921;
 			
 			// aapt resource value: 0x7f0201a2
-			public const int sr_frog = 2130837922;
+			public const int tr_kaplumbaga = 2130837922;
 			
 			// aapt resource value: 0x7f0201a3
-			public const int sr_fruit = 2130837923;
+			public const int tr_karinca = 2130837923;
 			
 			// aapt resource value: 0x7f0201a4
-			public const int sr_garbage = 2130837924;
+			public const int tr_karpuz = 2130837924;
 			
 			// aapt resource value: 0x7f0201a5
-			public const int sr_giant = 2130837925;
+			public const int tr_kasik = 2130837925;
 			
 			// aapt resource value: 0x7f0201a6
-			public const int sr_ginger = 2130837926;
+			public const int tr_kedi = 2130837926;
 			
 			// aapt resource value: 0x7f0201a7
-			public const int sr_giraffe = 2130837927;
+			public const int tr_kemik = 2130837927;
 			
 			// aapt resource value: 0x7f0201a8
-			public const int sr_glass = 2130837928;
+			public const int tr_kibrit = 2130837928;
 			
 			// aapt resource value: 0x7f0201a9
-			public const int sr_glasses = 2130837929;
+			public const int tr_kiraz = 2130837929;
 			
 			// aapt resource value: 0x7f0201aa
-			public const int sr_gloves = 2130837930;
+			public const int tr_kitap = 2130837930;
 			
 			// aapt resource value: 0x7f0201ab
-			public const int sr_goat = 2130837931;
+			public const int tr_kizgin = 2130837931;
 			
 			// aapt resource value: 0x7f0201ac
-			public const int sr_grass = 2130837932;
+			public const int tr_kofte = 2130837932;
 			
 			// aapt resource value: 0x7f0201ad
-			public const int sr_greeting = 2130837933;
+			public const int tr_kopuk = 2130837933;
 			
 			// aapt resource value: 0x7f0201ae
-			public const int sr_guidepost = 2130837934;
+			public const int tr_koyun = 2130837934;
 			
 			// aapt resource value: 0x7f0201af
-			public const int sr_gum = 2130837935;
+			public const int tr_kozalak = 2130837935;
 			
 			// aapt resource value: 0x7f0201b0
-			public const int sr_hair = 2130837936;
+			public const int tr_krem = 2130837936;
 			
 			// aapt resource value: 0x7f0201b1
-			public const int sr_hair_brush = 2130837937;
+			public const int tr_kul = 2130837937;
 			
 			// aapt resource value: 0x7f0201b2
-			public const int sr_hairdresser = 2130837938;
+			public const int tr_kulah = 2130837938;
 			
 			// aapt resource value: 0x7f0201b3
-			public const int sr_handkerchief = 2130837939;
+			public const int tr_kulak = 2130837939;
 			
 			// aapt resource value: 0x7f0201b4
-			public const int sr_hat = 2130837940;
+			public const int tr_kulube = 2130837940;
 			
 			// aapt resource value: 0x7f0201b5
-			public const int sr_headphone = 2130837941;
+			public const int tr_kutu = 2130837941;
 			
 			// aapt resource value: 0x7f0201b6
-			public const int sr_hedgehog = 2130837942;
+			public const int tr_lahana = 2130837942;
 			
 			// aapt resource value: 0x7f0201b7
-			public const int sr_hedgehogs = 2130837943;
+			public const int tr_lale = 2130837943;
 			
 			// aapt resource value: 0x7f0201b8
-			public const int sr_hotel = 2130837944;
+			public const int tr_lamba = 2130837944;
 			
 			// aapt resource value: 0x7f0201b9
-			public const int sr_house = 2130837945;
+			public const int tr_lastik = 2130837945;
 			
 			// aapt resource value: 0x7f0201ba
-			public const int sr_hunter = 2130837946;
+			public const int tr_leblebi = 2130837946;
 			
 			// aapt resource value: 0x7f0201bb
-			public const int sr_jam = 2130837947;
+			public const int tr_leylek = 2130837947;
 			
 			// aapt resource value: 0x7f0201bc
-			public const int sr_jeep = 2130837948;
+			public const int tr_limon = 2130837948;
 			
 			// aapt resource value: 0x7f0201bd
-			public const int sr_joker = 2130837949;
+			public const int tr_makara = 2130837949;
 			
 			// aapt resource value: 0x7f0201be
-			public const int sr_judo = 2130837950;
+			public const int tr_makas = 2130837950;
 			
 			// aapt resource value: 0x7f0201bf
-			public const int sr_jungle = 2130837951;
+			public const int tr_mantar = 2130837951;
 			
 			// aapt resource value: 0x7f0201c0
-			public const int sr_kale = 2130837952;
+			public const int tr_masa = 2130837952;
 			
 			// aapt resource value: 0x7f0201c1
-			public const int sr_key = 2130837953;
+			public const int tr_maymun = 2130837953;
 			
 			// aapt resource value: 0x7f0201c2
-			public const int sr_kindergarden = 2130837954;
+			public const int tr_melek = 2130837954;
 			
 			// aapt resource value: 0x7f0201c3
-			public const int sr_king = 2130837955;
+			public const int tr_mum = 2130837955;
 			
 			// aapt resource value: 0x7f0201c4
-			public const int sr_kissing = 2130837956;
+			public const int tr_mumya = 2130837956;
 			
 			// aapt resource value: 0x7f0201c5
-			public const int sr_knife = 2130837957;
+			public const int tr_muz = 2130837957;
 			
 			// aapt resource value: 0x7f0201c6
-			public const int sr_knives = 2130837958;
+			public const int tr_nane = 2130837958;
 			
 			// aapt resource value: 0x7f0201c7
-			public const int sr_lamp = 2130837959;
+			public const int tr_nar = 2130837959;
 			
 			// aapt resource value: 0x7f0201c8
-			public const int sr_leaf = 2130837960;
+			public const int tr_nehir = 2130837960;
 			
 			// aapt resource value: 0x7f0201c9
-			public const int sr_lemon = 2130837961;
+			public const int tr_nine = 2130837961;
 			
 			// aapt resource value: 0x7f0201ca
-			public const int sr_letter = 2130837962;
+			public const int tr_okcu = 2130837962;
 			
 			// aapt resource value: 0x7f0201cb
-			public const int sr_lily = 2130837963;
+			public const int tr_oksuruk = 2130837963;
 			
 			// aapt resource value: 0x7f0201cc
-			public const int sr_lily_of_the_valley = 2130837964;
+			public const int tr_olta = 2130837964;
 			
 			// aapt resource value: 0x7f0201cd
-			public const int sr_lion = 2130837965;
+			public const int tr_ordek = 2130837965;
 			
 			// aapt resource value: 0x7f0201ce
-			public const int sr_love = 2130837966;
+			public const int tr_otobus = 2130837966;
 			
 			// aapt resource value: 0x7f0201cf
-			public const int sr_machine = 2130837967;
+			public const int tr_oyuncak = 2130837967;
 			
 			// aapt resource value: 0x7f0201d0
-			public const int sr_magician = 2130837968;
+			public const int tr_papagan = 2130837968;
 			
 			// aapt resource value: 0x7f0201d1
-			public const int sr_man = 2130837969;
+			public const int tr_park = 2130837969;
 			
 			// aapt resource value: 0x7f0201d2
-			public const int sr_mask = 2130837970;
+			public const int tr_paspas = 2130837970;
 			
 			// aapt resource value: 0x7f0201d3
-			public const int sr_meat = 2130837971;
+			public const int tr_pasta = 2130837971;
 			
 			// aapt resource value: 0x7f0201d4
-			public const int sr_medal = 2130837972;
+			public const int tr_pencere = 2130837972;
 			
 			// aapt resource value: 0x7f0201d5
-			public const int sr_medicine = 2130837973;
+			public const int tr_pergel = 2130837973;
 			
 			// aapt resource value: 0x7f0201d6
-			public const int sr_metre = 2130837974;
+			public const int tr_pilot = 2130837974;
 			
 			// aapt resource value: 0x7f0201d7
-			public const int sr_milk = 2130837975;
+			public const int tr_pomegranate = 2130837975;
 			
 			// aapt resource value: 0x7f0201d8
-			public const int sr_milkman = 2130837976;
+			public const int tr_portakal = 2130837976;
 			
 			// aapt resource value: 0x7f0201d9
-			public const int sr_mirror = 2130837977;
+			public const int tr_prens = 2130837977;
 			
 			// aapt resource value: 0x7f0201da
-			public const int sr_money = 2130837978;
+			public const int tr_puding = 2130837978;
 			
 			// aapt resource value: 0x7f0201db
-			public const int sr_monopoly = 2130837979;
+			public const int tr_puskul = 2130837979;
 			
 			// aapt resource value: 0x7f0201dc
-			public const int sr_mouse = 2130837980;
+			public const int tr_radyo = 2130837980;
 			
 			// aapt resource value: 0x7f0201dd
-			public const int sr_nest = 2130837981;
+			public const int tr_resim = 2130837981;
 			
 			// aapt resource value: 0x7f0201de
-			public const int sr_night = 2130837982;
+			public const int tr_robot = 2130837982;
 			
 			// aapt resource value: 0x7f0201df
-			public const int sr_nose = 2130837983;
+			public const int tr_rozet = 2130837983;
 			
 			// aapt resource value: 0x7f0201e0
-			public const int sr_oak = 2130837984;
+			public const int tr_ruzgar = 2130837984;
 			
 			// aapt resource value: 0x7f0201e1
-			public const int sr_old = 2130837985;
+			public const int tr_saat = 2130837985;
 			
 			// aapt resource value: 0x7f0201e2
-			public const int sr_onion = 2130837986;
+			public const int tr_sabah = 2130837986;
 			
 			// aapt resource value: 0x7f0201e3
-			public const int sr_orange = 2130837987;
+			public const int tr_sabun = 2130837987;
 			
 			// aapt resource value: 0x7f0201e4
-			public const int sr_owl = 2130837988;
+			public const int tr_salincak = 2130837988;
 			
 			// aapt resource value: 0x7f0201e5
-			public const int sr_padlock = 2130837989;
+			public const int tr_sapka = 2130837989;
 			
 			// aapt resource value: 0x7f0201e6
-			public const int sr_pajamas = 2130837990;
+			public const int tr_sarimsak = 2130837990;
 			
 			// aapt resource value: 0x7f0201e7
-			public const int sr_pear = 2130837991;
+			public const int tr_sarmasik = 2130837991;
 			
 			// aapt resource value: 0x7f0201e8
-			public const int sr_pencil = 2130837992;
+			public const int tr_seker = 2130837992;
 			
 			// aapt resource value: 0x7f0201e9
-			public const int sr_pencil_sharpener = 2130837993;
+			public const int tr_seksen = 2130837993;
 			
 			// aapt resource value: 0x7f0201ea
-			public const int sr_people = 2130837994;
+			public const int tr_semsiye = 2130837994;
 			
 			// aapt resource value: 0x7f0201eb
-			public const int sr_perch = 2130837995;
+			public const int tr_sepet = 2130837995;
 			
 			// aapt resource value: 0x7f0201ec
-			public const int sr_pinecone = 2130837996;
+			public const int tr_sincap = 2130837996;
 			
 			// aapt resource value: 0x7f0201ed
-			public const int sr_pitcher = 2130837997;
+			public const int tr_siren = 2130837997;
 			
 			// aapt resource value: 0x7f0201ee
-			public const int sr_plastic_bag = 2130837998;
+			public const int tr_sis = 2130837998;
 			
 			// aapt resource value: 0x7f0201ef
-			public const int sr_pocket = 2130837999;
+			public const int tr_sise = 2130837999;
 			
 			// aapt resource value: 0x7f0201f0
-			public const int sr_policeman = 2130838000;
+			public const int tr_sisman = 2130838000;
 			
 			// aapt resource value: 0x7f0201f1
-			public const int sr_potato = 2130838001;
+			public const int tr_siyah = 2130838001;
 			
 			// aapt resource value: 0x7f0201f2
-			public const int sr_promenade = 2130838002;
+			public const int tr_soguk = 2130838002;
 			
 			// aapt resource value: 0x7f0201f3
-			public const int sr_puppy_dog = 2130838003;
+			public const int tr_speechsounds_2 = 2130838003;
 			
 			// aapt resource value: 0x7f0201f4
-			public const int sr_pussy_cat = 2130838004;
+			public const int tr_speechsounds_3 = 2130838004;
 			
 			// aapt resource value: 0x7f0201f5
-			public const int sr_rabbit = 2130838005;
+			public const int tr_speechsounds_4 = 2130838005;
 			
 			// aapt resource value: 0x7f0201f6
-			public const int sr_rain = 2130838006;
+			public const int tr_speechsounds_5 = 2130838006;
 			
 			// aapt resource value: 0x7f0201f7
-			public const int sr_room = 2130838007;
+			public const int tr_sunger = 2130838007;
 			
 			// aapt resource value: 0x7f0201f8
-			public const int sr_rose = 2130838008;
+			public const int tr_supurge = 2130838008;
 			
 			// aapt resource value: 0x7f0201f9
-			public const int sr_rug = 2130838009;
+			public const int tr_surup = 2130838009;
 			
 			// aapt resource value: 0x7f0201fa
-			public const int sr_sack = 2130838010;
+			public const int tr_susam = 2130838010;
 			
 			// aapt resource value: 0x7f0201fb
-			public const int sr_sailor = 2130838011;
+			public const int tr_tabak = 2130838011;
 			
 			// aapt resource value: 0x7f0201fc
-			public const int sr_scarf = 2130838012;
+			public const int tr_tablet = 2130838012;
 			
 			// aapt resource value: 0x7f0201fd
-			public const int sr_school = 2130838013;
+			public const int tr_tahta = 2130838013;
 			
 			// aapt resource value: 0x7f0201fe
-			public const int sr_sew = 2130838014;
+			public const int tr_taksi = 2130838014;
 			
 			// aapt resource value: 0x7f0201ff
-			public const int sr_shadoof = 2130838015;
+			public const int tr_tas = 2130838015;
 			
 			// aapt resource value: 0x7f020200
-			public const int sr_sheep = 2130838016;
+			public const int tr_tavsan = 2130838016;
 			
 			// aapt resource value: 0x7f020201
-			public const int sr_ship = 2130838017;
+			public const int tr_tekerlek = 2130838017;
 			
 			// aapt resource value: 0x7f020202
-			public const int sr_shirt = 2130838018;
+			public const int tr_telefon = 2130838018;
 			
 			// aapt resource value: 0x7f020203
-			public const int sr_shoe = 2130838019;
+			public const int tr_terzi = 2130838019;
 			
 			// aapt resource value: 0x7f020204
-			public const int sr_shoes = 2130838020;
+			public const int tr_test = 2130838020;
 			
 			// aapt resource value: 0x7f020205
-			public const int sr_shower = 2130838021;
+			public const int tr_tuy = 2130838021;
 			
 			// aapt resource value: 0x7f020206
-			public const int sr_singer = 2130838022;
+			public const int tr_tuz = 2130838022;
 			
 			// aapt resource value: 0x7f020207
-			public const int sr_skirt = 2130838023;
+			public const int tr_ucak = 2130838023;
 			
 			// aapt resource value: 0x7f020208
-			public const int sr_small_bird = 2130838024;
+			public const int tr_uzum = 2130838024;
 			
 			// aapt resource value: 0x7f020209
-			public const int sr_small_stickers = 2130838025;
+			public const int tr_vadi = 2130838025;
 			
 			// aapt resource value: 0x7f02020a
-			public const int sr_snail = 2130838026;
+			public const int tr_valiz = 2130838026;
 			
 			// aapt resource value: 0x7f02020b
-			public const int sr_snails = 2130838027;
+			public const int tr_vazo = 2130838027;
 			
 			// aapt resource value: 0x7f02020c
-			public const int sr_snake = 2130838028;
+			public const int tr_visne = 2130838028;
 			
 			// aapt resource value: 0x7f02020d
-			public const int sr_snow = 2130838029;
+			public const int tr_yastik = 2130838029;
 			
 			// aapt resource value: 0x7f02020e
-			public const int sr_snowdrop = 2130838030;
+			public const int tr_yatak = 2130838030;
 			
 			// aapt resource value: 0x7f02020f
-			public const int sr_soap = 2130838031;
+			public const int tr_yay = 2130838031;
 			
 			// aapt resource value: 0x7f020210
-			public const int sr_socks = 2130838032;
+			public const int tr_yayla = 2130838032;
 			
 			// aapt resource value: 0x7f020211
-			public const int sr_sofa = 2130838033;
+			public const int tr_yemek = 2130838033;
 			
 			// aapt resource value: 0x7f020212
-			public const int sr_sparrow = 2130838034;
+			public const int tr_yildiz = 2130838034;
 			
 			// aapt resource value: 0x7f020213
-			public const int sr_spoon = 2130838035;
+			public const int tr_yulaf = 2130838035;
 			
 			// aapt resource value: 0x7f020214
-			public const int sr_squat = 2130838036;
+			public const int tr_yunus = 2130838036;
 			
 			// aapt resource value: 0x7f020215
-			public const int sr_stars = 2130838037;
+			public const int tr_yuruyus = 2130838037;
 			
 			// aapt resource value: 0x7f020216
-			public const int sr_sticks = 2130838038;
+			public const int tr_zar = 2130838038;
 			
 			// aapt resource value: 0x7f020217
-			public const int sr_street = 2130838039;
+			public const int tr_zarf = 2130838039;
 			
 			// aapt resource value: 0x7f020218
-			public const int sr_student = 2130838040;
+			public const int tr_zebra = 2130838040;
 			
 			// aapt resource value: 0x7f020219
-			public const int sr_sun = 2130838041;
+			public const int tr_zelzele = 2130838041;
 			
 			// aapt resource value: 0x7f02021a
-			public const int sr_swan = 2130838042;
+			public const int tr_zikzak = 2130838042;
 			
 			// aapt resource value: 0x7f02021b
-			public const int sr_sweater = 2130838043;
+			public const int tr_zil = 2130838043;
 			
 			// aapt resource value: 0x7f02021c
-			public const int sr_swimming_pool = 2130838044;
-			
-			// aapt resource value: 0x7f02021d
-			public const int sr_swing = 2130838045;
-			
-			// aapt resource value: 0x7f02021e
-			public const int sr_sword = 2130838046;
-			
-			// aapt resource value: 0x7f02021f
-			public const int sr_tail = 2130838047;
-			
-			// aapt resource value: 0x7f020220
-			public const int sr_tea = 2130838048;
-			
-			// aapt resource value: 0x7f020221
-			public const int sr_teacher = 2130838049;
-			
-			// aapt resource value: 0x7f020222
-			public const int sr_tears = 2130838050;
-			
-			// aapt resource value: 0x7f020223
-			public const int sr_teeter_totter = 2130838051;
-			
-			// aapt resource value: 0x7f020224
-			public const int sr_tennis = 2130838052;
-			
-			// aapt resource value: 0x7f020225
-			public const int sr_tent = 2130838053;
-			
-			// aapt resource value: 0x7f020226
-			public const int sr_thorn = 2130838054;
-			
-			// aapt resource value: 0x7f020227
-			public const int sr_thread = 2130838055;
-			
-			// aapt resource value: 0x7f020228
-			public const int sr_to_fall_down = 2130838056;
-			
-			// aapt resource value: 0x7f020229
-			public const int sr_to_sleep = 2130838057;
-			
-			// aapt resource value: 0x7f02022a
-			public const int sr_to_swing = 2130838058;
-			
-			// aapt resource value: 0x7f02022b
-			public const int sr_tooth = 2130838059;
-			
-			// aapt resource value: 0x7f02022c
-			public const int sr_toothpick = 2130838060;
-			
-			// aapt resource value: 0x7f02022d
-			public const int sr_towel = 2130838061;
-			
-			// aapt resource value: 0x7f02022e
-			public const int sr_tractor = 2130838062;
-			
-			// aapt resource value: 0x7f02022f
-			public const int sr_train = 2130838063;
-			
-			// aapt resource value: 0x7f020230
-			public const int sr_tree = 2130838064;
-			
-			// aapt resource value: 0x7f020231
-			public const int sr_tulip = 2130838065;
-			
-			// aapt resource value: 0x7f020232
-			public const int sr_turkey = 2130838066;
-			
-			// aapt resource value: 0x7f020233
-			public const int sr_vacuum_cleaner = 2130838067;
-			
-			// aapt resource value: 0x7f020234
-			public const int sr_violet = 2130838068;
-			
-			// aapt resource value: 0x7f020235
-			public const int sr_wall = 2130838069;
-			
-			// aapt resource value: 0x7f020236
-			public const int sr_walled_up = 2130838070;
-			
-			// aapt resource value: 0x7f020237
-			public const int sr_walnut = 2130838071;
-			
-			// aapt resource value: 0x7f020238
-			public const int sr_walrus = 2130838072;
-			
-			// aapt resource value: 0x7f020239
-			public const int sr_watchmaker = 2130838073;
-			
-			// aapt resource value: 0x7f02023a
-			public const int sr_wheat = 2130838074;
-			
-			// aapt resource value: 0x7f02023b
-			public const int sr_whip = 2130838075;
-			
-			// aapt resource value: 0x7f02023c
-			public const int sr_wind = 2130838076;
-			
-			// aapt resource value: 0x7f02023d
-			public const int sr_window = 2130838077;
-			
-			// aapt resource value: 0x7f02023e
-			public const int sr_winter = 2130838078;
-			
-			// aapt resource value: 0x7f02023f
-			public const int sr_woodpecker = 2130838079;
-			
-			// aapt resource value: 0x7f020240
-			public const int sr_yellow = 2130838080;
-			
-			// aapt resource value: 0x7f020241
-			public const int sr_young_man = 2130838081;
-			
-			// aapt resource value: 0x7f020242
-			public const int sr_zebra = 2130838082;
-			
-			// aapt resource value: 0x7f020243
-			public const int tooltip_frame_dark = 2130838083;
-			
-			// aapt resource value: 0x7f020244
-			public const int tooltip_frame_light = 2130838084;
-			
-			// aapt resource value: 0x7f020245
-			public const int youtube_icon = 2130838085;
+			public const int youtube_icon = 2130838044;
 			
 			static Drawable()
 			{
