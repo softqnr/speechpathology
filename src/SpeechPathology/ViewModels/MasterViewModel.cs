@@ -57,10 +57,10 @@ namespace SpeechPathology.ViewModels
 
         public MasterViewModel()
         {
-            MenuItems = new ObservableCollection<NavMenuItem>(new[]
+             MenuItems = new ObservableCollection<NavMenuItem>(new[]
             {
                     new NavMenuItem { Id = 0, Title = Resources.AppResources.Disclaimer, TargetType=typeof(AboutViewModel) },
-                    new NavMenuItem { Id = 1, Title = Resources.AppResources.RecomendedUsage, Parameter = Resources.AppResources.RecomendedUsage + "|http://www.speechpathologytools.eu/recommended_usage.html", TargetType=typeof(WebViewerViewModel) },
+                    new NavMenuItem { Id = 1, Title = Resources.AppResources.RecomendedUsage, Parameter = Resources.AppResources.RecomendedUsage + "|http://www.speechpathologytools.eu/recommended_usage_" + App.Language + ".html" , TargetType=typeof(WebViewerViewModel) },
             });
         }
 

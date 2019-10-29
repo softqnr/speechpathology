@@ -37,7 +37,7 @@
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
     <AotAssemblies>false</AotAssemblies>
     <EnableLLVM>false</EnableLLVM>
-    <AndroidUseSharedRuntime>true</AndroidUseSharedRuntime>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
     <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
     <AndroidStoreUncompressedFileExtensions>.mp3;jpg</AndroidStoreUncompressedFileExtensions>
     <AndroidSupportedAbis />
@@ -55,6 +55,9 @@
     <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
     <Debugger>Xamarin</Debugger>
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <BundleAssemblies>false</BundleAssemblies>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
@@ -442,26 +445,26 @@
     <None Include="Assets\Worksheets\NL\Worksheet_NL_T.pdf" />
     <None Include="Assets\Worksheets\NL\Worksheet_NL_Z.pdf" />
     <None Include="Assets\LanguageSkills\NL\languageskills_nl_all.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_Дж%28DZH%29.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_Ж%28J%29.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_З%28Z%29.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_К%28K%29.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_Л%28L%29.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_М%28M%29.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_П%28P%29.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_Т%28T%29.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_Ф%28F%29.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_Ц%28TS%29.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_Ч%28TCH%29.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_Щ%28ST%29.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_B%28V%29.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_C%28S%29.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_H%28R%29.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_P%28R%29.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_W%28SH%29.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_Б%28B%29.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_Г%28G%29.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_Д%28D%29.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_DZH.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_ZH.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_Z.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_K.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_L.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_M.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_P.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_T.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_F.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_TS.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_CH.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_SHT.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_V.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_S.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_N.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_R.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_SH.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_B.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_G.pdf" />
+    <AndroidAsset Include="Assets\Worksheets\BG\Worksheet_BG_D.pdf" />
     <None Include="Assets\Worksheets\TR\Worksheet_TR_Z.pdf" />
     <None Include="Assets\Worksheets\TR\Worksheet_TR_Y.pdf" />
     <None Include="Assets\Worksheets\TR\Worksheet_TR_V.pdf" />
@@ -4109,7 +4112,7 @@
     <None Include="Resources\drawable\en_cab.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\drawable\bg_beehive.jpg" />
+    <AndroidResource Include="Resources\drawable\bg_beehive.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\drawable\en_beaver.jpg" />
@@ -7277,7 +7280,7 @@
     <AndroidResource Include="Resources\drawable\bg_fork.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\bg_water-mill.jpg" />
+    <AndroidResource Include="Resources\drawable\bg_watermill.jpg" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\bg_diver.jpg" />
@@ -7331,7 +7334,7 @@
     <AndroidResource Include="Resources\drawable\bg_child.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\bg_flip-flop.jpg" />
+    <AndroidResource Include="Resources\drawable\bg_flipflop.jpg" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\bg_ginger.jpg" />
@@ -7421,7 +7424,7 @@
     <AndroidResource Include="Resources\drawable\bg_cart.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\bg_cash-box.jpg" />
+    <AndroidResource Include="Resources\drawable\bg_cashbox.jpg" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\bg_cage.jpg" />
@@ -7814,7 +7817,7 @@
     <AndroidResource Include="Resources\drawable\bg_scarf.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\bg_knitted-cap.jpg" />
+    <AndroidResource Include="Resources\drawable\bg_knittedcap.jpg" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\bg_pinecone.jpg" />
@@ -7846,21 +7849,28 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\bg_sea.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\bg_speechsounds_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\bg_speechsounds_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\bg_speechsounds_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\bg_speechsounds.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>PowerShell -ExecutionPolicy Unrestricted -File "$(SolutionDir)build\update-version-from-git.ps1" $(ProjectDir)
 
+PowerShell -ExecutionPolicy Unrestricted -File "$(SolutionDir)build\update-packagename.ps1" $(ProjectDir) sr
 
+PowerShell -ExecutionPolicy Unrestricted -File "$(SolutionDir)build\update-language-setting.ps1" "$(ProjectDir)Assets\sp.db" sr
 
-PowerShell -ExecutionPolicy Unrestricted -File "$(SolutionDir)build\update-packagename.ps1" $(ProjectDir) bg
+PowerShell -ExecutionPolicy Unrestricted -File "$(SolutionDir)build\update-resources.ps1" $(ProjectDir) sr "bg|en|tr|nl|sr"
 
-
-
-PowerShell -ExecutionPolicy Unrestricted -File "$(SolutionDir)build\update-language-setting.ps1" "$(ProjectDir)Assets\sp.db" bg
-
-
-
-PowerShell -ExecutionPolicy Unrestricted -File "$(SolutionDir)build\update-resources.ps1" $(ProjectDir) bg "bg|en|tr|nl|sr"
 </PreBuildEvent>
   </PropertyGroup>
 </Project>

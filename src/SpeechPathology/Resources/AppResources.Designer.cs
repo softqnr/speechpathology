@@ -333,6 +333,15 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to correctly?.
+        /// </summary>
+        public static string letterCorrect {
+            get {
+                return ResourceManager.GetString("letterCorrect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Letters.
         /// </summary>
         public static string Letters {
@@ -455,6 +464,15 @@ namespace SpeechPathology.Resources {
         public static string ProjectTitle {
             get {
                 return ResourceManager.GetString("ProjectTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Does your child pronounce the.
+        /// </summary>
+        public static string pronounceLetter {
+            get {
+                return ResourceManager.GetString("pronounceLetter", resourceCulture);
             }
         }
         
