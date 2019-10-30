@@ -336,4 +336,7 @@
   <data name="pronounceLetter" xml:space="preserve">
     <value>Да ли ваше дете изговара </value>
   </data>
+  <data name="LetterFocus" xml:space="preserve">
+    <value>Да ли ваше дијете исправно изговара {0}?</value>
+  </data>
 </root>

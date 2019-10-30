@@ -46,6 +46,10 @@
             </Label>
             <Label Text="{i18n:Translate AboutFooter}"
                 HorizontalOptions="CenterAndExpand" />
+            <Label Text="2017-1-BG01-KA201-036295" 
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   VerticalOptions="EndAndExpand"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

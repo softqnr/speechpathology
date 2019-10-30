@@ -7,6 +7,8 @@ namespace SpeechPathology.Models
     {
         public int AgeInYears { get; set; }
 
+        public int Months { get; set; }
+
         public string LanguageSkillsFile { get; set; }
 
         public string SpeechSoundsFile { get; set; }

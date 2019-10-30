@@ -136,13 +136,13 @@
     <value>Werkbladen</value>
   </data>
   <data name="Final" xml:space="preserve">
-    <value>laatste</value>
+    <value>Laatste</value>
   </data>
   <data name="Initial" xml:space="preserve">
-    <value>eerste</value>
+    <value>Eerste</value>
   </data>
   <data name="Medial" xml:space="preserve">
-    <value>midden</value>
+    <value>Midden</value>
   </data>
   <data name="Mixed" xml:space="preserve">
     <value>Gemengd</value>
@@ -333,10 +333,7 @@ Deze applicatie vervangt geen logopedist, maar biedt een extra ondersteunend hul
   <data name="NotCorrectAbbreviation" xml:space="preserve">
     <value>NC</value>
   </data>
-  <data name="letterCorrect" xml:space="preserve">
-    <value>correct uit?</value>
-  </data>
-  <data name="pronounceLetter" xml:space="preserve">
-    <value>Spreekt uw kind de</value>
+  <data name="LetterFocus" xml:space="preserve">
+    <value>Spreekt uw kind de {0} correct uit?</value>
   </data>
 </root>
