@@ -1,11 +1,11 @@
 ﻿using SpeechPathology.Data;
 using SpeechPathology.Models;
 using SpeechPathology.Models.Enums;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using System;
-using System.Linq;
 using SpeechPathology.Types;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace SpeechPathology.Services.Articulation
 {
@@ -65,12 +65,12 @@ namespace SpeechPathology.Services.Articulation
             // Delete previous exams
             await DeleteAllExams();
             // Get tests by sound position
-            //string blended = Enum.GetName(typeof(SoundPosition), SoundPosition.Blended);
-            var tests = await _repositoryTest.GetAsync(predicate: x => x.AgeY <= age.Item1 && x.AgeM <= age.Item2 && x.LanguageCode == languageCode, //&& x.SoundPosition != blended,
+            string blended = Enum.GetName(typeof(SoundPosition), SoundPosition.Blended);
+            var tests = await _repositoryTest.GetAsync(predicate: x => x.AgeY <= age.Item1 && x.AgeM <= age.Item2 && x.LanguageCode == languageCode && x.SoundPosition != blended,
                 orderBy: x => x.AgeY);
 
             tests.OrderBy(x => x.AgeY).ThenBy(x => x.AgeM);
-
+            
             if (tests.Count == 0)
                 return null;
 
