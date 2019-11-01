@@ -133,7 +133,7 @@
     <value> од </value>
   </data>
   <data name="Worksheets" xml:space="preserve">
-    <value>Рани листови</value>
+    <value>Радни листови</value>
   </data>
   <data name="Final" xml:space="preserve">
     <value>Финална позиција</value>
@@ -289,7 +289,7 @@
     <value>Узраст детета</value>
   </data>
   <data name="Blend" xml:space="preserve">
-    <value>Са понавлјањем</value>
+    <value>Са понављањем</value>
   </data>
   <data name="Blended" xml:space="preserve">
     <value>Са понављањем</value>
@@ -307,7 +307,7 @@
     <value>Ok</value>
   </data>
   <data name="ResumeTestMessage" xml:space="preserve">
-    <value>Да ли желите да наставите претходни тест_</value>
+    <value>Да ли желите да наставите претходни тест?</value>
   </data>
   <data name="ResumeTestTitle" xml:space="preserve">
     <value>Претходни тест је нађен</value>
@@ -316,19 +316,25 @@
     <value>резултат</value>
   </data>
   <data name="All" xml:space="preserve">
-    <value>All</value>
+    <value>Сви</value>
   </data>
   <data name="Letters" xml:space="preserve">
-    <value>Letters</value>
+    <value>Слова</value>
   </data>
   <data name="SoundTestResultsButton" xml:space="preserve">
     <value>Резултати по гласовима</value>
   </data>
   <data name="CorrectAbbreviation" xml:space="preserve">
-    <value>C</value>
+    <value>T</value>
   </data>
   <data name="NotCorrectAbbreviation" xml:space="preserve">
-    <value>NC</value>
+    <value>НТ</value>
+  </data>
+  <data name="letterCorrect" xml:space="preserve">
+    <value> правилно?</value>
+  </data>
+  <data name="pronounceLetter" xml:space="preserve">
+    <value>Да ли ваше дете изговара </value>
   </data>
   <data name="LetterFocus" xml:space="preserve">
     <value>Да ли ваше дијете исправно изговара {0}?</value>

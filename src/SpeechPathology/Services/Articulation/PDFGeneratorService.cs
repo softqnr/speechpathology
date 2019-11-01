@@ -53,9 +53,11 @@ namespace SpeechPathology.Services.Articulation
             // Render Results
             // Header title
             var par = _section.Headers.Primary.AddParagraph(Resources.AppResources.ProjectTitle);
-            par.Format.Font.Size = 24;
+            par.Format.Font.Size = 20;
             par.Format.Font.Bold = true;
             par.Format.Alignment = ParagraphAlignment.Center;
+            par.Format.SpaceAfter = "1cm";
+
 
             // Title
             par = _section.AddParagraph(Resources.AppResources.PositionTestResults);
@@ -181,9 +183,10 @@ namespace SpeechPathology.Services.Articulation
             // Render Results
             // Header title
             var par = _section.Headers.Primary.AddParagraph(Resources.AppResources.ProjectTitle);
-            par.Format.Font.Size = 24;
+            par.Format.Font.Size = 16;
             par.Format.Font.Bold = true;
             par.Format.Alignment = ParagraphAlignment.Center;
+            par.Format.SpaceAfter = "1cm";
 
             // Title
             par = _section.AddParagraph(Resources.AppResources.SoundTestResults);
@@ -195,6 +198,7 @@ namespace SpeechPathology.Services.Articulation
             // Sub title 
             string soundPosition = articulationTestExam.SoundPosition != "" ? articulationTestExam.SoundPosition :
                 Resources.AppResources.All.ToUpper();
+        
             par = _section.AddParagraph(soundPosition);
             par.Format.Font.Size = 12;
             par.Format.Font.Bold = true;
