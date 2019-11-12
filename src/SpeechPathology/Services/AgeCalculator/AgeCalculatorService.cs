@@ -8,7 +8,7 @@ namespace SpeechPathology.Services.AgeCalculator
 {
     public class AgeCalculatorService : IAgeCalculatorService
     {
-        private IRepository<AgeCalculation> _repositoryAgeCalculation;
+        private readonly IRepository<AgeCalculation> _repositoryAgeCalculation;
 
         public AgeCalculatorService(IRepository<AgeCalculation> repositoryAgeCalculation)
         {

@@ -9,6 +9,7 @@ namespace SpeechPathology.ViewModels
     {
         protected readonly INavigationService NavigationService;
         protected readonly IDialogService DialogService;
+
         public ViewModelBase()
         {
             DialogService = ServiceLocator.Current.GetInstance<IDialogService>();

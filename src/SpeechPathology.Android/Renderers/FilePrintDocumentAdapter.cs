@@ -1,20 +1,16 @@
-﻿using System;
-using Android.Content;
-using Android.Print;
-using Android.Support.V4.Content;
+﻿using Android.Print;
 using Java.IO;
+using System;
 
 namespace SpeechPathology.Droid
 {
     public class FilePrintDocumentAdapter : PrintDocumentAdapter
     {
-        private readonly Context _context;
         private readonly string _fileName;
-        private string _filePath;
+        private readonly string _filePath;
 
-        public FilePrintDocumentAdapter(Context context, string fileName, string filePath)
+        public FilePrintDocumentAdapter(string fileName, string filePath)
         {
-            _context = context;
             _fileName = fileName;
             _filePath = filePath;
         }
@@ -29,9 +25,12 @@ namespace SpeechPathology.Droid
                 return;
             }
 
-            callback.OnLayoutFinished(new PrintDocumentInfo.Builder(_fileName)
-                .SetContentType(PrintContentType.Document)
-                .Build(), true);
+            using (var builder = new PrintDocumentInfo.Builder(_fileName))
+            {
+                callback.OnLayoutFinished(builder
+                    .SetContentType(PrintContentType.Document)
+                    .Build(), true);
+            }
         }
 
         public override void OnWrite(PageRange[] pages, Android.OS.ParcelFileDescriptor destination, Android.OS.CancellationSignal cancellationSignal, WriteResultCallback callback)

@@ -12,8 +12,8 @@ namespace SpeechPathology.ViewModels
 {
     public class FlashcardsTestViewModel : ViewModelBase
     {
-        private IFlashcardService _flashcardService;
-        private ISoundService _soundService;
+        private readonly IFlashcardService _flashcardService;
+        private readonly ISoundService _soundService;
         private ObservableCollection<Flashcard> _flashcards;
         private int _currentIndex;
 

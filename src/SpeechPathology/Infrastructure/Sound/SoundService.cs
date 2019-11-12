@@ -5,7 +5,7 @@ namespace SpeechPathology.Infrastructure.Sound
 {
     public class SoundService : ISoundService
     {
-        private ISoundService _soundProvider;
+        private readonly ISoundService _soundProvider;
         public SoundService()
         {
             _soundProvider = DependencyService.Get<ISoundService>();
