@@ -88,7 +88,7 @@ namespace SpeechPathology.Infrastructure.Navigation
 
         protected virtual async Task InternalNavigateToAsync(Type viewModelType, object parameter)
         {
-            var page = CreateAndBindPage(viewModelType);
+            var page = CreateAndBindPage(viewModelType, parameter);
 
             if (page is MasterDetailView && page is ContentPage)
             {
@@ -143,7 +143,7 @@ namespace SpeechPathology.Infrastructure.Navigation
             return _mappings[viewModelType];
         }
 
-        protected Page CreateAndBindPage(Type viewModelType)
+        protected Page CreateAndBindPage(Type viewModelType, object parameter)
         {
             Type pageType = GetPageTypeForViewModel(viewModelType);
 

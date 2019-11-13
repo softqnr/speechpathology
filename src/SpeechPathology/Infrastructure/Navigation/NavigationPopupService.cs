@@ -16,7 +16,7 @@ namespace SpeechPathology.Infrastructure.Navigation
 
         public async Task NavigateToPopupAsync<TViewModel>(object parameter, bool animate) where TViewModel : ViewModelBase
         {
-            var page = CreateAndBindPage(typeof(TViewModel));
+            var page = CreateAndBindPage(typeof(TViewModel), parameter);
             await (page.BindingContext as ViewModelBase).InitializeAsync(parameter);
 
             if (page is PopupPage)

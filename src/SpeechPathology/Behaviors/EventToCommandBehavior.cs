@@ -87,8 +87,7 @@ namespace SpeechPathology.Behaviors
             eventHandler = null;
         }
 
-        /*
-        void OnEvent(object _sender, object eventArgs)
+        void OnEvent(object sender, object eventArgs)
         {
             object resolvedParameter;
 
@@ -117,7 +116,6 @@ namespace SpeechPathology.Behaviors
                 Command.Execute(resolvedParameter);
             }
         }
-        */
 
         static void OnEventNameChanged(BindableObject bindable, object oldValue, object newValue)
         {

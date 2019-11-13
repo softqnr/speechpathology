@@ -48,7 +48,7 @@ namespace SpeechPathology
                 InitializeDI();
                 // Localization
                 var task = InitializeLocalization();
-                task.Wait();
+                task.Wait(10);
 
                 Initialized = true;
             }
@@ -131,8 +131,8 @@ namespace SpeechPathology
             Container.RegisterType<AgeCalcSpeechSoundsViewModel>();
 
             // Set as service locator provider
-            using (var unityServiceLocator = new UnityServiceLocator(Container))
-                ServiceLocator.SetLocatorProvider(() => unityServiceLocator);
+            var unityServiceLocator = new UnityServiceLocator(Container);
+            ServiceLocator.SetLocatorProvider(() => unityServiceLocator);
         }
 
         protected override async void OnStart()
