@@ -324,7 +324,7 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Language Skills.
+        ///   Looks up a localized string similar to Language Skills .
         /// </summary>
         public static string LanguageSkillsButton {
             get {
@@ -333,11 +333,20 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Does your child pronounce {0} correctly?.
+        ///   Looks up a localized string similar to  correctly?.
         /// </summary>
-        public static string LetterFocus {
+        public static string LetterFocusPost {
             get {
-                return ResourceManager.GetString("LetterFocus", resourceCulture);
+                return ResourceManager.GetString("LetterFocusPost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Does your child pronounce .
+        /// </summary>
+        public static string LetterFocusPre {
+            get {
+                return ResourceManager.GetString("LetterFocusPre", resourceCulture);
             }
         }
         
