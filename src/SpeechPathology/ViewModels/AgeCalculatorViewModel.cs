@@ -11,7 +11,7 @@ namespace SpeechPathology.ViewModels
 {
     public class AgeCalculatorViewModel : ViewModelBase
     {
-        private IAgeCalculatorService _ageCalculatorService;
+        private readonly IAgeCalculatorService _ageCalculatorService;
         private List<AgeCalculation> _ageCalculations;
 
         private DateTime _endDate;

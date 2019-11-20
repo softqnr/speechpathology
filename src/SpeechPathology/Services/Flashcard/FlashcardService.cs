@@ -10,7 +10,7 @@ namespace SpeechPathology.Services.Flashcard
 {
     public class FlashcardService : IFlashcardService
     {
-        private IRepository<Models.Flashcard> _repositoryFlashcard;
+        private readonly IRepository<Models.Flashcard> _repositoryFlashcard;
         public FlashcardService(IRepository<Models.Flashcard> repositoryFlashcard)
         {
             _repositoryFlashcard = repositoryFlashcard;

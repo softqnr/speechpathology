@@ -22,7 +22,13 @@ namespace SpeechPathology.iOS.Services
             }
             return path;
         }
+
         public Task<string> CopyAssetFileToTemp(string assetFile, string destinationFileName)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void CopyAssetFileTo(string assetFile, string destinationFileName)
         {
             throw new System.NotImplementedException();
         }

@@ -11,9 +11,9 @@ namespace SpeechPathology.Services.Articulation
 {
     public class ArticulationTestService : IArticulationTestService
     {
-        private IRepository<ArticulationTest> _repositoryTest;
-        private IRepository<ArticulationTestExam> _repositoryTestExam;
-        private IRepository<ArticulationTestExamAnswer> _repositoryTestExamAnswer;
+        private readonly IRepository<ArticulationTest> _repositoryTest;
+        private readonly IRepository<ArticulationTestExam> _repositoryTestExam;
+        private readonly IRepository<ArticulationTestExamAnswer> _repositoryTestExamAnswer;
 
         public ArticulationTestService(IRepository<ArticulationTest> repositoryTest,
             IRepository<ArticulationTestExam> repositoryExam,

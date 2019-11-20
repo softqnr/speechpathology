@@ -15,8 +15,8 @@ namespace SpeechPathology.ViewModels
     {
         private ArticulationTestExam _articulationTestExam;
         private ObservableCollection<Grouping<string, ArticulationTestExamAnswer>> _articulationTestAnswers;
-        private IArticulationTestService _articulationTestService;
-        private IPDFGeneratorService _pdfGeneratorService;
+        private readonly IArticulationTestService _articulationTestService;
+        private readonly IPDFGeneratorService _pdfGeneratorService;
         private double _score;
         private string _soundPosition;
 

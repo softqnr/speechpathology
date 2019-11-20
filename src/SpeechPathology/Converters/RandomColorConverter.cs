@@ -8,8 +8,8 @@ namespace SpeechPathology.Converters
 {
     public class RandomColorConverter : IValueConverter, IMarkupExtension
     {
-        private Random _random = new Random();
-        private List<string> _colors = new List<string>() {
+        private readonly Random _random = new Random();
+        private readonly List<string> _colors = new List<string>() {
             "0047BD",
             "09B9FC",
             "009543",

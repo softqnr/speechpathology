@@ -9,7 +9,7 @@ namespace SpeechPathology.Behaviors
 {
     public class EventToCommandBehavior : BehaviorBase<View>
     {
-        Delegate eventHandler;
+        private Delegate eventHandler;
         
         public static readonly BindableProperty EventNameProperty = BindableProperty.Create("EventName", typeof(string), typeof(EventToCommandBehavior), null, propertyChanged: OnEventNameChanged);
         public static readonly BindableProperty CommandProperty = BindableProperty.Create("Command", typeof(ICommand), typeof(EventToCommandBehavior), null);
@@ -89,19 +89,17 @@ namespace SpeechPathology.Behaviors
 
         void OnEvent(object sender, object eventArgs)
         {
-            object resolvedParameter = new object();
+            object resolvedParameter;
 
             if (Command == null)
                 return;
-
             else if (Converter != null)
             {
                 resolvedParameter = Converter.Convert(eventArgs, typeof(object), null, null);
             }
             else
             {
-                var arg = eventArgs as ItemTappedEventArgs;
-                if (arg == null)
+                if (!(eventArgs is ItemTappedEventArgs arg))
                 {
                     resolvedParameter = eventArgs;
                 }
@@ -118,7 +116,6 @@ namespace SpeechPathology.Behaviors
                 Command.Execute(resolvedParameter);
             }
         }
-
 
         static void OnEventNameChanged(BindableObject bindable, object oldValue, object newValue)
         {

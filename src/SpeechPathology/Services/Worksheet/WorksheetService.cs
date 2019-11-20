@@ -6,7 +6,7 @@ namespace SpeechPathology.Services.Worksheet
 {
     public class WorksheetService : IWorksheetService
     {
-        private IRepository<Models.Worksheet> _repositoryWorksheet;
+        private readonly IRepository<Models.Worksheet> _repositoryWorksheet;
 
         public WorksheetService(IRepository<Models.Worksheet> repositoryWorksheet)
         {

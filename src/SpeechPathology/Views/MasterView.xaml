@@ -4,82 +4,97 @@
              xmlns:b="clr-namespace:SpeechPathology.Behaviors"
              x:Class="SpeechPathology.Views.MasterView"
              Title="Speech Pathology Tools">
-  <StackLayout>
-    <ListView x:Name="MenuItemsListView"
-              SeparatorVisibility="None"
-              HasUnevenRows="true"
-              ItemsSource="{Binding MenuItems}">
+    <StackLayout>
+        <ListView x:Name="MenuItemsListView"
+                  SeparatorVisibility="None"
+                  HasUnevenRows="true"
+                  ItemsSource="{Binding MenuItems}">
             <ListView.Behaviors>
                 <b:EventToCommandBehavior Command="{Binding NavigationItemSelectedCommand}" 
-                                                  EventName="ItemTapped"/>
+                                          EventName="ItemTapped"/>
             </ListView.Behaviors>
             <ListView.Header>
-        <Grid BackgroundColor="{StaticResource primary}">
-          <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="10"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="10"/>
-          </Grid.ColumnDefinitions>
-          <Grid.RowDefinitions>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-          </Grid.RowDefinitions>
-            <StackLayout
-                Grid.Column="1"
-                Grid.Row="1"
-                VerticalOptions="End">
-                <Label TextColor="White" Text="{Binding ProjectTitle}" 
-                       FontSize="Large" Style="{DynamicResource SubtitleStyle}"/>
-            </StackLayout>
-            
-            <Label TextColor="White"
-              Grid.Column="1"
-              Grid.Row="2">
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span Text="{Binding Version}" FontSize="Small" />
-                        <Span Text="{Binding Language}" FontSize="Small" />
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Grid.Column="1" Grid.Row="3" Padding="6">
-              <Image Source="facebook_icon.png" WidthRequest="40" HeightRequest="40" >
-                <Image.GestureRecognizers>
-                  <TapGestureRecognizer Command="{Binding LinkTappedCommand}"
-                                    CommandParameter="{StaticResource facebookUrl}"/>
-                </Image.GestureRecognizers>
-              </Image>
-                <Image Source="home_icon.png" WidthRequest="40" HeightRequest="40">
-                <Image.GestureRecognizers>
-                  <TapGestureRecognizer Command="{Binding LinkTappedCommand}"
-                                    CommandParameter="{StaticResource homePageUrl}"/>
-                </Image.GestureRecognizers>
-              </Image>
-              <Image Source="mail_icon.png" WidthRequest="40" HeightRequest="40">
-                <Image.GestureRecognizers>
-                  <TapGestureRecognizer Command="{Binding LinkTappedCommand}"
-                                    CommandParameter="{StaticResource email}"/>
-                </Image.GestureRecognizers>
-              </Image>
-            </StackLayout>
+                <Grid BackgroundColor="{StaticResource primary}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="10"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <StackLayout Grid.Column="1"
+                                 Grid.Row="1"
+                                 VerticalOptions="End">
+                        <Label TextColor="White"
+                               Text="{Binding ProjectTitle}"
+                               FontSize="Large"
+                               Style="{DynamicResource SubtitleStyle}"/>
+                    </StackLayout>
+
+                    <Label TextColor="White"
+                           Grid.Column="1"
+                           Grid.Row="2">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{Binding Version}"
+                                      FontSize="Small" />
+                                <Span Text="{Binding Language}"
+                                      FontSize="Small" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <StackLayout Orientation="Horizontal"
+                                 HorizontalOptions="Center"
+                                 Grid.Column="1"
+                                 Grid.Row="3"
+                                 Padding="6">
+                        <Image Source="facebook_icon.png"
+                               WidthRequest="40"
+                               HeightRequest="40" >
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding LinkTappedCommand}"
+                                                      CommandParameter="{StaticResource facebookUrl}"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="home_icon.png"
+                               WidthRequest="40"
+                               HeightRequest="40">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding LinkTappedCommand}"
+                                                      CommandParameter="{StaticResource homePageUrl}"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="mail_icon.png"
+                               WidthRequest="40"
+                               HeightRequest="40">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding LinkTappedCommand}"
+                                                      CommandParameter="{StaticResource email}"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </StackLayout>
                 </Grid>
-      </ListView.Header>
-      <ListView.ItemTemplate>
-        <DataTemplate>
-          <ViewCell>
-            <Grid Padding="5,10">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="18"/>
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <Image Source="{Binding IconSource}" />
-                <Label Grid.Column="1" Text="{Binding Title}" FontSize="Large"/>
-            </Grid>
-        </ViewCell>
-        </DataTemplate>
-      </ListView.ItemTemplate>
-    </ListView>
-  </StackLayout>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="5,10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="18"/>
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Image Source="{Binding IconSource}" />
+                            <Label Grid.Column="1"
+                                   Text="{Binding Title}"
+                                   FontSize="Large"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
 </ContentPage>

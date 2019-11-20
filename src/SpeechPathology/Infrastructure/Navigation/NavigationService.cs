@@ -88,7 +88,7 @@ namespace SpeechPathology.Infrastructure.Navigation
 
         protected virtual async Task InternalNavigateToAsync(Type viewModelType, object parameter)
         {
-            Page page = CreateAndBindPage(viewModelType, parameter);
+            var page = CreateAndBindPage(viewModelType, parameter);
 
             if (page is MasterDetailView && page is ContentPage)
             {
@@ -101,15 +101,14 @@ namespace SpeechPathology.Infrastructure.Navigation
             else if (CurrentApplication.MainPage is MasterDetailPage)
             {
                 var mainPage = CurrentApplication.MainPage as MasterDetailPage;
-                var navigationPage = mainPage.Detail as CustomNavigationPage;
 
-                if (navigationPage != null)
+                if (mainPage.Detail is CustomNavigationPage navigationPage)
                 {
-                    var currentPage = navigationPage.CurrentPage;
-
+                    //var currentPage = navigationPage.CurrentPage;
+                    //
                     //if (currentPage.GetType() != page.GetType())
                     //{
-                        await navigationPage.PushAsync(page);
+                    await navigationPage.PushAsync(page);
                     //}
                 }
                 else
@@ -122,9 +121,7 @@ namespace SpeechPathology.Infrastructure.Navigation
             }
             else
             {
-                var navigationPage = CurrentApplication.MainPage as CustomNavigationPage;
-
-                if (navigationPage != null)
+                if (CurrentApplication.MainPage is CustomNavigationPage navigationPage)
                 {
                     await navigationPage.PushAsync(page);
                 }

@@ -8,7 +8,7 @@ namespace SpeechPathology.Converters
 {
     public class RandomNumberConverter : IValueConverter, IMarkupExtension
     {
-        private Random _random = new Random();
+        private readonly Random _random = new Random();
 
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {

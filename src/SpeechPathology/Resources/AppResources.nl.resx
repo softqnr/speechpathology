@@ -333,7 +333,10 @@ Deze applicatie vervangt geen logopedist, maar biedt een extra ondersteunend hul
   <data name="NotCorrectAbbreviation" xml:space="preserve">
     <value>NC</value>
   </data>
-  <data name="LetterFocus" xml:space="preserve">
-    <value>Spreekt uw kind de {0} correct uit?</value>
+  <data name="LetterFocusPre" xml:space="preserve">
+    <value>Spreekt uw kind de </value>
+  </data>
+  <data name="LetterFocusPost" xml:space="preserve">
+    <value> correct uit?</value>
   </data>
 </root>

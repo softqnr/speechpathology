@@ -8,7 +8,7 @@ namespace SpeechPathology.ViewModels
 {
     public class FlashcardsSelectSoundPositionViewModel : ViewModelBase
     {
-        private IFlashcardService _flashcardService;
+        private readonly IFlashcardService _flashcardService;
         private string _selectedSound;
         private string _selectedExcludedSound;
         private string[] _soundPositions;
@@ -54,8 +54,7 @@ namespace SpeechPathology.ViewModels
 
         private async Task LoadData(object navigationData)
         {
-            var navigationDataArray = navigationData as string[];
-            if (navigationDataArray != null)
+            if (navigationData is string[] navigationDataArray)
             {
                 SelectedSound = navigationDataArray[0];
                 _selectedExcludedSound = navigationDataArray[1];

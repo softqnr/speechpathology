@@ -65,9 +65,8 @@ namespace SpeechPathology.Behaviors
             bindable.BindingContextChanged -= OnBindingContextChanged;
             AssociatedObject = null;
 
-            var exists = bindable.GestureRecognizers.FirstOrDefault() as TapGestureRecognizer;
 
-            if (exists != null)
+            if (bindable.GestureRecognizers.FirstOrDefault() is TapGestureRecognizer exists)
                 exists.Tapped -= View_Tapped;
 
             base.OnDetachingFrom(bindable);

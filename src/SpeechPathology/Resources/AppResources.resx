@@ -273,7 +273,7 @@ This application does not replace a speech therapist, but offers an additional s
     <value>Continue to the test</value>
   </data>
   <data name="LanguageSkillsButton" xml:space="preserve">
-    <value>Language Skills</value>
+    <value>Language Skills </value>
   </data>
   <data name="SpeechSoundsButton" xml:space="preserve">
     <value>Speech Sounds</value>
@@ -332,7 +332,10 @@ This application does not replace a speech therapist, but offers an additional s
   <data name="NotCorrectAbbreviation" xml:space="preserve">
     <value>NC</value>
   </data>
-  <data name="LetterFocus" xml:space="preserve">
-    <value>Does your child pronounce {0} correctly?</value>
+  <data name="LetterFocusPre" xml:space="preserve">
+    <value>Does your child pronounce </value>
+  </data>
+  <data name="LetterFocusPost" xml:space="preserve">
+    <value> correctly?</value>
   </data>
 </root>

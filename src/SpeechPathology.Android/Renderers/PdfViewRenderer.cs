@@ -15,14 +15,14 @@ namespace SpeechPathology.Droid
 {
     public class PdfViewRenderer : WebViewRenderer
     {
-        Context _context;
+        private readonly Context _context;
         public PdfViewRenderer(Context context) : base(context)
         {
             _context = context;
         }
         internal class PdfWebChromeClient : WebChromeClient
         {
-            Context _context;
+            private readonly Context _context;
             public PdfWebChromeClient(Context context)
             {
                 _context = context;
@@ -36,7 +36,7 @@ namespace SpeechPathology.Droid
 
                 using (var printManager = _context.GetSystemService(Android.Content.Context.PrintService) as PrintManager)
                 {
-                    printManager?.Print(FileName, new FilePrintDocumentAdapter(_context, FileName, Uri), null);
+                    printManager?.Print(FileName, new FilePrintDocumentAdapter(FileName, Uri), null);
                 }
 
                 return true;
@@ -56,13 +56,12 @@ namespace SpeechPathology.Droid
                 return;
             }
 
-            var pdfView = Element as PdfView;
 
-            if (pdfView == null)
+            if (!(Element is PdfView pdfView))
             {
                 return;
             }
-           
+
             if (string.IsNullOrWhiteSpace(pdfView.Uri) == false)
             {
                 Control.SetWebChromeClient(new PdfWebChromeClient(_context)
@@ -94,9 +93,8 @@ namespace SpeechPathology.Droid
                 return;
             }
 
-            var pdfView = Element as PdfView;
 
-            if (pdfView == null)
+            if (!(Element is PdfView pdfView))
             {
                 return;
             }
