@@ -17,6 +17,7 @@
                                         Source="{Binding SpeechSoundsFile}"
                                         Aspect="AspectFit"
                                         VerticalOptions="Center"
+                                        DownsampleToViewSize="True"
                                         Margin="15"/>
             <Button Text="{i18n:Translate SpeechSoundsDetail}"
                     TextColor="White"

@@ -202,8 +202,9 @@ namespace SpeechPathology.ViewModels
         {
             for (var i = 0; i < AgeCalculations.Count; i++)
             {
+                if (AgeCalculations[i].AgeInYears > AgeInYears)
+                    break;
                 ageCalculation = AgeCalculations[i];
-                if (ageCalculation.AgeInYears >= AgeInYears) break;
             }
         }
     }
