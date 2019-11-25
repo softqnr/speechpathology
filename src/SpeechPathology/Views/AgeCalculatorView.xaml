@@ -6,19 +6,16 @@
              Title="{i18n:Translate AgeCalculator}">
     <ContentPage.Content>
         <StackLayout Margin="10">
-
             <Label Text="{i18n:Translate AgeCalculatorTitle}"
                    Style="{DynamicResource TitleStyle}"
                    Margin="0, 20"
                    HorizontalTextAlignment="Center" />
-
             <Label Text="{i18n:Translate DateOfBirth}"
                    Style="{DynamicResource SubtitleStyle}" />
             <DatePicker x:Name="startDatePicker"
                         Format="D"
                         Margin="30, 0, 30, 30"
                         Date="{Binding StartDate}" />
-
             <Label Text="{i18n:Translate DateOfTest}"
                    Style="{DynamicResource SubtitleStyle}" />
             <DatePicker x:Name="endDatePicker"
@@ -26,14 +23,12 @@
                         Format="D"
                         Margin="30, 0, 30, 30"
                         Date="{Binding EndDate}" />
-
             <Label Text="{i18n:Translate AgeAtTest}"
                    Style="{DynamicResource TitleStyle}"
                    HorizontalOptions="CenterAndExpand" />
             <Label Text="{Binding CurrentAgeString}"
                    Style="{DynamicResource TitleStyle}"
                    HorizontalOptions="CenterAndExpand" />
-
             <FlexLayout Direction="Row"
                         Margin="0, 30"
                         JustifyContent="SpaceEvenly">
@@ -50,7 +45,6 @@
                         Margin="10"
                         Command="{Binding SpeechSoundsCommand}" />
             </FlexLayout>
-            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

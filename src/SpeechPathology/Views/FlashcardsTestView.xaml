@@ -6,59 +6,69 @@
              xmlns:cards="clr-namespace:PanCardView;assembly=PanCardView"
              xmlns:behaviors="clr-namespace:SpeechPathology.Behaviors"
              x:Class="SpeechPathology.Views.FlashcardsTestView"
-             Title="{i18n:Translate Flashcards}" BackgroundColor="White">
+             Title="{i18n:Translate Flashcards}"
+             BackgroundColor="White">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Start">
-                <Label Text="{Binding Source={x:Reference Flashcards}, Path=SelectedIndex, Converter={StaticResource ZeroToOneBaseConverter}}" FontSize="Large" />
-                <Label Text="{i18n:Translate of}" FontSize="Large" />
-                <Label Text="{Binding Source={x:Reference Flashcards}, Path=ItemsSource.Count}" FontSize="Large" />
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="Center"
+                         VerticalOptions="Start">
+                <Label Text="{Binding Source={x:Reference Flashcards}, Path=SelectedIndex, Converter={StaticResource ZeroToOneBaseConverter}}"
+                       FontSize="Large" />
+                <Label Text="{i18n:Translate of}"
+                       FontSize="Large" />
+                <Label Text="{Binding Source={x:Reference Flashcards}, Path=ItemsSource.Count}"
+                       FontSize="Large" />
             </StackLayout>
-          <cards:CarouselView
-              x:Name="Flashcards"
-              ItemsSource="{Binding Flashcards}"
-              IsCyclical="false"
-              IsAutoNavigatingAimationEnabled="false"
-              SelectedIndex="{Binding CurrentIndex}"
-              VerticalOptions="CenterAndExpand">
-            <cards:CarouselView.ItemTemplate>
-              <DataTemplate>
-                <ContentView>
-                  <Frame
-                      VerticalOptions="Center"
-                      HorizontalOptions="Center"
-                      Padding="0"
-                      HasShadow="false"
-                      IsClippedToBounds="true"
-                      CornerRadius="0">
-
-                    <Grid>
-                      <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="*"/>
-                      </Grid.RowDefinitions>
-
-                      <Label TextColor="{StaticResource primary_dark}" Grid.Row="0" Text="{Binding Text}" FontSize="26" HorizontalOptions="Center"/>
-
-                      <ffimage:CachedImage x:Name="image" Source="{Binding ImageFile}"
-                                                    Aspect="AspectFit" Grid.Row="1" VerticalOptions="Center"/>
-
-                    </Grid>
-
-                  </Frame>
-                </ContentView>
-              </DataTemplate>
-            </cards:CarouselView.ItemTemplate>
-          </cards:CarouselView>
-          
-            <StackLayout  BackgroundColor="{StaticResource primary_light}" Padding="12" VerticalOptions="End">
-                <Frame CornerRadius="50" BackgroundColor="{StaticResource accent}" 
-                       WidthRequest="50" HeightRequest="50"
-                       HorizontalOptions="Center" VerticalOptions="Center">
+            <cards:CarouselView x:Name="Flashcards"
+                                ItemsSource="{Binding Flashcards}"
+                                IsCyclical="false"
+                                IsAutoNavigatingAimationEnabled="false"
+                                SelectedIndex="{Binding CurrentIndex}"
+                                VerticalOptions="CenterAndExpand">
+                <cards:CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <ContentView>
+                            <Frame VerticalOptions="Center"
+                                   HorizontalOptions="Center"
+                                   Padding="0"
+                                   HasShadow="false"
+                                   IsClippedToBounds="true"
+                                   CornerRadius="0">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Label TextColor="{StaticResource primary_dark}"
+                                           Grid.Row="0"
+                                           Text="{Binding Text}"
+                                           FontSize="26"
+                                           HorizontalOptions="Center"/>
+                                    <ffimage:CachedImage x:Name="image"
+                                                         Source="{Binding ImageFile}"
+                                                         Aspect="AspectFit"
+                                                         Grid.Row="1" 
+                                                         VerticalOptions="Center"/>
+                                </Grid>
+                            </Frame>
+                        </ContentView>
+                    </DataTemplate>
+                </cards:CarouselView.ItemTemplate>
+            </cards:CarouselView>
+            <StackLayout BackgroundColor="{StaticResource primary_light}"
+                         Padding="12"
+                         VerticalOptions="End">
+                <Frame CornerRadius="50"
+                       BackgroundColor="{StaticResource accent}" 
+                       WidthRequest="50"
+                       HeightRequest="50"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center">
                     <Image Source="baseline_play_arrow_white_24.png">
                         <Image.Behaviors>
                             <behaviors:ViewTappedButtonBehavior Command="{Binding PlaySoundCommand}"
-                                                        AnimationType="Fade"/>
+                                                                AnimationType="Fade"/>
                         </Image.Behaviors>
                     </Image>
                 </Frame>
