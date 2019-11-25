@@ -62,14 +62,14 @@ namespace SpeechPathology.ViewModels
             }
         }
 
-        public bool IsValidAge
-        {
-            get
-            {
-                var rslt = AgeCalculations.FindIndex(x => x.AgeInYears >= AgeInYears && x.Months >= MonthsThisYear);
-                return (rslt != 0);
-            }
-        }
+        //public bool IsValidAge
+        //{
+        //    get
+        //    {
+        //        var rslt = AgeCalculations.FindIndex(x => x.AgeInYears >= AgeInYears && x.Months >= MonthsThisYear);
+        //        return (rslt != 0);
+        //    }
+        //}
 
         public ICommand LanguageSkillsCommand
         {
@@ -128,7 +128,7 @@ namespace SpeechPathology.ViewModels
         {
             RefreshAgeCalculation();
 
-            if (IsValidAge)
+            if (ageCalculation != null)
             {
                 DialogService.ShowLoading(Resources.AppResources.Loading);
                 string[] array = { ageCalculation.SpeechSoundsFile, AgeInYears.ToString(), MonthsThisYear.ToString() };
@@ -200,10 +200,16 @@ namespace SpeechPathology.ViewModels
 
         private void RefreshAgeCalculation()
         {
+            ageCalculation = null;
+
             for (var i = 0; i < AgeCalculations.Count; i++)
             {
                 if (AgeCalculations[i].AgeInYears > AgeInYears)
                     break;
+                else if (AgeCalculations[i].AgeInYears == AgeInYears
+                    && AgeCalculations[i].Months > MonthsThisYear)
+                    break;
+
                 ageCalculation = AgeCalculations[i];
             }
         }

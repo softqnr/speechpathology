@@ -8,34 +8,46 @@
              x:Name="Page">
     <ContentPage.Resources>
         <ResourceDictionary>
-            <Style x:Key="plainButton" TargetType="Button">
-                <Setter Property="TextColor" Value="White" />
-                <Setter Property="FontSize" Value="Large" />
-                <Setter Property="FontAttributes" Value="Bold" />
-                <Setter Property="HeightRequest" Value="50" />
+            <Style x:Key="plainButton"
+                   TargetType="Button">
+                <Setter Property="TextColor"
+                        Value="White" />
+                <Setter Property="FontSize"
+                        Value="Large" />
+                <Setter Property="FontAttributes"
+                        Value="Bold" />
+                <Setter Property="HeightRequest"
+                        Value="50" />
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="{Binding SelectedSound}" TextColor="Gray" FontAttributes="Bold" FontSize="128" HorizontalOptions="Center" />
-
-            <ListView ItemsSource="{Binding SoundPositions}" HasUnevenRows="true">
+            <Label Text="{Binding SelectedSound}"
+                   TextColor="Gray"
+                   FontAttributes="Bold"
+                   FontSize="128"
+                   HorizontalOptions="Center" />
+            <ListView ItemsSource="{Binding SoundPositions}"
+                      HasUnevenRows="true">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Frame Padding="0" Margin="5" HasShadow="True" CornerRadius="0">
+                            <Frame Padding="0"
+                                   Margin="5"
+                                   HasShadow="True"
+                                   CornerRadius="0">
                                 <Button Text="{Binding .}" 
                                     Command="{Binding Path=BindingContext.ItemTappedCommand, Source={x:Reference Name=Page}}" 
                                     CommandParameter="{Binding .}" 
                                     BackgroundColor="{Binding ., Converter={StaticResource RandomColorConverter}}"
-                                    HorizontalOptions="Fill" Style="{StaticResource plainButton}" />
+                                    HorizontalOptions="Fill"
+                                        Style="{StaticResource plainButton}" />
                             </Frame>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
