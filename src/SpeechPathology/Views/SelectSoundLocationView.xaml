@@ -1,21 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <pages:PopupPage  xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SpeechPathology.Views.SelectSoundLocationView"
-             xmlns:i18n="clr-namespace:SpeechPathology.Extensions"
-             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
-             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup">
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  x:Class="SpeechPathology.Views.SelectSoundLocationView"
+                  xmlns:i18n="clr-namespace:SpeechPathology.Extensions"
+                  xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                  xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup">
     <pages:PopupPage.Animation>
-        <animations:ScaleAnimation
-          PositionIn="Center"
-          PositionOut="Center"
-          ScaleIn="1.2"
-          ScaleOut="1"
-          DurationIn="400"
-          DurationOut="100"
-          EasingIn="SinOut"
-          EasingOut="SinIn"
-          HasBackgroundAnimation="True"/>
+        <animations:ScaleAnimation PositionIn="Center"
+                                   PositionOut="Center"
+                                   ScaleIn="1.2"
+                                   ScaleOut="1"
+                                   DurationIn="400"
+                                   DurationOut="100"
+                                   EasingIn="SinOut"
+                                   EasingOut="SinIn"
+                                   HasBackgroundAnimation="True"/>
     </pages:PopupPage.Animation>
     <ContentPage.Content>
         <StackLayout Margin="12" 
@@ -24,47 +23,44 @@
                      BackgroundColor="White" 
                      HorizontalOptions="CenterAndExpand" 
                      VerticalOptions="Center">
-            <Label Text="Select position" />
-            
-            <Button Text="Initial"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" 
-                Command="{Binding SelectLocationCommand}">
+            <Label Text="{i18n:Translate SelectSoundPosition}" />
+            <Button Text="{i18n:Translate Initial}"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Command="{Binding SelectLocationCommand}">
                 <Button.CommandParameter>
                     <x:String>INITIAL</x:String>
                 </Button.CommandParameter>
             </Button>
-            
-            <Button Text="Medial"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" 
+            <Button Text="{i18n:Translate Medial}"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
                     Command="{Binding SelectLocationCommand}">
                 <Button.CommandParameter>
                     <x:String>MEDIAL</x:String>
                 </Button.CommandParameter>
             </Button>
-            
-            <Button Text="Final"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" 
-                Command="{Binding SelectLocationCommand}">
+
+            <Button Text="{i18n:Translate Final}"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Command="{Binding SelectLocationCommand}">
                 <Button.CommandParameter>
                     <x:String>FINAL</x:String>
                 </Button.CommandParameter>
             </Button>
-            
-            <Button Text="Blended"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand"                     
-                Command="{Binding SelectLocationCommand}">
+
+            <Button Text="{i18n:Translate Blended}"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Command="{Binding SelectLocationCommand}">
                 <Button.CommandParameter>
                     <x:String>BLENDED</x:String>
                 </Button.CommandParameter>
             </Button>
-            <ActivityIndicator 
-                Color="Blue"
-                IsRunning="{Binding IsBusy}" 
-                IsVisible="{Binding IsBusy}" />
+            <ActivityIndicator Color="Blue"
+                               IsRunning="{Binding IsBusy}"
+                               IsVisible="{Binding IsBusy}"/>
         </StackLayout>
     </ContentPage.Content>
 </pages:PopupPage>

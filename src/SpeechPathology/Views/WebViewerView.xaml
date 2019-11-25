@@ -4,18 +4,20 @@
              xmlns:i18n="clr-namespace:SpeechPathology.Extensions"
              x:Class="SpeechPathology.Views.WebViewerView"
              Title="{Binding Title}">
-
     <ContentPage.ToolbarItems>
-        <ToolbarItem Name="{i18n:Translate OpenInBrowser}" Priority="0" Order="Secondary" 
-                                      Command="{Binding OpenInBrowserCommand}"  />
+        <ToolbarItem Name="{i18n:Translate OpenInBrowser}"
+                     Priority="0"
+                     Order="Secondary"
+                     Command="{Binding OpenInBrowserCommand}"  />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-
         <Grid VerticalOptions="FillAndExpand">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <WebView Grid.Row="0" VerticalOptions="FillAndExpand" Source="{Binding Url}" />
+            <WebView Grid.Row="0"
+                     VerticalOptions="FillAndExpand"
+                     Source="{Binding Url}" />
         </Grid>
     </ContentPage.Content>
 </ContentPage>

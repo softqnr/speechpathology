@@ -6,14 +6,12 @@
              x:Class="SpeechPathology.Views.AgeCalcPdfViewerView"
              Title="{i18n:Translate LanguageSkills}">
     <ContentPage.ToolbarItems>
-        <controls:HideableToolbarItem Name="Save"
+        <controls:HideableToolbarItem Name="{i18n:Translate Save}"
                                       Priority="0"
                                       Order="Primary" 
                                       Command="{Binding SavePdfCommand}"  />
     </ContentPage.ToolbarItems>
-    
     <ContentPage.Content>
-        
         <Grid VerticalOptions="FillAndExpand">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
@@ -24,6 +22,5 @@
                               VerticalOptions="FillAndExpand"
                               Uri="{Binding PdfFile}"/>
         </Grid>
-        
     </ContentPage.Content>
 </ContentPage>

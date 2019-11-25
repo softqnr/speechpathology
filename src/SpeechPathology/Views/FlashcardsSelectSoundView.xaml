@@ -8,39 +8,63 @@
              Title="{i18n:Translate Flashcards}">
     <ContentPage.Resources>
         <ResourceDictionary>
-            <x:Array x:Key="rotationParams" Type="{x:Type x:Int32}">
+            <x:Array x:Key="rotationParams"
+                     Type="{x:Type x:Int32}">
                 <x:Int32>-6</x:Int32>
                 <x:Int32>6</x:Int32>
             </x:Array>
-            <Style x:Key="plainButton" TargetType="Label">
-                <Setter Property="TextColor" Value="White" />
-                <Setter Property="FontSize" Value="48" />
-                <Setter Property="FontAttributes" Value="Bold" />
-                <Setter Property="HeightRequest" Value="80" />
-                <Setter Property="WidthRequest" Value="80" />
+            <Style x:Key="plainButton"
+                   TargetType="Label">
+                <Setter Property="TextColor"
+                        Value="White" />
+                <Setter Property="FontSize"
+                        Value="48" />
+                <Setter Property="FontAttributes"
+                        Value="Bold" />
+                <Setter Property="HeightRequest"
+                        Value="80" />
+                <Setter Property="WidthRequest"
+                        Value="80" />
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.ToolbarItems>
-        <controls:HideableToolbarItem Name="Skip" Priority="0" Order="Primary" Text="{i18n:Translate Skip}"
-                                      Command="{Binding SkipClickedCommand}" IsVisible="{Binding SkipIsVisible}" />
+        <controls:HideableToolbarItem Name="Skip"
+                                      Priority="0"
+                                      Order="Primary"
+                                      Text="{i18n:Translate Skip}"
+                                      Command="{Binding SkipClickedCommand}"
+                                      IsVisible="{Binding SkipIsVisible}" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="{Binding LabelText}" TextColor="{StaticResource accent}" FontSize="Large" HorizontalOptions="Center" />
-            
-            <flv:FlowListView FlowColumnCount="4" SeparatorVisibility="None" HasUnevenRows="false" RowHeight="130" FlowColumnMinWidth="130"
-	            FlowItemTappedCommand="{Binding ItemTappedCommand}" FlowItemsSource="{Binding Sounds}" >
-
+            <Label Text="{Binding LabelText}"
+                   TextColor="{StaticResource accent}"
+                   FontSize="Large"
+                   HorizontalOptions="Center" />
+            <flv:FlowListView FlowColumnCount="4"
+                              SeparatorVisibility="None"
+                              HasUnevenRows="false"
+                              RowHeight="130"
+                              FlowColumnMinWidth="130"
+                              FlowItemTappedCommand="{Binding ItemTappedCommand}"
+                              FlowItemsSource="{Binding Sounds}" >
                 <flv:FlowListView.FlowColumnTemplate>
                     <DataTemplate>
-                        <Frame CornerRadius="10" BackgroundColor="{Binding ., Converter={StaticResource RandomColorConverter}}" Padding="4" Margin="4">
-                            <Label Text="{Binding .}" Rotation="{Binding ., Converter={StaticResource RandomNumberConverter}, ConverterParameter={StaticResource rotationParams}}"
-                                   XAlign="Center" YAlign="Center" HorizontalOptions="Fill" VerticalOptions="Fill" Style="{StaticResource plainButton}" />
+                        <Frame CornerRadius="10"
+                               BackgroundColor="{Binding ., Converter={StaticResource RandomColorConverter}}"
+                               Padding="4"
+                               Margin="4">
+                            <Label Text="{Binding .}"
+                                   Rotation="{Binding ., Converter={StaticResource RandomNumberConverter}, ConverterParameter={StaticResource rotationParams}}"
+                                   XAlign="Center"
+                                   YAlign="Center"
+                                   HorizontalOptions="Fill"
+                                   VerticalOptions="Fill"
+                                   Style="{StaticResource plainButton}" />
                         </Frame>
                     </DataTemplate>
                 </flv:FlowListView.FlowColumnTemplate>
-
             </flv:FlowListView>
         </StackLayout>
     </ContentPage.Content>
