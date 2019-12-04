@@ -81,7 +81,7 @@ namespace SpeechPathology.Droid
         private static string GetFileNameFromUri(string uri)
         {
             var lastIndexOf = uri?.LastIndexOf("/", StringComparison.InvariantCultureIgnoreCase);
-            return lastIndexOf > 0 ? uri.Substring(lastIndexOf.Value, uri.Length - lastIndexOf.Value) : string.Empty;
+            return lastIndexOf > 0 ? uri[lastIndexOf.Value..] : string.Empty;
         }
 
         protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)

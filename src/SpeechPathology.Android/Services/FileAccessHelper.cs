@@ -36,10 +36,8 @@ namespace SpeechPathology.Droid
 
         public void CopyAssetFileTo(string assetFile, string destinationFileName)
         {
-            using (var fileStream = new FileStream(destinationFileName, FileMode.OpenOrCreate, FileAccess.Write))
-            {
-                Android.App.Application.Context.Assets.Open(assetFile).CopyTo(fileStream);
-            }
+            using var fileStream = new FileStream(destinationFileName, FileMode.OpenOrCreate, FileAccess.Write);
+            Android.App.Application.Context.Assets.Open(assetFile).CopyTo(fileStream);
         }
     }
 }
