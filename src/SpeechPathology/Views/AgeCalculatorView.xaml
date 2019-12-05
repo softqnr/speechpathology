@@ -13,6 +13,7 @@
             <Label Text="{i18n:Translate DateOfBirth}"
                    Style="{DynamicResource SubtitleStyle}" />
             <DatePicker x:Name="startDatePicker"
+                        MaximumDate="{Binding Source={x:Reference endDatePicker}, Path=Date}"
                         Format="D"
                         Margin="30, 0, 30, 30"
                         Date="{Binding StartDate}" />

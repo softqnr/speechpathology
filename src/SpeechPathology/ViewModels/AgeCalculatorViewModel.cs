@@ -28,6 +28,9 @@ namespace SpeechPathology.ViewModels
             get => _startDate;
             set
             {
+                if (value > EndDate)
+                    EndDate = value;
+
                 SetProperty(ref _startDate, value);
                 Application.Current.Properties["StartDate"] = value;
                 Application.Current.SavePropertiesAsync();
@@ -41,6 +44,9 @@ namespace SpeechPathology.ViewModels
             get => _endDate;
             set
             {
+                if (value < StartDate)
+                    StartDate = value;
+
                 SetProperty(ref _endDate, value);
                 CalculateAge();
                 OnPropertyChanged(nameof(CurrentAgeString));
@@ -119,9 +125,19 @@ namespace SpeechPathology.ViewModels
         {
             RefreshAgeCalculation();
 
-            DialogService.ShowLoading(AppResources.Loading);
-            await NavigationService.NavigateToAsync<AgeCalcPdfViewerViewModel>(ageCalculation.LanguageSkillsFile);
-            DialogService.HideLoading();
+            if (ageCalculation != null)
+            {
+                DialogService.ShowLoading(AppResources.Loading);
+                await NavigationService.NavigateToAsync<AgeCalcPdfViewerViewModel>(ageCalculation.LanguageSkillsFile);
+                DialogService.HideLoading();
+            }
+            else
+            {
+                await DialogService.ShowAlertAsync(
+                    Resources.AppResources.AgeNotSetMsg,
+                    Resources.AppResources.AgeNotSetTitle,
+                    Resources.AppResources.Continue);
+            }
         }
 
         private async Task OnSpeechSoundsSelected()
