@@ -16,17 +16,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Assets\Fonts\OpenSans-Bold.ttf" />
-    <None Remove="Assets\Fonts\OpenSans-BoldItalic.ttf" />
-    <None Remove="Assets\Fonts\OpenSans-Italic.ttf" />
-    <None Remove="Assets\Fonts\OpenSans-Regular.ttf" />
-    <None Remove="Assets\Images\book.jpg" />
-    <None Remove="Assets\Images\erasmusplus_logo.svg" />
-    <None Remove="Assets\Images\lemon.jpg" />
-    <None Remove="Assets\Images\logo.svg" />
-  </ItemGroup>
-
-  <ItemGroup>
     <EmbeddedResource Include="Assets\Fonts\OpenSans-Bold.ttf" />
     <EmbeddedResource Include="Assets\Fonts\OpenSans-BoldItalic.ttf" />
     <EmbeddedResource Include="Assets\Fonts\OpenSans-Italic.ttf" />

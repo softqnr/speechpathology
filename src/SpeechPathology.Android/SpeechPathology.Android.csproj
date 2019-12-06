@@ -482,7 +482,6 @@
     <AndroidAsset Include="Assets\Worksheets\EN\F_English_NTU.pdf" />
     <AndroidAsset Include="Assets\Worksheets\EN\Y_English_NTU.pdf" />
     <AndroidAsset Include="Assets\Worksheets\EN\W_English_NTU.pdf" />
-    <AndroidAsset Include="Assets\Worksheets\EN\TH_English_NTU.pdf" />
     <AndroidAsset Include="Assets\Worksheets\EN\L_English_NTU.pdf" />
     <AndroidAsset Include="Assets\Worksheets\EN\ZH_English_NTU.pdf" />
     <AndroidAsset Include="Assets\Worksheets\EN\R_English_NTU.pdf" />
@@ -4160,7 +4159,7 @@
     <AndroidResource Include="Resources\values-tr\strings.xml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\drawable\sr_deki_02.png" />
+    <None Include="Resources\drawable\sr_speechsounds_4.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\drawable\nl_yet.jpg" />
@@ -6515,19 +6514,19 @@
     <None Include="Resources\drawable\sr_angel.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\drawable\sr_deki_03.png" />
+    <None Include="Resources\drawable\sr_speechsounds_4_5.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\drawable\sr_deki_04.png" />
+    <None Include="Resources\drawable\sr_speechsounds_5.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\drawable\sr_deki_05.png" />
+    <None Include="Resources\drawable\sr_speechsounds_5_5.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\drawable\sr_deki_06.png" />
+    <None Include="Resources\drawable\sr_speechsounds.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\drawable\sr_deki_01.png" />
+    <None Include="Resources\drawable\sr_speechsounds_3_5.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values-nl\strings.xml">
