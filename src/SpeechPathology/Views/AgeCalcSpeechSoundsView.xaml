@@ -18,11 +18,22 @@
                                         VerticalOptions="Center"
                                         DownsampleToViewSize="True"
                                         Margin="15"/>
-            <Button Text="{i18n:Translate SpeechSoundsDetail}"
-                    TextColor="White"
-                    BackgroundColor="{StaticResource primary}"
-                    Margin="80"
-                    Command="{Binding AgeSpecificTestCommand}"/>
+            <FlexLayout Direction="Row"
+                        Margin="0, 30"
+                        JustifyContent="SpaceEvenly">
+                <Button Text="{i18n:Translate LanguageSkillsButton}"
+                        BackgroundColor="{StaticResource primary}"
+                        TextColor="White"
+                        HeightRequest="60"
+                        Margin="10"
+                        Command="{Binding LanguageSkillsCommand}" />
+                <Button Text="{i18n:Translate SpeechSoundsButton}"
+                        BackgroundColor="{StaticResource primary}"
+                        TextColor="White"
+                        HeightRequest="60"
+                        Margin="10"
+                        Command="{Binding AgeSpecificTestCommand}" />
+            </FlexLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

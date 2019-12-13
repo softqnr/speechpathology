@@ -77,17 +77,6 @@ namespace SpeechPathology.ViewModels
         //    }
         //}
 
-        public ICommand LanguageSkillsCommand
-        {
-            get
-            {
-                return new Command(async () =>
-                {
-                    await OnLanguageSkillsSelected();
-                });
-            }
-        }
-
         public ICommand SpeechSoundsCommand
         {
             get
@@ -121,25 +110,6 @@ namespace SpeechPathology.ViewModels
             AgeCalculations = ageCalculations;
         }
 
-        private async Task OnLanguageSkillsSelected()
-        {
-            RefreshAgeCalculation();
-
-            if (ageCalculation != null)
-            {
-                DialogService.ShowLoading(AppResources.Loading);
-                await NavigationService.NavigateToAsync<AgeCalcPdfViewerViewModel>(ageCalculation.LanguageSkillsFile);
-                DialogService.HideLoading();
-            }
-            else
-            {
-                await DialogService.ShowAlertAsync(
-                    Resources.AppResources.AgeNotSetMsg,
-                    Resources.AppResources.AgeNotSetTitle,
-                    Resources.AppResources.Continue);
-            }
-        }
-
         private async Task OnSpeechSoundsSelected()
         {
             RefreshAgeCalculation();
@@ -147,7 +117,7 @@ namespace SpeechPathology.ViewModels
             if (ageCalculation != null)
             {
                 DialogService.ShowLoading(Resources.AppResources.Loading);
-                string[] array = { ageCalculation.SpeechSoundsFile, AgeInYears.ToString(), MonthsThisYear.ToString() };
+                string[] array = { ageCalculation.SpeechSoundsFile, ageCalculation.LanguageSkillsFile, AgeInYears.ToString(), MonthsThisYear.ToString() };
                 await NavigationService.NavigateToAsync<AgeCalcSpeechSoundsViewModel>(array);
                 DialogService.HideLoading();
             }

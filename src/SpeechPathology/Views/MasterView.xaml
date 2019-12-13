@@ -35,18 +35,6 @@
                                Style="{DynamicResource SubtitleStyle}"/>
                     </StackLayout>
 
-                    <Label TextColor="White"
-                           Grid.Column="1"
-                           Grid.Row="2">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="{Binding Version}"
-                                      FontSize="Small" />
-                                <Span Text="{Binding Language}"
-                                      FontSize="Small" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
                     <StackLayout Orientation="Horizontal"
                                  HorizontalOptions="Center"
                                  Grid.Column="1"
@@ -96,5 +84,18 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <ContentView Padding="5">
+            <Label HorizontalOptions="End"
+                   VerticalOptions="EndAndExpand">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="{Binding Version}"
+                              FontSize="Micro" />
+                        <Span Text="{Binding Language}"
+                              FontSize="Micro" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </ContentView>
     </StackLayout>
 </ContentPage>
