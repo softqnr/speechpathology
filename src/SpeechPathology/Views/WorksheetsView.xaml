@@ -30,6 +30,10 @@
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout>
+            <Label Text="{i18n:Translate Selectsound}"
+                   TextColor="{StaticResource accent}"
+                   FontSize="Large"
+                   HorizontalOptions="Center" />
             <flv:FlowListView FlowColumnCount="4"
                               SeparatorVisibility="None"
                               HasUnevenRows="false"

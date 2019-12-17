@@ -136,8 +136,8 @@ namespace SpeechPathology.ViewModels
             {
                 bool resume = await DialogService.ShowConfirmAsync(Resources.AppResources.ResumeTestMessage,
                     Resources.AppResources.ResumeTestTitle,
-                    Resources.AppResources.OK,
-                    Resources.AppResources.Cancel
+                    Resources.AppResources.ResumeTestYes,
+                    Resources.AppResources.ResumeTestNo
                 );
 
                 if (resume)

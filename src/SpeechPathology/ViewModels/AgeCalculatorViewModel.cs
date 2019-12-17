@@ -28,6 +28,9 @@ namespace SpeechPathology.ViewModels
             get => _startDate;
             set
             {
+                if (value > EndDate)
+                    EndDate = value;
+
                 SetProperty(ref _startDate, value);
                 Application.Current.Properties["StartDate"] = value;
                 Application.Current.SavePropertiesAsync();
@@ -41,6 +44,9 @@ namespace SpeechPathology.ViewModels
             get => _endDate;
             set
             {
+                if (value < StartDate)
+                    StartDate = value;
+
                 SetProperty(ref _endDate, value);
                 CalculateAge();
                 OnPropertyChanged(nameof(CurrentAgeString));
@@ -70,17 +76,6 @@ namespace SpeechPathology.ViewModels
         //        return (rslt != 0);
         //    }
         //}
-
-        public ICommand LanguageSkillsCommand
-        {
-            get
-            {
-                return new Command(async () =>
-                {
-                    await OnLanguageSkillsSelected();
-                });
-            }
-        }
 
         public ICommand SpeechSoundsCommand
         {
@@ -115,15 +110,6 @@ namespace SpeechPathology.ViewModels
             AgeCalculations = ageCalculations;
         }
 
-        private async Task OnLanguageSkillsSelected()
-        {
-            RefreshAgeCalculation();
-
-            DialogService.ShowLoading(AppResources.Loading);
-            await NavigationService.NavigateToAsync<AgeCalcPdfViewerViewModel>(ageCalculation.LanguageSkillsFile);
-            DialogService.HideLoading();
-        }
-
         private async Task OnSpeechSoundsSelected()
         {
             RefreshAgeCalculation();
@@ -131,7 +117,7 @@ namespace SpeechPathology.ViewModels
             if (ageCalculation != null)
             {
                 DialogService.ShowLoading(Resources.AppResources.Loading);
-                string[] array = { ageCalculation.SpeechSoundsFile, AgeInYears.ToString(), MonthsThisYear.ToString() };
+                string[] array = { ageCalculation.SpeechSoundsFile, ageCalculation.LanguageSkillsFile, AgeInYears.ToString(), MonthsThisYear.ToString() };
                 await NavigationService.NavigateToAsync<AgeCalcSpeechSoundsViewModel>(array);
                 DialogService.HideLoading();
             }

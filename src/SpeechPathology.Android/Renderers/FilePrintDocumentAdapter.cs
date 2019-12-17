@@ -25,12 +25,10 @@ namespace SpeechPathology.Droid
                 return;
             }
 
-            using (var builder = new PrintDocumentInfo.Builder(_fileName))
-            {
-                callback.OnLayoutFinished(builder
-                    .SetContentType(PrintContentType.Document)
-                    .Build(), true);
-            }
+            using var builder = new PrintDocumentInfo.Builder(_fileName);
+            callback.OnLayoutFinished(builder
+                .SetContentType(PrintContentType.Document)
+                .Build(), true);
         }
 
         public override void OnWrite(PageRange[] pages, Android.OS.ParcelFileDescriptor destination, Android.OS.CancellationSignal cancellationSignal, WriteResultCallback callback)
@@ -39,15 +37,13 @@ namespace SpeechPathology.Droid
             {
                 using (InputStream input = new FileInputStream(_filePath))
                 {
-                    using (OutputStream output = new FileOutputStream(destination.FileDescriptor))
-                    {
-                        var buf = new byte[1024];
-                        int bytesRead;
+                    using OutputStream output = new FileOutputStream(destination.FileDescriptor);
+                    var buf = new byte[1024];
+                    int bytesRead;
 
-                        while ((bytesRead = input.Read(buf)) > 0)
-                        {
-                            output.Write(buf, 0, bytesRead);
-                        }
+                    while ((bytesRead = input.Read(buf)) > 0)
+                    {
+                        output.Write(buf, 0, bytesRead);
                     }
                 }
 

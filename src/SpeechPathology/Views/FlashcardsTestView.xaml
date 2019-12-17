@@ -10,16 +10,6 @@
              BackgroundColor="White">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout Orientation="Horizontal"
-                         HorizontalOptions="Center"
-                         VerticalOptions="Start">
-                <Label Text="{Binding Source={x:Reference Flashcards}, Path=SelectedIndex, Converter={StaticResource ZeroToOneBaseConverter}}"
-                       FontSize="Large" />
-                <Label Text="{i18n:Translate of}"
-                       FontSize="Large" />
-                <Label Text="{Binding Source={x:Reference Flashcards}, Path=ItemsSource.Count}"
-                       FontSize="Large" />
-            </StackLayout>
             <cards:CarouselView x:Name="Flashcards"
                                 ItemsSource="{Binding Flashcards}"
                                 IsCyclical="false"
@@ -44,7 +34,8 @@
                                            Grid.Row="0"
                                            Text="{Binding Text}"
                                            FontSize="26"
-                                           HorizontalOptions="Center"/>
+                                           HorizontalOptions="Center"
+                                           FontFamily="comic.ttf#Comic Sans MS" />
                                     <ffimage:CachedImage x:Name="image"
                                                          Source="{Binding ImageFile}"
                                                          Aspect="AspectFit"
@@ -56,6 +47,17 @@
                     </DataTemplate>
                 </cards:CarouselView.ItemTemplate>
             </cards:CarouselView>
+            <Label HorizontalOptions="Center"
+                       HorizontalTextAlignment="Center"
+                       FontSize="Micro">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="{Binding Source={x:Reference Flashcards}, Path=SelectedIndex, Converter={StaticResource ZeroToOneBaseConverter}}"/>
+                        <Span Text="{i18n:Translate of}"/>
+                        <Span Text="{Binding Source={x:Reference Flashcards}, Path=ItemsSource.Count}"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
             <StackLayout BackgroundColor="{StaticResource primary_light}"
                          Padding="12"
                          VerticalOptions="End">

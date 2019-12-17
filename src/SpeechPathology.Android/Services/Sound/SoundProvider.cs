@@ -15,7 +15,7 @@ namespace SpeechPathology.Droid.Services.Sound
         public async Task PlaySoundAsync(string filename)
         {
             // Create media player
-            player = player ?? new MediaPlayer();
+            player ??= new MediaPlayer();
 
             player.Reset();
 
@@ -40,7 +40,5 @@ namespace SpeechPathology.Droid.Services.Sound
 
             player.PrepareAsync();
         }
-
-
     }
 }

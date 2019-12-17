@@ -11,11 +11,18 @@ namespace SpeechPathology.ViewModels
     {
         private string _speechSoundsFile;
         private string _speechSoundsDetail;
+        private string _languageSkillsFile;
 
         public string SpeechSoundsFile
         {
             get => _speechSoundsFile;
             set => SetProperty(ref _speechSoundsFile, value);
+        }
+        
+        public string LanguageSkillsFile
+        {
+            get => _languageSkillsFile;
+            set => SetProperty(ref _languageSkillsFile, value);
         }
 
         private Tuple <int, int> age;
@@ -46,8 +53,9 @@ namespace SpeechPathology.ViewModels
                 string[] navigationDataArray = (string[])navigationData;
 
                 SpeechSoundsFile = navigationDataArray[0];
-                var ageString = navigationDataArray[1];
-                var monthString = navigationDataArray[2];
+                LanguageSkillsFile = navigationDataArray[1];
+                var ageString = navigationDataArray[2];
+                var monthString = navigationDataArray[3];
                 age = Tuple.Create(int.Parse(ageString), int.Parse(monthString));
                 SpeechSoundsDetail = AppResources.SpeechSoundsDetail;
             }
@@ -71,6 +79,24 @@ namespace SpeechPathology.ViewModels
                     Resources.AppResources.AgeNotSetTitle,
                     Resources.AppResources.Continue);
             }
+        }
+
+        public ICommand LanguageSkillsCommand
+        {
+            get
+            {
+                return new Command(async () =>
+                {
+                    await OnLanguageSkillsSelected();
+                });
+            }
+        }
+
+        private async Task OnLanguageSkillsSelected()
+        {
+            DialogService.ShowLoading(AppResources.Loading);
+            await NavigationService.NavigateToAsync<AgeCalcPdfViewerViewModel>(LanguageSkillsFile);
+            DialogService.HideLoading();
         }
     }
 }

@@ -13,6 +13,7 @@
             <Label Text="{i18n:Translate DateOfBirth}"
                    Style="{DynamicResource SubtitleStyle}" />
             <DatePicker x:Name="startDatePicker"
+                        MaximumDate="{Binding Source={x:Reference endDatePicker}, Path=Date}"
                         Format="D"
                         Margin="30, 0, 30, 30"
                         Date="{Binding StartDate}" />
@@ -29,22 +30,11 @@
             <Label Text="{Binding CurrentAgeString}"
                    Style="{DynamicResource TitleStyle}"
                    HorizontalOptions="CenterAndExpand" />
-            <FlexLayout Direction="Row"
-                        Margin="0, 30"
-                        JustifyContent="SpaceEvenly">
-                <Button Text="{i18n:Translate LanguageSkillsButton}"
-                        BackgroundColor="#ffff99"
-                        TextColor="black"
-                        HeightRequest="60"
-                        Margin="10"
-                        Command="{Binding LanguageSkillsCommand}" />
-                <Button Text="{i18n:Translate SpeechSoundsButton}"
-                        BackgroundColor="#8eb4e3"
-                        TextColor="black"
-                        HeightRequest="60"
-                        Margin="10"
-                        Command="{Binding SpeechSoundsCommand}" />
-            </FlexLayout>
+            <Button Text="{i18n:Translate Continue}"
+                    TextColor="White"
+                    BackgroundColor="{StaticResource primary}"
+                    Margin="80, 20"
+                    Command="{Binding SpeechSoundsCommand}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

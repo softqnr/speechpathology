@@ -16,17 +16,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Assets\Fonts\OpenSans-Bold.ttf" />
-    <None Remove="Assets\Fonts\OpenSans-BoldItalic.ttf" />
-    <None Remove="Assets\Fonts\OpenSans-Italic.ttf" />
-    <None Remove="Assets\Fonts\OpenSans-Regular.ttf" />
-    <None Remove="Assets\Images\book.jpg" />
-    <None Remove="Assets\Images\erasmusplus_logo.svg" />
-    <None Remove="Assets\Images\lemon.jpg" />
-    <None Remove="Assets\Images\logo.svg" />
-  </ItemGroup>
-
-  <ItemGroup>
     <EmbeddedResource Include="Assets\Fonts\OpenSans-Bold.ttf" />
     <EmbeddedResource Include="Assets\Fonts\OpenSans-BoldItalic.ttf" />
     <EmbeddedResource Include="Assets\Fonts\OpenSans-Italic.ttf" />
@@ -46,7 +35,7 @@
     <PackageReference Include="Unity" Version="5.8.10" />
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms" Version="2.4.11.982" />
-    <PackageReference Include="Xamarin.Forms" Version="3.6.0.344457" />
+    <PackageReference Include="Xamarin.Forms" Version="4.1.0.778454" />
   </ItemGroup>
 
   <ItemGroup>

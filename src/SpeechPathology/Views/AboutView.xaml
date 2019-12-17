@@ -17,43 +17,6 @@
                                               HorizontalOptions="Center"
                                               VerticalOptions="End"
                                               Source="erasmusplus_logo.svg" />
-            <Label Text="{i18n:Translate AboutSocial}"
-                   HorizontalOptions="CenterAndExpand" />
-            <StackLayout Orientation="Horizontal"
-                         HorizontalOptions="Center"
-                         Padding="10">
-                <Image Source="facebook_icon.png"
-                       WidthRequest="40" >
-                    <Image.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding LinkTappedCommand}"
-                                              CommandParameter="{StaticResource facebookUrl}"/>
-                    </Image.GestureRecognizers>
-                </Image>
-                <Image Source="home_icon.png"
-                       WidthRequest="40" >
-                    <Image.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding LinkTappedCommand}"
-                                              CommandParameter="{StaticResource homePageUrl}"/>
-                    </Image.GestureRecognizers>
-                </Image>
-                <Image Source="mail_icon.png"
-                       WidthRequest="40" >
-                    <Image.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding LinkTappedCommand}"
-                                              CommandParameter="{StaticResource email}"/>
-                    </Image.GestureRecognizers>
-                </Image>
-            </StackLayout>
-            <Label Text="http://speechpathologytools.eu"
-                   FontAttributes="Bold"
-                   TextColor="Blue"
-                   Margin="10"
-                   HorizontalOptions="CenterAndExpand" >
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding LinkTappedCommand}" 
-                                          CommandParameter="http://speechpathologytools.eu"/>
-                </Label.GestureRecognizers>
-            </Label>
             <Label Text="{i18n:Translate AboutFooter}"
                    HorizontalOptions="CenterAndExpand" />
             <Label Text="2017-1-BG01-KA201-036295" 

@@ -115,7 +115,7 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Age of the Student.
+        ///   Looks up a localized string similar to Age of the Child.
         /// </summary>
         public static string AgeCalculatorTitle {
             get {
@@ -124,7 +124,7 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You have not configured the app with an age for the test, or the age you set is too young. Please input a valid birth date..
+        ///   Looks up a localized string similar to You have not set an age to test, or the age you chose is too young. Please input a valid birth date..
         /// </summary>
         public static string AgeNotSetMsg {
             get {
@@ -324,7 +324,7 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Language Skills .
+        ///   Looks up a localized string similar to Expected Language Skills.
         /// </summary>
         public static string LanguageSkillsButton {
             get {
@@ -504,11 +504,20 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Resume test?.
+        ///   Looks up a localized string similar to Do you want to resume your previous test?.
         /// </summary>
         public static string ResumeTestMessage {
             get {
                 return ResourceManager.GetString("ResumeTestMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Start afresh.
+        /// </summary>
+        public static string ResumeTestNo {
+            get {
+                return ResourceManager.GetString("ResumeTestNo", resourceCulture);
             }
         }
         
@@ -518,6 +527,15 @@ namespace SpeechPathology.Resources {
         public static string ResumeTestTitle {
             get {
                 return ResourceManager.GetString("ResumeTestTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Resume test.
+        /// </summary>
+        public static string ResumeTestYes {
+            get {
+                return ResourceManager.GetString("ResumeTestYes", resourceCulture);
             }
         }
         
@@ -639,7 +657,7 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Speech Sounds.
+        ///   Looks up a localized string similar to Start Test.
         /// </summary>
         public static string SpeechSoundsButton {
             get {
