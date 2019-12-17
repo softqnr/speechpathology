@@ -34,7 +34,8 @@
                                            Grid.Row="0"
                                            Text="{Binding Text}"
                                            FontSize="26"
-                                           HorizontalOptions="Center"/>
+                                           HorizontalOptions="Center"
+                                           FontFamily="comic.ttf#Comic Sans MS" />
                                     <ffimage:CachedImage x:Name="image"
                                                          Source="{Binding ImageFile}"
                                                          Aspect="AspectFit"
