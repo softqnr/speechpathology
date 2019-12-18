@@ -547,4 +547,9 @@
     <Content Include="Content\pdfjs\web\viewer.html" />
     <Content Include="Content\pdfjs\web\viewer.js" />
   </ItemGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties XamarinHotReloadWrongLinkerErrorInfoBarSpeechPathologyiOSHideInfoBar="True" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>
