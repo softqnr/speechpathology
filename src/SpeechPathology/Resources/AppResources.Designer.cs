@@ -558,6 +558,15 @@ namespace SpeechPathology.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Score: {0:0.0%}.
+        /// </summary>
+        public static string ScoreFmt {
+            get {
+                return ResourceManager.GetString("ScoreFmt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Select excluded sound.
         /// </summary>
         public static string Selectexcludedsound {

@@ -136,7 +136,7 @@
     <value>Тест базиран на възрастта</value>
   </data>
   <data name="AgeCalculatorTitle" xml:space="preserve">
-    <value>Възраст на ученика</value>
+    <value>Възрастта на детето</value>
   </data>
   <data name="AgeNotSetMsg" xml:space="preserve">
     <value>Не сте конфигурирали приложението с възрастта за теста или възрастта, която сте задали, е твърде млада. Моля, въведете валидна дата на раждане.</value>
@@ -204,7 +204,7 @@
     <value>Устни езикови умения</value>
   </data>
   <data name="LanguageSkillsButton" xml:space="preserve">
-    <value>Езикови умения</value>
+    <value>Очаквани езикови умения</value>
   </data>
   <data name="Letters" xml:space="preserve">
     <value>Писма</value>
@@ -297,7 +297,7 @@
     <value>Развитие на речта</value>
   </data>
   <data name="SpeechSoundsButton" xml:space="preserve">
-    <value>Звуци на речта</value>
+    <value>Стартиране на тест</value>
   </data>
   <data name="SpeechSoundsDetail" xml:space="preserve">
     <value>Продължете с теста</value>
@@ -331,5 +331,14 @@
   </data>
   <data name="LetterFocusPost" xml:space="preserve">
     <value> правилно?</value>
+  </data>
+  <data name="ResumeTestNo" xml:space="preserve">
+    <value>Започнете наново</value>
+  </data>
+  <data name="ResumeTestYes" xml:space="preserve">
+    <value>Възобновете теста</value>
+  </data>
+  <data name="ScoreFmt" xml:space="preserve">
+    <value>Резултат: {0:0.0%}</value>
   </data>
 </root>
