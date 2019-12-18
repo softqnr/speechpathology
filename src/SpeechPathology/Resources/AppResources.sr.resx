@@ -271,13 +271,13 @@
     <value>Настави са тестом</value>
   </data>
   <data name="LanguageSkillsButton" xml:space="preserve">
-    <value>Језичке способности</value>
+    <value>Очекиване вештине језика</value>
   </data>
   <data name="SpeechSoundsButton" xml:space="preserve">
-    <value>Гласови</value>
+    <value>Старт Тест</value>
   </data>
   <data name="AgeNotSetMsg" xml:space="preserve">
-    <value>Нисте конфигурисали апликацију са узрастом за тест, или је узраст који сте поставили исувише мали. Унесите важећи датум рођења.</value>
+    <value>Нисте поставили старост за тестирање или је старост коју сте одабрали била премлада. Унесите важећи датум рођења.</value>
   </data>
   <data name="AgeNotSetTitle" xml:space="preserve">
     <value>Узраст није могуће тестирати.</value>
@@ -286,7 +286,7 @@
     <value>Настави</value>
   </data>
   <data name="AgeCalculatorTitle" xml:space="preserve">
-    <value>Узраст детета</value>
+    <value>Старост детета</value>
   </data>
   <data name="Blend" xml:space="preserve">
     <value>Са понављањем</value>
@@ -341,5 +341,14 @@
   </data>
   <data name="LetterFocusPost" xml:space="preserve">
     <value>?</value>
+  </data>
+  <data name="ResumeTestNo" xml:space="preserve">
+    <value>Почните изнова</value>
+  </data>
+  <data name="ResumeTestYes" xml:space="preserve">
+    <value>Настави тест</value>
+  </data>
+  <data name="ScoreFmt" xml:space="preserve">
+    <value>Настави тест</value>
   </data>
 </root>
