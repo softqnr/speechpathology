@@ -19,7 +19,7 @@
                 <Label Text="{Binding SoundPosition}"
                        FontSize="Medium"
                        TextColor="White"/>
-                <Label Text="{Binding Score, StringFormat=Score: '{0:0.0%}'}"
+                <Label Text="{Binding Score, StringFormat={i18n:Translate ScoreFmt}}"
                        FontSize="Large"
                        TextColor="White"/>
             </StackLayout>
