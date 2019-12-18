@@ -273,13 +273,13 @@ Deze applicatie vervangt geen logopedist, maar biedt een extra ondersteunend hul
     <value>Ga door naar de test</value>
   </data>
   <data name="LanguageSkillsButton" xml:space="preserve">
-    <value>Taalvaardigheden</value>
+    <value>Verwachte Taalvaardigheden</value>
   </data>
   <data name="SpeechSoundsButton" xml:space="preserve">
-    <value>Spraak Geluiden</value>
+    <value>Start de test</value>
   </data>
   <data name="AgeNotSetMsg" xml:space="preserve">
-    <value>Je hebt de app niet geconfigureerd met een leeftijd voor de test, of de leeftijd die je hebt ingesteld is te jong. Voer een geldige geboortedatum in.</value>
+    <value>Je hebt geen leeftijd ingesteld om te testen, of de leeftijd die je hebt gekozen was te jong. Voer een geldige geboortedatum in.</value>
   </data>
   <data name="AgeNotSetTitle" xml:space="preserve">
     <value>Leeftijd is niet te testen</value>
@@ -288,7 +288,7 @@ Deze applicatie vervangt geen logopedist, maar biedt een extra ondersteunend hul
     <value>Doorgaan</value>
   </data>
   <data name="AgeCalculatorTitle" xml:space="preserve">
-    <value>Leeftijd van de student</value>
+    <value>Leeftijd van het kind</value>
   </data>
   <data name="Blend" xml:space="preserve">
     <value>Mengen</value>
@@ -309,7 +309,7 @@ Deze applicatie vervangt geen logopedist, maar biedt een extra ondersteunend hul
     <value>Ok</value>
   </data>
   <data name="ResumeTestMessage" xml:space="preserve">
-    <value>Test hervatten?</value>
+    <value>Wilt u uw vorige test hervatten?</value>
   </data>
   <data name="ResumeTestTitle" xml:space="preserve">
     <value>Nog niet afgewerkte test gevonden</value>
@@ -338,5 +338,14 @@ Deze applicatie vervangt geen logopedist, maar biedt een extra ondersteunend hul
   </data>
   <data name="LetterFocusPost" xml:space="preserve">
     <value> correct uit?</value>
+  </data>
+  <data name="ResumeTestNo" xml:space="preserve">
+    <value>Begin opnieuw</value>
+  </data>
+  <data name="ResumeTestYes" xml:space="preserve">
+    <value>Hervat test</value>
+  </data>
+  <data name="ScoreFmt" xml:space="preserve">
+    <value>Score: {0: 0,0%}</value>
   </data>
 </root>
