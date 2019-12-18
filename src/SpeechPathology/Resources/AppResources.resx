@@ -344,4 +344,7 @@ This application does not replace a speech therapist, but offers an additional s
   <data name="ResumeTestYes" xml:space="preserve">
     <value>Resume test</value>
   </data>
+  <data name="ScoreFmt" xml:space="preserve">
+    <value>Score: {0:0.0%}</value>
+  </data>
 </root>
