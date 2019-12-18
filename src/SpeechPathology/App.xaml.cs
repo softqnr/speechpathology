@@ -31,7 +31,7 @@ namespace SpeechPathology
         public static MasterDetailPage MasterPage { get; set; }
         public static UnityContainer Container { get; private set; }
         public static string DatabaseFilePath { get; private set; }
-        public static string Language = "SI";
+        public static string Language = "TR";
         public static bool Initialized = false;
         public readonly static INavigationService NavigationService = new NavigationService();
 

@@ -273,10 +273,10 @@ Bu uygulama konuşma terapistinin yerini almaz, ancak öğretmenler için bir de
     <value>Teste devam et</value>
   </data>
   <data name="LanguageSkillsButton" xml:space="preserve">
-    <value>SÖZLÜ DİL BECERİSİ</value>
+    <value>Beklenen dil becerileri</value>
   </data>
   <data name="SpeechSoundsButton" xml:space="preserve">
-    <value>DİL VE KONUŞMA SESLERİ</value>
+    <value>Testi Başlat</value>
   </data>
   <data name="Blended" xml:space="preserve">
     <value>Karışık durum</value>
@@ -300,13 +300,13 @@ Bu uygulama konuşma terapistinin yerini almaz, ancak öğretmenler için bir de
     <value>Geçerli biçimde bir yaş giriniz.</value>
   </data>
   <data name="AgeNotSetTitle" xml:space="preserve">
-    <value>Bu yaş için test uygun değildir.</value>
+    <value>Test etmek için bir yaş belirlemediniz veya seçtiğiniz yaş çok küçüktü. Lütfen geçerli bir doğum tarihi girin.</value>
   </data>
   <data name="OK" xml:space="preserve">
     <value>Ok</value>
   </data>
   <data name="ResumeTestMessage" xml:space="preserve">
-    <value>Teste devam et</value>
+    <value>Önceki testinize devam etmek istiyor musunuz?</value>
   </data>
   <data name="ResumeTestTitle" xml:space="preserve">
     <value>Tamamlanmamış testiniz var</value>
@@ -315,7 +315,7 @@ Bu uygulama konuşma terapistinin yerini almaz, ancak öğretmenler için bir de
     <value>Skor</value>
   </data>
   <data name="AgeCalculatorTitle" xml:space="preserve">
-    <value>Öğrencinin yaşı</value>
+    <value>Çocuğun yaşı</value>
   </data>
   <data name="All" xml:space="preserve">
     <value>Bütün harfler</value>
@@ -337,5 +337,14 @@ Bu uygulama konuşma terapistinin yerini almaz, ancak öğretmenler için bir de
   </data>
   <data name="LetterFocusPost" xml:space="preserve">
     <value> doğru telaffuz ediyor mu?</value>
+  </data>
+  <data name="ResumeTestNo" xml:space="preserve">
+    <value>Yeniden başlat</value>
+  </data>
+  <data name="ResumeTestYes" xml:space="preserve">
+    <value>Teste devam et</value>
+  </data>
+  <data name="ScoreFmt" xml:space="preserve">
+    <value>Skor: {0:% 0.0}</value>
   </data>
 </root>
