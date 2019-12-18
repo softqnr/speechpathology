@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="209" android:versionName="v0.4.0_NL-2-g1553f02" android:theme="@style/MainTheme" package="com.softqnr.SpeechPathologySR" android:installLocation="auto">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="212" android:versionName="v0.4.1_RS-1-g78103da" android:theme="@style/MainTheme" package="com.softqnr.SpeechPathologySI" android:installLocation="auto">
   <uses-sdk android:minSdkVersion="17" android:targetSdkVersion="28" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-  <application android:icon="@mipmap/ic_launcher_circle" android:largeHeap="true" android:label="Говорна Патолошка Средства" android:allowBackup="false">
+  <application android:icon="@mipmap/ic_launcher_circle" android:largeHeap="true" android:label="Orodja za Patologijo Govora" android:allowBackup="false">
     <provider android:name="android.support.v4.content.FileProvider" android:authorities="${applicationId}.fileprovider" android:exported="false" android:grantUriPermissions="true">
       <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths" />
     </provider>
