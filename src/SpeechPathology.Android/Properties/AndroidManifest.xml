@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="227" android:versionName="v0.4.1_EN-1-gc86b7c2" android:theme="@style/MainTheme" package="com.softqnr.SpeechPathologyBG" android:installLocation="auto">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="230" android:versionName="v0.4.2_BG-1-g502f2db" android:theme="@style/MainTheme" package="com.softqnr.SpeechPathologyTR" android:installLocation="auto">
   <uses-sdk android:minSdkVersion="17" android:targetSdkVersion="28" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-  <application android:icon="@mipmap/ic_launcher_circle" android:largeHeap="true" android:label="Инструменти за Патология на Речта" android:allowBackup="false">
+  <application android:icon="@mipmap/ic_launcher_circle" android:largeHeap="true" android:label="Dil ve Konuşma Araçları" android:allowBackup="false">
     <provider android:name="android.support.v4.content.FileProvider" android:authorities="${applicationId}.fileprovider" android:exported="false" android:grantUriPermissions="true">
       <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths" />
     </provider>
