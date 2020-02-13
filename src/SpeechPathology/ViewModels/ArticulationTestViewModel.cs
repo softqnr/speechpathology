@@ -12,7 +12,7 @@ namespace SpeechPathology.ViewModels
 {
     public class ArticulationTestViewModel : ViewModelBase
     {
-        private IArticulationTestService _articulationTestService;
+        private readonly IArticulationTestService _articulationTestService;
         private ArticulationTestExam _articulationTestExam;
         private IEnumerator<ArticulationTestExamAnswer> _articulationTestAnswersEnumerator;
         private ArticulationTestExamAnswer _articulationTestAnswer;
@@ -136,8 +136,8 @@ namespace SpeechPathology.ViewModels
             {
                 bool resume = await DialogService.ShowConfirmAsync(Resources.AppResources.ResumeTestMessage,
                     Resources.AppResources.ResumeTestTitle,
-                    Resources.AppResources.OK,
-                    Resources.AppResources.Cancel
+                    Resources.AppResources.ResumeTestYes,
+                    Resources.AppResources.ResumeTestNo
                 );
 
                 if (resume)

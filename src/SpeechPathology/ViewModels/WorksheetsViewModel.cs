@@ -9,7 +9,7 @@ namespace SpeechPathology.ViewModels
 {
     public class WorksheetsViewModel : ViewModelBase
     {
-        private IWorksheetService _worksheetService;
+        private readonly IWorksheetService _worksheetService;
         private List<Worksheet> _worksheets;
         private string _uri;
 

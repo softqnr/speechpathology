@@ -8,12 +8,9 @@ namespace SpeechPathology.Views
         {
             InitializeComponent();
 
-            if (App.Language == "EN" || App.Language == "SI")
-            {
-                Grid.SetColumnSpan(AgeCalculatorButton, 2);
-                var grid = ArticulationButton.Parent as Grid;
-                grid.Children.Remove(ArticulationButton);
-            }
+            Grid.SetColumnSpan(AgeCalculatorButton, 2);
+            var grid = ArticulationButton.Parent as Grid;
+            grid.Children.Remove(ArticulationButton);
         }
     }
 }

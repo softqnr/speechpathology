@@ -209,7 +209,7 @@ namespace SpeechPathology.Services.Articulation
             Table table = _section.AddTable();
             table.Borders.Visible = true;
             // Create table columns
-            var col = table.AddColumn(140);
+            table.AddColumn(140);
             foreach (Grouping<string, ArticulationTestExamAnswer> grouping in articulationTestAnswersGrouping)
             {
                 var row = table.AddRow();

@@ -1,20 +1,16 @@
-﻿using System;
-using Android.Content;
-using Android.Print;
-using Android.Support.V4.Content;
+﻿using Android.Print;
 using Java.IO;
+using System;
 
 namespace SpeechPathology.Droid
 {
     public class FilePrintDocumentAdapter : PrintDocumentAdapter
     {
-        private readonly Context _context;
         private readonly string _fileName;
-        private string _filePath;
+        private readonly string _filePath;
 
-        public FilePrintDocumentAdapter(Context context, string fileName, string filePath)
+        public FilePrintDocumentAdapter(string fileName, string filePath)
         {
-            _context = context;
             _fileName = fileName;
             _filePath = filePath;
         }
@@ -29,7 +25,8 @@ namespace SpeechPathology.Droid
                 return;
             }
 
-            callback.OnLayoutFinished(new PrintDocumentInfo.Builder(_fileName)
+            using var builder = new PrintDocumentInfo.Builder(_fileName);
+            callback.OnLayoutFinished(builder
                 .SetContentType(PrintContentType.Document)
                 .Build(), true);
         }
@@ -40,15 +37,13 @@ namespace SpeechPathology.Droid
             {
                 using (InputStream input = new FileInputStream(_filePath))
                 {
-                    using (OutputStream output = new FileOutputStream(destination.FileDescriptor))
-                    {
-                        var buf = new byte[1024];
-                        int bytesRead;
+                    using OutputStream output = new FileOutputStream(destination.FileDescriptor);
+                    var buf = new byte[1024];
+                    int bytesRead;
 
-                        while ((bytesRead = input.Read(buf)) > 0)
-                        {
-                            output.Write(buf, 0, bytesRead);
-                        }
+                    while ((bytesRead = input.Read(buf)) > 0)
+                    {
+                        output.Write(buf, 0, bytesRead);
                     }
                 }
 

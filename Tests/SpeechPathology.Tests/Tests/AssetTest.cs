@@ -8,7 +8,8 @@ namespace SpeechPathology.Tests
 {
     public class AssetTest
     {
-        private readonly FlashcardService _flashcardService;
+        //private readonly FlashcardService _flashcardService;
+
         public AssetTest()
         {
             //_flashcardService = new FlashcardService();

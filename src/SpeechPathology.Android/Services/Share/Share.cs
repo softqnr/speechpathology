@@ -15,7 +15,7 @@ namespace SpeechPathology.Droid.Services.Share
         public void ShareFile(string title, string message, string filePath)
         {
             var extension = Path.GetExtension(filePath.ToLower());  
-            var contentType = string.Empty;
+            string contentType;
 
             // Map ContentTypes
             switch (extension)

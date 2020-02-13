@@ -12,7 +12,7 @@ namespace SpeechPathology.ViewModels
     {
         private ArticulationTestExam _articulationTestExam;
         private List<ArticulationTestExamAnswer> _articulationTestAnswers;
-        private IPDFGeneratorService _pdfGeneratorService;
+        private readonly IPDFGeneratorService _pdfGeneratorService;
         private double _score;
         private string _soundPosition;
 

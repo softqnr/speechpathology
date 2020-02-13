@@ -6,18 +6,21 @@
              x:Class="SpeechPathology.Views.PdfViewerView"
              Title="{i18n:Translate WorksheetsView}">
     <ContentPage.ToolbarItems>
-        <controls:HideableToolbarItem Name="Save" Priority="0" Order="Primary" 
+        <controls:HideableToolbarItem Name="{i18n:Translate Save}"
+                                      Priority="0"
+                                      Order="Primary"
                                       Command="{Binding SavePdfCommand}"  />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-
         <Grid VerticalOptions="FillAndExpand">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <controls:PdfView Grid.Row="0" x:Name="PdfDocView" VerticalOptions="FillAndExpand" Uri="{Binding PdfFile}"/>
-
+            <controls:PdfView Grid.Row="0"
+                              x:Name="PdfDocView"
+                              VerticalOptions="FillAndExpand"
+                              Uri="{Binding PdfFile}"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

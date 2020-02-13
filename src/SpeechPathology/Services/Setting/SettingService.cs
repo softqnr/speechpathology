@@ -5,7 +5,7 @@ namespace SpeechPathology.Services.Setting
 {
     public class SettingService : ISettingService
     {
-        private IRepository<Models.Setting> _repositorySetting;
+        private readonly IRepository<Models.Setting> _repositorySetting;
 
         public SettingService(IRepository<Models.Setting> repositorySetting)
         {

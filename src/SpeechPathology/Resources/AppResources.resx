@@ -273,13 +273,13 @@ This application does not replace a speech therapist, but offers an additional s
     <value>Continue to the test</value>
   </data>
   <data name="LanguageSkillsButton" xml:space="preserve">
-    <value>Language Skills</value>
+    <value>Expected Language Skills</value>
   </data>
   <data name="SpeechSoundsButton" xml:space="preserve">
-    <value>Speech Sounds</value>
+    <value>Start Test</value>
   </data>
   <data name="AgeNotSetMsg" xml:space="preserve">
-    <value>You have not configured the app with an age for the test, or the age you set is too young. Please input a valid birth date.</value>
+    <value>You have not set an age to test, or the age you chose is too young. Please input a valid birth date.</value>
   </data>
   <data name="AgeNotSetTitle" xml:space="preserve">
     <value>Age Not Testable</value>
@@ -288,7 +288,7 @@ This application does not replace a speech therapist, but offers an additional s
     <value>Continue</value>
   </data>
   <data name="AgeCalculatorTitle" xml:space="preserve">
-    <value>Age of the Student</value>
+    <value>Age of the Child</value>
   </data>
   <data name="Blend" xml:space="preserve">
     <value>blend</value>
@@ -309,7 +309,7 @@ This application does not replace a speech therapist, but offers an additional s
     <value>Ok</value>
   </data>
   <data name="ResumeTestMessage" xml:space="preserve">
-    <value>Resume test?</value>
+    <value>Do you want to resume your previous test?</value>
   </data>
   <data name="ResumeTestTitle" xml:space="preserve">
     <value>Pending test found</value>
@@ -332,7 +332,19 @@ This application does not replace a speech therapist, but offers an additional s
   <data name="NotCorrectAbbreviation" xml:space="preserve">
     <value>NC</value>
   </data>
-  <data name="LetterFocus" xml:space="preserve">
-    <value>Does your child pronounce {0} correctly?</value>
+  <data name="LetterFocusPre" xml:space="preserve">
+    <value>Does your child pronounce </value>
+  </data>
+  <data name="LetterFocusPost" xml:space="preserve">
+    <value> correctly?</value>
+  </data>
+  <data name="ResumeTestNo" xml:space="preserve">
+    <value>Start afresh</value>
+  </data>
+  <data name="ResumeTestYes" xml:space="preserve">
+    <value>Resume test</value>
+  </data>
+  <data name="ScoreFmt" xml:space="preserve">
+    <value>Score: {0:0.0%}</value>
   </data>
 </root>

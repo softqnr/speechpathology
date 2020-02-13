@@ -66,8 +66,7 @@ namespace SpeechPathology.ViewModels
 
         public async Task NavigateTo(object sender)
         {
-            var item = sender as NavMenuItem;
-            if (item == null)
+            if (!(sender is NavMenuItem item))
                 return;
 
             Title = item.Title;

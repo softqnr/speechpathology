@@ -2,17 +2,17 @@
 using DLToolkit.Forms.Controls;
 using Plugin.Multilingual;
 using SpeechPathology.Data;
-using SpeechPathology.Services.AgeCalculator;
-using SpeechPathology.Services.Articulation;
-using SpeechPathology.Services.Flashcard;
-using SpeechPathology.Services.Worksheet;
+using SpeechPathology.Infrastructure.Dialog;
+using SpeechPathology.Infrastructure.Navigation;
+using SpeechPathology.Infrastructure.Sound;
 using SpeechPathology.Interfaces;
 using SpeechPathology.Models;
 using SpeechPathology.Resources;
-using SpeechPathology.Infrastructure.Dialog;
-using SpeechPathology.Infrastructure.Navigation;
-using SpeechPathology.Infrastructure.PDF;
-using SpeechPathology.Infrastructure.Sound;
+using SpeechPathology.Services.AgeCalculator;
+using SpeechPathology.Services.Articulation;
+using SpeechPathology.Services.Flashcard;
+using SpeechPathology.Services.Setting;
+using SpeechPathology.Services.Worksheet;
 using SpeechPathology.ViewModels;
 using SpeechPathology.Views;
 using System.Threading.Tasks;
@@ -22,7 +22,6 @@ using Unity.Lifetime;
 using Unity.ServiceLocation;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using SpeechPathology.Services.Setting;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace SpeechPathology
@@ -32,7 +31,7 @@ namespace SpeechPathology
         public static MasterDetailPage MasterPage { get; set; }
         public static UnityContainer Container { get; private set; }
         public static string DatabaseFilePath { get; private set; }
-        public static string Language = "EN";
+        public static string Language = "BG";
         public static bool Initialized = false;
         public readonly static INavigationService NavigationService = new NavigationService();
 
@@ -41,13 +40,15 @@ namespace SpeechPathology
             InitializeComponent();
             FlowListView.Init();
 
-            if (!Initialized){
+            if (!Initialized)
+            {
                 // Init DB
                 InitializeDatabase();
                 // Init DI
                 InitializeDI();
                 // Localization
-                InitializeLocalization();
+                var task = InitializeLocalization();
+                task.Wait(10);
 
                 Initialized = true;
             }

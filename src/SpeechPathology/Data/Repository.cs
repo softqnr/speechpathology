@@ -10,7 +10,7 @@ namespace SpeechPathology.Data
 {
     public class Repository<T> : IRepository<T> where T : ModelBase, new()
     {
-        private SQLiteAsyncConnection db;
+        private readonly SQLiteAsyncConnection db;
 
         public Repository(string databaseFile)
         {

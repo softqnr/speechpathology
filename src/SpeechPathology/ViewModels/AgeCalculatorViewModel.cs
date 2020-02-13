@@ -11,7 +11,7 @@ namespace SpeechPathology.ViewModels
 {
     public class AgeCalculatorViewModel : ViewModelBase
     {
-        private IAgeCalculatorService _ageCalculatorService;
+        private readonly IAgeCalculatorService _ageCalculatorService;
         private List<AgeCalculation> _ageCalculations;
 
         private DateTime _endDate;
@@ -28,6 +28,9 @@ namespace SpeechPathology.ViewModels
             get => _startDate;
             set
             {
+                if (value > EndDate)
+                    EndDate = value;
+
                 SetProperty(ref _startDate, value);
                 Application.Current.Properties["StartDate"] = value;
                 Application.Current.SavePropertiesAsync();
@@ -41,6 +44,9 @@ namespace SpeechPathology.ViewModels
             get => _endDate;
             set
             {
+                if (value < StartDate)
+                    StartDate = value;
+
                 SetProperty(ref _endDate, value);
                 CalculateAge();
                 OnPropertyChanged(nameof(CurrentAgeString));
@@ -62,25 +68,14 @@ namespace SpeechPathology.ViewModels
             }
         }
 
-        public bool IsValidAge
-        {
-            get
-            {
-                var rslt = AgeCalculations.FindIndex(x => x.AgeInYears >= AgeInYears && x.Months >= MonthsThisYear);
-                return (rslt != 0);
-            }
-        }
-
-        public ICommand LanguageSkillsCommand
-        {
-            get
-            {
-                return new Command(async () =>
-                {
-                    await OnLanguageSkillsSelected();
-                });
-            }
-        }
+        //public bool IsValidAge
+        //{
+        //    get
+        //    {
+        //        var rslt = AgeCalculations.FindIndex(x => x.AgeInYears >= AgeInYears && x.Months >= MonthsThisYear);
+        //        return (rslt != 0);
+        //    }
+        //}
 
         public ICommand SpeechSoundsCommand
         {
@@ -115,23 +110,14 @@ namespace SpeechPathology.ViewModels
             AgeCalculations = ageCalculations;
         }
 
-        private async Task OnLanguageSkillsSelected()
-        {
-            RefreshAgeCalculation();
-
-            DialogService.ShowLoading(AppResources.Loading);
-            await NavigationService.NavigateToAsync<AgeCalcPdfViewerViewModel>(ageCalculation.LanguageSkillsFile);
-            DialogService.HideLoading();
-        }
-
         private async Task OnSpeechSoundsSelected()
         {
             RefreshAgeCalculation();
 
-            if (IsValidAge)
+            if (ageCalculation != null)
             {
                 DialogService.ShowLoading(Resources.AppResources.Loading);
-                string[] array = { ageCalculation.SpeechSoundsFile, AgeInYears.ToString(), MonthsThisYear.ToString() };
+                string[] array = { ageCalculation.SpeechSoundsFile, ageCalculation.LanguageSkillsFile, AgeInYears.ToString(), MonthsThisYear.ToString() };
                 await NavigationService.NavigateToAsync<AgeCalcSpeechSoundsViewModel>(array);
                 DialogService.HideLoading();
             }
@@ -200,10 +186,17 @@ namespace SpeechPathology.ViewModels
 
         private void RefreshAgeCalculation()
         {
+            ageCalculation = null;
+
             for (var i = 0; i < AgeCalculations.Count; i++)
             {
+                if (AgeCalculations[i].AgeInYears > AgeInYears)
+                    break;
+                else if (AgeCalculations[i].AgeInYears == AgeInYears
+                    && AgeCalculations[i].Months > MonthsThisYear)
+                    break;
+
                 ageCalculation = AgeCalculations[i];
-                if (ageCalculation.AgeInYears >= AgeInYears) break;
             }
         }
     }

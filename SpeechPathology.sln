@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29503.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpeechPathology.Android", "src\SpeechPathology.Android\SpeechPathology.Android.csproj", "{E0C7ACB5-25DC-441B-87EF-23D4DC7D88B6}"
 EndProject
@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpeechPathology.iOS", "src\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpeechPathology", "src\SpeechPathology\SpeechPathology.csproj", "{7F0B7782-27D8-48D9-B6D7-26A4007F066B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{AF15307C-2938-41EF-9227-47F24ACAF17D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{AF15307C-2938-41EF-9227-47F24ACAF17D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpeechPathology.Tests", "tests\SpeechPathology.Tests\SpeechPathology.Tests.csproj", "{49F243BA-C621-4E99-83B9-47A62814C413}"
 EndProject
