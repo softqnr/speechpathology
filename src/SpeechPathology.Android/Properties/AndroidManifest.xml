@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="231" android:versionName="v0.4.2_EN-2-g378f77d" android:theme="@style/MainTheme" package="com.softqnr.SpeechPathologyEN" android:installLocation="auto">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="235" android:versionName="v0.4.2_TR-3-g248453b" android:theme="@style/MainTheme" package="com.softqnr.SpeechPathologyNL" android:installLocation="auto">
   <uses-sdk android:minSdkVersion="17" android:targetSdkVersion="28" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-  <application android:icon="@mipmap/ic_launcher_circle" android:largeHeap="true" android:allowBackup="false">
+  <application android:icon="@mipmap/ic_launcher_circle" android:largeHeap="true" android:label="Spraakpathologie Instrumenten" android:allowBackup="false">
     <provider android:name="android.support.v4.content.FileProvider" android:authorities="${applicationId}.fileprovider" android:exported="false" android:grantUriPermissions="true">
       <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths" />
     </provider>
